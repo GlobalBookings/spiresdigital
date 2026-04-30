@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="About Us" description="Learn about Spires Digital, a data-driven digital marketing agency in Guernsey and Lichfield with over 15 years of experience in PPC, Meta Ads, and performance marketing.">
+  <Breadcrumbs items={[{ label: 'About Us' }]} />
+
+  <section class="page-hero" style="margin-top: -2rem;">
+    <div class="container page-hero-content">
+      <span class="badge">About Spires Digital</span>
+      <h1>Built on Transparency, Driven by Results</h1>
+      <p>Over 15 years of helping businesses grow through data-driven digital marketing. Based in Guernsey and Lichfield, serving clients across the UK and Channel Islands.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <div class="about-intro">
+        <h2>Our Story</h2>
+        <p>Spires Digital was founded with a simple belief: businesses deserve marketing partners who are completely transparent about results, spending, and strategy.</p>
+        <p>After more than 15 years working in digital marketing — managing over &pound;10M in ad spend across 150+ campaigns — we've seen first-hand how agencies can overcomplicate things, hide behind jargon, and lock clients into contracts they don't need.</p>
+        <p>We do things differently. Every client gets full access to their advertising accounts, clear reporting they can actually understand, and the flexibility to scale up, down, or pause at any time. No long-term contracts, no hidden fees.</p>
+      </div>
+
+      <h2 style="margin-top: 3rem;">What Sets Us Apart</h2>
+      <div class="grid grid-2" style="margin: 2rem 0;">
+        <div class="about-card">
+          <h3>Complete Transparency</h3>
+          <p>You own your accounts. We provide full access to every platform, every metric, and every penny spent. No surprises.</p>
+        </div>
+        <div class="about-card">
+          <h3>No Lock-In Contracts</h3>
+          <p>We earn your business every month. If we're not delivering results, you're free to leave. That keeps us accountable.</p>
+        </div>
+        <div class="about-card">
+          <h3>Data-Driven Decisions</h3>
+          <p>Every strategy is backed by data. We test, measure, and optimise continuously — never guessing with your budget.</p>
+        </div>
+        <div class="about-card">
+          <h3>Genuine Partnership</h3>
+          <p>We treat your business like our own. Your success is our success, and we're invested in your long-term growth.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Certifications & Partnerships</h2>
+      <div class="cert-grid">
+        <div class="cert-item">Google Partner</div>
+        <div class="cert-item">Bing Ads Certified</div>
+        <div class="cert-item">Google Analytics 4 Expert</div>
+        <div class="cert-item">Shopify Partner</div>
+        <div class="cert-item">Affiliate Window Certified</div>
+        <div class="cert-item">E-Commerce Specialist</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Let's Work Together</h2>
+      <p>Ready to partner with a team that puts your results first?</p>
+      <a href="/contact" class="btn btn-white btn-lg">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-intro p { color: var(--color-text-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem; }
+  .about-card { padding: 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); }
+  .about-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .about-card p { font-size: 0.95rem; color: var(--color-text-light); }
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .cert-item { background: var(--color-bg-alt); padding: 1rem; border-radius: var(--radius-sm); text-align: center; font-weight: 600; font-size: 0.9rem; color: var(--color-text); }
+</style>

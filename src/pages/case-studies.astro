@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { caseStudies } from '../data/caseStudies';
+---
+
+<BaseLayout title="Case Studies" description="See real results from our digital marketing campaigns. Case studies showing ROI improvements across PPC, SEO, affiliate marketing, and e-commerce.">
+  <Breadcrumbs items={[{ label: 'Case Studies' }]} />
+
+  <section class="page-hero" style="margin-top: -2rem;">
+    <div class="container page-hero-content">
+      <span class="badge">Our Work</span>
+      <h1>Real Results for Real Businesses</h1>
+      <p>Every campaign tells a story. Here's how we've helped businesses across the UK achieve exceptional growth through data-driven marketing.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        {caseStudies.map(study => (
+          <div class="card case-card">
+            <div class="card-body">
+              <div class="case-header">
+                <span class="badge" style="font-size: 0.7rem;">{study.industry}</span>
+                <span class="case-service">{study.service}</span>
+              </div>
+              <h3>{study.title}</h3>
+              <p>{study.description}</p>
+              <div class="case-challenge">
+                <h4>Challenge</h4>
+                <p>{study.challenge}</p>
+              </div>
+              <div class="case-stats">
+                {study.stats.map(stat => (
+                  <div class="case-stat">
+                    <span class="case-stat-value">{stat.value}</span>
+                    <span class="case-stat-label">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Want Results Like These?</h2>
+      <p>Get a free audit and discover how we can grow your business.</p>
+      <a href="/contact" class="btn btn-white btn-lg">Get Free Marketing Audit</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .case-card .card-body { padding: 2rem; }
+  .case-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .case-service { font-size: 0.8rem; color: var(--color-text-light); font-weight: 500; }
+  .case-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .case-challenge { margin: 1.25rem 0; padding: 1rem; background: var(--color-bg-alt); border-radius: var(--radius-sm); }
+  .case-challenge h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); margin-bottom: 0.25rem; }
+  .case-challenge p { font-size: 0.9rem; color: var(--color-text-light); }
+  .case-stats { display: flex; gap: 1.5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .case-stat-value { display: block; font-size: 1.4rem; font-weight: 800; color: var(--color-accent); }
+  .case-stat-label { font-size: 0.75rem; color: var(--color-text-light); }
+</style>

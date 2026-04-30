@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const services = [
+  {
+    title: 'PPC Management',
+    href: '/services/ppc-management',
+    icon: '\u{1F3AF}',
+    description: 'Google Ads & Bing Ads management with proven ROI. Search, Shopping, Display, and Performance Max campaigns.',
+    highlights: ['Average 250% ROAS improvement', 'Full account ownership', 'Performance-based pricing'],
+    bestFor: 'Businesses wanting immediate traffic and leads from search advertising.',
+  },
+  {
+    title: 'Meta Ads',
+    href: '/services/meta-ads',
+    icon: '\u{1F4F1}',
+    description: 'Facebook and Instagram advertising with systematic creative testing to find and scale what works.',
+    highlights: ['Full-funnel campaigns', 'Creative testing framework', 'Audience targeting & lookalikes'],
+    bestFor: 'Brands wanting to reach new audiences and drive awareness, leads, or sales on social.',
+  },
+  {
+    title: 'Affiliate Management',
+    href: '/services/affiliate-management',
+    icon: '\u{1F91D}',
+    description: 'Complete affiliate program setup and management on AWIN, CJ, and Rakuten networks.',
+    highlights: ['Network setup & management', 'Partner recruitment', 'Performance monitoring'],
+    bestFor: 'E-commerce brands wanting a performance-based channel where you only pay for results.',
+  },
+  {
+    title: 'Shopify Builds',
+    href: '/services/shopify-builds',
+    icon: '\u{1F6D2}',
+    description: 'Custom Shopify stores designed for conversion with optimised checkout and SEO from day one.',
+    highlights: ['Custom theme development', 'Migration from other platforms', 'Ongoing support & optimisation'],
+    bestFor: 'Businesses launching or upgrading an e-commerce store.',
+  },
+];
+---
+
+<BaseLayout title="Digital Marketing Services" description="Full-service digital marketing: PPC, Meta Ads, affiliate management, and Shopify builds. Transparent pricing, no lock-in contracts.">
+  <Breadcrumbs items={[{ label: 'Services' }]} />
+
+  <section class="page-hero" style="margin-top: -2rem;">
+    <div class="container page-hero-content">
+      <span class="badge">Our Services</span>
+      <h1>Digital Marketing Services That Drive Growth</h1>
+      <p>Full-service digital marketing with complete transparency. Every strategy is backed by data, and you always own your accounts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-list">
+        {services.map((service, i) => (
+          <a href={service.href} class="service-row card">
+            <div class="service-row-content">
+              <div class="service-row-icon">{service.icon}</div>
+              <div class="service-row-info">
+                <h2>{service.title}</h2>
+                <p>{service.description}</p>
+                <div class="service-highlights">
+                  {service.highlights.map(h => (
+                    <span class="highlight-tag">{h}</span>
+                  ))}
+                </div>
+                <div class="best-for">
+                  <strong>Best for:</strong> {service.bestFor}
+                </div>
+              </div>
+              <span class="service-row-arrow">&rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Compare</span>
+        <h2>Which Service Is Right for You?</h2>
+      </div>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>PPC</th>
+              <th>Meta Ads</th>
+              <th>Affiliate</th>
+              <th>Shopify</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time to results</td>
+              <td>Days</td>
+              <td>Weeks</td>
+              <td>3-6 months</td>
+              <td>4-8 weeks</td>
+            </tr>
+            <tr>
+              <td>Ongoing cost</td>
+              <td>&pound;1,200 + 5%</td>
+              <td>&pound;1,200 + 5%</td>
+              <td>&pound;1,200 + 5%</td>
+              <td>One-off + support</td>
+            </tr>
+            <tr>
+              <td>Best for</td>
+              <td>Immediate leads</td>
+              <td>Brand awareness</td>
+              <td>Performance-based</td>
+              <td>E-commerce launch</td>
+            </tr>
+            <tr>
+              <td>Scales with budget</td>
+              <td>&#x2713;</td>
+              <td>&#x2713;</td>
+              <td>&#x2713;</td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td>Compounds over time</td>
+              <td>&mdash;</td>
+              <td>&mdash;</td>
+              <td>&#x2713;</td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <h2>Not Sure Where to Start?</h2>
+      <p style="color: var(--color-text-light); font-size: 1.05rem; margin: 1rem 0 2rem;">We'll audit your current marketing and recommend the channels that will deliver the best ROI for your business. No obligation, no sales pressure.</p>
+      <a href="/contact" class="btn btn-primary btn-lg">Get Your Free Marketing Audit</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .services-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .service-row { text-decoration: none; }
+  .service-row-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 2rem;
+  }
+
+  .service-row-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    background: rgba(79, 70, 229, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .service-row-info { flex: 1; }
+  .service-row-info h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .service-row-info > p { color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 1rem; }
+
+  .service-highlights { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+  .highlight-tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.25rem 0.7rem;
+    background: rgba(5, 150, 105, 0.08);
+    color: var(--color-success);
+    border-radius: 100px;
+  }
+
+  .best-for { font-size: 0.88rem; color: var(--color-text-light); }
+  .best-for strong { color: var(--color-text); }
+
+  .service-row-arrow {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .service-row:hover .service-row-arrow { transform: translateX(4px); }
+
+  .comparison-table-wrap { overflow-x: auto; }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .comparison-table th, .comparison-table td {
+    padding: 0.9rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .comparison-table th {
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th:first-child { text-align: left; }
+  .comparison-table td:first-child { text-align: left; font-weight: 500; color: var(--color-text); }
+  .comparison-table td { color: var(--color-text-light); }
+
+  .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+  @media (max-width: 768px) {
+    .service-row-content { flex-direction: column; }
+    .service-row-arrow { display: none; }
+  }
+</style>

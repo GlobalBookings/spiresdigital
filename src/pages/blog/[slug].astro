@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { blogPosts } from '../../data/blogPosts';
+import { blogContent } from '../../data/blogContent';
+
+export function getStaticPaths() {
+  return blogPosts.map(post => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = blogPosts.find(p => p.slug === slug)!;
+const content = blogContent[slug];
+---
+
+<BlogLayout
+  title={post.title}
+  description={post.description}
+  date={post.date}
+  category={post.category}
+  image={post.image}
+  readTime={post.readTime}
+>
+  {content ? <Fragment set:html={content} /> : (
+    <p>{post.description}</p>
+    <h2>Coming Soon</h2>
+    <p>This article is being written by our digital marketing experts. Check back soon for the full guide.</p>
+    <p>In the meantime, explore our <a href="/services/ppc-management">PPC management services</a> or <a href="/contact">get in touch</a> for personalised advice.</p>
+  )}
+</BlogLayout>

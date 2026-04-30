@@ -1,0 +1,129 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/logo.png" alt="Spires Digital" style="width: 175px; filter: brightness(0) invert(1);" />
+        </a>
+        <p>Data-driven digital marketing agency based in Guernsey and Lichfield. Helping businesses grow through PPC, Meta Ads, and performance marketing.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services">All Services</a></li>
+          <li><a href="/services/ppc-management">PPC Management</a></li>
+          
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/affiliate-management">Affiliate Management</a></li>
+          <li><a href="/services/shopify-builds">Shopify Builds</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/how-we-work">How We Work</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a></li>
+          <li>Guernsey, Channel Islands</li>
+          <li>Lichfield, Staffordshire</li>
+          <li>United Kingdom</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">Free Marketing Audit</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Spires Digital. All rights reserved.</p>
+      <div class="footer-certifications">
+        <span>Google Partner</span>
+        <span>Bing Certified</span>
+        <span>GA4 Expert</span>
+        <span>Shopify Partner</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand p { font-size: 0.9rem; line-height: 1.6; }
+
+  .footer-links h4 {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul { list-style: none; }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-links a:hover { color: var(--color-white); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+
+  .footer-certifications {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    .footer-certifications { flex-wrap: wrap; justify-content: center; }
+  }
+</style>

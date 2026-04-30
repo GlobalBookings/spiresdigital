@@ -1,0 +1,519 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { caseStudies } from '../data/caseStudies';
+import { blogPosts } from '../data/blogPosts';
+import { testimonials } from '../data/testimonials';
+
+const featuredStudies = caseStudies.slice(0, 3);
+const recentPosts = blogPosts.slice(0, 3);
+const featuredTestimonials = testimonials.slice(0, 3);
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge">15+ Years of Digital Marketing</span>
+        <h1>Performance Marketing That Delivers Measurable Growth</h1>
+        <p>We help ambitious businesses scale with transparent, data-driven PPC, Meta Ads, affiliate management, and conversion optimisation. Full account access, no long-term contracts, and a relentless focus on ROI.</p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn-primary btn-lg">Get Your Free Audit</a>
+          <a href="/case-studies" class="btn btn-outline btn-lg">View Results</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6 2.7 8.3" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Transparent reporting & full account access</span>
+          </div>
+          <div class="proof-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6 2.7 8.3" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Proven track record across all industries</span>
+          </div>
+          <div class="proof-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6 2.7 8.3" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>No long-term contracts required</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">250%</span>
+          <span class="stat-desc">Average ROAS Increase</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">150+</span>
+          <span class="stat-desc">Campaigns Delivered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">&pound;10M+</span>
+          <span class="stat-desc">Ad Spend Managed</span>
+        </div>
+        <a href="https://www.google.com/partners/agency?id=9380641815" target="_blank" rel="noopener" class="stat-card google-partner-card">
+          <img src="https://www.gstatic.com/partners/badge/images/2025/PartnerBadgeClickable.svg" alt="Google Partner Badge" width="80" height="80" loading="lazy" />
+          <span class="stat-desc">Google Partner</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certs-bar">
+    <div class="container">
+      <p class="certs-label">Certified Partners</p>
+      <div class="certs-banner">
+        <a href="https://www.google.com/partners/agency?id=9380641815" target="_blank" rel="noopener" class="cert-item">
+          <img src="https://www.gstatic.com/partners/badge/images/2025/PartnerBadgeClickable.svg" alt="Google Partner Badge" loading="lazy" />
+        </a>
+        <div class="cert-item">
+          <img src="/images/partners/bing-partner.png" alt="Microsoft Bing Partner" loading="lazy" />
+        </div>
+        <div class="cert-item">
+          <img src="/images/partners/shopify-partner.jpg" alt="Shopify Partner" loading="lazy" />
+        </div>
+        <div class="cert-item">
+          <img src="/images/partners/awin-certified.png" alt="AWIN Certified Agency 2025" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">What We Do</span>
+        <h2>Digital Marketing Services That Drive Growth</h2>
+        <p>Performance-driven marketing with complete transparency. Every strategy is backed by data and designed to deliver measurable results.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <a href="/services/ppc-management" class="service-card card">
+          <div class="card-body">
+            <div class="icon-box">&#x1F3AF;</div>
+            <h3>PPC Management</h3>
+            <p>Expert Google Ads and Bing Ads management with transparent reporting and proven ROI. Search, Shopping, Display and YouTube campaigns.</p>
+            <ul class="service-features">
+              <li>Search & Shopping campaigns</li>
+              <li>Bing Ads optimisation</li>
+              <li>Conversion tracking setup</li>
+              <li>Performance-based pricing</li>
+            </ul>
+            <span class="card-link">Learn more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/services/meta-ads" class="service-card card">
+          <div class="card-body">
+            <div class="icon-box">&#x1F4F1;</div>
+            <h3>Meta Ads</h3>
+            <p>Facebook and Instagram advertising that drives engagement, leads, and conversions at scale.</p>
+            <ul class="service-features">
+              <li>Facebook & Instagram campaigns</li>
+              <li>Audience targeting & lookalikes</li>
+              <li>Creative testing & optimisation</li>
+              <li>Retargeting strategies</li>
+            </ul>
+            <span class="card-link">Learn more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/services/affiliate-management" class="service-card card">
+          <div class="card-body">
+            <div class="icon-box">&#x1F91D;</div>
+            <h3>Affiliate Management</h3>
+            <p>Complete affiliate program management to scale your business through strategic partnerships.</p>
+            <ul class="service-features">
+              <li>Network setup & management</li>
+              <li>Partner recruitment</li>
+              <li>Commission optimisation</li>
+              <li>Performance monitoring</li>
+            </ul>
+            <span class="card-link">Learn more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/services/shopify-builds" class="service-card card">
+          <div class="card-body">
+            <div class="icon-box">&#x1F6D2;</div>
+            <h3>Shopify Builds</h3>
+            <p>Custom Shopify stores designed for conversion and optimised for growth from day one.</p>
+            <ul class="service-features">
+              <li>Custom theme development</li>
+              <li>E-commerce optimisation</li>
+              <li>Payment gateway integration</li>
+              <li>SEO & performance tuning</li>
+            </ul>
+            <span class="card-link">Learn more &rarr;</span>
+          </div>
+        </a>
+
+        <div class="service-card card cta-card">
+          <div class="card-body">
+            <div class="icon-box" style="background: rgba(5,150,105,0.1); color: #059669;">&#x1F680;</div>
+            <h3>Not Sure Where to Start?</h3>
+            <p>Get a free, comprehensive audit of your digital marketing. We'll identify the biggest opportunities for growth.</p>
+            <a href="/contact" class="btn btn-primary" style="margin-top: 1rem;">Get Free Audit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <span class="badge">Why Spires Digital</span>
+          <h2>Guernsey &amp; Lichfield's Most Trusted Digital Marketing Agency</h2>
+          <p>With over 15 years of experience, we've built our reputation on transparency, results, and genuine partnerships. Every strategy is backed by data and designed to deliver measurable business growth.</p>
+          <p>We treat your business like our own. That means complete transparency with reporting, full access to your marketing accounts, and a relentless focus on ROI. No long-term contracts, no hidden fees.</p>
+          <a href="/about" class="btn btn-outline" style="margin-top: 1rem;">Learn About Our Process</a>
+        </div>
+        <div class="why-features">
+          <div class="feature-item">
+            <div class="feature-icon">&#x1F50D;</div>
+            <div>
+              <h4>Full Transparency</h4>
+              <p>Complete access to your accounts and real-time performance data. No hidden fees or surprises.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">&#x1F4C8;</div>
+            <div>
+              <h4>Results-Focused</h4>
+              <p>Every campaign is optimised for measurable business outcomes, not vanity metrics.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">&#x1F3C6;</div>
+            <div>
+              <h4>Expert Team</h4>
+              <p>15+ years of combined experience across all major digital marketing platforms.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">&#x26A1;</div>
+            <div>
+              <h4>Agile Approach</h4>
+              <p>Quick implementation and continuous optimisation based on performance data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  {featuredStudies.length > 0 && (
+    <section class="section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Results</span>
+          <h2>Proven Results Across Industries</h2>
+          <p>See how we've helped businesses like yours achieve exceptional growth.</p>
+        </div>
+        <div class="grid grid-3">
+          {featuredStudies.map(study => (
+            <div class="card">
+              <div class="card-body">
+                <span class="badge" style="font-size: 0.7rem;">{study.industry}</span>
+                <h3>{study.title}</h3>
+                <p>{study.description}</p>
+                <div class="study-stats">
+                  {study.stats.map(stat => (
+                    <div class="study-stat">
+                      <span class="study-stat-value">{stat.value}</span>
+                      <span class="study-stat-label">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="/case-studies" class="btn btn-outline">View All Case Studies</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Blog -->
+  {recentPosts.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Insights</span>
+          <h2>Latest from the Blog</h2>
+          <p>Digital marketing insights, strategies, and industry updates.</p>
+        </div>
+        <div class="grid grid-3">
+          {recentPosts.map(post => (
+            <a href={`/blog/${post.slug}`} class="card">
+              {post.image && (
+                <img src={post.image} alt={post.title} class="card-image" loading="lazy" width="400" height="220" style="width:100%;height:220px;object-fit:cover;" />
+              )}
+              <div class="card-body">
+                <span class="badge" style="font-size: 0.7rem;">{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+                <div class="card-meta">
+                  <span>{post.date}</span>
+                  <span>{post.readTime}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="/blog" class="btn btn-outline">Read All Articles</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Client Feedback</span>
+        <h2>What Our Clients Say</h2>
+        <p>Don't take our word for it. Here's what businesses we've worked with have to say.</p>
+      </div>
+      <div class="grid grid-3">
+        {featuredTestimonials.map(t => (
+          <div class="testimonial-card">
+            <div class="testimonial-quote">&ldquo;{t.quote}&rdquo;</div>
+            <div class="testimonial-author">
+              <div>
+                <strong>{t.name}</strong>
+                <span>{t.role}, {t.company}</span>
+              </div>
+              <span class="testimonial-service">{t.service}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Grow Your Business?</h2>
+      <p>Get a free consultation from our experts who have managed over &pound;10M in ad spend across 150+ campaigns.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn-white btn-lg">Get Free Marketing Audit</a>
+        <a href="/case-studies" class="btn btn-outline btn-lg" style="border-color: rgba(255,255,255,0.3); color: white;">View Case Studies</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 10rem 0 5rem;
+    background: linear-gradient(135deg, #1a1f36 0%, #2d1b69 50%, #3730a3 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-content h1 { color: white; margin-bottom: 1.25rem; }
+  .hero-content p { font-size: 1.1rem; opacity: 0.85; line-height: 1.7; margin-bottom: 1.5rem; }
+
+  .hero-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+
+  .hero-proof { display: flex; flex-direction: column; gap: 0.6rem; }
+  .proof-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; opacity: 0.85; }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-number { display: block; font-size: 2.2rem; font-weight: 800; color: white; }
+  .stat-desc { font-size: 0.85rem; opacity: 0.7; margin-top: 0.25rem; display: block; }
+
+  .google-partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+  }
+  .google-partner-card img { margin-bottom: 0.25rem; }
+
+  .certs-bar {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 2rem 0;
+  }
+
+  .certs-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .certs-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-item img {
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .cert-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .certs-banner { gap: 1.5rem; }
+    .cert-item img { max-height: 60px; }
+  }
+
+  .service-card { text-decoration: none; }
+  .service-features { list-style: none; padding: 0; margin: 1rem 0 0.75rem; }
+  .service-features li { padding: 0.25rem 0; font-size: 0.88rem; color: var(--color-text-light); }
+  .service-features li::before { content: '\2713'; color: var(--color-success); margin-right: 0.5rem; font-weight: 600; }
+  .card-link { color: var(--color-accent); font-weight: 600; font-size: 0.9rem; }
+
+  .cta-card { border: 2px dashed var(--color-border); box-shadow: none; }
+  .cta-card:hover { border-color: var(--color-accent); }
+
+  .why-section { background: var(--color-white); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .why-content p { color: var(--color-text-light); margin-bottom: 1rem; line-height: 1.7; }
+  .why-features { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(79,70,229,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .feature-item h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+  .feature-item p { font-size: 0.9rem; color: var(--color-text-light); }
+
+  .study-stats { display: flex; gap: 1.5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .study-stat-value { display: block; font-size: 1.3rem; font-weight: 800; color: var(--color-accent); }
+  .study-stat-label { font-size: 0.75rem; color: var(--color-text-light); }
+
+  .card-image { width: 100%; height: 220px; object-fit: cover; }
+  .card-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--color-text-light); margin-top: 0.75rem; }
+
+  @media (max-width: 900px) {
+    .hero .container { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+  }
+
+  .testimonials-section { background: var(--color-white); }
+
+  .testimonial-card {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .testimonial-author strong { display: block; font-size: 0.9rem; }
+  .testimonial-author span { font-size: 0.8rem; color: var(--color-text-light); }
+  .testimonial-service {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--color-accent);
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 7rem 0 3rem; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+  }
+</style>

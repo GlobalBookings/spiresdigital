@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="Terms of Service" description="Terms and conditions for using Spires Digital services and website.">
+  <Breadcrumbs items={[{ label: 'Terms of Service' }]} />
+
+  <section class="page-hero" style="margin-top: -2rem;">
+    <div class="container page-hero-content">
+      <h1>Terms of Service</h1>
+      <p>Last updated: April 2026</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container legal-content">
+      <h2>1. Services</h2>
+      <p>Spires Digital provides digital marketing services including but not limited to PPC management, SEO, social media advertising, affiliate management, and Shopify development. All services are provided on a month-to-month basis unless otherwise agreed in writing.</p>
+
+      <h2>2. No Long-Term Contracts</h2>
+      <p>We operate without long-term lock-in contracts. Either party may terminate the service agreement with 30 days written notice. Any pre-paid fees for the notice period remain non-refundable.</p>
+
+      <h2>3. Account Ownership</h2>
+      <p>All advertising accounts (Google Ads, Meta Ads, etc.) created or managed on your behalf remain your property. You retain full access and ownership at all times, including if our engagement ends.</p>
+
+      <h2>4. Billing & Payment</h2>
+      <p>Management fees are invoiced monthly in advance. Ad spend is billed directly by the advertising platform to the client's account. Payment is due within 14 days of invoice date.</p>
+
+      <h2>5. Performance Expectations</h2>
+      <p>While we apply industry best practices and data-driven strategies to maximise results, we cannot guarantee specific rankings, traffic levels, or conversion rates. Digital marketing performance is influenced by many factors outside our control including market conditions, competition, and platform algorithm changes.</p>
+
+      <h2>6. Confidentiality</h2>
+      <p>Both parties agree to keep confidential any proprietary information shared during the engagement. This includes business strategies, analytics data, customer information, and pricing details.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>Any ad copy, landing pages, or creative assets produced during the engagement are owned by the client upon payment of applicable fees. Strategy documents and proprietary tools remain the property of Spires Digital.</p>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>Spires Digital's total liability for any claim arising from our services shall not exceed the fees paid in the three months preceding the claim. We are not liable for indirect, incidental, or consequential damages.</p>
+
+      <h2>9. Website Use</h2>
+      <p>The content on spiresdigital.com is for informational purposes. While we strive for accuracy, we make no warranties about the completeness or reliability of information on this website.</p>
+
+      <h2>10. Governing Law</h2>
+      <p>These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the English courts.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms? Contact us at <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  .legal-content p { color: var(--color-text-light); line-height: 1.8; margin-bottom: 1rem; }
+  .legal-content a { color: var(--color-accent); }
+</style>

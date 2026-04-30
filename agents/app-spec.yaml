@@ -1,0 +1,47 @@
+name: spiresdigital-agents
+region: lon1
+
+services:
+  - name: agents
+    dockerfile_path: agents/Dockerfile
+    source_dir: /
+    github:
+      repo: GlobalBookings/spiresdigital
+      branch: main
+      deploy_on_push: true
+    http_port: 3100
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    routes:
+      - path: /
+    health_check:
+      http_path: /health
+    envs:
+      - key: GOOGLE_CLIENT_ID
+        type: SECRET
+      - key: GOOGLE_CLIENT_SECRET
+        type: SECRET
+      - key: GOOGLE_REFRESH_TOKEN
+        type: SECRET
+      - key: GA4_PROPERTY_ID
+        type: SECRET
+      - key: SEARCH_CONSOLE_SITE_URL
+        value: https://spiresdigital.com
+      - key: SLACK_WEBHOOK_URL
+        type: SECRET
+      - key: ANTHROPIC_API_KEY
+        type: SECRET
+      - key: OPENAI_API_KEY
+        type: SECRET
+      - key: GITHUB_TOKEN
+        type: SECRET
+      - key: GITHUB_REPO
+        value: GlobalBookings/spiresdigital
+      - key: RESEND_API_KEY
+        type: SECRET
+      - key: SITE_URL
+        value: https://spiresdigital.com
+      - key: SITEMAP_URL
+        value: https://spiresdigital.com/sitemap-index.xml
+      - key: APPROVAL_PORT
+        value: "3100"

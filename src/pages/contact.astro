@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="Contact Us — Free Marketing Audit" description="Get in touch with Spires Digital for a free digital marketing audit. PPC, Meta Ads, and more. Based in Guernsey and Lichfield, UK.">
+  <Breadcrumbs items={[{ label: 'Contact' }]} />
+
+  <section class="page-hero" style="margin-top: -2rem;">
+    <div class="container page-hero-content">
+      <span class="badge">Get in Touch</span>
+      <h1>Let's Grow Your Business Together</h1>
+      <p>Ready to scale your digital marketing? Get a free consultation from our experts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-wrap">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="budget">Monthly Ad Spend</label>
+              <select id="budget" name="budget">
+                <option value="">Select budget range</option>
+                <option>Under &pound;1,000/month</option>
+                <option>&pound;1,000 - &pound;5,000/month</option>
+                <option>&pound;5,000 - &pound;10,000/month</option>
+                <option>&pound;10,000 - &pound;25,000/month</option>
+                <option>&pound;25,000 - &pound;50,000/month</option>
+                <option>&pound;50,000+/month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Services you're interested in</label>
+              <div class="checkbox-group">
+                <label class="checkbox"><input type="checkbox" name="services" value="Google Ads" /> Google Ads</label>
+                <label class="checkbox"><input type="checkbox" name="services" value="Meta Ads" /> Meta Ads</label>
+                <label class="checkbox"><input type="checkbox" name="services" value="Affiliate" /> Affiliate Marketing</label>
+                <label class="checkbox"><input type="checkbox" name="services" value="Shopify" /> Shopify / E-Commerce</label>
+                <label class="checkbox"><input type="checkbox" name="services" value="Lead Gen" /> Lead Generation</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+          </form>
+          <script is:inline>
+            document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const f = e.target;
+              const name = f.querySelector('#name')?.value || '';
+              const company = f.querySelector('#company')?.value || '';
+              const email = f.querySelector('#email')?.value || '';
+              const phone = f.querySelector('#phone')?.value || '';
+              const budget = f.querySelector('#budget')?.value || '';
+              const services = [...f.querySelectorAll('input[name="services"]:checked')].map(c => c.value).join(', ');
+              const message = f.querySelector('#message')?.value || '';
+              const subject = encodeURIComponent('Website Enquiry from ' + name);
+              const body = encodeURIComponent(
+                'Name: ' + name +
+                '\nCompany: ' + company +
+                '\nEmail: ' + email +
+                '\nPhone: ' + phone +
+                '\nBudget: ' + budget +
+                '\nServices: ' + services +
+                '\n\nMessage:\n' + message
+              );
+              window.location.href = 'mailto:jack@spiresdigital.com?subject=' + subject + '&body=' + body;
+            });
+          </script>
+        </div>
+
+        <div class="contact-info">
+          <h2>Get in Touch Directly</h2>
+
+          <div class="info-card">
+            <h4>Email</h4>
+            <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a>
+          </div>
+
+          <div class="info-card">
+            <h4>Location</h4>
+            <p>Guernsey, Channel Islands<br/>Lichfield, Staffordshire<br/>United Kingdom</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Response Time</h4>
+            <p>We respond within 24 hours during business hours.</p>
+          </div>
+
+          <div class="calendly-box">
+            <h4>Book a Call</h4>
+            <p>Skip the back-and-forth. Book a free 30-minute consultation directly in my calendar.</p>
+            <a href="https://calendly.com/jack-spiresdigital/30min?back=1" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 0.75rem;">Book 30-Min Call</a>
+          </div>
+
+          <div class="why-box">
+            <h4>Why Businesses Choose Us</h4>
+            <ul>
+              <li>Rapid 24-hour response time</li>
+              <li>Google & Meta certified</li>
+              <li>Transparent real-time reporting</li>
+              <li>No long-term contracts</li>
+              <li>&pound;10M+ ad spend managed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: start; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; }
+  .form-group label { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.35rem; color: var(--color-text); }
+  .form-group input, .form-group select, .form-group textarea {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+    background: var(--color-white);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+  }
+  .checkbox-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.25rem; }
+  .checkbox { display: flex; align-items: center; gap: 0.35rem; font-size: 0.88rem; cursor: pointer; }
+
+  .contact-info { margin-top: 3rem; }
+  .info-card { margin-bottom: 1.5rem; }
+  .info-card h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); margin-bottom: 0.25rem; }
+  .info-card a { color: var(--color-accent); font-weight: 500; }
+  .info-card p { color: var(--color-text); font-size: 0.95rem; }
+
+  .calendly-box { background: var(--color-white); border: 2px solid var(--color-accent); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1.5rem; }
+  .calendly-box h4 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--color-dark); }
+  .calendly-box p { font-size: 0.9rem; color: var(--color-text-light); }
+  .why-box { background: var(--color-bg-alt); padding: 1.5rem; border-radius: var(--radius); margin-top: 2rem; }
+  .why-box h4 { font-size: 1rem; margin-bottom: 0.75rem; }
+  .why-box ul { list-style: none; }
+  .why-box li { padding: 0.3rem 0; font-size: 0.9rem; color: var(--color-text-light); }
+  .why-box li::before { content: '\2713'; color: var(--color-success); margin-right: 0.5rem; font-weight: 600; }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-info { margin-top: 0; }
+  }
+</style>

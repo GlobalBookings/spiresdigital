@@ -1,0 +1,18 @@
+name: spiresdigital
+region: lon1
+
+static_sites:
+  - name: site
+    github:
+      repo: GlobalBookings/spiresdigital
+      branch: main
+      deploy_on_push: true
+    build_command: npm install && npm run build
+    output_dir: dist
+    environment_slug: node-js
+    routes:
+      - path: /
+
+domains:
+  - domain: spiresdigital.com
+    type: PRIMARY

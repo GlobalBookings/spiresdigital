@@ -1,0 +1,198 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header" id="site-header">
+  <nav class="container header-nav">
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Spires Digital" class="logo-mark" />
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/" class:list={[{ active: pathname === '/' }]}>Home</a></li>
+      <li class="has-dropdown">
+        <a href="/services" class:list={[{ active: pathname.startsWith('/services') }]}>Services</a>
+        <ul class="dropdown">
+          <li><a href="/services/ppc-management">PPC Management</a></li>
+          
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/affiliate-management">Affiliate Management</a></li>
+          <li><a href="/services/shopify-builds">Shopify Builds</a></li>
+        </ul>
+      </li>
+      <li><a href="/case-studies" class:list={[{ active: pathname.startsWith('/case-studies') }]}>Case Studies</a></li>
+      <li><a href="/blog" class:list={[{ active: pathname.startsWith('/blog') }]}>Blog</a></li>
+      <li><a href="/about" class:list={[{ active: pathname === '/about' }]}>About</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <a href="/contact" class="btn btn-primary">Free Audit</a>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .logo-mark {
+    display: block;
+    width: 175px;
+    max-width: 175px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+  }
+
+  .nav-links > li > a {
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all 0.2s;
+  }
+
+  .nav-links > li > a:hover,
+  .nav-links > li > a.active {
+    background: var(--color-bg-alt);
+    color: var(--color-accent);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    list-style: none;
+    min-width: 220px;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s ease;
+  }
+
+  .has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown li a {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text);
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+
+  .dropdown li a:hover {
+    background: var(--color-bg-alt);
+    color: var(--color-accent);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header-actions .btn { padding: 0.55rem 1.2rem; font-size: 0.88rem; }
+
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-dark);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .mobile-toggle { display: flex; }
+
+    .logo-mark { width: 140px; max-width: 140px; }
+
+    .nav-links {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      display: none;
+    }
+
+    .nav-links.open { display: flex; }
+
+    .dropdown {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      padding-left: 1rem;
+    }
+
+    .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; }
+  }
+</style>
+
+<script is:inline>
+  document.getElementById('mobile-toggle')?.addEventListener('click', () => {
+    document.getElementById('nav-links')?.classList.toggle('open');
+  });
+</script>

@@ -1,0 +1,108 @@
+# Spires Digital
+
+> Data-driven digital marketing agency based in Lichfield, Staffordshire, UK. We help businesses grow through transparent, performance-focused PPC management, Meta Ads, affiliate marketing, and Shopify development.
+
+## About
+
+Spires Digital is a digital marketing agency with over 15 years of experience managing more than £10M in ad spend across 150+ campaigns. We operate on a growth partnership model — our pricing is structured so our success is tied directly to yours: £1,200/month base fee plus 5% of profitable revenue we generate.
+
+We are a Google Partner, Bing Ads Certified, GA4 Expert, Shopify Partner, and Affiliate Window Certified.
+
+Key principles:
+- Full transparency: clients own all their advertising accounts and have complete access to every metric
+- No long-term contracts: month-to-month agreements with 30 days notice
+- Data-driven: every strategy is backed by analytics and performance data
+- Results-focused: we optimise for business outcomes (revenue, leads, profit), not vanity metrics
+
+Contact: jack@spiresdigital.com
+Location: Guernsey, Channel Islands & Lichfield, Staffordshire, United Kingdom
+Website: https://spiresdigital.com
+
+## Services
+
+### PPC Management (Google & Bing Ads)
+URL: https://spiresdigital.com/services/ppc-management/
+Expert management of Google Ads and Bing Ads campaigns including Search, Shopping, Display, YouTube, and Performance Max. Average 250% ROAS improvement across our client portfolio. Services include campaign strategy, keyword research, ad copy creation, conversion tracking setup, bid management, A/B testing, and monthly reporting with strategy calls.
+Pricing: £1,200/month + 5% of profitable revenue generated.
+
+### Meta Ads (Facebook & Instagram)
+URL: https://spiresdigital.com/services/meta-ads/
+Full-funnel Facebook and Instagram advertising including campaign strategy, audience targeting, creative testing, retargeting, catalogue/shopping ads, and Conversions API setup. Systematic A/B testing framework to identify and scale winning creative.
+Pricing: £1,200/month + 5% of profitable revenue generated.
+
+### Affiliate Management
+URL: https://spiresdigital.com/services/affiliate-management/
+Complete affiliate program setup and management on AWIN, CJ Affiliate, Rakuten, and Impact networks. Includes partner recruitment, commission structure design, creative asset provision, performance monitoring, coupon policing, and compliance management.
+Pricing: £1,200/month + 5% of profitable revenue generated.
+
+### Shopify Website Builds
+URL: https://spiresdigital.com/services/shopify-builds/
+Custom Shopify store development including theme customisation or bespoke builds, checkout optimisation, payment gateway integration, migration from other platforms (WooCommerce, Magento), and ongoing support. Typical project timeline: 4-8 weeks.
+Pricing: Standard stores from £3,000, custom builds from £5,000+, ongoing support from £300/month.
+
+## Industry Expertise
+
+### E-Commerce
+URL: https://spiresdigital.com/industries/ecommerce/
+Specialist in Google Shopping, Performance Max, Meta catalogue ads, and affiliate programs for online retailers.
+
+### SaaS
+URL: https://spiresdigital.com/industries/saas/
+B2B lead generation, demo booking campaigns, and targeted advertising for software companies.
+
+### Local Business
+URL: https://spiresdigital.com/industries/local-business/
+Local PPC, Google Business Profile optimisation, and geo-targeted advertising for service-area businesses.
+
+## Content / Blog
+
+### Google Ads Quality Score Guide
+URL: https://spiresdigital.com/blog/google-ads-quality-score-guide/
+Comprehensive guide covering what Quality Score is, how it affects CPCs, and proven strategies to improve Expected CTR, Ad Relevance, and Landing Page Experience.
+
+### Meta Ads Creative Testing Framework
+URL: https://spiresdigital.com/blog/meta-ads-creative-testing-framework/
+Systematic three-phase approach to testing ad creative on Facebook and Instagram: concept testing, format testing, and iteration.
+
+### Technical SEO Audit Checklist 2026
+URL: https://spiresdigital.com/blog/seo-technical-audit-checklist/
+Step-by-step checklist covering crawlability, Core Web Vitals, site architecture, schema markup, and mobile/security.
+
+### Performance Max Campaigns Guide
+URL: https://spiresdigital.com/blog/performance-max-campaigns-guide/
+Practical guide to structuring, launching, and optimising Performance Max campaigns for e-commerce growth.
+
+### Affiliate Program Setup Guide
+URL: https://spiresdigital.com/blog/affiliate-program-setup-guide/
+Complete guide to choosing networks, setting commission structures, recruiting partners, and managing for profitability.
+
+### GA4 Conversion Tracking Setup
+URL: https://spiresdigital.com/blog/ga4-conversion-tracking-setup/
+Complete setup guide for GA4 event tracking, Google Tag Manager configuration, and Google Ads conversion import.
+
+## Key Pages
+
+- Homepage: https://spiresdigital.com/
+- About: https://spiresdigital.com/about/
+- How We Work: https://spiresdigital.com/how-we-work/
+- Case Studies: https://spiresdigital.com/case-studies/
+- Contact: https://spiresdigital.com/contact/
+- All Services: https://spiresdigital.com/services/
+- Blog: https://spiresdigital.com/blog/
+- Privacy Policy: https://spiresdigital.com/privacy/
+- Terms of Service: https://spiresdigital.com/terms/
+
+## Credentials & Certifications
+- Google Partner (verified): https://www.google.com/partners/agency?id=9380641815
+- Bing Ads Certified
+- Google Analytics 4 Expert
+- Shopify Partner
+- Affiliate Window (AWIN) Certified
+
+## Case Study Results (anonymised)
+- E-Commerce: 250% ROAS increase, 68% CPA reduction, 3.2x revenue growth
+- SaaS: 3x lead increase, 45% CPC reduction, 2.8x pipeline growth
+- Local Services: 340% organic traffic increase, #1 local rankings, 180% lead increase
+- Retail Affiliate: 25% revenue share from affiliate channel, 120+ active partners, 8.5x program ROI
+- E-Commerce Migration: 2.1x conversion rate after Shopify migration, 65% faster load time
+- DTC Brand: 5x ROAS on Meta, 42% lower CPA, 4x ad spend scaled
