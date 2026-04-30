@@ -19,7 +19,12 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       <div class="contact-grid">
         <div class="contact-form-wrap">
           <h2>Send Us a Message</h2>
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" action="https://formsubmit.co/jack@spiresdigital.com" method="POST">
+            <input type="hidden" name="_subject" value="New enquiry from spiresdigital.com" />
+            <input type="hidden" name="_next" value="https://spiresdigital.com/contact/?sent=1" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name *</label>
@@ -69,28 +74,12 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
             <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
           </form>
           <script is:inline>
-            document.getElementById('contact-form')?.addEventListener('submit', (e) => {
-              e.preventDefault();
-              const f = e.target;
-              const name = f.querySelector('#name')?.value || '';
-              const company = f.querySelector('#company')?.value || '';
-              const email = f.querySelector('#email')?.value || '';
-              const phone = f.querySelector('#phone')?.value || '';
-              const budget = f.querySelector('#budget')?.value || '';
-              const services = [...f.querySelectorAll('input[name="services"]:checked')].map(c => c.value).join(', ');
-              const message = f.querySelector('#message')?.value || '';
-              const subject = encodeURIComponent('Website Enquiry from ' + name);
-              const body = encodeURIComponent(
-                'Name: ' + name +
-                '\nCompany: ' + company +
-                '\nEmail: ' + email +
-                '\nPhone: ' + phone +
-                '\nBudget: ' + budget +
-                '\nServices: ' + services +
-                '\n\nMessage:\n' + message
-              );
-              window.location.href = 'mailto:jack@spiresdigital.com?subject=' + subject + '&body=' + body;
-            });
+            if (window.location.search.includes('sent=1')) {
+              const wrap = document.querySelector('.contact-form-wrap');
+              if (wrap) {
+                wrap.innerHTML = '<div class="success-msg"><h2>Message Sent!</h2><p>Thanks for getting in touch. We\'ll get back to you within 24 hours.</p><a href="/contact" class="btn btn-outline" style="margin-top:1rem;">Send Another</a></div>';
+              }
+            }
           </script>
         </div>
 
@@ -172,6 +161,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   .why-box ul { list-style: none; }
   .why-box li { padding: 0.3rem 0; font-size: 0.9rem; color: var(--color-text-light); }
   .why-box li::before { content: '\2713'; color: var(--color-success); margin-right: 0.5rem; font-weight: 600; }
+
+  .success-msg { text-align: center; padding: 3rem 1rem; }
+  .success-msg h2 { color: var(--color-success); margin-bottom: 0.5rem; }
+  .success-msg p { color: var(--color-text-light); font-size: 1.05rem; }
 
   @media (max-width: 768px) {
     .contact-grid { grid-template-columns: 1fr; }
