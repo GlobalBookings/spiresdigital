@@ -1,4 +1,11 @@
+import { ppcBlogContent } from './blogContentPpc';
+import { metaBlogContent } from './blogContentMeta';
+import { mixedBlogContent } from './blogContentMixed';
+
 export const blogContent: Record<string, string> = {
+  ...ppcBlogContent,
+  ...metaBlogContent,
+  ...mixedBlogContent,
   'google-ads-quality-score-guide': `
 <p>Quality Score is one of the most important metrics in Google Ads, yet it remains one of the most misunderstood. It directly impacts how much you pay per click and where your ads appear. Getting it right can mean the difference between a profitable campaign and one that bleeds money.</p>
 

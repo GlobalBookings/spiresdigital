@@ -8,7 +8,14 @@ export interface BlogPost {
   readTime: string;
 }
 
+import { ppcBlogPosts } from './blogContentPpc';
+import { metaBlogPosts } from './blogContentMeta';
+import { mixedBlogPosts } from './blogContentMixed';
+
 export const blogPosts: BlogPost[] = [
+  ...ppcBlogPosts,
+  ...metaBlogPosts,
+  ...mixedBlogPosts,
   {
     slug: 'google-ads-quality-score-guide',
     title: 'The Complete Guide to Google Ads Quality Score in 2026',
