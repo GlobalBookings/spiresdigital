@@ -1,12 +1,12 @@
 # Spires Digital
 
-> Data-driven digital marketing agency based in Lichfield, Staffordshire, UK. We help businesses grow through transparent, performance-focused PPC management, Meta Ads, affiliate marketing, and Shopify development.
+> Data-driven digital marketing agency based in Guernsey, Channel Islands and Lichfield, Staffordshire, UK. We help businesses grow through transparent, performance-focused PPC management, Meta Ads, affiliate marketing, and Shopify development.
 
 ## About
 
 Spires Digital is a digital marketing agency with over 15 years of experience managing more than £10M in ad spend across 150+ campaigns. We operate on a growth partnership model — our pricing is structured so our success is tied directly to yours: £1,200/month base fee plus 5% of profitable revenue we generate.
 
-We are a Google Partner, Bing Ads Certified, GA4 Expert, Shopify Partner, and Affiliate Window Certified.
+We are a Google Partner, Bing Ads Certified, GA4 Expert, Shopify Partner, Meta Business Partner, and AWIN Certified Agency.
 
 Key principles:
 - Full transparency: clients own all their advertising accounts and have complete access to every metric
@@ -17,34 +17,35 @@ Key principles:
 Contact: jack@spiresdigital.com
 Location: Guernsey, Channel Islands & Lichfield, Staffordshire, United Kingdom
 Website: https://spiresdigital.com
+Book a call: https://calendly.com/jack-spiresdigital/30min
 
 ## Services
 
 ### PPC Management (Google & Bing Ads)
 URL: https://spiresdigital.com/services/ppc-management/
-Expert management of Google Ads and Bing Ads campaigns including Search, Shopping, Display, YouTube, and Performance Max. Average 250% ROAS improvement across our client portfolio. Services include campaign strategy, keyword research, ad copy creation, conversion tracking setup, bid management, A/B testing, and monthly reporting with strategy calls.
+Expert management of Google Ads and Bing Ads campaigns including Search, Shopping, Display, YouTube, Performance Max, and Demand Gen. Average 250% ROAS improvement across our client portfolio. Services include campaign strategy, keyword research, ad copy creation, conversion tracking setup, bid management, A/B testing, and monthly reporting with strategy calls.
 Pricing: £1,200/month + 5% of profitable revenue generated.
 
 ### Meta Ads (Facebook & Instagram)
 URL: https://spiresdigital.com/services/meta-ads/
-Full-funnel Facebook and Instagram advertising including campaign strategy, audience targeting, creative testing, retargeting, catalogue/shopping ads, and Conversions API setup. Systematic A/B testing framework to identify and scale winning creative.
+Full-funnel Facebook and Instagram advertising including campaign strategy, audience targeting, creative testing, retargeting, Advantage+ Shopping campaigns, catalogue/shopping ads, UGC sourcing, and Conversions API setup. Systematic A/B testing framework to identify and scale winning creative.
 Pricing: £1,200/month + 5% of profitable revenue generated.
 
 ### Affiliate Management
 URL: https://spiresdigital.com/services/affiliate-management/
-Complete affiliate program setup and management on AWIN, CJ Affiliate, Rakuten, and Impact networks. Includes partner recruitment, commission structure design, creative asset provision, performance monitoring, coupon policing, and compliance management.
+Complete affiliate program setup and management on AWIN, CJ Affiliate, Rakuten, and Impact networks. Includes partner recruitment, commission structure design, creative asset provision, performance monitoring, coupon policing, fraud prevention, and compliance management.
 Pricing: £1,200/month + 5% of profitable revenue generated.
 
 ### Shopify Website Builds
 URL: https://spiresdigital.com/services/shopify-builds/
-Custom Shopify store development including theme customisation or bespoke builds, checkout optimisation, payment gateway integration, migration from other platforms (WooCommerce, Magento), and ongoing support. Typical project timeline: 4-8 weeks.
+Custom Shopify store development including theme customisation or bespoke builds, checkout optimisation, payment gateway integration, migration from other platforms (WooCommerce, Magento), speed optimisation, and ongoing support. Typical project timeline: 4-8 weeks.
 Pricing: Standard stores from £3,000, custom builds from £5,000+, ongoing support from £300/month.
 
 ## Industry Expertise
 
 ### E-Commerce
 URL: https://spiresdigital.com/industries/ecommerce/
-Specialist in Google Shopping, Performance Max, Meta catalogue ads, and affiliate programs for online retailers.
+Specialist in Google Shopping, Performance Max, Meta catalogue ads, Advantage+ Shopping, and affiliate programs for online retailers.
 
 ### SaaS
 URL: https://spiresdigital.com/industries/saas/
@@ -52,33 +53,121 @@ B2B lead generation, demo booking campaigns, and targeted advertising for softwa
 
 ### Local Business
 URL: https://spiresdigital.com/industries/local-business/
-Local PPC, Google Business Profile optimisation, and geo-targeted advertising for service-area businesses.
+Local PPC, Google Business Profile optimisation, geo-targeted advertising, and call tracking for service-area businesses.
 
-## Content / Blog
+## Blog — Full Article Index (100 articles)
 
-### Google Ads Quality Score Guide
-URL: https://spiresdigital.com/blog/google-ads-quality-score-guide/
-Comprehensive guide covering what Quality Score is, how it affects CPCs, and proven strategies to improve Expected CTR, Ad Relevance, and Landing Page Experience.
+### PPC / Google Ads
+- How Much Does Google Ads Management Cost in 2026: https://spiresdigital.com/blog/google-ads-management-cost-2026/
+- How to Choose a Google Ads Agency That Won't Waste Your Budget: https://spiresdigital.com/blog/how-to-choose-google-ads-agency/
+- Google Ads Agency vs In-House PPC: https://spiresdigital.com/blog/google-ads-agency-vs-in-house/
+- Questions to Ask Before Hiring a PPC Agency: https://spiresdigital.com/blog/questions-to-ask-ppc-agency/
+- What to Expect from a Google Ads Management Service: https://spiresdigital.com/blog/what-to-expect-google-ads-management/
+- Google Ads vs Meta Ads — Where to Spend in 2026: https://spiresdigital.com/blog/google-ads-vs-meta-ads-2026/
+- Is Google Ads Worth It for Small Businesses in 2026: https://spiresdigital.com/blog/google-ads-small-business-worth-it/
+- Google Ads Benchmarks by Industry 2026: https://spiresdigital.com/blog/google-ads-benchmarks-by-industry-2026/
+- How to Calculate Your Google Ads Budget: https://spiresdigital.com/blog/how-to-calculate-google-ads-budget/
+- Google Ads vs Bing Ads — Should You Run Both: https://spiresdigital.com/blog/google-ads-vs-bing-ads/
+- The Complete Guide to Google Ads Quality Score: https://spiresdigital.com/blog/google-ads-quality-score-guide/
+- How to Set Up Google Ads Conversion Tracking Properly: https://spiresdigital.com/blog/google-ads-conversion-tracking-setup/
+- How to Write Google Ads Copy That Actually Converts: https://spiresdigital.com/blog/google-ads-copy-that-converts/
+- Responsive Search Ads Best Practices for 2026: https://spiresdigital.com/blog/responsive-search-ads-best-practices/
+- Google Ads Negative Keywords — The Complete Guide: https://spiresdigital.com/blog/google-ads-negative-keywords-guide/
+- How to Structure Google Ads Campaigns for Maximum ROI: https://spiresdigital.com/blog/google-ads-campaign-structure/
+- Google Shopping Ads — Setup and Optimisation Guide: https://spiresdigital.com/blog/google-shopping-ads-guide/
+- Smart Bidding Strategies Explained: https://spiresdigital.com/blog/smart-bidding-strategies-explained/
+- How to Reduce Wasted Ad Spend in Google Ads: https://spiresdigital.com/blog/reduce-wasted-ad-spend-google-ads/
+- Landing Page Optimisation for PPC: https://spiresdigital.com/blog/landing-page-optimisation-ppc/
+- Google Ads for Lead Generation — B2B Guide: https://spiresdigital.com/blog/google-ads-lead-generation-b2b/
+- Performance Max Campaigns — E-Commerce Guide: https://spiresdigital.com/blog/performance-max-campaigns-guide/
+- GA4 Conversion Tracking — Complete Setup Guide: https://spiresdigital.com/blog/ga4-conversion-tracking-setup/
+- How to Track Phone Calls from Google Ads: https://spiresdigital.com/blog/how-to-track-phone-calls-google-ads/
+- Google Ads Remarketing — Setup Guide and Best Practices: https://spiresdigital.com/blog/google-ads-remarketing-guide/
+- YouTube Ads for Business — Beginner's Guide: https://spiresdigital.com/blog/youtube-ads-for-business/
+- How to Audit a Google Ads Account in 30 Minutes: https://spiresdigital.com/blog/how-to-audit-google-ads-account/
+- Google Ads Scripts Every Advertiser Should Use: https://spiresdigital.com/blog/google-ads-scripts-guide/
+- Demand Gen Campaigns in Google Ads: https://spiresdigital.com/blog/demand-gen-campaigns-google-ads/
+- Local PPC — Google Ads for Local Business: https://spiresdigital.com/blog/local-ppc-google-ads-guide/
+- Broad Match in Google Ads — Is It Safe in 2026: https://spiresdigital.com/blog/google-ads-broad-match-2026/
 
-### Meta Ads Creative Testing Framework
-URL: https://spiresdigital.com/blog/meta-ads-creative-testing-framework/
-Systematic three-phase approach to testing ad creative on Facebook and Instagram: concept testing, format testing, and iteration.
+### Meta Ads (Facebook & Instagram)
+- How Much Does Facebook Ads Management Cost in 2026: https://spiresdigital.com/blog/facebook-ads-management-cost-2026/
+- How to Choose a Facebook Ads Agency: https://spiresdigital.com/blog/how-to-choose-facebook-ads-agency/
+- Facebook Ads Agency vs DIY — A Realistic Comparison: https://spiresdigital.com/blog/facebook-ads-agency-vs-diy/
+- Facebook Ads vs Instagram Ads — Where to Focus: https://spiresdigital.com/blog/facebook-ads-vs-instagram-ads/
+- Is Facebook Advertising Still Worth It in 2026: https://spiresdigital.com/blog/is-facebook-advertising-worth-it-2026/
+- Facebook Ads Benchmarks 2026 — CPM, CPC, CPA: https://spiresdigital.com/blog/facebook-ads-benchmarks-2026/
+- Meta Advantage+ Shopping Campaigns Guide: https://spiresdigital.com/blog/meta-advantage-plus-shopping-guide/
+- Facebook Ads Audience Targeting in 2026: https://spiresdigital.com/blog/facebook-ads-audience-targeting-2026/
+- How to Build Lookalike Audiences That Convert: https://spiresdigital.com/blog/facebook-lookalike-audiences-guide/
+- How to Build a Meta Ads Creative Testing Framework: https://spiresdigital.com/blog/meta-ads-creative-testing-framework/
+- Facebook Retargeting — The Complete Strategy Guide: https://spiresdigital.com/blog/facebook-retargeting-strategy-guide/
+- Meta Conversions API — Setup Guide: https://spiresdigital.com/blog/meta-conversions-api-guide/
+- How to Scale Facebook Ads Without Killing Performance: https://spiresdigital.com/blog/scale-facebook-ads-without-killing-performance/
+- Facebook Ads for E-Commerce — Full-Funnel Structure: https://spiresdigital.com/blog/facebook-ads-ecommerce-full-funnel/
+- Instagram Ads Guide 2026 — Formats and Best Practices: https://spiresdigital.com/blog/instagram-ads-guide-2026/
+- How to Reduce Facebook Ad Costs — 12 Strategies: https://spiresdigital.com/blog/reduce-facebook-ad-costs/
+- Facebook Lead Ads vs Landing Pages: https://spiresdigital.com/blog/facebook-lead-ads-vs-landing-pages/
+- Dynamic Product Ads on Meta for Shopify: https://spiresdigital.com/blog/dynamic-product-ads-meta-shopify/
+- How to Read Facebook Ads Reports — Metrics Guide: https://spiresdigital.com/blog/facebook-ads-reporting-metrics/
+- Facebook Ads for B2B — Strategies for 2026: https://spiresdigital.com/blog/facebook-ads-b2b-strategies/
+- UGC Ads on Meta — Source, Create, and Scale: https://spiresdigital.com/blog/ugc-ads-meta-guide/
+- Attribution in Meta Ads — Understanding the Data Gap: https://spiresdigital.com/blog/meta-ads-attribution-guide/
+- Carousel vs Single Image vs Video on Meta: https://spiresdigital.com/blog/meta-ad-formats-compared/
+- How to Write Facebook Ad Copy That Stops the Scroll: https://spiresdigital.com/blog/facebook-ad-copy-guide/
+- Meta Ads for App Installs and SaaS Signups: https://spiresdigital.com/blog/meta-ads-saas-app-installs/
 
-### Technical SEO Audit Checklist 2026
-URL: https://spiresdigital.com/blog/seo-technical-audit-checklist/
-Step-by-step checklist covering crawlability, Core Web Vitals, site architecture, schema markup, and mobile/security.
+### Affiliate Marketing
+- How Much Does Affiliate Program Management Cost: https://spiresdigital.com/blog/affiliate-program-management-cost/
+- How to Choose an Affiliate Management Agency: https://spiresdigital.com/blog/how-to-choose-affiliate-management-agency/
+- Signs You Need an Affiliate Manager: https://spiresdigital.com/blog/signs-you-need-affiliate-manager/
+- Affiliate Marketing vs Paid Ads — ROI Comparison: https://spiresdigital.com/blog/affiliate-marketing-vs-paid-ads/
+- Best Affiliate Networks 2026 — AWIN vs CJ vs Rakuten vs Impact: https://spiresdigital.com/blog/best-affiliate-networks-2026/
+- Is Affiliate Marketing Worth It for Small E-Commerce: https://spiresdigital.com/blog/affiliate-marketing-small-ecommerce/
+- How to Set Affiliate Commission Rates: https://spiresdigital.com/blog/affiliate-commission-rates-guide/
+- Affiliate Marketing vs Influencer Marketing: https://spiresdigital.com/blog/affiliate-vs-influencer-marketing/
+- How to Launch a Profitable Affiliate Program: https://spiresdigital.com/blog/affiliate-program-setup-guide/
+- How to Recruit Affiliates That Drive Revenue: https://spiresdigital.com/blog/recruit-affiliates-guide/
+- Affiliate Fraud Prevention Guide: https://spiresdigital.com/blog/affiliate-fraud-prevention/
+- Coupon and Cashback Affiliates — Margin Management: https://spiresdigital.com/blog/coupon-cashback-affiliates-guide/
+- How to Write an Affiliate Program Page: https://spiresdigital.com/blog/affiliate-program-page-guide/
+- Affiliate Attribution Models Explained: https://spiresdigital.com/blog/affiliate-attribution-models/
+- How to Build an Affiliate Promotional Calendar: https://spiresdigital.com/blog/affiliate-promotional-calendar/
+- AWIN Setup Guide — Launch Your First Program: https://spiresdigital.com/blog/awin-setup-guide/
+- Affiliate Program KPIs — What to Track: https://spiresdigital.com/blog/affiliate-program-kpis/
+- How to Reactivate Dormant Affiliates: https://spiresdigital.com/blog/reactivate-dormant-affiliates/
+- Integrating Affiliate Tracking with Shopify: https://spiresdigital.com/blog/affiliate-tracking-shopify-integration/
+- Sub-Affiliate Networks Explained: https://spiresdigital.com/blog/sub-affiliate-networks-guide/
 
-### Performance Max Campaigns Guide
-URL: https://spiresdigital.com/blog/performance-max-campaigns-guide/
-Practical guide to structuring, launching, and optimising Performance Max campaigns for e-commerce growth.
+### Shopify / E-Commerce
+- How Much Does a Custom Shopify Store Cost in 2026: https://spiresdigital.com/blog/custom-shopify-store-cost-2026/
+- Shopify Agency vs Freelancer vs DIY: https://spiresdigital.com/blog/shopify-agency-vs-freelancer-vs-diy/
+- Shopify vs WooCommerce in 2026: https://spiresdigital.com/blog/shopify-vs-woocommerce-2026/
+- Signs You've Outgrown Your E-Commerce Platform: https://spiresdigital.com/blog/signs-outgrown-ecommerce-platform/
+- Shopify Plus vs Standard Shopify: https://spiresdigital.com/blog/shopify-plus-vs-standard/
+- Best Shopify Apps for CRO: https://spiresdigital.com/blog/best-shopify-apps-cro/
+- Is Shopify Good for SEO: https://spiresdigital.com/blog/shopify-seo-guide/
+- Shopify Checkout Optimisation Guide: https://spiresdigital.com/blog/shopify-checkout-optimisation/
+- Shopify SEO Checklist for Product Pages: https://spiresdigital.com/blog/shopify-seo-checklist/
+- How to Migrate WooCommerce to Shopify: https://spiresdigital.com/blog/migrate-woocommerce-to-shopify/
+- Shopify Speed Optimisation — Hit 90+ PageSpeed: https://spiresdigital.com/blog/shopify-speed-optimisation/
+- Shopify Product Page Design Best Practices: https://spiresdigital.com/blog/shopify-product-page-design/
+- Google Shopping Setup for Shopify: https://spiresdigital.com/blog/google-shopping-shopify-setup/
+- Shopify Email Marketing — Klaviyo Guide: https://spiresdigital.com/blog/shopify-email-marketing-klaviyo/
+- Shopify Analytics Guide: https://spiresdigital.com/blog/shopify-analytics-guide/
+- Shopify B2B and Wholesale Setup: https://spiresdigital.com/blog/shopify-b2b-wholesale/
+- International Selling on Shopify: https://spiresdigital.com/blog/shopify-international-selling/
+- Shopify Theme Development — Custom vs Pre-Built: https://spiresdigital.com/blog/shopify-theme-development-guide/
+- Upselling and Cross-Selling on Shopify: https://spiresdigital.com/blog/shopify-upselling-cross-selling/
+- Shopify Store Launch Checklist: https://spiresdigital.com/blog/shopify-store-launch-checklist/
 
-### Affiliate Program Setup Guide
-URL: https://spiresdigital.com/blog/affiliate-program-setup-guide/
-Complete guide to choosing networks, setting commission structures, recruiting partners, and managing for profitability.
-
-### GA4 Conversion Tracking Setup
-URL: https://spiresdigital.com/blog/ga4-conversion-tracking-setup/
-Complete setup guide for GA4 event tracking, Google Tag Manager configuration, and Google Ads conversion import.
+### Strategy / Cross-Service
+- Full-Funnel E-Commerce Marketing Strategy: https://spiresdigital.com/blog/full-funnel-ecommerce-marketing-strategy/
+- How to Allocate Your Digital Marketing Budget: https://spiresdigital.com/blog/how-to-allocate-digital-marketing-budget/
+- The First 90 Days with a Digital Marketing Agency: https://spiresdigital.com/blog/first-90-days-digital-marketing-agency/
+- Digital Marketing for Guernsey and Channel Islands: https://spiresdigital.com/blog/digital-marketing-guernsey-channel-islands/
+- Marketing Attribution — Which Channels Actually Work: https://spiresdigital.com/blog/marketing-attribution-which-channels-work/
+- Technical SEO Audit Checklist 2026: https://spiresdigital.com/blog/seo-technical-audit-checklist/
 
 ## Key Pages
 
@@ -94,10 +183,11 @@ Complete setup guide for GA4 event tracking, Google Tag Manager configuration, a
 
 ## Credentials & Certifications
 - Google Partner (verified): https://www.google.com/partners/agency?id=9380641815
+- Meta Business Partner
 - Bing Ads Certified
 - Google Analytics 4 Expert
 - Shopify Partner
-- Affiliate Window (AWIN) Certified
+- AWIN Certified Agency 2025
 
 ## Case Study Results (anonymised)
 - E-Commerce: 250% ROAS increase, 68% CPA reduction, 3.2x revenue growth
@@ -106,3 +196,6 @@ Complete setup guide for GA4 event tracking, Google Tag Manager configuration, a
 - Retail Affiliate: 25% revenue share from affiliate channel, 120+ active partners, 8.5x program ROI
 - E-Commerce Migration: 2.1x conversion rate after Shopify migration, 65% faster load time
 - DTC Brand: 5x ROAS on Meta, 42% lower CPA, 4x ad spend scaled
+
+## Topics We Cover
+PPC management, Google Ads, Bing Ads, Meta Ads, Facebook advertising, Instagram advertising, affiliate marketing, affiliate program management, Shopify development, Shopify builds, e-commerce, conversion rate optimisation, landing page optimisation, remarketing, retargeting, Google Shopping, Performance Max, Demand Gen, YouTube advertising, Advantage+ Shopping, Conversions API, Klaviyo email marketing, Shopify SEO, checkout optimisation, A/B testing, digital marketing strategy, marketing attribution, budget allocation, B2B marketing, lead generation, local PPC, international e-commerce

@@ -24,12 +24,12 @@ export default defineConfig({
         } else if (item.url.includes('/industries/')) {
           item.priority = 0.85;
           item.changefreq = 'monthly';
-        } else if (item.url.includes('/blog/') && !item.url.endsWith('/blog/')) {
-          item.priority = 0.7;
-          item.changefreq = 'weekly';
         } else if (item.url.endsWith('/blog/')) {
-          item.priority = 0.8;
+          item.priority = 0.9;
           item.changefreq = 'daily';
+        } else if (item.url.includes('/blog/')) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
         } else if (item.url.includes('/case-studies')) {
           item.priority = 0.8;
           item.changefreq = 'monthly';

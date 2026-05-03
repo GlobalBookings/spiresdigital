@@ -1,11 +1,23 @@
 import { ppcBlogContent } from './blogContentPpc';
+import { ppc2BlogContent } from './blogContentPpc2';
+import { ppc3BlogContent } from './blogContentPpc3';
 import { metaBlogContent } from './blogContentMeta';
+import { meta2BlogContent } from './blogContentMeta2';
 import { mixedBlogContent } from './blogContentMixed';
+import { affiliateBlogContent } from './blogContentAffiliate';
+import { shopifyBlogContent } from './blogContentShopify';
+import { strategyBlogContent } from './blogContentStrategy';
 
 export const blogContent: Record<string, string> = {
   ...ppcBlogContent,
+  ...ppc2BlogContent,
+  ...ppc3BlogContent,
   ...metaBlogContent,
+  ...meta2BlogContent,
   ...mixedBlogContent,
+  ...affiliateBlogContent,
+  ...shopifyBlogContent,
+  ...strategyBlogContent,
   'google-ads-quality-score-guide': `
 <p>Quality Score is one of the most important metrics in Google Ads, yet it remains one of the most misunderstood. It directly impacts how much you pay per click and where your ads appear. Getting it right can mean the difference between a profitable campaign and one that bleeds money.</p>
 

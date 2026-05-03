@@ -9,13 +9,25 @@ export interface BlogPost {
 }
 
 import { ppcBlogPosts } from './blogContentPpc';
+import { ppc2BlogPosts } from './blogContentPpc2';
+import { ppc3BlogPosts } from './blogContentPpc3';
 import { metaBlogPosts } from './blogContentMeta';
+import { meta2BlogPosts } from './blogContentMeta2';
 import { mixedBlogPosts } from './blogContentMixed';
+import { affiliateBlogPosts } from './blogContentAffiliate';
+import { shopifyBlogPosts } from './blogContentShopify';
+import { strategyBlogPosts } from './blogContentStrategy';
 
 export const blogPosts: BlogPost[] = [
   ...ppcBlogPosts,
+  ...ppc2BlogPosts,
+  ...ppc3BlogPosts,
   ...metaBlogPosts,
+  ...meta2BlogPosts,
   ...mixedBlogPosts,
+  ...affiliateBlogPosts,
+  ...shopifyBlogPosts,
+  ...strategyBlogPosts,
   {
     slug: 'google-ads-quality-score-guide',
     title: 'The Complete Guide to Google Ads Quality Score in 2026',
