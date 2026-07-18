@@ -14,12 +14,19 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** a trustworthy post-launch baseline and a short list of issues that need immediate attention.
 
-- Merge and deploy the current website pull request
-- Test the live contact form, thank-you route, Calendly, email links and all five tools
-- Verify GA4 consent behaviour and DebugView events: `cta_click`, `tool_complete`, `generate_lead` and `lead_confirmation_view`
-- Confirm Search Console ownership, sitemap discovery, canonical URLs and indexing status
-- Record the launch baseline: organic clicks, impressions, CTR, position, leads, CTA clicks and tool completions
-- Create annotations for the launch date and changed URL set
+- [x] Merge and deploy the current website pull request
+- [x] Test contact-form validation, the thank-you route, Calendly and email destinations, and all five live tool result states
+- [x] Verify consent gating: no Google tag before consent; `G-B7840X8QFQ` is injected only after acceptance
+- [ ] Confirm `cta_click`, `tool_complete`, `generate_lead` and `lead_confirmation_view` in GA4 DebugView
+- [x] Confirm the public sitemap, robots file, homepage canonical and primary production URLs
+- [ ] Confirm Search Console ownership, sitemap acceptance and post-launch indexing status in the property
+- [x] Save the private 16-month Search Console baseline outside version control
+- [x] Create a launch annotation using the deployment date and merge commit
+- [x] Recover the highest-clicking legacy URL that returned a 404 after launch
+- [ ] Send and receive one live test lead through the production form
+- [ ] Configure and validate a `www.spiresdigital.com` alias; the apex domain and HTTP-to-HTTPS redirect already work
+
+**18 July 2026 checkpoint:** the revamp is live from merge commit `bcc5a73`; public routes, form validation, consent gating and all five tools pass. The remaining checks require GA4/Search Console account access or a real form submission. Search Console export files and the detailed baseline workbook are intentionally excluded from the public repository.
 
 **Done when:** one live test lead is received, expected GA4 events are visible, the sitemap is accepted and the baseline is saved.
 

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const updated = '2026-07-18';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Can Google AdSense Pay to PayPal?',
+  dateModified: updated,
+  datePublished: updated,
+  author: { '@type': 'Organization', name: 'Spires Digital' },
+  publisher: { '@id': 'https://spiresdigital.com/#organisation' },
+  mainEntityOfPage: 'https://spiresdigital.com/can-google-adsense-pay-to-paypal/',
+};
+---
+
+<BaseLayout
+  title="Can Google AdSense Pay to PayPal?"
+  description="Google AdSense does not currently list PayPal as a direct payment method. Check the payment options available for your country and payments profile."
+  lastUpdated={updated}
+  schema={schema}
+>
+  <Breadcrumbs items={[{ label: 'AdSense payment methods' }]} />
+  <section class="page-hero">
+    <div class="container-narrow page-hero-content">
+      <span class="badge">AdSense payments</span>
+      <h1>Can Google AdSense pay directly to PayPal?</h1>
+      <p>No. Google’s current AdSense payment-method table does not list PayPal as a direct payout option. The methods available to you depend on the country or territory in your payments profile.</p>
+    </div>
+  </section>
+
+  <article class="section surface">
+    <div class="container-narrow answer-content">
+      <div class="answer-box">
+        <span>Short answer</span>
+        <strong>Choose one of the payment methods shown inside your AdSense account.</strong>
+        <p>Google currently lists combinations of electronic funds transfer (EFT), wire transfer, cheque and Hyperwallet depending on location. PayPal is not included in that official list.</p>
+      </div>
+
+      <h2>How to check the method available to you</h2>
+      <ol>
+        <li>Sign in to the correct AdSense account.</li>
+        <li>Open <strong>Payments</strong>, then <strong>Payments info</strong>.</li>
+        <li>Select <strong>Manage payment methods</strong>.</li>
+        <li>Use <strong>Add payment method</strong> to see the supported options for that payments profile.</li>
+      </ol>
+      <p>Do not rely on a method available in another country. Google’s options vary by the country or territory attached to the payments profile and can differ between AdSense and YouTube payment accounts.</p>
+
+      <h2>Can you route an AdSense payment through PayPal?</h2>
+      <p>AdSense should be configured with a payment method Google supports for your profile. If you later move money between your own bank and another service, that is separate from Google’s AdSense payout process. Check the receiving account details, fees, currency conversion and account-name requirements before making changes.</p>
+
+      <h2>If the payment has not arrived</h2>
+      <p>Check for account alerts, identity or address verification, tax-information requests, payment thresholds and payment holds before changing the payment method. Google says wire transfers can also take time to reach the receiving bank.</p>
+
+      <div class="source-card">
+        <strong>Check the live Google guidance</strong>
+        <a href="https://support.google.com/adsense/answer/1714397?hl=en-GB" target="_blank" rel="noopener">Google AdSense: add your payment method ↗</a>
+        <a href="https://support.google.com/adsense/answer/3372975?hl=en-GB" target="_blank" rel="noopener">Google AdSense: receive payments by wire transfer ↗</a>
+        <a href="https://support.google.com/adsense/answer/1714364?hl=en-GB" target="_blank" rel="noopener">Google AdSense: common payment holds ↗</a>
+      </div>
+
+      <p class="updated">Checked against Google’s official guidance on 18 July 2026. Payment options can change, so use the choices shown in your own AdSense account as the final source of truth.</p>
+    </div>
+  </article>
+
+  <section class="cta-section">
+    <div class="container-narrow">
+      <h2>Running an ecommerce business rather than a publisher site?</h2>
+      <p>Use the free calculators and diagnostics built to turn store economics into practical acquisition, conversion and retention decisions.</p>
+      <a href="/tools" class="btn btn-white btn-lg btn-arrow" data-track="adsense_legacy_tools">Explore the ecommerce tools</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .answer-content{font-size:.95rem}.answer-content h2{margin:2.5rem 0 .8rem}.answer-content p,.answer-content ol{color:var(--slate)}.answer-content ol{display:grid;gap:.55rem;padding-left:1.3rem}.answer-box{padding:1.4rem;border:1px solid #cce9e2;border-radius:var(--radius-sm);background:#effbf8}.answer-box span,.answer-box strong{display:block}.answer-box span{color:var(--success);font-size:.67rem;font-weight:800;text-transform:uppercase}.answer-box strong{margin:.4rem 0;color:var(--ink);font-size:1.15rem}.source-card{display:grid;gap:.55rem;margin-top:2.5rem;padding:1.2rem;border-radius:var(--radius-sm);background:var(--ink)}.source-card strong{color:white}.source-card a{color:#91eadb;font-weight:700}.updated{margin-top:1rem;font-size:.76rem}.cta-section{text-align:center}.cta-section p{max-width:680px;margin:.7rem auto 1.2rem;color:#d8deea}
+</style>
