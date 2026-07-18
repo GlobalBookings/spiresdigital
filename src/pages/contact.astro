@@ -8,7 +8,15 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   <section class="contact-hero hero-dark">
     <div class="container contact-hero-grid">
       <div><span class="badge">Free ecommerce growth review</span><h1>Find the next constraint worth removing.</h1><p>Share the commercial context behind your store. We will review the customer journey and return a concise opportunity map with priorities, quick wins and the questions that need deeper evidence.</p></div>
-      <div class="audit-preview"><span>What you receive</span><ol><li><strong>Commercial snapshot</strong><small>Targets, economics and current channel mix</small></li><li><strong>Constraint map</strong><small>Acquire, convert, retain and measure</small></li><li><strong>Prioritised next steps</strong><small>Impact, confidence and dependencies</small></li></ol><p>No obligation. Useful even if we do not work together.</p></div>
+      <div class="audit-preview">
+        <span>What you receive</span>
+        <ol>
+          <li><div><strong>Commercial snapshot</strong><small>Targets, economics and current channel mix</small></div></li>
+          <li><div><strong>Constraint map</strong><small>Acquire, convert, retain and measure</small></div></li>
+          <li><div><strong>Prioritised next steps</strong><small>Impact, confidence and dependencies</small></div></li>
+        </ol>
+        <p>No obligation. Useful even if we do not work together.</p>
+      </div>
     </div>
   </section>
 
@@ -185,9 +193,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   .audit-preview { padding: 1.5rem; border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); background: rgba(255,255,255,.07); }
   .audit-preview > span { color: #91eadb; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
   .audit-preview ol { display: grid; gap: .7rem; margin: 1.2rem 0; list-style: none; counter-reset: review; }
-  .audit-preview li { display: grid; grid-template-columns: auto 1fr; gap: .8rem; counter-increment: review; }
+  .audit-preview li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: .8rem; align-items: start; counter-increment: review; }
   .audit-preview li::before { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: rgba(117,230,211,.12); color: #91eadb; content: counter(review); font-size: .68rem; font-weight: 800; }
-  .audit-preview strong, .audit-preview small { display: block; }.audit-preview strong { color: white; }.audit-preview small { color: #9da8ba; }
+  .audit-preview li > div { min-width: 0; padding-top: .05rem; }
+  .audit-preview strong, .audit-preview small { display: block; }.audit-preview strong { color: white; line-height: 1.3; }.audit-preview small { margin-top: .18rem; color: #9da8ba; line-height: 1.45; }
   .audit-preview > p { margin: 0; color: #cbd2df; font-size: .75rem; }
   .contact-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .65fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: start; }
   .contact-layout h2 { max-width: 760px; }
