@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { founder, founderSchema } from '../../data/author';
+---
+
+<BaseLayout
+  title="Jack Chittenden — Ecommerce Growth Strategist"
+  description="Meet Jack Chittenden, founder of Spires Digital: 15+ years in digital growth, £10m+ advertising spend managed and 150+ campaigns delivered."
+  schema={founderSchema}
+>
+  <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: founder.name }]} />
+
+  <section class="profile-hero hero-dark">
+    <div class="container profile-hero-grid">
+      <div>
+        <span class="badge">Founder and lead strategist</span>
+        <h1>{founder.name}</h1>
+        <p>{founder.summary}</p>
+        <div class="profile-actions">
+          <a href="/contact" class="btn btn-primary btn-lg" data-track="author_contact">Discuss an ecommerce challenge</a>
+          <a href={founder.linkedinUrl} class="btn btn-outline btn-lg" target="_blank" rel="me noopener">View professional profile ↗</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="profile-mark" aria-hidden="true">JC</div>
+        <span>{founder.location}</span>
+        <strong>Direct senior involvement from diagnosis through delivery.</strong>
+        <a href={`mailto:${founder.email}`}>{founder.email} →</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="experience-strip surface">
+    <div class="container experience-grid">
+      {founder.experience.map(item => <article><strong>{item.value}</strong><h2>{item.label}</h2><p>{item.context}</p></article>)}
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="container profile-copy-grid">
+      <div class="section-heading">
+        <span class="eyebrow">Experience in context</span>
+        <h2>Commercial judgement built across channels.</h2>
+      </div>
+      <div class="long-copy">
+        <p>Jack has worked in digital marketing for more than 15 years, from early social and content work through paid acquisition, ecommerce, affiliate partnerships and measurement. That breadth shapes the Spires Digital model: a channel should be judged by the commercial job it performs, not by the amount of credit its own dashboard claims.</p>
+        <p>He has overseen more than £10m in cumulative advertising spend and more than 150 campaigns. Those figures describe the scale of experience behind the work; they are not presented as an average result or a guarantee for an individual client.</p>
+        <p>Jack leads the initial diagnosis, commercial model, channel strategy and major optimisation decisions. Specialist support is added where the agreed scope requires it, while the client retains direct access to the person accountable for the recommendation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-warm">
+    <div class="container expertise-grid">
+      <div><span class="eyebrow">Working knowledge</span><h2>Where Jack works directly.</h2><p>The focus is the relationship between acquisition, store performance, repeat purchase and measurement.</p></div>
+      <ul>{founder.expertise.map(item => <li>{item}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="container">
+      <div class="section-heading"><span class="eyebrow">Credentials and platform programmes</span><h2>Supporting signals, with the work explained.</h2><p>Badges are useful context, but they do not replace account evidence, references or a clear method. The programme links explain what each platform relationship represents.</p></div>
+      <div class="credential-grid">
+        {founder.credentials.map(item => <article><img src={item.image} alt={item.name} loading="lazy" /><div><h3>{item.name}</h3><p>{item.description}</p><a href={item.programmeUrl} target="_blank" rel="noopener">About the programme ↗</a></div></article>)}
+      </div>
+      <div class="credential-history">
+        <strong>Additional certification history</strong>
+        <p>Jack’s public professional profile records Google Ads certification history across Search, Display, Video, Apps and AI-powered Shopping. Certification dates and platform programmes change; the public profile is linked so the recorded history can be checked directly.</p>
+        <a href={founder.linkedinUrl} target="_blank" rel="me noopener">Review the public credential history ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="container trust-grid">
+      <article><span>01</span><h3>Named authorship</h3><p>Articles identify their author and connect to this experience profile.</p></article>
+      <article><span>02</span><h3>Source-led updates</h3><p>Platform-sensitive content is checked against current primary guidance where available.</p></article>
+      <article><span>03</span><h3>Qualified evidence</h3><p>Case-study outcomes retain their commercial claims with the baseline, evidence window and limitations made visible.</p></article>
+      <article><span>04</span><h3>Corrections route</h3><p>Readers can report outdated or disputed information through the published editorial policy.</p></article>
+    </div>
+    <div class="container policy-link"><a href="/editorial-policy" class="text-link">Read the editorial and corrections policy →</a></div>
+  </section>
+
+  <section class="cta-section"><div class="container"><h2>Bring the commercial question—not a polished brief.</h2><p>Jack will review the context and identify the most useful next decision before recommending a scope.</p><a href="/contact" class="btn btn-white btn-lg">Request a consultation</a></div></section>
+</BaseLayout>
+
+<style>
+  .profile-hero{padding-top:6rem}.profile-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .55fr;gap:clamp(3rem,8vw,7rem);align-items:end}.profile-hero p{max-width:700px}.profile-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}.profile-card{padding:1.5rem;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);background:rgba(255,255,255,.07)}.profile-mark{display:grid;width:76px;height:76px;place-items:center;margin-bottom:2rem;border-radius:20px;background:linear-gradient(135deg,var(--violet),var(--mint));color:white;font-size:1.5rem;font-weight:850}.profile-card span,.profile-card strong,.profile-card a{display:block}.profile-card span{color:#91eadb;font-size:.72rem;font-weight:800;text-transform:uppercase}.profile-card strong{margin:1rem 0;color:white;font-size:1.15rem}.profile-card a{color:#91eadb;font-size:.84rem}.experience-strip{padding:2rem 0;border-bottom:1px solid var(--line)}.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.experience-grid article{padding:1.4rem;background:white}.experience-grid strong{color:var(--violet-dark);font-size:2rem}.experience-grid h2{margin:.25rem 0;font-size:1rem}.experience-grid p{color:var(--slate);font-size:.78rem}.profile-copy-grid,.expertise-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(2.5rem,8vw,7rem)}.long-copy p{margin-bottom:1.2rem;color:var(--slate);font-size:1.04rem}.expertise-grid>div>p{margin-top:1rem;color:var(--slate)}.expertise-grid ul{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;list-style:none}.expertise-grid li{padding:1.2rem;border:1px solid #ddd7c9;border-radius:var(--radius-sm);background:white;color:var(--ink);font-weight:750}.credential-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.credential-grid article{display:grid;grid-template-columns:145px 1fr;gap:1.2rem;padding:1.2rem;border:1px solid var(--line);border-radius:var(--radius);align-items:center}.credential-grid img{width:100%;height:105px;padding:.7rem;object-fit:contain;filter:grayscale(1)}.credential-grid p{margin:.5rem 0;color:var(--slate);font-size:.82rem}.credential-grid a,.credential-history a{color:var(--violet-dark);font-size:.78rem;font-weight:750}.credential-history{margin-top:1rem;padding:1.3rem;border-left:4px solid var(--violet);background:var(--violet-soft)}.credential-history p{margin:.5rem 0;color:var(--slate);font-size:.86rem}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.trust-grid article{padding:1.3rem;border-top:3px solid var(--violet);background:var(--canvas)}.trust-grid span{color:var(--violet-dark);font-size:.7rem;font-weight:800}.trust-grid h3{margin:1.5rem 0 .5rem}.trust-grid p{color:var(--slate);font-size:.82rem}.policy-link{margin-top:1.5rem}@media(max-width:900px){.profile-hero-grid,.profile-copy-grid,.expertise-grid{grid-template-columns:1fr}.credential-grid,.trust-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.experience-grid,.credential-grid,.trust-grid,.expertise-grid ul{grid-template-columns:1fr}.credential-grid article{grid-template-columns:110px 1fr}}
+</style>

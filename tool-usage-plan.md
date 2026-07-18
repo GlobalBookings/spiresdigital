@@ -11,6 +11,7 @@ This is the Week 5 operating plan for the six browser-based tools. It defines wh
 | Store growth assessment | Identify the first acquisition, conversion, retention or measurement constraint to investigate | `tool_complete`: `growth_assessment` | Validate the weakest score against commercial impact and implementation effort | Tools hub, related-tool navigation, cross-service consultations |
 | Google Ads VAT guide | Identify the invoice, profile and adviser checks relevant to the billing setup | `tool_complete`: `google_ads_vat_guide` | Confirm the actual invoice and tax treatment with the appropriate adviser | Tools hub, related-tool navigation, Google Ads billing searches |
 | Paid media waste estimator | Estimate which part of media spend needs stronger evidence and control | `tool_complete`: `paid_media_waste_estimator` | Audit measurement and the highest-risk control before changing budget | Tools hub, related-tool navigation, PPC service journey |
+| Ecommerce Google Ads audit checklist | Score the account controls across measurement, economics, Shopping, demand, structure and conversion | `tool_complete`: `google_ads_audit_checklist` | Validate the first priority against account and store evidence | Google Ads audit guide, tools hub, PPC service journey |
 | Keyword density & content analyser | Spot repeated language and target-phrase usage without uploading a draft | `tool_complete`: `keyword_density_checker` | Edit for clarity and search intent, then review the wider SEO structure | Exact search landing page, tools hub, ecommerce SEO service, Shopify SEO checklist |
 
 ## Result actions
@@ -27,7 +28,7 @@ The contact page displays a preview and requires a second explicit action before
 
 Create a GA4 exploration named **Tool journey — weekly** using page path, event name, tool name, result type and result action.
 
-- Use page views for the six tool URLs as the starting population.
+- Use page views for the seven tool URLs as the starting population.
 - Divide `tool_complete` users by tool-page users for the completion rate.
 - Compare page users without `tool_complete` to identify the largest pre-result exits.
 - Compare `copy`, `print` and `share` values on `tool_result_action` to understand repeat-use intent.

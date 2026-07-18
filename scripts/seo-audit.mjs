@@ -35,9 +35,11 @@ const pages = await Promise.all(files.map(async file => {
     redirect: /http-equiv=["']refresh["']/i.test(html),
     noindex: /<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html),
     title: match(html, /<title>([\s\S]*?)<\/title>/i),
-    description: match(html, /<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i),
-    canonical: match(html, /<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i),
+    description: match(html, /<meta\s+name="description"\s+content="([^"]*)"/i),
+    canonical: match(html, /<link\s+rel="canonical"\s+href="([^"]+)"/i),
     h1s: (html.match(/<h1(?:\s[^>]*)?>/gi) || []).length,
+    schemas: [...html.matchAll(/<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)].map(item => item[1]),
+    missingAlt: [...html.matchAll(/<img\b[^>]*>/gi)].filter(item => !/\salt=("[^"]*"|'[^']*')/i.test(item[0])).length,
   };
 }));
 
@@ -47,6 +49,18 @@ const sitemapXml = await readFile(new URL('sitemap-0.xml', root), 'utf8');
 const sitemapRoutes = new Set([...sitemapXml.matchAll(/<loc>https:\/\/spiresdigital\.com([^<]*)<\/loc>/g)].map(match => match[1] || '/'));
 const errors = [];
 const warnings = [];
+const inbound = new Map(indexable.map(page => [page.route, new Set()]));
+
+for (const source of indexable) {
+  for (const hrefMatch of source.html.matchAll(/<a\s[^>]*href=["']([^"']+)["']/gi)) {
+    const href = decode(hrefMatch[1]);
+    if (!href.startsWith('/') || href.startsWith('//')) continue;
+    const clean = href.split(/[?#]/)[0];
+    if (!clean || /\.[a-z0-9]{2,5}$/i.test(clean)) continue;
+    const target = clean === '/' ? '/' : clean.endsWith('/') ? clean : `${clean}/`;
+    if (target !== source.route && inbound.has(target)) inbound.get(target).add(source.route);
+  }
+}
 
 for (const page of indexable) {
   const expectedCanonical = `${site}${page.route}`;
@@ -54,9 +68,14 @@ for (const page of indexable) {
   if (!page.description) errors.push(`${page.route}: missing meta description`);
   if (page.canonical !== expectedCanonical) errors.push(`${page.route}: canonical is ${page.canonical || 'missing'}; expected ${expectedCanonical}`);
   if (page.h1s !== 1) errors.push(`${page.route}: expected one H1; found ${page.h1s}`);
+  if (page.missingAlt) errors.push(`${page.route}: ${page.missingAlt} image(s) missing an alt attribute`);
   if (!sitemapRoutes.has(page.route)) errors.push(`${page.route}: indexable page missing from sitemap`);
-  if (page.title.length > 65) warnings.push(`${page.route}: title is ${page.title.length} characters`);
+  if (page.title.length > 70) warnings.push(`${page.route}: title is ${page.title.length} characters`);
   if (page.description.length < 70 || page.description.length > 165) warnings.push(`${page.route}: description is ${page.description.length} characters`);
+  if (page.route !== '/' && !(inbound.get(page.route)?.size)) warnings.push(`${page.route}: no internal links found from another indexable page`);
+  for (const value of page.schemas) {
+    try { JSON.parse(value); } catch { errors.push(`${page.route}: invalid JSON-LD`); }
+  }
 
   for (const hrefMatch of page.html.matchAll(/<a\s[^>]*href=["']([^"']+)["']/gi)) {
     const href = decode(hrefMatch[1]);

@@ -21,6 +21,11 @@ const groups = [
   <section class="section surface featured-section"><div class="container"><div class="library-tools"><div><span class="eyebrow">Explore the library</span><h2>Find the problem you are working on.</h2></div><label><span>Search all articles</span><input id="article-search" type="search" placeholder="e.g. Shopping, attribution, Shopify…" autocomplete="off" /></label></div><nav class="topic-nav" aria-label="Insight topics">{groups.map(group => <a href={`#${group.id}`}>{group.label}</a>)}</nav><div class="grid grid-3 featured-grid">{featured.map(post => <a href={`/blog/${post.slug}`} class="card feature-card" data-article={`${post.title} ${post.description} ${post.category}`.toLowerCase()}>{post.image && <img src={post.image} alt="" width="520" height="285" loading="lazy" referrerpolicy="no-referrer" />}<div class="card-body"><span class="article-category">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><small>{post.readTime} · {new Date(`${post.date}T12:00:00Z`).toLocaleDateString('en-GB',{month:'short',year:'numeric'})}</small></div></a>)}</div></div></section>
 
   <section class="section surface-warm library"><div class="container"><p id="no-results" hidden>No articles match that search. Try a broader term, or <a href="/contact">send us the question</a>.</p>{groups.map(group => { const groupPosts = posts.filter(post => group.match.includes(post.category)); return <section id={group.id} class="article-group"><div class="group-heading"><h2>{group.label}</h2><span>{groupPosts.length} guides</span></div><div class="article-list">{groupPosts.map(post => <a href={`/blog/${post.slug}`} data-article={`${post.title} ${post.description} ${post.category}`.toLowerCase()}><div><span>{post.category}</span><h3>{post.title}</h3><p>{post.description}</p></div><small>{post.readTime}<b aria-hidden="true">→</b></small></a>)}</div></section>; })}</div></section>
+  <section class="section platform-answers"><div class="container"><div class="section-heading"><span class="eyebrow">Specific platform questions</span><h2>Clear answers to awkward advertising questions.</h2><p>Short, maintained explainers for account, payment and policy questions that deserve a direct answer.</p></div><div class="grid grid-3">
+    <a class="card answer-card" href="/can-google-adsense-pay-to-paypal"><span>AdSense payments</span><h3>Can Google AdSense pay to PayPal?</h3><p>Understand when PayPal Hyperwallet may appear and which account and country checks matter.</p></a>
+    <a class="card answer-card" href="/can-google-adsense-detect-vpn"><span>AdSense policy</span><h3>Can Google AdSense detect a VPN?</h3><p>Separate published invalid-traffic guidance from unsupported claims about VPN detection.</p></a>
+    <a class="card answer-card" href="/what-is-the-facebook-ad-credit-code"><span>Meta billing</span><h3>What is the Facebook ad credit code?</h3><p>Learn how legitimate Meta ad credits work and where to investigate payment or delivery issues.</p></a>
+  </div></div></section>
   <section class="cta-section"><div class="container"><h2>Need a number, not another article?</h2><p>Use a calculator or assessment immediately. No email gate.</p><a href="/tools" class="btn btn-white btn-lg">Explore free tools</a></div></section>
 </BaseLayout>
 
@@ -61,5 +66,11 @@ const groups = [
   .article-list b { color: var(--violet); font-size: 1.3rem; }
   #no-results { padding: 1.25rem; border-radius: var(--radius-sm); background: white; }
   #no-results a { color: var(--violet-dark); text-decoration: underline; }
+  .section-heading { max-width: 760px; margin-bottom: 2rem; }
+  .section-heading p { margin-top: .8rem; color: var(--slate); }
+  .answer-card { padding: 1.5rem; }
+  .answer-card span { color: var(--violet-dark); font-size: .69rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .answer-card h3 { margin-top: .45rem; font-size: 1.18rem; }
+  .answer-card p { margin-top: .65rem; color: var(--slate); font-size: .86rem; }
   @media (max-width: 760px) { .library-tools { align-items: stretch; flex-direction: column; } .library-tools label { min-width: 0; } .article-list a { align-items: flex-start; } .article-list p { display: none; } .article-list small { font-size: .72rem; } }
 </style>

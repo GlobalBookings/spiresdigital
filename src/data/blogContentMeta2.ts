@@ -84,7 +84,7 @@ export const meta2BlogPosts: BlogPost[] = [
   },
   {
     slug: 'ugc-ads-meta-guide',
-    title: 'UGC Ads on Meta: How to Source, Create, and Scale User-Generated Content',
+    title: 'UGC Ads on Meta: How to Source, Create and Scale',
     description: 'A complete guide to running UGC ads on Meta — from finding creators and writing briefs to whitelisting, testing, and scaling winners.',
     date: '2026-02-28',
     category: 'Meta Ads',
@@ -93,7 +93,7 @@ export const meta2BlogPosts: BlogPost[] = [
   },
   {
     slug: 'meta-ads-attribution-guide',
-    title: 'Attribution in Meta Ads: Understanding the Data Gap and What to Do About It',
+    title: 'Meta Ads Attribution: Understand and Close the Data Gap',
     description: 'How to navigate Meta Ads attribution challenges in 2026, including iOS privacy changes, modelled conversions, and incrementality testing.',
     date: '2026-02-27',
     category: 'Meta Ads',

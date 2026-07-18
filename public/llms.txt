@@ -38,6 +38,8 @@ Spires Digital does not publish fixed service prices. Every potential engagement
 - Case studies: https://spiresdigital.com/case-studies/
 - How we work: https://spiresdigital.com/how-we-work/
 - About: https://spiresdigital.com/about/
+- Founder and author — Jack Chittenden: https://spiresdigital.com/about/jack-chittenden/
+- Editorial standards and corrections: https://spiresdigital.com/editorial-policy/
 - Insights: https://spiresdigital.com/blog/
 - Contact: https://spiresdigital.com/contact/
 
@@ -50,16 +52,18 @@ The tools work without an email gate. Calculator inputs are processed in the vis
 - Ecommerce growth assessment: https://spiresdigital.com/tools/growth-assessment/
 - Google Ads VAT decision guide: https://spiresdigital.com/tools/google-ads-vat-guide/
 - Paid media waste estimator: https://spiresdigital.com/tools/paid-media-waste-estimator/
+- Ecommerce Google Ads audit checklist: https://spiresdigital.com/tools/google-ads-audit-checklist/
 
 The VAT guide is educational and not tax advice. Financial outputs are estimates based on user-supplied assumptions and are not promises of performance.
 
 ## Trust and evidence
 
-- The agency is founder-led; Jack leads commercial and strategic work.
-- More than 15 years of digital marketing experience and more than £10m of managed advertising spend are stated on the company website.
-- Client outcomes on the case-study page are anonymised because of confidentiality. They describe prior engagements and are not guarantees.
-- Platform certifications and partner status are supporting signals, not substitutes for commercial evidence.
-- Articles identify the author and publication date and include an editorial caveat where platform, cost or tax information may change.
+- The agency is founder-led; Jack Chittenden leads diagnosis, commercial strategy and major optimisation decisions.
+- The website states more than 15 years of digital marketing experience, more than £10m of cumulative managed advertising spend and more than 150 campaigns delivered. These are experience-scale claims, not an average result or guarantee.
+- Client outcomes retain their commercial claims and show the baseline, intervention, evidence window, measurement basis and relevant limitations. Client identities remain anonymised where agreements require confidentiality.
+- Named references may be arranged during a qualified buying process when the relevant client has given permission.
+- Shopify Partner, AWIN Certified Agency, Meta Business Partner and Microsoft Advertising Partner badges are explained as supporting platform signals. Programme context and additional public certification history are linked from Jack Chittenden’s profile.
+- Articles identify Jack Chittenden as author, link to his profile and publish an editorial and corrections route where platform, cost or tax information may change.
 
 ## Location accuracy
 

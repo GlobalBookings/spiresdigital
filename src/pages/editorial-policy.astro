@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const updated = '2026-07-18';
+const principles = [
+  { title: 'Named responsibility', text: 'Core guidance is attributed to Jack Chittenden, founder and lead strategist. Specialist or external contributions should be identified when used.' },
+  { title: 'Primary sources first', text: 'For platform behaviour, tax guidance, technical requirements and policies, we prefer the organisation responsible for the rule or product.' },
+  { title: 'Experience with context', text: 'Hands-on experience can inform a recommendation, but an observation is not presented as universal proof.' },
+  { title: 'Commercial clarity', text: 'Spires Digital publishes content to help prospective clients and may link to its own services. Advice is not made more absolute to force an enquiry.' },
+];
+---
+
+<BaseLayout title="Editorial Standards & Corrections Policy" description="How Spires Digital authors, sources, reviews, qualifies and corrects ecommerce marketing guidance and commercial evidence." lastUpdated={updated}>
+  <Breadcrumbs items={[{ label: 'Editorial policy' }]} />
+  <section class="page-hero"><div class="container page-hero-content"><span class="badge">Published standards</span><h1>Useful guidance needs accountable authorship.</h1><p>This policy explains how Spires Digital handles sources, experience, commercial claims, case studies, platform changes and corrections.</p></div></section>
+
+  <section class="section surface"><div class="container standards-grid">{principles.map((item,index) => <article><span>{String(index+1).padStart(2,'0')}</span><h2>{item.title}</h2><p>{item.text}</p></article>)}</div></section>
+
+  <section class="section surface-warm"><div class="container policy-grid"><nav aria-label="Editorial policy sections"><strong>On this page</strong><a href="#authorship">Authorship</a><a href="#sources">Sources and review</a><a href="#claims">Commercial claims</a><a href="#case-studies">Case studies</a><a href="#tools">Calculators and tools</a><a href="#corrections">Corrections</a></nav><div class="policy-copy">
+    <section id="authorship"><span class="eyebrow">Authorship</span><h2>Who is responsible</h2><p>Articles identify Jack Chittenden as the author and link to a dedicated profile describing his experience, working areas and credential history. The company remains responsible for the accuracy and maintenance of material published on spiresdigital.com.</p><p><a href="/about/jack-chittenden">Read Jack’s author profile →</a></p></section>
+
+    <section id="sources"><span class="eyebrow">Sources and review</span><h2>How guidance is checked</h2><p>Platform-sensitive guidance is checked against official help centres, developer documentation, policies or other primary material where available. A review date shows when the page was last materially checked; it does not mean the platform will remain unchanged.</p><p>Third-party benchmarks are used only when their geography, sample, timeframe and metric definition make the comparison useful. When those details are unavailable, the number should be treated as context rather than a target.</p></section>
+
+    <section id="claims"><span class="eyebrow">Commercial claims</span><h2>Claims stay visible, with context</h2><p>Experience figures and service claims are retained because they help a buyer assess fit. We explain whether a figure is cumulative experience, a selected client outcome, a planning example or a platform-reported result. No historical result guarantees a future result.</p><p>Spires Digital does not publish a standard service rate card. Scope and price follow a consultation because the accounts, evidence, access, risk and work required differ by engagement.</p></section>
+
+    <section id="case-studies"><span class="eyebrow">Case studies</span><h2>How outcomes are presented</h2><p>Client identities may be withheld where agreements require confidentiality. Each published case includes the starting constraint, intervention, evidence window, selected outcome and relevant limitations. Where underlying commercial data cannot be made public, the page says so rather than implying independent public verification.</p><p>Named references or testimonials are published only with permission. A relevant client reference may be arranged during a qualified buying process when the client has agreed to be contacted.</p></section>
+
+    <section id="tools"><span class="eyebrow">Calculators and tools</span><h2>Planning support, not professional advice</h2><p>Tools use the inputs supplied in the browser to produce scenarios. Outputs are estimates and can be wrong when the assumptions are incomplete. Tax, legal, accounting and financial decisions should be checked with an appropriately qualified adviser.</p></section>
+
+    <section id="corrections"><span class="eyebrow">Corrections</span><h2>Report something outdated or disputed</h2><p>Email <a href="mailto:jack@spiresdigital.com?subject=Editorial%20correction">jack@spiresdigital.com</a> with the page URL, disputed statement and supporting source. Material corrections are reviewed against the best available evidence and the page’s review date is updated when the content changes.</p><p>Last materially reviewed: 18 July 2026.</p></section>
+  </div></div></section>
+
+  <section class="cta-section"><div class="container"><h2>Challenge the evidence, not just the conclusion.</h2><p>If a page could be clearer or more current, send the URL and the source you believe should change it.</p><a href="mailto:jack@spiresdigital.com?subject=Editorial%20feedback" class="btn btn-white btn-lg">Send editorial feedback</a></div></section>
+</BaseLayout>
+
+<style>
+  .standards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.standards-grid article{padding:1.4rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--canvas)}.standards-grid span{color:var(--violet-dark);font-size:.7rem;font-weight:800}.standards-grid h2{margin:2rem 0 .6rem;font-size:1.25rem}.standards-grid p{color:var(--slate);font-size:.84rem}.policy-grid{display:grid;grid-template-columns:220px minmax(0,760px);justify-content:center;gap:clamp(2rem,7vw,6rem);align-items:start}.policy-grid nav{position:sticky;top:110px;display:grid;gap:.65rem;padding:1.1rem;border-top:3px solid var(--violet);background:white}.policy-grid nav strong{margin-bottom:.3rem}.policy-grid nav a{color:var(--slate);font-size:.8rem}.policy-copy{display:grid;gap:3rem}.policy-copy section{scroll-margin-top:110px}.policy-copy h2{margin:.5rem 0 1rem}.policy-copy p{margin-bottom:1rem;color:var(--slate);font-size:1rem}.policy-copy a{color:var(--violet-dark);text-decoration:underline;text-underline-offset:3px}@media(max-width:850px){.standards-grid{grid-template-columns:repeat(2,1fr)}.policy-grid{grid-template-columns:1fr}.policy-grid nav{position:static}}@media(max-width:560px){.standards-grid{grid-template-columns:1fr}}
+</style>

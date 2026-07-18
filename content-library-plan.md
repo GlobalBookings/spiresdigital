@@ -14,6 +14,7 @@ The export contains 1,000 query rows and 296 page rows. The strongest opportunit
 | Understand Meta ad credits, failed billing or non-delivery | 1,869 across 38 variants | Keep the consolidated explainer at `/what-is-the-facebook-ad-credit-code/` |
 | Understand VAT on Google Ads | 1,681 across 22 variants | Keep the sourced guide at `/tools/google-ads-vat-guide/`; retain the four legacy redirects |
 | Find out whether AdSense pays through PayPal | 1,342 across 14 variants | Refresh the existing answer against current Google guidance; distinguish PayPal Hyperwallet and UK availability |
+| Audit a Google Ads account | 93 impressions for the main audit query, plus related variants | Connect the audit guide to an interactive ecommerce checklist and then to PPC support |
 
 The library has broad coverage, but search demand rewards a smaller number of clear, maintained answers. New articles should not be published simply to fill a calendar.
 
