@@ -119,7 +119,7 @@ export const services: ServiceDefinition[] = [
       { q: 'Do we need to publish blog articles every week?', a: 'No. Publishing frequency is not the strategy. We prioritise collection, product and decision-support content where there is a clear user and commercial purpose.' },
       { q: 'Can you protect rankings during a Shopify migration?', a: 'Yes. We create the redirect and URL-retention plan, validate canonicals and sitemaps, and monitor launch behaviour in Search Console.' },
     ],
-    related: [{ href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/services/analytics-attribution', label: 'Analytics & attribution' }],
+    related: [{ href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/seo-keyword-density-checker', label: 'Content analyser' }],
   },
   {
     slug: 'cro-shopify',

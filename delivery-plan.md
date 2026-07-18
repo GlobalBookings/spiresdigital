@@ -84,11 +84,14 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** the tools become useful acquisition assets rather than one-off calculators.
 
-- Analyse completion rate and exit points for each tool
-- Add printable or copyable result summaries where useful
-- Improve recommendations so outputs lead to a clear next decision
-- Create focused landing content and internal links for the strongest tool-search queries
-- Test a voluntary result-sharing route without gating the calculator
+- [ ] Analyse live completion rate and exit points after sufficient clean GA4 data is available
+- [x] Define the six-tool completion and result-action reporting view
+- [x] Add printable and copyable result summaries to every tool
+- [x] Improve recommendations so outputs lead to a clear next decision
+- [x] Create focused landing content and internal links for the strongest tool-search query family
+- [x] Add a voluntary, preview-first result-sharing route without gating the calculator
+
+**Week 5 checkpoint:** all six tools now have a defined user job, purpose-built result summary, copy and print controls, a decision-oriented next step and an explicit consultation handoff. Shared results remain in the visitor's browser session until they choose to insert the preview into the contact form; no calculator values or summaries are sent to GA4. The keyword-density search journey now connects the exact-match tool page, tools hub, ecommerce SEO service and Shopify SEO checklist. Live completion and exit rates remain a measurement task until enough post-launch consented GA4 data exists.
 
 **Done when:** each tool has a defined user job, completion event, follow-on action and distribution plan.
 
