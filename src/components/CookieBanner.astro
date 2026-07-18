@@ -1,0 +1,54 @@
+---
+interface Props { measurementId?: string; }
+const { measurementId } = Astro.props;
+---
+
+{measurementId && (
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <div>
+      <strong>Useful measurement, with your choice.</strong>
+      <p>We use analytics to understand which pages and tools help people. You can accept or decline non-essential cookies.</p>
+      <a href="/privacy">Read our privacy policy</a>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+      <button class="btn btn-primary" type="button" data-cookie="accept">Accept analytics</button>
+    </div>
+  </div>
+)}
+
+<style>
+  .cookie-banner { position: fixed; right: 1rem; bottom: 1rem; z-index: 2000; display: grid; width: min(560px, calc(100% - 2rem)); grid-template-columns: 1fr auto; gap: 1.3rem; align-items: center; padding: 1.25rem; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: var(--shadow-lg); }
+  .cookie-banner[hidden] { display: none; }
+  .cookie-banner strong { color: var(--ink); }
+  .cookie-banner p { margin: .3rem 0; color: var(--slate); font-size: .8rem; line-height: 1.45; }
+  .cookie-banner a { color: var(--violet-dark); font-size: .75rem; font-weight: 700; text-decoration: underline; }
+  .cookie-actions { display: flex; gap: .5rem; }
+  .cookie-actions .btn { min-height: 42px; padding: .6rem .8rem; font-size: .75rem; }
+  @media (max-width: 620px) { .cookie-banner { grid-template-columns: 1fr; } .cookie-actions { display: grid; grid-template-columns: 1fr 1fr; } }
+</style>
+
+{measurementId && <script is:inline define:vars={{ measurementId }}>
+  const banner = document.getElementById('cookie-banner');
+  const preference = localStorage.getItem('spires-cookie-consent');
+  const loadAnalytics = () => {
+    if (document.querySelector('script[data-spires-ga]')) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, { anonymize_ip: true });
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.dataset.spiresGa = 'true';
+    document.head.appendChild(script);
+  };
+  if (preference === 'accepted') loadAnalytics();
+  if (!preference) banner.hidden = false;
+  banner?.querySelectorAll('[data-cookie]').forEach(button => button.addEventListener('click', () => {
+    const accepted = button.dataset.cookie === 'accept';
+    localStorage.setItem('spires-cookie-consent', accepted ? 'accepted' : 'declined');
+    banner.hidden = true;
+    if (accepted) loadAnalytics();
+  }));
+</script>}

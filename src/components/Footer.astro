@@ -3,127 +3,63 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">
-          <img src="/logo.png" alt="Spires Digital" style="width: 175px; filter: brightness(0) invert(1);" />
-        </a>
-        <p>Data-driven digital marketing agency based in Guernsey and Lichfield. Helping businesses grow through PPC, Meta Ads, and performance marketing.</p>
+  <div class="container footer-top">
+    <div class="footer-lead">
+      <span class="footer-kicker">Profitable ecommerce growth</span>
+      <h2>Know what to fix next.</h2>
+      <p>Get a practical growth plan across acquisition, conversion, retention and measurement.</p>
+      <a href="/contact" class="btn btn-white btn-arrow" data-track="footer_growth_plan">Get your growth plan</a>
+    </div>
+    <div class="footer-columns">
+      <div>
+        <h3>Grow</h3>
+        <a href="/industries/ecommerce">Ecommerce growth</a>
+        <a href="/services/ppc-management">Google Shopping &amp; PPC</a>
+        <a href="/services/meta-ads">Meta ads</a>
+        <a href="/services/ecommerce-seo">Ecommerce SEO</a>
+        <a href="/services/affiliate-management">Affiliate growth</a>
       </div>
-
-      <div class="footer-links">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="/services">All Services</a></li>
-          <li><a href="/services/ppc-management">PPC Management</a></li>
-          
-          <li><a href="/services/meta-ads">Meta Ads</a></li>
-          <li><a href="/services/affiliate-management">Affiliate Management</a></li>
-          <li><a href="/services/shopify-builds">Shopify Builds</a></li>
-        </ul>
+      <div>
+        <h3>Optimise</h3>
+        <a href="/services/cro-shopify">CRO &amp; Shopify</a>
+        <a href="/services/email-retention">Email &amp; retention</a>
+        <a href="/services/analytics-attribution">Analytics &amp; attribution</a>
+        <a href="/tools">Free tools</a>
+        <a href="/case-studies">Results</a>
       </div>
-
-      <div class="footer-links">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/how-we-work">How We Work</a></li>
-          <li><a href="/case-studies">Case Studies</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a></li>
-          <li>Guernsey, Channel Islands</li>
-          <li>Lichfield, Staffordshire</li>
-          <li>United Kingdom</li>
-        </ul>
-        <a href="/contact" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">Free Marketing Audit</a>
+      <div>
+        <h3>Company</h3>
+        <a href="/about">About</a>
+        <a href="/how-we-work">How we work</a>
+        <a href="/blog">Insights</a>
+        <a href="/contact">Contact</a>
+        <a href="mailto:jack@spiresdigital.com" data-track="footer_email">jack@spiresdigital.com</a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; {currentYear} Spires Digital. All rights reserved.</p>
-      <div class="footer-certifications">
-        <span>Google Partner</span>
-        <span>Bing Certified</span>
-        <span>GA4 Expert</span>
-        <span>Shopify Partner</span>
-      </div>
-    </div>
+  </div>
+  <div class="container footer-bottom">
+    <a href="/" aria-label="Spires Digital home"><img src="/logo.png" alt="Spires Digital" width="150" height="50" /></a>
+    <p><a href="/locations/guernsey">Based in Guernsey</a>. Working with ambitious ecommerce brands across the UK and beyond.</p>
+    <div class="legal"><span>© {currentYear} Spires Digital</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
   </div>
 </footer>
 
 <style>
-  .site-footer {
-    background: var(--color-dark);
-    color: rgba(255,255,255,0.7);
-    padding: 4rem 0 2rem;
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-  }
-
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--color-white);
-    margin-bottom: 1rem;
-  }
-
-  .footer-brand p { font-size: 0.9rem; line-height: 1.6; }
-
-  .footer-links h4 {
-    color: var(--color-white);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-  }
-
-  .footer-links ul { list-style: none; }
-
-  .footer-links li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .footer-links a:hover { color: var(--color-white); }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-  }
-
-  .footer-certifications {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 0.8rem;
-    opacity: 0.6;
-  }
-
-  @media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-    .footer-certifications { flex-wrap: wrap; justify-content: center; }
-  }
+  .site-footer { padding: 5rem 0 1.5rem; background: var(--ink); color: #c4cbd8; }
+  .footer-top { display: grid; grid-template-columns: .9fr 1.4fr; gap: clamp(3rem, 8vw, 8rem); padding-bottom: 4rem; }
+  .footer-kicker { color: #91eadb; font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .footer-lead h2 { max-width: 420px; margin-top: .8rem; color: white; font-size: clamp(2rem, 4vw, 3.6rem); }
+  .footer-lead p { max-width: 450px; margin: 1rem 0 1.5rem; }
+  .footer-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .footer-columns > div { display: grid; align-content: start; gap: .7rem; }
+  .footer-columns h3 { margin-bottom: .4rem; color: white; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+  .footer-columns a { font-size: .86rem; transition: color var(--transition); }
+  .footer-columns a:hover { color: white; }
+  .footer-bottom { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.12); font-size: .75rem; }
+  .footer-bottom img { width: 138px; filter: brightness(0) invert(1); }
+  .footer-bottom p { text-align: center; }
+  .legal { display: flex; gap: 1rem; white-space: nowrap; }
+  .legal a:hover { color: white; }
+  @media (max-width: 850px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { grid-template-columns: 1fr; justify-items: start; } .footer-bottom p { text-align: left; } }
+  @media (max-width: 560px) { .footer-columns { grid-template-columns: 1fr 1fr; } .footer-columns > div:last-child { grid-column: 1 / -1; } }
 </style>

@@ -1,55 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout title="Page Not Found" description="The page you're looking for doesn't exist. Browse our digital marketing services or get in touch.">
-  <section class="not-found">
-    <div class="container">
-      <span class="error-code">404</span>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved.</p>
-      <div class="not-found-actions">
-        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
-        <a href="/contact" class="btn btn-outline btn-lg">Contact Us</a>
-      </div>
-      <div class="not-found-links">
-        <h3>You might be looking for:</h3>
-        <ul>
-          <li><a href="/services/ppc-management">PPC Management</a></li>
-          
-          <li><a href="/services/meta-ads">Meta Ads</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/case-studies">Case Studies</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<BaseLayout title="Page Not Found" description="This Spires Digital page could not be found." noindex canonicalUrl="https://spiresdigital.com/404/">
+  <section class="not-found hero-dark"><div class="container-narrow"><span class="error-code">404</span><h1>This route has reached the end of the funnel.</h1><p>The page may have moved during the rebuild or the address may be incorrect. The most useful destinations are below.</p><div class="page-hero-actions"><a href="/" class="btn btn-primary btn-lg">Go to the homepage</a><a href="/tools" class="btn btn-outline btn-lg">Use a free tool</a></div><div class="route-links"><a href="/industries/ecommerce"><strong>Ecommerce growth</strong><span>See the connected growth model</span></a><a href="/services"><strong>Services</strong><span>Acquire, convert, retain and measure</span></a><a href="/contact"><strong>Growth review</strong><span>Get a tailored opportunity map</span></a></div></div></section>
 </BaseLayout>
-
-<style>
-  .not-found {
-    padding: 10rem 0 5rem;
-    text-align: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-  }
-  .error-code {
-    font-size: 8rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    opacity: 0.15;
-    line-height: 1;
-    display: block;
-    margin-bottom: -1rem;
-  }
-  .not-found h1 { margin-bottom: 0.75rem; }
-  .not-found p { color: var(--color-text-light); font-size: 1.1rem; margin-bottom: 2rem; }
-  .not-found-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-  .not-found-links { max-width: 400px; margin: 0 auto; text-align: left; }
-  .not-found-links h3 { font-size: 1rem; margin-bottom: 0.75rem; }
-  .not-found-links ul { list-style: none; }
-  .not-found-links li { padding: 0.4rem 0; }
-  .not-found-links a { color: var(--color-accent); font-weight: 500; }
-  .not-found-links a:hover { text-decoration: underline; }
-</style>
+<style>.not-found{min-height:780px;display:grid;align-items:center}.not-found .container-narrow{position:relative;z-index:1}.error-code{display:block;color:#91eadb;font-size:.78rem;font-weight:850;letter-spacing:.18em}.not-found h1{margin-top:1rem}.route-links{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:3rem}.route-links a{padding:1rem;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);background:rgba(255,255,255,.06)}.route-links strong,.route-links span{display:block}.route-links strong{color:white}.route-links span{margin-top:.3rem;color:#9da8ba;font-size:.7rem}@media(max-width:650px){.route-links{grid-template-columns:1fr}}</style>

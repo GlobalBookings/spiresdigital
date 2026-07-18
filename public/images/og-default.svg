@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Spires Digital</title>
+  <desc id="desc">Profit-focused ecommerce growth across acquisition, conversion, retention and measurement.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1221"/><stop offset="1" stop-color="#182238"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#5a55ed" stop-opacity=".72"/><stop offset="1" stop-color="#5a55ed" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="20" r="420" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="72" y="68" width="50" height="50" rx="12" fill="#5a55ed"/>
+  <path d="M88 99c7 7 22 5 22-3 0-10-22-4-22-17 0-8 10-13 21-8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <text x="140" y="104" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">SPIRES DIGITAL</text>
+  <text x="72" y="244" fill="#a8fff0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="3">PROFIT-FOCUSED ECOMMERCE GROWTH</text>
+  <text x="72" y="342" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">Know what to fix next.</text>
+  <text x="72" y="414" fill="#cbd2df" font-family="Arial, Helvetica, sans-serif" font-size="31">Acquire · Convert · Retain · Measure</text>
+  <rect x="72" y="492" width="340" height="62" rx="12" fill="#5a55ed"/>
+  <text x="104" y="533" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">spiresdigital.com</text>
+</svg>

@@ -10,6 +10,10 @@ static_sites:
     build_command: npm install && npm run build
     output_dir: dist
     environment_slug: node-js
+    envs:
+      - key: PUBLIC_GA_MEASUREMENT_ID
+        scope: BUILD_TIME
+        value: G-B7840X8QFQ
     routes:
       - path: /
 

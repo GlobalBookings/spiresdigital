@@ -4,7 +4,7 @@ export const mixedBlogPosts: BlogPost[] = [
   {
     slug: 'affiliate-program-management-cost',
     title: 'How Much Does Affiliate Program Management Cost',
-    description: 'A transparent breakdown of affiliate management pricing models, agency fees, and what to expect from a growth partnership starting at £1,200/month + 5% of profitable revenue.',
+    description: 'A transparent breakdown of affiliate management pricing models, agency fees, what affects a quote, and how to compare proposed scopes.',
     date: '2026-04-08',
     category: 'Affiliate Marketing',
     image: '',
@@ -49,7 +49,7 @@ export const mixedBlogPosts: BlogPost[] = [
   {
     slug: 'custom-shopify-store-cost-2026',
     title: 'How Much Does a Custom Shopify Store Cost in 2026',
-    description: 'A transparent pricing breakdown for Shopify builds in 2026: standard stores from £3,000, custom builds from £5,000+, and ongoing support from £300/month.',
+    description: 'A practical pricing guide for Shopify builds in 2026, including the factors that affect project scope, third-party costs, and ongoing support.',
     date: '2026-04-03',
     category: 'Shopify',
     image: '',
@@ -107,13 +107,13 @@ export const mixedBlogContent: Record<string, string> = {
 <h3>2. Performance-Only (Commission Override)</h3>
 <p>The agency takes a percentage of affiliate revenue, typically 10–30% on top of publisher commissions. This sounds appealing because you only pay when you earn, but it creates misaligned incentives. Agencies on pure performance models may favour high-volume voucher and cashback publishers over the brand-building content partnerships that drive incremental growth.</p>
 
-<h3>3. Growth Partnership (Retainer + Performance Bonus)</h3>
-<p>This is the model we use at Spires Digital and the one we believe delivers the best outcomes for both parties. Our <a href="/services/affiliate-management">affiliate management</a> partnerships start at <strong>£1,200/month plus 5% of profitable revenue growth</strong>. The retainer covers comprehensive programme management, while the performance component ensures our incentives are directly aligned with your bottom line.</p>
+<h3>3. Scope-Based or Hybrid Model</h3>
+<p>This model combines an agreed management scope with fixed or performance-related elements. At Spires Digital, we price <a href="/services/affiliate-management">affiliate management</a> only after understanding the programme, network, tracking, publisher mix and growth opportunity. The consultation is followed by a written scope and quote.</p>
 
 <div class="tip-box"><strong>Pro Tip:</strong> Be wary of agencies that charge purely on performance with no retainer. The best affiliate strategy involves long-term publisher relationship building, content partnerships, and brand protection — activities that take time to bear fruit. If an agency isn't compensated for that work, they'll default to quick wins that may not serve your brand well.</div>
 
 <h2>What's Included in Professional Affiliate Management</h2>
-<p>Whether you're paying £1,200 or £5,000 per month, here's what comprehensive affiliate programme management should include:</p>
+<p>Whatever fee you are quoted, comprehensive affiliate programme management should clearly state whether it includes:</p>
 
 <h3>Programme Strategy &amp; Setup</h3>
 <ul>
@@ -155,9 +155,9 @@ export const mixedBlogContent: Record<string, string> = {
 <ul>
 <li>Publisher commissions (8% average): £4,000</li>
 <li>Network override (25%): £1,000</li>
-<li>Agency management fee: £1,200</li>
-<li>Performance bonus (5% of growth): Variable</li>
-<li><strong>Total: approximately £6,200/month + performance bonus</strong></li>
+<li>Agency management fee: Based on the agreed scope</li>
+<li>Performance component: Variable, if applicable</li>
+<li><strong>Total: commissions and network costs plus the quoted management fee</strong></li>
 </ul>
 
 <h2>When Does Affiliate Management Pay for Itself?</h2>
@@ -188,7 +188,7 @@ export const mixedBlogContent: Record<string, string> = {
 
 <details>
 <summary>What's the cheapest way to manage an affiliate programme?</summary>
-<div class="faq-answer"><p>The most budget-friendly option is in-house management using a single marketing team member, but this only works for small programmes. For growing programmes, a growth partnership model like ours (£1,200/month + 5% of profitable revenue growth) delivers the best balance of cost and results. Avoid cutting corners on management — an unmanaged programme will stagnate or attract fraudulent publishers.</p></div>
+<div class="faq-answer"><p>The most budget-friendly option is in-house management using a single marketing team member, but this only works for small programmes. For growing programmes, compare agency proposals by scope, expertise and commercial accountability rather than headline fee alone. Spires Digital provides a tailored price after consultation.</p></div>
 </details>
 
 <details>
@@ -203,12 +203,12 @@ export const mixedBlogContent: Record<string, string> = {
 
 <details>
 <summary>Are there any setup costs on top of ongoing management fees?</summary>
-<div class="faq-answer"><p>Some agencies charge a one-off setup fee (£500–£2,000) for new programme launches, covering network registration, tracking implementation, and initial creative production. At Spires Digital, we include setup within the first month's management fee for our growth partnership clients — no hidden extras.</p></div>
+<div class="faq-answer"><p>Some agencies charge a one-off setup fee (£500–£2,000) for new programme launches, covering network registration, tracking implementation and initial creative production. At Spires Digital, the written proposal states whether setup is included and identifies any third-party costs before work begins.</p></div>
 </details>
 
 <h2>Ready to Get a Transparent Quote?</h2>
-<p>At Spires Digital, we believe in straightforward pricing with no hidden fees. Our <a href="/services/affiliate-management">affiliate management</a> growth partnerships start at £1,200/month + 5% of profitable revenue growth, and every proposal is tailored to your programme's specific needs and goals.</p>
-<p><a href="/contact">Book a free consultation via Calendly</a> and we'll provide a detailed proposal within 48 hours — including a projected ROI timeline based on your current programme data.</p>
+<p>At Spires Digital, we believe in straightforward pricing with no hidden fees. We first understand the programme, then provide a tailored <a href="/services/affiliate-management">affiliate management</a> scope and price before you decide whether to proceed.</p>
+<p><a href="/contact">Book a free consultation</a> and, if there is a strong fit, we'll provide a detailed proposal based on your current programme data and goals.</p>
 `,
 
 
@@ -280,7 +280,7 @@ export const mixedBlogContent: Record<string, string> = {
 <ul>
 <li><strong>Fixed retainer:</strong> Predictable costs, but incentives may not align with growth</li>
 <li><strong>Performance-only:</strong> Low risk, but can lead to short-term thinking</li>
-<li><strong>Growth partnership (retainer + performance bonus):</strong> Best alignment of incentives with our model starting at £1,200/month + 5% of profitable revenue growth</li>
+<li><strong>Scope-based or hybrid:</strong> An agreed delivery scope with fixed or performance-related elements; ask for every component to be documented</li>
 </ul>
 
 <p>Don't automatically choose the cheapest option. Consider total value — including the agency's ability to grow your programme and the quality of service you'll receive.</p>
@@ -421,7 +421,7 @@ export const mixedBlogContent: Record<string, string> = {
 <h2>In-House vs. Agency: Which Is Right for You?</h2>
 <p>If your programme generates under £20,000/month, an agency partnership is almost always more cost-effective than hiring in-house. You get experienced management at a fraction of the cost of a full-time salary, benefits, and training.</p>
 <p>For larger programmes (£50,000+/month), the decision depends on whether affiliate is a strategic priority that warrants dedicated headcount. Many brands at this stage use a hybrid model — in-house coordination with agency execution.</p>
-<p>Our growth partnership model at <a href="/services/affiliate-management">Spires Digital</a> starts at £1,200/month + 5% of profitable revenue growth, making professional management accessible for programmes of all sizes.</p>
+<p>At <a href="/services/affiliate-management">Spires Digital</a>, we assess the programme and work required before providing a tailored scope and price. This helps keep the proposed service proportionate to the opportunity.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -458,7 +458,7 @@ export const mixedBlogContent: Record<string, string> = {
 <ul>
 <li><strong>Publisher commissions:</strong> 5–15% of sale value, paid only when a conversion occurs</li>
 <li><strong>Network fees:</strong> 20–30% override on publisher commissions</li>
-<li><strong>Management costs:</strong> Agency fees or in-house salary (our <a href="/services/affiliate-management">growth partnership</a> starts at £1,200/month + 5% of profitable revenue)</li>
+<li><strong>Management costs:</strong> Agency fees or in-house salary; Spires Digital provides a <a href="/services/affiliate-management">tailored quote</a> after consultation</li>
 </ul>
 <p>This makes affiliate marketing inherently lower risk — you're never paying for clicks or impressions that don't convert.</p>
 
@@ -742,7 +742,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Advanced Shopify:</strong> £399/month — for established brands needing advanced reporting and lower transaction fees</li>
 <li><strong>Shopify Plus:</strong> From £2,300/month — enterprise-grade for high-volume brands</li>
 </ul>
-<p>Most brands we work with at <a href="/services/shopify-builds">Spires Digital</a> operate on the standard Shopify or Advanced plans, with Shopify Plus reserved for brands processing £1M+ annually.</p>
+<p>Most brands we work with at <a href="/services/cro-shopify">Spires Digital</a> operate on the standard Shopify or Advanced plans, with Shopify Plus reserved for brands processing £1M+ annually.</p>
 
 <h2>Standard Shopify Store: From £3,000</h2>
 <p>A standard Shopify store build uses a premium theme as its foundation, customised to match your brand. This is the right choice for most new e-commerce brands and businesses migrating from other platforms.</p>
@@ -790,7 +790,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li>Custom subscription or membership functionality</li>
 </ul>
 
-<h2>Ongoing Costs: From £300/Month</h2>
+<h2>Ongoing Shopify Costs</h2>
 <p>Your Shopify store isn't a one-off project — it needs ongoing attention to perform. Budget for these recurring costs:</p>
 
 <h3>Essential Ongoing Costs</h3>
@@ -801,8 +801,8 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Transaction fees:</strong> 0.5–2% per transaction (depending on plan and payment gateway)</li>
 </ul>
 
-<h3>Ongoing Support &amp; Maintenance: From £300/Month</h3>
-<p>Our ongoing Shopify support packages at Spires Digital start at £300/month and include:</p>
+<h3>Ongoing Support &amp; Maintenance</h3>
+<p>At Spires Digital, ongoing Shopify support is scoped and priced after a consultation. Depending on the agreed requirements, a support proposal may include:</p>
 <ul>
 <li>Monthly theme and app updates</li>
 <li>Security monitoring and backup management</li>
@@ -850,7 +850,7 @@ export const mixedBlogContent: Record<string, string> = {
 
 <details>
 <summary>Can I start with a basic build and upgrade later?</summary>
-<div class="faq-answer"><p>Absolutely — and we often recommend this approach. Starting with a standard build (£3,000–£5,000) lets you validate your business model and customer preferences before investing in custom features. Shopify's modular architecture makes it straightforward to add custom functionality incrementally as your business grows and your needs become clearer.</p></div>
+<div class="faq-answer"><p>Absolutely — and this is often a sensible approach. Starting with a well-scoped theme-based build lets you validate your business model and customer preferences before investing in custom features. Shopify's modular architecture makes it straightforward to add custom functionality incrementally as your business grows and your needs become clearer.</p></div>
 </details>
 
 <details>
@@ -864,7 +864,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Get a Detailed Quote for Your Shopify Project</h2>
-<p>Every Shopify build is different, and the right investment depends on your specific requirements, growth ambitions, and budget. At <a href="/services/shopify-builds">Spires Digital</a>, we provide transparent, itemised quotes with no hidden fees.</p>
+<p>Every Shopify build is different, and the right investment depends on your specific requirements, growth ambitions, and budget. At <a href="/services/cro-shopify">Spires Digital</a>, we provide transparent, itemised quotes with no hidden fees.</p>
 <p><a href="/contact">Book a free consultation via Calendly</a> to discuss your project requirements. We'll help you define the right scope, choose the appropriate build level, and create a project plan that delivers maximum value within your budget.</p>
 `,
 
@@ -935,7 +935,7 @@ export const mixedBlogContent: Record<string, string> = {
 <h2>Option 3: Agency</h2>
 
 <h3>Cost: £3,000–£15,000+</h3>
-<p>An agency provides a team approach — typically a project manager, designer, developer, and QA tester working on your build. At <a href="/services/shopify-builds">Spires Digital</a>, our standard Shopify builds start from £3,000 and custom builds from £5,000+.</p>
+<p>An agency provides a team approach — typically a project manager, designer, developer, and QA tester working on your build. At <a href="/services/cro-shopify">Spires Digital</a>, we price Shopify work after understanding the store, customer journey, integrations and implementation requirements.</p>
 
 <h3>When an Agency Works Well</h3>
 <ul>
@@ -960,7 +960,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Discovery process:</strong> A proper <a href="/how-we-work">discovery phase</a> before design or development begins</li>
 <li><strong>Multi-discipline team:</strong> Design, development, and strategy expertise under one roof</li>
 <li><strong>Quality assurance:</strong> Dedicated testing before launch</li>
-<li><strong>Post-launch support:</strong> Ongoing maintenance packages (ours start at <a href="/blog/custom-shopify-store-cost-2026">£300/month</a>)</li>
+<li><strong>Post-launch support:</strong> Ongoing maintenance can be included in a tailored scope after the required level of support is understood</li>
 <li><strong>Marketing integration:</strong> Ability to connect your store with <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, and <a href="/services/affiliate-management">affiliate marketing</a></li>
 </ul>
 
@@ -1007,15 +1007,15 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Ready to Discuss Your Shopify Project?</h2>
-<p>Whether you're starting from scratch or upgrading an existing store, we can help you determine the right approach and investment level. At <a href="/services/shopify-builds">Spires Digital</a>, we offer transparent pricing with standard builds from £3,000 and custom projects from £5,000+.</p>
-<p><a href="/contact">Book a free consultation via Calendly</a> and let's discuss your project — we'll recommend the right approach based on your specific situation, whether that's working with us or pointing you in the right direction if an agency isn't the best fit right now.</p>
+<p>Whether you're starting from scratch or upgrading an existing store, we can help you determine the right approach and investment level. At <a href="/services/cro-shopify">Spires Digital</a>, the price follows a consultation and a clearly documented project scope.</p>
+<p><a href="/contact">Book a free consultation</a> and let's discuss your project. If there is a strong fit, we will provide a tailored written scope and quote before you decide whether to proceed.</p>
 `,
 
 
   'shopify-vs-woocommerce-2026': `
 <p>The Shopify vs WooCommerce debate has been running for years, but the landscape has shifted significantly heading into 2026. Both platforms have evolved, and the right choice depends on factors that have changed since many of the existing comparison articles were written.</p>
 
-<p>This comparison is based on our hands-on experience building and managing stores on both platforms at <a href="/services/shopify-builds">Spires Digital</a>. We'll be honest about where each platform excels and where it falls short.</p>
+<p>This comparison is based on our hands-on experience building and managing stores on both platforms at <a href="/services/cro-shopify">Spires Digital</a>. We'll be honest about where each platform excels and where it falls short.</p>
 
 <h2>The Fundamental Difference</h2>
 <p>Before diving into features, understand the core philosophical difference:</p>
@@ -1044,7 +1044,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Apps:</strong> £50–£500/month (depending on needs)</li>
 <li><strong>Transaction fees:</strong> 0.5–2% if not using Shopify Payments</li>
 <li><strong>Build cost:</strong> £3,000–£15,000+ for professional setup</li>
-<li><strong>Ongoing support:</strong> From £300/month</li>
+<li><strong>Ongoing support:</strong> Varies by support scope and provider</li>
 </ul>
 
 <h3>WooCommerce Costs</h3>
@@ -1144,7 +1144,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Need Help Deciding?</h2>
-<p>Platform selection is an important decision, and the right answer depends on your specific business requirements, technical capabilities, and growth plans. At <a href="/services/shopify-builds">Spires Digital</a>, we've built stores on both platforms and can give you genuinely unbiased advice.</p>
+<p>Platform selection is an important decision, and the right answer depends on your specific business requirements, technical capabilities, and growth plans. At <a href="/services/cro-shopify">Spires Digital</a>, we've built stores on both platforms and can give you genuinely unbiased advice.</p>
 <p><a href="/contact">Book a free consultation via Calendly</a> and we'll help you evaluate both options against your specific needs — no pressure towards either platform, just honest guidance based on experience.</p>
 `,
 
@@ -1203,7 +1203,7 @@ export const mixedBlogContent: Record<string, string> = {
 <div class="tip-box"><strong>Pro Tip:</strong> Map your customer journey using Google Analytics 4's conversion paths report. You'll likely discover that your highest-value customers interact with 3–5 touchpoints across multiple channels before purchasing. This data should drive your budget allocation decisions.</div>
 
 <h3>Shopify Store: The Conversion Engine</h3>
-<p>Your <a href="/services/shopify-builds">Shopify store</a> is where all channels converge. It's not just a shop — it's the conversion engine that determines whether your marketing spend translates into revenue. Key elements:</p>
+<p>Your <a href="/services/cro-shopify">Shopify store</a> is where all channels converge. It's not just a shop — it's the conversion engine that determines whether your marketing spend translates into revenue. Key elements:</p>
 <ul>
 <li><strong>Landing pages:</strong> Channel-specific landing pages that match the messaging of your ads and affiliate content</li>
 <li><strong>Product pages:</strong> Detailed, persuasive pages with reviews, trust signals, and clear CTAs</li>
@@ -1284,7 +1284,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Ready to Build Your Full-Funnel Strategy?</h2>
-<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/shopify-builds">Shopify builds</a> under one roof — specifically so we can build cohesive, full-funnel strategies for <a href="/industries/ecommerce">e-commerce brands</a>. No silos, no finger-pointing between agencies, just integrated growth.</p>
+<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/cro-shopify">Shopify builds</a> under one roof — specifically so we can build cohesive, full-funnel strategies for <a href="/industries/ecommerce">e-commerce brands</a>. No silos, no finger-pointing between agencies, just integrated growth.</p>
 <p><a href="/contact">Book a free strategy session via Calendly</a> and we'll audit your current channels, identify the gaps in your funnel, and create a roadmap for integrated, sustainable growth.</p>
 `,
 
@@ -1328,7 +1328,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Affiliate Marketing:</strong> 15–20% — mature programme with diverse publisher mix driving significant incremental revenue</li>
 <li><strong>SEO/Content:</strong> 10–15% — ongoing content creation, technical optimisation, and authority building</li>
 <li><strong>Email/CRM:</strong> 5–10% — advanced segmentation, personalisation, and lifecycle marketing</li>
-<li><strong>Store optimisation:</strong> 5% — continuous CRO testing and UX improvements on your <a href="/services/shopify-builds">Shopify store</a></li>
+<li><strong>Store optimisation:</strong> 5% — continuous CRO testing and UX improvements on your <a href="/services/cro-shopify">Shopify store</a></li>
 </ul>
 <p>Total recommended spend: £25,000–£100,000+/month. At this stage, marginal gains matter — a 10% improvement in conversion rate on your store can be worth more than a 50% increase in ad spend.</p>
 
@@ -1366,7 +1366,7 @@ export const mixedBlogContent: Record<string, string> = {
 </ul>
 
 <h3>Affiliate Marketing</h3>
-<p>Budget components: publisher commissions (5–15% of affiliate revenue), network fees (20–30% override), and <a href="/services/affiliate-management">management fees</a>. Our growth partnership model starts at £1,200/month + 5% of profitable revenue growth.</p>
+<p>Budget components: publisher commissions (5–15% of affiliate revenue), network fees (20–30% override), and <a href="/services/affiliate-management">management fees</a>. Spires Digital provides a tailored management price after the programme and required scope have been discussed.</p>
 <ul>
 <li>Affiliate costs are largely variable (pay-on-performance), making budgeting more predictable</li>
 <li>Fixed costs (management + network minimums) are typically £1,500–£3,000/month</li>
@@ -1437,7 +1437,7 @@ export const mixedBlogContent: Record<string, string> = {
 
 <h2>Get a Custom Budget Recommendation</h2>
 <p>Every brand's optimal allocation is different. The frameworks above provide a starting point, but the right split for your business depends on your margins, competitive landscape, brand awareness, and growth targets.</p>
-<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/shopify-builds">Shopify</a> — which means we can recommend budget allocation across channels without bias towards any single service.</p>
+<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/cro-shopify">Shopify</a> — which means we can recommend budget allocation across channels without bias towards any single service.</p>
 <p><a href="/contact">Book a free budget consultation via Calendly</a> and we'll analyse your current spend, benchmark it against industry data, and provide a recommended allocation framework tailored to your business stage and objectives.</p>
 `,
 };

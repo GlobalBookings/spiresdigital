@@ -1,248 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faq = [
+  { q: 'Is Spires Digital only for Shopify brands?', a: 'No. Shopify is a core platform, but the growth framework applies to any ecommerce business with reliable store, customer and channel data.' },
+  { q: 'Can we start with one channel?', a: 'Yes. The diagnosis considers the whole journey, but the initial scope can focus on one constraint such as Google Shopping, Meta creative, SEO, CRO or retention.' },
+  { q: 'How do you decide which area to prioritise?', a: 'We compare commercial upside, evidence confidence, implementation effort and dependencies. The best first project is often the smallest change that unlocks better decisions or improves every acquisition channel.' },
+];
+const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) };
 ---
 
-<BaseLayout title="Digital Marketing for E-Commerce" description="Specialist e-commerce digital marketing: Google Shopping, Performance Max, Meta catalogue ads, affiliate programmes, and Shopify builds. Spires Digital, Guernsey &amp; Lichfield.">
-  <Breadcrumbs items={[{ label: 'Industries', href: '/industries/ecommerce' }, { label: 'E-Commerce' }]} />
+<BaseLayout title="Ecommerce Growth Agency" description="A connected ecommerce growth system across paid media, SEO, CRO, Shopify, email retention, affiliate and analytics." schema={schema}>
+  <div class="breadcrumbs-wrap"><Breadcrumbs items={[{ label: 'Ecommerce growth' }]} /></div>
+  <section class="ecom-hero hero-dark"><div class="container hero-grid"><div><span class="badge">Ecommerce growth agency</span><h1>Scale the customer journey, not a collection of channels.</h1><p>More traffic is useful only when the store converts it, the customer returns and the economics support the next pound of investment.</p><div class="page-hero-actions"><a href="/contact" class="btn btn-primary btn-lg btn-arrow">Get an ecommerce growth plan</a><a href="/tools/growth-assessment" class="btn btn-outline btn-lg">Find your current constraint</a></div></div><div class="journey-map"><div class="journey-head"><span>Connected growth model</span><span>Commercial view</span></div><div class="journey-stage"><span>01</span><div><strong>Acquire</strong><small>Demand and customer cost</small></div><b>Google · Meta · SEO · Affiliate</b></div><div class="journey-stage"><span>02</span><div><strong>Convert</strong><small>Experience and order value</small></div><b>CRO · Shopify · Merchandising</b></div><div class="journey-stage"><span>03</span><div><strong>Retain</strong><small>Repeat purchase and LTV</small></div><b>Email · Automation · Loyalty</b></div><div class="journey-stage"><span>04</span><div><strong>Measure</strong><small>Margin and decision confidence</small></div><b>GA4 · Attribution · Profit</b></div></div></div></section>
 
-  <section class="page-hero" style="margin-top: -2rem;">
-    <div class="container page-hero-content">
-      <span class="badge">E-Commerce Marketing</span>
-      <h1>Digital Marketing for E-Commerce Brands</h1>
-      <p>Revenue-focused strategies that turn browsers into buyers. From Google Shopping to Meta catalogue ads, we help e-commerce businesses scale profitably with data-driven campaigns.</p>
-    </div>
-  </section>
+  <section class="section surface"><div class="container"><div class="section-heading"><span class="eyebrow">Built for the real operating questions</span><h2>The dashboard says revenue is up. What happened to profit?</h2><p>Ecommerce teams are asked to make investment decisions across platforms that use different attribution, incentives and definitions of success.</p></div><div class="question-grid"><article><span>Acquisition</span><h3>How much can we afford to pay for a new customer?</h3><a href="/tools/ecommerce-profit-calculator">Model break-even CAC →</a></article><article><span>Conversion</span><h3>Why do qualified visitors leave without buying?</h3><a href="/services/cro-shopify">Find conversion friction →</a></article><article><span>Retention</span><h3>How do we reduce dependency on the next paid click?</h3><a href="/services/email-retention">Grow repeat revenue →</a></article><article><span>Measurement</span><h3>Which channel actually created incremental value?</h3><a href="/services/analytics-attribution">Improve decision confidence →</a></article></div></div></section>
 
-  <!-- The Challenge -->
-  <section class="section">
-    <div class="container" style="max-width: 900px;">
-      <h2>The E-Commerce Marketing Challenge</h2>
-      <p style="color: var(--color-text-light); margin-bottom: 2rem;">Selling online is more competitive than ever. If any of these sound familiar, you're not alone.</p>
-      <div class="grid grid-2" style="margin-bottom: 3rem;">
-        <div class="challenge-card">
-          <div class="icon-box">🛒</div>
-          <h3>Rising Acquisition Costs</h3>
-          <p>CPCs are climbing across Google and Meta. Without tight campaign management and feed optimisation, your margins shrink with every click.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="icon-box">📉</div>
-          <h3>Low Conversion Rates</h3>
-          <p>Traffic without conversions is just an expense. Many e-commerce brands struggle with checkout abandonment, poor product pages, and weak retargeting.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="icon-box">🔄</div>
-          <h3>Channel Fragmentation</h3>
-          <p>Google Shopping, Meta, affiliate networks, email — managing multiple channels without a unified strategy leads to wasted spend and missed opportunities.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="icon-box">📊</div>
-          <h3>Attribution Confusion</h3>
-          <p>With iOS privacy changes and cross-device journeys, understanding which channels actually drive revenue is harder than ever.</p>
-        </div>
-      </div>
+  <section class="section model-section"><div class="container"><div class="section-heading center"><span class="eyebrow">The operating model</span><h2>Each growth lever has a job and a shared scorecard.</h2></div><div class="model-table"><div class="model-head"><span>Stage</span><span>Primary question</span><span>Measures that matter</span><span>Services</span></div><div><strong>Acquire</strong><p>Can we reach valuable customers at a sustainable cost?</p><span>CAC · new-customer ROAS · contribution</span><nav><a href="/services/ppc-management">PPC</a><a href="/services/meta-ads">Meta</a><a href="/services/ecommerce-seo">SEO</a><a href="/services/affiliate-management">Affiliate</a></nav></div><div><strong>Convert</strong><p>Can more qualified sessions become profitable orders?</p><span>CVR · AOV · checkout completion</span><nav><a href="/services/cro-shopify">CRO &amp; Shopify</a></nav></div><div><strong>Retain</strong><p>Can the first order become a valuable relationship?</p><span>Repeat rate · time to second order · LTV</span><nav><a href="/services/email-retention">Email &amp; retention</a></nav></div><div><strong>Measure</strong><p>Can the team make the next decision with confidence?</p><span>MER · margin · event quality · incrementality</span><nav><a href="/services/analytics-attribution">Analytics</a></nav></div></div></div></section>
 
-      <!-- Our Approach -->
-      <h2>Our Approach to E-Commerce Growth</h2>
-      <p style="color: var(--color-text-light); margin-bottom: 2rem;">We combine paid media expertise with deep e-commerce understanding to build campaigns that scale profitably.</p>
-      <div class="process-steps">
-        <div class="step">
-          <span class="step-num">1</span>
-          <div>
-            <h3>Revenue Audit</h3>
-            <p>We analyse your product data, margins, and current campaign performance to identify the highest-value opportunities and quick wins.</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <div>
-            <h3>Feed &amp; Catalogue Optimisation</h3>
-            <p>Your product feed is the foundation of Shopping and catalogue campaigns. We optimise titles, descriptions, images, and custom labels for maximum visibility.</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <div>
-            <h3>Multi-Channel Campaigns</h3>
-            <p>Coordinated campaigns across Google Shopping, Performance Max, Meta catalogue ads, and affiliate networks — all working towards the same revenue targets.</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-num">4</span>
-          <div>
-            <h3>Test, Measure &amp; Scale</h3>
-            <p>Continuous A/B testing of creatives, audiences, and bidding strategies. We double down on what works and cut what doesn't.</p>
-          </div>
-        </div>
-      </div>
+  <section class="section surface"><div class="container split"><div class="split-copy"><span class="eyebrow">How an engagement starts</span><h2>Diagnose before prescribing.</h2><p>The first review considers the complete commercial system, even when the resulting project focuses on one channel.</p><ol class="engagement-steps"><li><span>1</span><div><strong>Economics</strong><p>Margin, AOV, repeat rate, customer targets and budget.</p></div></li><li><span>2</span><div><strong>Journey</strong><p>Demand, merchandising, conversion and lifecycle friction.</p></div></li><li><span>3</span><div><strong>Evidence</strong><p>Tracking quality, current performance and customer signals.</p></div></li><li><span>4</span><div><strong>Roadmap</strong><p>Priorities scored by impact, confidence, effort and dependency.</p></div></li></ol></div><div class="fit-panel"><span>Usually a strong fit for</span><h3>Brands with product-market fit and a growth question that crosses team boundaries.</h3><ul class="check-list"><li>Established stores ready to improve efficiency</li><li>Brands preparing to scale paid acquisition</li><li>Teams planning a Shopify redesign or migration</li><li>Businesses with conflicting channel reports</li><li>Retailers building a second or third acquisition channel</li></ul><a href="/contact" class="btn btn-primary btn-arrow">Discuss the growth question</a></div></div></section>
 
-      <div class="tip-box" style="margin-top: 2rem;">
-        <strong>Pro tip:</strong> E-commerce brands that combine Google Shopping with Meta retargeting typically see 30–50% higher ROAS than those relying on a single channel.
-      </div>
-    </div>
-  </section>
+  <section class="section surface-warm"><div class="container"><div class="section-heading"><span class="eyebrow">Start with a useful tool</span><h2>Get an immediate answer from the numbers you already have.</h2></div><div class="tool-links"><a href="/tools/ecommerce-profit-calculator"><span>Most useful first</span><h3>Profit &amp; break-even ROAS calculator</h3><p>Find the ROAS, MER and CAC your actual cost structure can support.</p><strong>Open calculator →</strong></a><a href="/tools/channel-budget-planner"><span>Planning</span><h3>Channel budget planner</h3><p>Work backwards from a revenue target to traffic, orders and acquisition budget.</p><strong>Build a scenario →</strong></a><a href="/tools/growth-assessment"><span>Diagnostic</span><h3>Store growth assessment</h3><p>Identify whether acquire, convert, retain or measure is the likely constraint.</p><strong>Start assessment →</strong></a></div></div></section>
 
-  <!-- Services for E-Commerce -->
-  <section class="section" style="background: var(--color-bg-alt);">
-    <div class="container" style="max-width: 900px;">
-      <h2>Services for E-Commerce Brands</h2>
-      <p style="color: var(--color-text-light); margin-bottom: 2rem;">Every service we offer is tailored to the unique demands of online retail.</p>
-      <div class="grid grid-2">
-        <a href="/services/ppc-management" class="service-link-card">
-          <h3>Google Shopping &amp; PPC</h3>
-          <p>Search campaigns, Shopping feeds, and Performance Max — all managed to maximise your return on ad spend.</p>
-          <span class="link-arrow">Learn more →</span>
-        </a>
-        <a href="/services/meta-ads" class="service-link-card">
-          <h3>Meta Catalogue Ads</h3>
-          <p>Dynamic product ads across Facebook and Instagram that retarget browsers and drive repeat purchases.</p>
-          <span class="link-arrow">Learn more →</span>
-        </a>
-        <a href="/services/affiliate-management" class="service-link-card">
-          <h3>Affiliate Programme Management</h3>
-          <p>Recruit, manage, and optimise affiliate partners to create a profitable, performance-based sales channel.</p>
-          <span class="link-arrow">Learn more →</span>
-        </a>
-        <a href="/services/shopify-builds" class="service-link-card">
-          <h3>Shopify Store Builds</h3>
-          <p>Conversion-optimised Shopify stores built from the ground up, or existing store redesigns to improve performance.</p>
-          <span class="link-arrow">Learn more →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats / Results -->
-  <section class="section">
-    <div class="container" style="max-width: 900px;">
-      <h2 style="text-align: center;">Results We Deliver for E-Commerce</h2>
-      <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">Average performance improvements across our e-commerce client portfolio.</p>
-      <div class="stat-grid">
-        <div class="stat">
-          <div class="stat-value">340%</div>
-          <div class="stat-label">Average ROAS</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">+62%</div>
-          <div class="stat-label">Conversion Rate Lift</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">-38%</div>
-          <div class="stat-label">Cost Per Acquisition</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">+85%</div>
-          <div class="stat-label">Revenue Growth (Avg.)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section" style="background: var(--color-bg-alt);">
-    <div class="container" style="max-width: 900px;">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>How much should an e-commerce brand spend on digital advertising?</summary>
-          <p>There's no one-size-fits-all answer, but most successful e-commerce brands invest 10–20% of revenue back into advertising. We'll help you determine the right budget based on your margins, average order value, and growth goals.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Do you manage Google Shopping and Performance Max campaigns?</summary>
-          <p>Absolutely. Google Shopping and Performance Max are core to our e-commerce offering. We handle everything from product feed optimisation and campaign structure to bid management and ongoing performance tuning.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Can you help with Shopify store setup as well as marketing?</summary>
-          <p>Yes — we offer end-to-end Shopify builds alongside our marketing services. Having one team handle both ensures your store is built for conversions from day one, with proper tracking, landing pages, and product page optimisation.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How do you track ROI across multiple channels?</summary>
-          <p>We implement comprehensive conversion tracking through GA4 and platform-specific pixels, alongside server-side tracking where needed. Monthly reports clearly show revenue, ROAS, and cost per acquisition for each channel.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What makes your approach different from other e-commerce agencies?</summary>
-          <p>We focus on profit, not just revenue. Every campaign decision is rooted in your actual margins and business economics. We also offer full transparency — you own all accounts and data, and we report on the metrics that matter to your bottom line.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Scale Your E-Commerce Revenue?</h2>
-      <p>Get a free audit of your current campaigns and discover untapped growth opportunities.</p>
-      <a href="/contact" class="btn btn-white btn-lg">Get Your Free Audit</a>
-    </div>
-  </section>
-
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much should an e-commerce brand spend on digital advertising?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "There's no one-size-fits-all answer, but most successful e-commerce brands invest 10–20% of revenue back into advertising. We'll help you determine the right budget based on your margins, average order value, and growth goals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you manage Google Shopping and Performance Max campaigns?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Google Shopping and Performance Max are core to our e-commerce offering. We handle everything from product feed optimisation and campaign structure to bid management and ongoing performance tuning."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you help with Shopify store setup as well as marketing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes — we offer end-to-end Shopify builds alongside our marketing services. Having one team handle both ensures your store is built for conversions from day one, with proper tracking, landing pages, and product page optimisation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you track ROI across multiple channels?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We implement comprehensive conversion tracking through GA4 and platform-specific pixels, alongside server-side tracking where needed. Monthly reports clearly show revenue, ROAS, and cost per acquisition for each channel."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes your approach different from other e-commerce agencies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We focus on profit, not just revenue. Every campaign decision is rooted in your actual margins and business economics. We also offer full transparency — you own all accounts and data, and we report on the metrics that matter to your bottom line."
-        }
-      }
-    ]
-  })} />
+  <section class="section surface"><div class="container-narrow"><div class="section-heading center"><span class="eyebrow">Questions</span><h2>Before you choose a channel.</h2></div><div class="faq-list">{faq.map(item => <details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
+  <section class="cta-section"><div class="container"><h2>Find the next move that improves the whole system.</h2><p>Share the context. We will return a commercially prioritised ecommerce growth plan.</p><a href="/contact" class="btn btn-white btn-lg btn-arrow">Request your free review</a></div></section>
 </BaseLayout>
 
 <style>
-  .challenge-card { padding: 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); }
-  .challenge-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .challenge-card p { font-size: 0.95rem; color: var(--color-text-light); }
-  .process-steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
-  .step { display: flex; gap: 1.25rem; align-items: start; }
-  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
-  .step h3 { font-size: 1rem; margin-bottom: 0.25rem; }
-  .step p { font-size: 0.92rem; color: var(--color-text-light); }
-  .service-link-card { display: block; padding: 1.5rem; background: var(--color-white); border-radius: var(--radius); border: 1px solid var(--color-border); transition: all var(--transition); text-decoration: none; }
-  .service-link-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--color-accent); }
-  .service-link-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .service-link-card p { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 0.75rem; }
-  .link-arrow { font-size: 0.9rem; font-weight: 600; color: var(--color-accent); }
-  .faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
-  .faq-item { background: var(--color-white); border-radius: var(--radius-sm); border: 1px solid var(--color-border); overflow: hidden; }
-  .faq-item summary { padding: 1.25rem 1.5rem; font-weight: 600; cursor: pointer; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--color-accent); font-weight: 700; flex-shrink: 0; margin-left: 1rem; }
-  .faq-item[open] summary::after { content: '−'; }
-  .faq-item p { padding: 0 1.5rem 1.25rem; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; }
+  .ecom-hero{padding-top:5rem}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .75fr;gap:clamp(3rem,7vw,6rem);align-items:center}.journey-map{padding:1rem;border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);background:rgba(255,255,255,.07)}.journey-head{display:flex;justify-content:space-between;padding:.4rem;color:#aab4c5;font-size:.67rem;font-weight:800}.journey-stage{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;margin-top:.6rem;padding:.9rem;border-radius:10px;background:rgba(255,255,255,.07)}.journey-stage>span{display:grid;width:30px;height:30px;place-items:center;border-radius:8px;background:rgba(117,230,211,.12);color:#91eadb;font-size:.62rem;font-weight:800}.journey-stage strong,.journey-stage small{display:block}.journey-stage strong{color:white}.journey-stage small{color:#9da8ba;font-size:.62rem}.journey-stage b{color:#cbd2df;font-size:.62rem;font-weight:600}.question-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.question-grid article{min-height:250px;padding:1.5rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--canvas)}.question-grid article>span,.tool-links>a>span{color:var(--violet-dark);font-size:.68rem;font-weight:800;text-transform:uppercase}.question-grid h3{max-width:470px;margin:2.5rem 0 1rem;font-size:clamp(1.4rem,2.6vw,2rem)}.question-grid a,.tool-links strong{color:var(--violet-dark);font-size:.78rem;font-weight:800}.model-section{background:#e9e8ff}.model-table{overflow:hidden;border:1px solid #d0cef7;border-radius:var(--radius);background:#d0cef7}.model-head,.model-table>div:not(.model-head){display:grid;grid-template-columns:.4fr 1.2fr 1fr 1fr;gap:1rem;padding:1rem 1.2rem;background:#f8f7ff}.model-head{background:var(--ink)!important;color:#cbd2df;font-size:.68rem;font-weight:800;text-transform:uppercase}.model-table>div+div{border-top:1px solid #d0cef7}.model-table strong{color:var(--ink)}.model-table p,.model-table>div>span{color:var(--slate);font-size:.8rem}.model-table nav{display:flex;flex-wrap:wrap;gap:.35rem}.model-table nav a{padding:.3rem .5rem;border-radius:999px;background:var(--violet-soft);color:var(--violet-dark);font-size:.62rem;font-weight:800}.engagement-steps{display:grid;gap:.6rem;margin-top:1.5rem;list-style:none}.engagement-steps li{display:grid;grid-template-columns:auto 1fr;gap:.7rem}.engagement-steps li>span{display:grid;width:30px;height:30px;place-items:center;border-radius:50%;background:var(--ink);color:white;font-size:.62rem}.engagement-steps strong{color:var(--ink)}.engagement-steps p{margin:0;color:var(--slate);font-size:.8rem}.fit-panel{padding:clamp(1.4rem,3vw,2rem);border-radius:var(--radius);background:var(--ink);color:#cbd2df}.fit-panel>span{color:#91eadb;font-size:.68rem;font-weight:800;text-transform:uppercase}.fit-panel h3{margin:1rem 0 1.5rem;color:white;font-size:clamp(1.5rem,3vw,2.2rem)}.fit-panel .check-list{margin-bottom:1.5rem;font-size:.82rem}.tool-links{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.tool-links>a{min-height:290px;padding:1.5rem;border:1px solid var(--line);border-radius:var(--radius);background:white}.tool-links h3{margin:2.5rem 0 .7rem}.tool-links p{margin-bottom:1rem;color:var(--slate);font-size:.84rem}.faq-list{display:grid;gap:.7rem}.faq-list details{border:1px solid var(--line);border-radius:var(--radius-sm);background:white}.faq-list summary{display:flex;justify-content:space-between;padding:1.2rem;cursor:pointer;color:var(--ink);font-weight:750;list-style:none}.faq-list summary::after{content:'+';color:var(--violet-dark)}.faq-list details[open] summary::after{content:'−'}.faq-list p{padding:0 1.2rem 1.2rem;color:var(--slate)}@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.model-head{display:none}.model-table>div:not(.model-head){grid-template-columns:1fr}.tool-links{grid-template-columns:1fr}}@media(max-width:650px){.question-grid{grid-template-columns:1fr}.journey-stage{grid-template-columns:auto 1fr}.journey-stage b{grid-column:2}}
 </style>

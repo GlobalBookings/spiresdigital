@@ -123,7 +123,7 @@ export const metaBlogContent: Record<string, string> = {
 </ul>
 
 <h3>4. Hybrid / Growth Partnership Model</h3>
-<p>This is the model we use at Spires Digital: a base retainer of <strong>£1,200/month</strong> combined with <strong>5% of profitable revenue</strong> generated through the campaigns we manage. The base retainer covers the ongoing strategic work, campaign management, creative direction, and reporting. The performance component ensures our incentives are fully aligned with your growth.</p>
+<p>At Spires Digital, we price Meta Ads management only after understanding the account, creative requirements, tracking, goals and delivery responsibilities. The consultation is followed by a written scope and quote so you can see exactly what the engagement would cover before making a decision.</p>
 <ul>
 <li><strong>Pros:</strong> Balanced risk, aligned incentives, transparent and fair</li>
 <li><strong>Cons:</strong> Requires accurate tracking and honest reporting from both sides — which should be a given anyway</li>
@@ -182,12 +182,12 @@ export const metaBlogContent: Record<string, string> = {
 <p>For benchmark CPAs across industries, see our <a href="/blog/facebook-ads-benchmarks-2026">Facebook Ads benchmarks guide</a>.</p>
 
 <h2>Getting Started</h2>
-<p>The best agencies will offer a free consultation or audit before quoting a price. This lets both sides assess fit before committing. At Spires Digital, our growth partnership model (£1,200/month + 5% of profitable revenue) is designed to make the decision straightforward: we only earn more when you do.</p>
+<p>The best agencies will offer a free consultation or audit before quoting a price. This lets both sides assess fit before committing. At Spires Digital, that consultation is required before we provide a tailored written scope and price.</p>
 <p>Ready to discuss what Facebook Ads management would cost for your specific situation? <a href="/contact">Book a free strategy call via our Calendly</a> and we'll give you a transparent breakdown with no obligation.</p>
 
 <h2>Frequently Asked Questions</h2>
 <details><summary>Is it worth paying an agency to manage Facebook Ads?</summary><div class="faq-answer"><p>For most businesses spending over £2,000/month on ads, yes. A skilled agency brings expertise in audience targeting, creative strategy, and platform optimisation that typically generates a higher return than the management fee costs. For smaller budgets, the agency fee can eat into your margins — read our <a href="/blog/facebook-ads-agency-vs-diy">agency vs DIY comparison</a> for more detail.</p></div></details>
-<details><summary>What's the average cost to hire a Facebook Ads agency in 2026?</summary><div class="faq-answer"><p>Most agencies charge between £1,000 and £3,000/month for small-to-mid-sized accounts. Larger accounts spending £20,000+ per month on ads can expect fees of £3,000–8,000/month or a percentage-of-spend model. Hybrid models like our growth partnership (£1,200/month + 5% of profitable revenue) offer a balanced middle ground.</p></div></details>
+<details><summary>What's the average cost to hire a Facebook Ads agency in 2026?</summary><div class="faq-answer"><p>Most agencies charge between £1,000 and £3,000/month for small-to-mid-sized accounts. Larger accounts spending £20,000+ per month on ads can expect fees of £3,000–8,000/month or a percentage-of-spend model. These are broad market benchmarks rather than a quote; Spires Digital prices after an initial consultation.</p></div></details>
 <details><summary>How quickly will I see results from a Facebook Ads agency?</summary><div class="faq-answer"><p>Most campaigns need 4–8 weeks of data collection and testing before producing consistent results. By month three, you should have clear evidence of whether the partnership is working. Avoid agencies promising instant results — effective Meta advertising requires methodical testing and optimisation.</p></div></details>
 <details><summary>Can I switch agencies if results are poor?</summary><div class="faq-answer"><p>You should always retain ownership of your ad account, pixel data, and creative assets. Reputable agencies work within your own Business Manager, so switching is straightforward. Avoid agencies that insist on running ads through their own accounts — this creates a dependency that's difficult to break.</p></div></details>
 `,
@@ -329,7 +329,7 @@ export const metaBlogContent: Record<string, string> = {
 
 <h3>Cost</h3>
 <p><strong>DIY:</strong> No management fees, but factor in your time at your effective hourly rate plus the cost of mistakes during learning.</p>
-<p><strong>Agency:</strong> Management fees typically range from £1,000–3,000/month. With a <a href="/blog/facebook-ads-management-cost-2026">growth partnership model</a> like ours (£1,200/month + 5% of profitable revenue), the fee is offset by better performance.</p>
+<p><strong>Agency:</strong> Management fees typically range from £1,000–3,000/month. This is a broad market benchmark. Compare the actual <a href="/blog/facebook-ads-management-cost-2026">scope and pricing model</a>, then judge the fee against the commercial value and accountability offered.</p>
 
 <h3>Expertise</h3>
 <p><strong>DIY:</strong> Limited to what you can learn through courses, YouTube, and trial and error. You're always a step behind platform updates.</p>
@@ -676,7 +676,7 @@ export const metaBlogContent: Record<string, string> = {
 <li><strong>Conversions API (CAPI):</strong> Server-side tracking is essential. ASC relies heavily on conversion data, and CAPI ensures you're capturing events that browser tracking misses.</li>
 <li><strong>Event match quality:</strong> Aim for an event match quality score of 6+ (ideally 8+) for your purchase event. The higher the match quality, the better the algorithm can optimise.</li>
 </ul>
-<p>If you're running a <a href="/services/shopify-builds">Shopify store</a>, Meta's native integration handles most of this automatically — but verify your setup to ensure CAPI is active and event deduplication is working.</p>
+<p>If you're running a <a href="/services/cro-shopify">Shopify store</a>, Meta's native integration handles most of this automatically — but verify your setup to ensure CAPI is active and event deduplication is working.</p>
 
 <h3>2. Product Catalogue</h3>
 <ul>
@@ -752,7 +752,7 @@ export const metaBlogContent: Record<string, string> = {
 </ul>
 <p>In these cases, start with traditional campaign structures to build your data foundation, then transition to ASC once you have consistent conversion volume.</p>
 
-<p>Need help setting up or optimising Advantage+ Shopping campaigns for your <a href="/services/shopify-builds">Shopify store</a>? Our <a href="/services/meta-ads">Meta Ads team</a> manages ASC campaigns for e-commerce brands across the UK. <a href="/contact">Book a free strategy call via our Calendly</a> and we'll assess whether ASC is right for your business.</p>
+<p>Need help setting up or optimising Advantage+ Shopping campaigns for your <a href="/services/cro-shopify">Shopify store</a>? Our <a href="/services/meta-ads">Meta Ads team</a> manages ASC campaigns for e-commerce brands across the UK. <a href="/contact">Book a free strategy call via our Calendly</a> and we'll assess whether ASC is right for your business.</p>
 
 <h2>Frequently Asked Questions</h2>
 <details><summary>Can I run Advantage+ Shopping alongside regular campaigns?</summary><div class="faq-answer"><p>Yes, and we recommend it during a transition period. Run both in parallel for at least 30 days, then compare performance. Many advertisers eventually consolidate into ASC for prospecting while maintaining separate retargeting campaigns for more granular control.</p></div></details>

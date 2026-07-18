@@ -187,7 +187,7 @@ export const affiliateBlogContent: Record<string, string> = {
 <p>This is your largest cost. For e-commerce, commissions typically range from 5-15% of sale value. A brand with 50% gross margins paying 10% commission retains healthy profitability. A brand with 30% margins paying the same rate is squeezing things tight.</p>
 
 <h3>Management Time or Agency Fees</h3>
-<p>Managing an affiliate programme properly takes 10-20 hours per week. If you handle this in-house, that's an opportunity cost. If you hire an agency, expect fees starting from <a href="/blog/affiliate-program-management-cost">£1,200/month plus a small percentage of revenue</a> for a growth partnership model.</p>
+<p>Managing an affiliate programme properly takes 10-20 hours per week. If you handle this in-house, that's an opportunity cost. If you hire an agency, the <a href="/blog/affiliate-program-management-cost">management price</a> should reflect the programme size, network setup, publisher recruitment and reporting required.</p>
 
 <h3>Creative Production</h3>
 <p>Banners, landing pages, product feeds, and promotional copy all need producing and updating. Budget £200-£500 per quarter for creative refreshes if you're handling this yourself.</p>
@@ -435,7 +435,7 @@ export const affiliateBlogContent: Record<string, string> = {
 <li>Network setup: £500-£3,000 (one-time)</li>
 <li>Monthly network fees: £200-£500</li>
 <li>Commissions: 5-15% of revenue driven</li>
-<li>Management: 10-20 hours/week or agency fees from £1,200/month</li>
+<li>Management: 10-20 hours/week or an agency fee quoted according to scope</li>
 <li><strong>Total effective CPA:</strong> Predictable and tied to revenue</li>
 </ul>
 
@@ -645,7 +645,7 @@ export const affiliateBlogContent: Record<string, string> = {
 
 <details><summary>How long does it take to launch an affiliate programme?</summary><div class="faq-answer"><p>From decision to live programme, typically 4-8 weeks. This includes network application and approval (1-2 weeks), technical integration and testing (1-2 weeks), creative asset production (1-2 weeks), and initial partner recruitment (ongoing from week 3). Working with an experienced agency can compress this timeline significantly.</p></div></details>
 
-<details><summary>What budget do I need for launch?</summary><div class="faq-answer"><p>Budget £3,000-£8,000 for the launch phase, covering network setup fees, creative production, and initial management. Ongoing costs are primarily commissions (variable, tied to revenue) plus network fees and management. Our growth partnership model starts at £1,200/month + 5% of profitable revenue, aligning our incentives with your programme's success.</p></div></details>
+<details><summary>What budget do I need for launch?</summary><div class="faq-answer"><p>Budget £3,000-£8,000 for the launch phase across network setup fees, creative production and management. Treat this as a broad market planning range rather than a Spires Digital quote. Ongoing costs are primarily commissions, network fees and management; we price our work after a consultation and written scope.</p></div></details>
 
 <details><summary>Should I launch on multiple networks simultaneously?</summary><div class="faq-answer"><p>Generally, no. Start with one primary network, build momentum, and consider adding a second network after 6-12 months if you need access to publishers not available on your primary network. Running multiple networks from day one splits your focus and complicates tracking.</p></div></details>
 
@@ -1638,7 +1638,7 @@ export const affiliateBlogContent: Record<string, string> = {
 
 <details><summary>What e-commerce platforms integrate best with AWIN?</summary><div class="faq-answer"><p>AWIN has pre-built integrations for Shopify, WooCommerce, Magento, and Salesforce Commerce Cloud. Shopify integration is particularly straightforward — see our <a href="/blog/affiliate-tracking-shopify-integration">Shopify integration guide</a> for details. Custom platforms require manual pixel implementation but are fully supported.</p></div></details>
 
-<details><summary>Do I need an agency to set up on AWIN?</summary><div class="faq-answer"><p>No, you can set up independently. However, an experienced agency ensures tracking is implemented correctly, commission structures are optimised from day one, and publisher recruitment begins immediately. Mistakes in initial setup — particularly tracking configuration — can be costly to fix later. Our growth partnership model (£1,200/month + 5%) includes full setup, management, and optimisation.</p></div></details>
+<details><summary>Do I need an agency to set up on AWIN?</summary><div class="faq-answer"><p>No, you can set up independently. However, an experienced agency helps ensure tracking is implemented correctly, commission structures are considered from day one and publisher recruitment begins with a plan. Mistakes in initial setup — particularly tracking configuration — can be costly to fix later. Spires Digital confirms what setup, management and optimisation are included in a tailored proposal after consultation.</p></div></details>
 
 <p>Ready to launch your affiliate programme on AWIN? <a href="/contact">Book a free setup consultation via our Calendly</a> and we'll guide you through the process, from application to first partner activation.</p>
 `,
@@ -1923,7 +1923,7 @@ export const affiliateBlogContent: Record<string, string> = {
   'affiliate-tracking-shopify-integration': `
 <p>Shopify powers millions of e-commerce stores worldwide, and integrating affiliate tracking is one of the most impactful steps you can take to grow your partnership channel. But getting the integration right — with accurate conversion tracking, proper deduplication, and reliable server-side backup — requires more than just dropping a pixel on your thank-you page.</p>
 
-<p>This step-by-step guide covers how to integrate AWIN, Impact, and CJ affiliate tracking with your <a href="/services/shopify-builds">Shopify store</a>, including common pitfalls and best practices for 2026.</p>
+<p>This step-by-step guide covers how to integrate AWIN, Impact, and CJ affiliate tracking with your <a href="/services/cro-shopify">Shopify store</a>, including common pitfalls and best practices for 2026.</p>
 
 <h2>Understanding Shopify's Tracking Architecture</h2>
 

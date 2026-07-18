@@ -33,7 +33,7 @@ export const strategyBlogPosts: BlogPost[] = [
 export const strategyBlogContent: Record<string, string> = {
 
   'first-90-days-digital-marketing-agency': `
-<p>Signing with a digital marketing agency is a significant decision — and the first 90 days set the tone for the entire partnership. Whether you're investing in <a href="/services/ppc-management">PPC management</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, or <a href="/services/shopify-builds">Shopify development</a>, understanding what happens during those critical first three months helps you evaluate progress, set realistic expectations, and get the most from your investment.</p>
+<p>Signing with a digital marketing agency is a significant decision — and the first 90 days set the tone for the entire partnership. Whether you're investing in <a href="/services/ppc-management">PPC management</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, or <a href="/services/cro-shopify">Shopify development</a>, understanding what happens during those critical first three months helps you evaluate progress, set realistic expectations, and get the most from your investment.</p>
 <p>Too many businesses sign with an agency expecting instant results, then feel disappointed when month one is spent on audits and strategy rather than scaling. That frustration is almost always a communication gap — not a performance gap. This guide walks you through exactly what should happen, week by week, so you can hold your agency accountable to the right milestones at the right times.</p>
 
 <h2>Weeks 1–2: Onboarding and Discovery</h2>
@@ -73,7 +73,7 @@ export const strategyBlogContent: Record<string, string> = {
 <ul>
 <li><strong>Quick wins:</strong> Immediate changes that can improve performance within weeks (pausing wasteful spend, fixing tracking gaps, adjusting bid strategies)</li>
 <li><strong>Medium-term initiatives:</strong> Structural improvements that take 4–8 weeks to implement and measure (campaign restructuring, audience testing, creative overhaul)</li>
-<li><strong>Long-term growth plays:</strong> Strategic investments that compound over 3–6 months (brand building, affiliate programme expansion, <a href="/services/shopify-builds">Shopify store optimisation</a>)</li>
+<li><strong>Long-term growth plays:</strong> Strategic investments that compound over 3–6 months (brand building, affiliate programme expansion, <a href="/services/cro-shopify">Shopify store optimisation</a>)</li>
 </ul>
 
 <h3>What Results to Expect in Month 1</h3>
@@ -105,7 +105,7 @@ export const strategyBlogContent: Record<string, string> = {
 <p>With two months of clean data under controlled conditions, your agency can now optimise with confidence. This includes adjusting bid strategies based on actual conversion data, reallocating budget from underperforming campaigns to proven winners, refining audience targeting based on conversion patterns, and scaling winning creative variations.</p>
 
 <h3>Cross-Channel Integration</h3>
-<p>If you're running multiple channels — and most serious businesses should be — month three is when cross-channel synergies should start emerging. Your PPC and Meta campaigns should be coordinated rather than siloed. Your affiliate programme should complement rather than cannibalise your paid media. Your <a href="/services/shopify-builds">Shopify store</a> should be optimised for the traffic your campaigns are driving.</p>
+<p>If you're running multiple channels — and most serious businesses should be — month three is when cross-channel synergies should start emerging. Your PPC and Meta campaigns should be coordinated rather than siloed. Your affiliate programme should complement rather than cannibalise your paid media. Your <a href="/services/cro-shopify">Shopify store</a> should be optimised for the traffic your campaigns are driving.</p>
 <p>This integrated approach is central to <a href="/how-we-work">how we work</a> at Spires Digital. Operating from our offices in Guernsey and Lichfield, we manage all channels under one roof — which means your PPC manager and your Meta Ads strategist are literally sitting next to each other, sharing insights in real time.</p>
 
 <h3>The 90-Day Review</h3>
@@ -132,7 +132,7 @@ export const strategyBlogContent: Record<string, string> = {
 
 <h2>What Good Looks Like: Setting Realistic Expectations</h2>
 <p>A strong first 90 days with a digital marketing agency should deliver clarity on what's working and what isn't, a clean data foundation for future decision-making, early performance improvements from quick wins and structural fixes, a tested and validated strategy for scaling, and a relationship built on trust, transparency, and shared goals.</p>
-<p>At Spires Digital, our growth partnership model — £1,200/month plus 5% of profitable revenue — means our success is directly tied to yours from day one. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring cross-channel expertise from the first kickoff call through to long-term scaling. We don't need three months to prove our process works; we need three months to prove it works <em>for your specific business</em>.</p>
+<p>At Spires Digital, every engagement is scoped around the commercial goal, current setup and work required. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring cross-channel expertise from the first kickoff call through to long-term scaling. We don't need three months to prove our process works; we need three months to prove it works <em>for your specific business</em>.</p>
 <p>If you're considering working with an agency — or you're unhappy with your current one — <a href="/contact">book a free consultation via Calendly</a>. We'll walk you through exactly what our first 90 days together would look like and give you a clear roadmap before you commit to anything.</p>
 
 <details>
@@ -167,7 +167,7 @@ export const strategyBlogContent: Record<string, string> = {
 <p>In a market this size, everyone knows everyone. Reputation travels fast, both positively and negatively. Digital marketing for Channel Islands businesses isn't just about driving clicks — it's about building and protecting a brand within a tight-knit community. This means your <a href="/services/meta-ads">Meta Ads</a> creative needs to feel authentic rather than corporate, your <a href="/services/ppc-management">PPC campaigns</a> need precision targeting to avoid wasting budget on irrelevant audiences, and your overall digital presence needs to reflect the values of the community you serve.</p>
 
 <h3>Cross-Border Complexity</h3>
-<p>Channel Islands businesses often operate across multiple jurisdictions — selling to local customers, UK customers, and sometimes EU or international markets. Each jurisdiction has different tax implications, shipping considerations, and regulatory requirements. Your digital marketing strategy must account for these complexities, from geo-targeted ad campaigns to jurisdiction-specific landing pages on your <a href="/services/shopify-builds">Shopify store</a>.</p>
+<p>Channel Islands businesses often operate across multiple jurisdictions — selling to local customers, UK customers, and sometimes EU or international markets. Each jurisdiction has different tax implications, shipping considerations, and regulatory requirements. Your digital marketing strategy must account for these complexities, from geo-targeted ad campaigns to jurisdiction-specific landing pages on your <a href="/services/cro-shopify">Shopify store</a>.</p>
 <p>For e-commerce businesses, the Low Value Consignment Relief (LVCR) changes and ongoing customs arrangements mean that pricing, shipping messaging, and purchase journey optimisation all need careful attention. Getting this wrong doesn't just cost you conversions — it costs you customer trust.</p>
 
 <h2>Local PPC for Channel Islands Businesses</h2>
@@ -200,7 +200,7 @@ export const strategyBlogContent: Record<string, string> = {
 
 <h3>Financial Services Marketing</h3>
 <p>Guernsey and Jersey's financial services sectors are significant economic drivers, and digital marketing for regulated financial businesses requires specialist knowledge. Meta Ads policies around financial products are strict, and the compliance requirements for Channel Islands financial services add another layer of complexity.</p>
-<p>Successful financial services marketing in the Channel Islands typically combines thought leadership content (distributed via Meta Ads), highly targeted <a href="/services/ppc-management">PPC campaigns</a> for specific financial products, and a professional <a href="/services/shopify-builds">website presence</a> that instils confidence and meets regulatory requirements for disclosures and disclaimers.</p>
+<p>Successful financial services marketing in the Channel Islands typically combines thought leadership content (distributed via Meta Ads), highly targeted <a href="/services/ppc-management">PPC campaigns</a> for specific financial products, and a professional <a href="/services/cro-shopify">website presence</a> that instils confidence and meets regulatory requirements for disclosures and disclaimers.</p>
 
 <h2>Channel Islands Regulations and Compliance</h2>
 <p>Marketing in the Channel Islands isn't just about what works — it's about what's permitted. The islands have their own data protection frameworks, advertising standards, and industry-specific regulations that differ from UK law.</p>
@@ -223,12 +223,12 @@ export const strategyBlogContent: Record<string, string> = {
 <p>Law firms, accountancy practices, and consultancies in Guernsey and Jersey compete in a concentrated market where differentiation is crucial. <a href="/services/ppc-management">PPC campaigns</a> targeting specific service terms, combined with LinkedIn advertising and content marketing, help professional services firms establish authority and generate qualified enquiries from both local and international clients.</p>
 
 <h3>Retail and E-Commerce</h3>
-<p>Local retailers expanding online face the cross-border shipping and customs challenges unique to the Channel Islands. A well-optimised <a href="/services/shopify-builds">Shopify store</a> with clear shipping policies, accurate duty and tax information, and a seamless checkout experience is essential. For businesses with <a href="/industries/local-business">local business</a> roots looking to serve both island customers and mainland UK buyers, a dual-audience strategy keeps campaigns efficient and messaging relevant.</p>
+<p>Local retailers expanding online face the cross-border shipping and customs challenges unique to the Channel Islands. A well-optimised <a href="/services/cro-shopify">Shopify store</a> with clear shipping policies, accurate duty and tax information, and a seamless checkout experience is essential. For businesses with <a href="/industries/local-business">local business</a> roots looking to serve both island customers and mainland UK buyers, a dual-audience strategy keeps campaigns efficient and messaging relevant.</p>
 
 <h2>Why Choose a Channel Islands-Based Agency</h2>
 <p>Most mainland UK agencies treat Channel Islands businesses like any other regional client — applying the same templates, assumptions, and strategies they'd use for a business in Birmingham or Bristol. The result is wasted budget, irrelevant targeting, and campaigns that don't account for the unique dynamics of island commerce.</p>
 <p>At Spires Digital, we're different because we're <em>from</em> here. Based in Guernsey and Lichfield, we understand the Channel Islands market from the inside out. We know the seasonal patterns, the competitive landscape, the regulatory environment, and the community dynamics that shape consumer behaviour on the islands.</p>
-<p>As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring enterprise-level expertise to Channel Islands businesses at a scale that makes sense. Our growth partnership model — £1,200/month plus 5% of profitable revenue — means you get dedicated, senior-level attention without the overhead of a large mainland agency.</p>
+<p>As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring enterprise-level expertise to Channel Islands businesses at a scale that makes sense. We first understand the opportunity and delivery requirements, then provide a tailored scope and price for dedicated, senior-level support.</p>
 
 <div class="tip-box"><strong>Pro Tip:</strong> When evaluating digital marketing agencies for your Channel Islands business, ask them to name three Guernsey or Jersey-specific challenges they'd account for in your campaign strategy. If they can't, they don't understand your market well enough to manage your budget effectively.</div>
 
@@ -256,7 +256,7 @@ export const strategyBlogContent: Record<string, string> = {
 `,
 
   'marketing-attribution-which-channels-work': `
-<p>You're running <a href="/services/ppc-management">Google Ads</a>, investing in <a href="/services/meta-ads">Meta Ads</a>, building an <a href="/services/affiliate-management">affiliate programme</a>, and optimising your <a href="/services/shopify-builds">Shopify store</a>. Revenue is growing — but which channel is actually driving that growth? Which deserves more budget, and which is quietly costing you money? Welcome to the attribution problem, and it's the single most important analytical challenge in modern digital marketing.</p>
+<p>You're running <a href="/services/ppc-management">Google Ads</a>, investing in <a href="/services/meta-ads">Meta Ads</a>, building an <a href="/services/affiliate-management">affiliate programme</a>, and optimising your <a href="/services/cro-shopify">Shopify store</a>. Revenue is growing — but which channel is actually driving that growth? Which deserves more budget, and which is quietly costing you money? Welcome to the attribution problem, and it's the single most important analytical challenge in modern digital marketing.</p>
 <p>Marketing attribution is the process of identifying which touchpoints — ads, emails, organic search visits, social interactions — contribute to a conversion. Get it right, and you make confident budget decisions that compound growth. Get it wrong, and you systematically over-invest in channels that take credit for conversions they didn't create whilst under-investing in the channels that actually drive them.</p>
 
 <h2>Why Attribution Matters More Than Ever</h2>
@@ -343,7 +343,7 @@ export const strategyBlogContent: Record<string, string> = {
 <p>For smaller businesses, the combination of GA4 data-driven attribution and regular incrementality testing provides sufficient insight. Tools like Google's open-source Meridian and Meta's Robyn have made lightweight MMM accessible to growing businesses without dedicated analytics teams.</p>
 
 <h2>Building Your Attribution Framework</h2>
-<p>For most businesses running <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate programmes</a>, and <a href="/services/shopify-builds">e-commerce</a>, we recommend a layered attribution approach:</p>
+<p>For most businesses running <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate programmes</a>, and <a href="/services/cro-shopify">e-commerce</a>, we recommend a layered attribution approach:</p>
 <ul>
 <li><strong>Foundation layer:</strong> GA4 data-driven attribution with proper UTM tagging and conversion tracking as your day-to-day reporting source</li>
 <li><strong>Validation layer:</strong> Quarterly incrementality tests on your top 2–3 channels to validate that GA4 attribution aligns with true incremental impact</li>
@@ -360,7 +360,7 @@ export const strategyBlogContent: Record<string, string> = {
 <li><strong>Set up a basic dashboard:</strong> Create a Looker Studio dashboard showing GA4 attributed conversions alongside platform-reported numbers</li>
 </ul>
 
-<p>At Spires Digital, attribution isn't an afterthought — it's central to how we manage multi-channel campaigns from our offices in Guernsey and Lichfield. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we work across all major performance channels and understand how they interact, overlap, and — critically — how to measure their true contribution. Our growth partnership model (£1,200/month + 5% of profitable revenue) means we're as invested in accurate attribution as you are — because our revenue depends on genuinely driving yours, not just claiming credit for it.</p>
+<p>At Spires Digital, attribution isn't an afterthought — it's central to how we manage multi-channel campaigns from Guernsey for brands across the UK and beyond. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we work across all major performance channels and understand how they interact, overlap, and — critically — how to measure their true contribution. The work and price are agreed after a consultation, once the data environment and delivery requirements are understood.</p>
 <p>If you're unsure whether your marketing budget is allocated to the channels that actually drive growth, <a href="/contact">book a free attribution audit via Calendly</a>. We'll review your current measurement setup, identify attribution gaps, and recommend a practical framework that gives you confidence in your channel decisions.</p>
 
 <details>

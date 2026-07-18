@@ -1,0 +1,252 @@
+export interface ServiceDefinition {
+  slug: string;
+  title: string;
+  metaTitle: string;
+  description: string;
+  phase: string;
+  intro: string;
+  promise: string;
+  outcomes: { value: string; label: string }[];
+  problems: { title: string; text: string }[];
+  deliverables: { title: string; text: string }[];
+  process: { title: string; text: string }[];
+  fit: string[];
+  faqs: { q: string; a: string }[];
+  related: { href: string; label: string }[];
+}
+
+export const services: ServiceDefinition[] = [
+  {
+    slug: 'ppc-management',
+    title: 'Google Shopping & PPC management',
+    metaTitle: 'Ecommerce PPC Management — Google Shopping & Search',
+    description: 'Profit-focused Google Shopping, Performance Max, paid search and Microsoft Ads management for ecommerce brands.',
+    phase: 'Acquire',
+    intro: 'Capture high-intent demand with product feeds, campaign structure and bidding targets grounded in the economics of your store—not an arbitrary platform ROAS.',
+    promise: 'Every campaign has a commercial job, a measurement plan and a clear reason to receive budget.',
+    outcomes: [
+      { value: 'Profit-led targets', label: 'ROAS and CAC based on margin' },
+      { value: 'Cleaner demand', label: 'Search terms and feeds actively managed' },
+      { value: 'Owned data', label: 'Accounts remain in your business' },
+    ],
+    problems: [
+      { title: 'ROAS looks healthy but margin is thin', text: 'Platform reporting excludes product cost, returns, fulfilment and the management cost of growth.' },
+      { title: 'Performance Max is a black box', text: 'Campaign overlap, weak asset groups and poor feed structure make it difficult to know what is creating demand.' },
+      { title: 'Budget increases stop scaling', text: 'Higher spend moves into weaker queries or products because campaigns are not segmented by commercial value.' },
+    ],
+    deliverables: [
+      { title: 'Unit-economics target model', text: 'Break-even ROAS, target ROAS, allowable CAC and budget guardrails by product group.' },
+      { title: 'Merchant Centre and feed optimisation', text: 'Titles, attributes, exclusions, custom labels, diagnostics and promotion readiness.' },
+      { title: 'Campaign architecture', text: 'Shopping, Performance Max, search, brand and remarketing roles designed to minimise overlap.' },
+      { title: 'Search-term and waste control', text: 'Negative keyword systems, query reviews and budget allocation based on incremental value.' },
+      { title: 'Creative and landing-page feedback', text: 'Asset testing and recommendations when the conversion constraint sits beyond the ad account.' },
+      { title: 'Commercial reporting', text: 'Plain-English reporting across spend, revenue, margin signals, new-customer performance and next actions.' },
+    ],
+    process: [
+      { title: 'Economics and tracking audit', text: 'Validate targets, conversion actions, attribution and the quality of the data feeding bidding.' },
+      { title: 'Rebuild the controllable foundations', text: 'Fix feeds, exclusions, structure, creative inputs and conversion priorities.' },
+      { title: 'Test with a clear hypothesis', text: 'Change one commercial lever at a time and record what the account learns.' },
+      { title: 'Scale the profitable segments', text: 'Move budget towards products, audiences and queries with the strongest contribution.' },
+    ],
+    fit: ['You spend at least £2,000 per month on Google Ads or are ready to.', 'Your product margins vary and one blended ROAS target is misleading.', 'You want full ownership and visibility of your account.', 'You need Shopping expertise as well as paid-search management.'],
+    faqs: [
+      { q: 'What advertising budget do you recommend?', a: 'The useful minimum depends on search demand, CPCs, conversion rate and margin. We model the click and order volume needed to learn before recommending a budget.' },
+      { q: 'Do you manage Merchant Centre and product feeds?', a: 'Yes. Feed quality is fundamental to ecommerce PPC and is included in the operating plan, not treated as a separate afterthought.' },
+      { q: 'Will you work in our existing account?', a: 'Usually, yes. We audit the existing history first and preserve useful learning. A new account is recommended only when there is a clear technical or ownership reason.' },
+      { q: 'How quickly should performance improve?', a: 'Tracking and structural fixes can have an immediate effect, but reliable optimisation normally requires several conversion cycles. We set expectations from the account volume and buying journey rather than promise a fixed timeline.' },
+    ],
+    related: [{ href: '/services/analytics-attribution', label: 'Analytics & attribution' }, { href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/meta-ads', label: 'Meta ads' }],
+  },
+  {
+    slug: 'meta-ads',
+    title: 'Meta ads for ecommerce',
+    metaTitle: 'Ecommerce Meta Ads Management — Facebook & Instagram',
+    description: 'Creative-led Meta ads management for ecommerce brands, covering prospecting, catalogue advertising, retargeting and measurement.',
+    phase: 'Acquire',
+    intro: 'Build a repeatable creative and audience testing system across Facebook and Instagram—then scale the combinations that acquire valuable customers, not just attributed purchases.',
+    promise: 'Creative learning becomes an operating system, not a collection of disconnected ads.',
+    outcomes: [{ value: 'Testing velocity', label: 'Structured hooks, formats and offers' }, { value: 'Full-funnel roles', label: 'Prospecting, nurture and retargeting' }, { value: 'Better signals', label: 'Pixel and Conversions API alignment' }],
+    problems: [
+      { title: 'Creative fatigue arrives quickly', text: 'Winning ads are scaled without a pipeline of new angles, formats and iterations ready to replace them.' },
+      { title: 'Every campaign claims the sale', text: 'View-through attribution and cross-channel overlap make platform ROAS an unreliable source of truth.' },
+      { title: 'Scaling raises CPA', text: 'Broader audiences expose a weak offer or creative system before the account has enough learning to compensate.' },
+    ],
+    deliverables: [
+      { title: 'Creative testing roadmap', text: 'Hooks, formats, messages, proof and offer hypotheses planned by funnel stage.' },
+      { title: 'Campaign architecture', text: 'Prospecting, catalogue, retargeting and retention roles with controlled overlap.' },
+      { title: 'Audience strategy', text: 'Broad, first-party, lookalike and exclusion logic appropriate to account maturity.' },
+      { title: 'Catalogue and dynamic ads', text: 'Product-set structure, feed diagnostics and relevant merchandising logic.' },
+      { title: 'Measurement foundation', text: 'Pixel, Conversions API, event quality and attribution settings reviewed together.' },
+      { title: 'Learning reports', text: 'What won, why it may have won, what to iterate and which commercial metric changed.' },
+    ],
+    process: [{ title: 'Map the offer and customer', text: 'Translate the purchase decision into testable messages and creative angles.' }, { title: 'Repair the signal quality', text: 'Validate events, catalogue data, exclusions and campaign roles.' }, { title: 'Build a testing rhythm', text: 'Launch controlled creative batches with clear success and stop conditions.' }, { title: 'Scale with blended evidence', text: 'Use Meta data alongside store, GA4 and new-customer signals.' }],
+    fit: ['You can produce or approve fresh creative consistently.', 'Your store has proven conversion demand and a viable contribution margin.', 'You want to understand why creative works, not only which ad won.', 'You need catalogue prospecting or retargeting for a broad product range.'],
+    faqs: [
+      { q: 'Do you create the advertising creative?', a: 'We provide the testing strategy, briefs, copy and iteration plan. Production scope can be agreed around your internal team, creators or external production partners.' },
+      { q: 'Do you set up the Meta Conversions API?', a: 'Yes. We review Pixel and Conversions API coverage, deduplication and event quality as part of the measurement foundation.' },
+      { q: 'Should we use Advantage+ Shopping campaigns?', a: 'They can be effective, but the decision depends on conversion volume, geography, catalogue quality and the degree of control needed. We test them within a broader account structure rather than assume one format fits every brand.' },
+      { q: 'How many new creatives do we need?', a: 'The required volume depends on spend, audience size and fatigue. We establish a sustainable testing cadence from the current account data.' },
+    ],
+    related: [{ href: '/services/email-retention', label: 'Email & retention' }, { href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/analytics-attribution', label: 'Analytics & attribution' }],
+  },
+  {
+    slug: 'ecommerce-seo',
+    title: 'Ecommerce SEO that compounds',
+    metaTitle: 'Ecommerce SEO Agency — Technical, Category & Product Growth',
+    description: 'Ecommerce SEO for Shopify and online retailers, covering technical foundations, category strategy, product content and digital authority.',
+    phase: 'Acquire',
+    intro: 'Grow valuable non-paid demand with an ecommerce SEO roadmap built around category economics, product discovery and technical control—not a volume target for blog posts.',
+    promise: 'Organic growth is prioritised by commercial value, implementation effort and the part of the journey it supports.',
+    outcomes: [{ value: 'Commercial coverage', label: 'Categories mapped to buying demand' }, { value: 'Crawl efficiency', label: 'Facets, canonicals and internal links controlled' }, { value: 'Useful authority', label: 'Content built to help a real decision' }],
+    problems: [
+      { title: 'Products are hard to discover', text: 'Category structure, filtering and internal links do not reflect how customers search or shop.' },
+      { title: 'Technical duplication grows quietly', text: 'Facets, parameters, collections and variants dilute crawling and create competing URLs.' },
+      { title: 'Content attracts the wrong audience', text: 'High-volume articles produce impressions without moving customers towards a commercially relevant page.' },
+    ],
+    deliverables: [
+      { title: 'Technical ecommerce audit', text: 'Indexation, rendering, canonicals, facets, pagination, sitemaps, structured data and migration risk.' },
+      { title: 'Category opportunity model', text: 'Demand, margin, competition and current authority combined into a prioritised roadmap.' },
+      { title: 'Information architecture', text: 'Collections, subcategories, filters and internal linking aligned to real shopping behaviour.' },
+      { title: 'Category and product templates', text: 'Reusable briefs that improve relevance without filling pages with generic SEO copy.' },
+      { title: 'Editorial authority plan', text: 'Decision-support content, original data and expert answers connected to commercial pages.' },
+      { title: 'Migration and monitoring', text: 'Redirect mapping, launch checks and Search Console monitoring when URLs or platforms change.' },
+    ],
+    process: [{ title: 'Understand the catalogue', text: 'Map products, categories, margins and the operational constraints behind the store.' }, { title: 'Fix indexation and architecture', text: 'Resolve technical duplication and improve pathways into priority collections.' }, { title: 'Build commercially useful pages', text: 'Create templates and evidence-rich content that answers buying questions.' }, { title: 'Measure category growth', text: 'Track non-brand clicks, landing-page revenue, coverage and assisted conversion.' }],
+    fit: ['Organic search should be a larger share of profitable acquisition.', 'Your Shopify or ecommerce catalogue has technical indexation issues.', 'You are planning a redesign or platform migration.', 'You want fewer, stronger resources rather than bulk content production.'],
+    faqs: [
+      { q: 'Do you specialise in Shopify SEO?', a: 'Shopify is a core platform for our work, including collections, products, markets, structured data, themes and migration constraints. The same commercial framework also applies to other ecommerce platforms.' },
+      { q: 'How long does ecommerce SEO take?', a: 'Technical fixes can change crawling quickly, while meaningful ranking and revenue growth usually builds over several months. Timing depends on authority, competition, catalogue size and implementation speed.' },
+      { q: 'Do we need to publish blog articles every week?', a: 'No. Publishing frequency is not the strategy. We prioritise collection, product and decision-support content where there is a clear user and commercial purpose.' },
+      { q: 'Can you protect rankings during a Shopify migration?', a: 'Yes. We create the redirect and URL-retention plan, validate canonicals and sitemaps, and monitor launch behaviour in Search Console.' },
+    ],
+    related: [{ href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/services/analytics-attribution', label: 'Analytics & attribution' }],
+  },
+  {
+    slug: 'cro-shopify',
+    title: 'CRO & Shopify growth',
+    metaTitle: 'Shopify CRO & Development — Convert More Ecommerce Traffic',
+    description: 'Research-led ecommerce CRO and Shopify development that improves product discovery, product pages, checkout journeys and site performance.',
+    phase: 'Convert',
+    intro: 'Remove the friction that stops qualified visitors buying. We combine behavioural evidence, commercial prioritisation and Shopify implementation so recommendations actually reach customers.',
+    promise: 'Every change links a customer problem to a measurable commercial hypothesis.',
+    outcomes: [{ value: 'Higher CVR', label: 'More orders from existing demand' }, { value: 'Stronger AOV', label: 'Merchandising and offer clarity' }, { value: 'Faster learning', label: 'Prioritised tests and releases' }],
+    problems: [
+      { title: 'Traffic grows but orders do not', text: 'Acquisition exposes unclear value, weak product proof or a journey that makes comparison and purchase difficult.' },
+      { title: 'The theme limits improvement', text: 'App bloat, inherited templates and fragile custom code turn simple commercial changes into technical projects.' },
+      { title: 'Ideas are not evidence', text: 'Teams debate design preferences without customer research, funnel data or a defined success measure.' },
+    ],
+    deliverables: [
+      { title: 'Conversion research', text: 'Analytics, recordings, surveys, reviews, support themes and heuristic review combined into evidence.' },
+      { title: 'Prioritised opportunity backlog', text: 'Hypotheses scored by likely impact, confidence, effort and dependency.' },
+      { title: 'Product and collection journeys', text: 'Merchandising, search, filters, product value, proof, comparison and cross-sell improvements.' },
+      { title: 'Shopify implementation', text: 'Theme sections, templates, speed work, app rationalisation and quality-assured releases.' },
+      { title: 'Experiment design', text: 'A/B tests where traffic supports them and structured before/after measurement where it does not.' },
+      { title: 'Launch and migration control', text: 'Analytics, redirects, accessibility and performance checked before releases go live.' },
+    ],
+    process: [{ title: 'Find the friction', text: 'Combine behavioural data and customer language to locate the highest-confidence problems.' }, { title: 'Model the opportunity', text: 'Estimate the commercial upside and define the metric that should move.' }, { title: 'Design and implement', text: 'Prototype, review and ship in small, quality-assured releases.' }, { title: 'Learn and iterate', text: 'Measure the outcome, record the learning and update the backlog.' }],
+    fit: ['You already pay for traffic and need more value from it.', 'Your Shopify theme is slow, inflexible or overloaded with apps.', 'Product pages are not communicating value or proof clearly.', 'You want an ongoing experimentation partner or a focused redesign.'],
+    faqs: [
+      { q: 'Do you build complete Shopify stores?', a: 'Yes. We support focused theme improvements, redesigns and full Shopify builds. The scope starts with the business and migration requirements rather than a fixed design package.' },
+      { q: 'Do we have enough traffic for A/B testing?', a: 'Not every store does. Where volume is insufficient, we use customer research, funnel evidence and carefully measured releases rather than manufacture false statistical confidence.' },
+      { q: 'Can you improve site speed?', a: 'Yes. We review theme code, third-party scripts, apps, images and rendering behaviour, then prioritise changes by user and commercial impact.' },
+      { q: 'Will conversion changes hurt SEO?', a: 'SEO, accessibility and measurement are part of release QA. Major content or URL changes are mapped before implementation.' },
+    ],
+    related: [{ href: '/services/ecommerce-seo', label: 'Ecommerce SEO' }, { href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/services/email-retention', label: 'Email & retention' }],
+  },
+  {
+    slug: 'email-retention',
+    title: 'Email & retention growth',
+    metaTitle: 'Ecommerce Email Marketing & Retention Strategy',
+    description: 'Ecommerce email and retention strategy covering lifecycle automation, segmentation, campaigns and repeat-purchase growth.',
+    phase: 'Retain',
+    intro: 'Increase the value of the customers you have already paid to acquire with lifecycle journeys that are timely, useful and measured beyond open rates.',
+    promise: 'Retention work is accountable to repeat purchase, customer value and margin—not the number of emails sent.',
+    outcomes: [{ value: 'More repeat revenue', label: 'Journeys matched to buying cycles' }, { value: 'Better first-party data', label: 'Useful preference and behaviour signals' }, { value: 'Lower paid dependency', label: 'More value after acquisition' }],
+    problems: [
+      { title: 'Automation stops after welcome and cart', text: 'The lifecycle ignores replenishment, education, cross-sell, win-back and high-value customer behaviour.' },
+      { title: 'Everyone receives the same campaign', text: 'Frequency and message do not reflect product interest, purchase history, value or engagement.' },
+      { title: 'Revenue attribution is inflated', text: 'Platform dashboards reward broad windows without showing incrementality, discount cost or margin.' },
+    ],
+    deliverables: [
+      { title: 'Lifecycle opportunity map', text: 'Customer stages, buying cycles, existing coverage and the journeys with the strongest commercial case.' },
+      { title: 'Core automation system', text: 'Welcome, browse, cart, checkout, post-purchase, replenishment, cross-sell and win-back where relevant.' },
+      { title: 'Segmentation framework', text: 'Engagement, product interest, purchase history, value, predicted timing and consent status.' },
+      { title: 'Campaign operating plan', text: 'Commercial calendar, content themes, testing rhythm, approvals and measurement.' },
+      { title: 'List and deliverability health', text: 'Consent sources, suppression, hygiene, authentication and engagement practices reviewed.' },
+      { title: 'Retention reporting', text: 'Repeat rate, time to second order, revenue per recipient, cohort value and incrementality questions.' },
+    ],
+    process: [{ title: 'Map the customer lifecycle', text: 'Understand purchase cycles, product relationships and where customers currently go quiet.' }, { title: 'Fix data and priority journeys', text: 'Validate tracking, consent and the flows closest to a commercial event.' }, { title: 'Build a useful campaign rhythm', text: 'Balance promotion with education, product discovery and brand value.' }, { title: 'Improve customer value', text: 'Use cohort and repeat-purchase behaviour to evolve timing, offers and segmentation.' }],
+    fit: ['Paid acquisition is a large share of revenue.', 'Repeat purchase should be higher for your category.', 'Your current automations are basic or have not been reviewed recently.', 'You use Klaviyo or a comparable ecommerce lifecycle platform.'],
+    faqs: [
+      { q: 'Do you work with Klaviyo?', a: 'Yes. Klaviyo is a primary platform for ecommerce lifecycle work, including data integrations, flows, segments, campaigns and reporting.' },
+      { q: 'How much revenue should email generate?', a: 'There is no honest universal percentage. Category, purchase cycle, list maturity, acquisition mix and attribution settings all change the answer. We establish the baseline and focus on incremental repeat value.' },
+      { q: 'Do you design and write emails?', a: 'Strategy, copy, testing and build scope can be included. We can also work with an existing brand or creative team using a shared operating plan.' },
+      { q: 'Can you help with deliverability?', a: 'We review authentication, list sources, suppression, engagement and sending practices. Specialist remediation may be recommended for severe reputation problems.' },
+    ],
+    related: [{ href: '/services/meta-ads', label: 'Meta ads' }, { href: '/services/cro-shopify', label: 'CRO & Shopify' }, { href: '/services/analytics-attribution', label: 'Analytics & attribution' }],
+  },
+  {
+    slug: 'affiliate-management',
+    title: 'Affiliate programme growth',
+    metaTitle: 'Ecommerce Affiliate Management — Recruitment & Growth',
+    description: 'Affiliate programme strategy and management covering network setup, partner recruitment, activation, commission and incrementality.',
+    phase: 'Acquire',
+    intro: 'Build a partner channel that creates incremental revenue without giving away margin to activity that would have happened anyway.',
+    promise: 'Partner value is judged by incrementality, customer quality and margin—not a network revenue total.',
+    outcomes: [{ value: 'Active partners', label: 'Recruitment followed by activation' }, { value: 'Margin control', label: 'Commission aligned to partner value' }, { value: 'Cleaner growth', label: 'Compliance and incrementality monitored' }],
+    problems: [
+      { title: 'The programme has many inactive partners', text: 'Recruitment counts have grown, but onboarding, communication and activation have not created productive relationships.' },
+      { title: 'Commission ignores incrementality', text: 'Content, cashback, voucher and technology partners receive similar terms despite creating different value.' },
+      { title: 'The channel cannibalises other demand', text: 'Late-funnel coupon activity receives credit for customers who had already decided to buy.' },
+    ],
+    deliverables: [
+      { title: 'Programme economics', text: 'Margin, new-customer value, partner types and commission guardrails modelled together.' },
+      { title: 'Network and tracking setup', text: 'AWIN and other suitable networks configured with validation and attribution checks.' },
+      { title: 'Recruitment pipeline', text: 'Prioritised partner targets, positioning, outreach, negotiation and onboarding.' },
+      { title: 'Activation programme', text: 'Launch plans, creative, product samples, codes, content and regular partner communication.' },
+      { title: 'Commission strategy', text: 'Tiering, bonuses and tenancy evaluated against incremental contribution.' },
+      { title: 'Compliance and reporting', text: 'Code leakage, brand bidding, fraud, publisher quality and programme performance monitored.' },
+    ],
+    process: [{ title: 'Model the programme case', text: 'Define what an incremental order is worth and which partner types fit the brand.' }, { title: 'Repair or launch the foundation', text: 'Set network terms, tracking, compliance and partner-facing assets.' }, { title: 'Recruit and activate', text: 'Build relationships with a relevant reason to promote, not a generic network invitation.' }, { title: 'Optimise partner value', text: 'Reallocate commission and attention based on customer and contribution quality.' }],
+    fit: ['You have an established ecommerce offer and healthy product margin.', 'Your existing network has low activation or weak partner diversity.', 'You want a performance-based complement to paid media.', 'You need specialist AWIN programme support.'],
+    faqs: [
+      { q: 'Which affiliate networks do you work with?', a: 'AWIN is a core specialism. We also assess other networks and direct partnerships based on geography, category, technology and the partners you need to reach.' },
+      { q: 'How long does a new programme take to grow?', a: 'Technical launch can happen within weeks, but a valuable partner base is built through sustained recruitment and activation. Most programmes should be evaluated over several months, not days.' },
+      { q: 'How do you prevent coupon cannibalisation?', a: 'We use partner rules, code controls, attribution review, commission differences and incremental reporting to reduce credit for activity that did not create the purchase.' },
+      { q: 'Do we need creative assets?', a: 'Yes, but useful product information, offers, feeds and partner-specific angles are often more important than a large folder of generic banners.' },
+    ],
+    related: [{ href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/services/email-retention', label: 'Email & retention' }, { href: '/services/analytics-attribution', label: 'Analytics & attribution' }],
+  },
+  {
+    slug: 'analytics-attribution',
+    title: 'Ecommerce analytics & attribution',
+    metaTitle: 'Ecommerce Analytics & Attribution — Profit-Led Measurement',
+    description: 'Ecommerce analytics and attribution covering GA4, tagging, platform events, dashboards, unit economics and decision frameworks.',
+    phase: 'Measure',
+    intro: 'Create a measurement system that connects customer behaviour, channel spend and store economics—so your team can make faster decisions with appropriate confidence.',
+    promise: 'One shared commercial scorecard, with platform data treated as evidence rather than absolute truth.',
+    outcomes: [{ value: 'Trusted events', label: 'Critical journeys measured consistently' }, { value: 'Shared definitions', label: 'Revenue, CAC and customers aligned' }, { value: 'Faster decisions', label: 'Reporting built around actions' }],
+    problems: [
+      { title: 'Platforms claim more revenue than exists', text: 'Different attribution windows and modelled conversions create a total that cannot be reconciled with store performance.' },
+      { title: 'GA4 data cannot answer commercial questions', text: 'Events exist, but product, customer, consent and campaign context are incomplete or inconsistently named.' },
+      { title: 'Reports are busy but decisions are slow', text: 'Dashboards contain every metric without clarifying what changed, why it matters or what action follows.' },
+    ],
+    deliverables: [
+      { title: 'Measurement plan', text: 'Commercial questions translated into events, parameters, ownership and data-quality tests.' },
+      { title: 'GA4 and tag implementation', text: 'Ecommerce events, consent behaviour, channel tags and critical conversion definitions.' },
+      { title: 'Platform signal review', text: 'Google, Meta and affiliate events checked for coverage, duplication and appropriate optimisation priority.' },
+      { title: 'Unit-economics model', text: 'Contribution margin, break-even ROAS, CAC and blended efficiency targets documented.' },
+      { title: 'Commercial scorecard', text: 'A concise view of acquisition, conversion, retention and profit signals with clear definitions.' },
+      { title: 'Decision cadence', text: 'Weekly and monthly review structure showing which metrics require action and which require patience.' },
+    ],
+    process: [{ title: 'Define the questions', text: 'Agree which decisions the measurement system needs to improve.' }, { title: 'Audit the data chain', text: 'Trace consent, tags, events, platforms, store data and reporting from source to dashboard.' }, { title: 'Repair and validate', text: 'Implement changes and test critical journeys with documented acceptance criteria.' }, { title: 'Build decision confidence', text: 'Create a scorecard and review rhythm that acknowledges attribution uncertainty.' }],
+    fit: ['Different platforms report conflicting revenue.', 'Tracking has changed through a redesign, consent update or platform migration.', 'Your team lacks shared definitions for CAC, ROAS or new customers.', 'You need better data before increasing media spend.'],
+    faqs: [
+      { q: 'Can attribution ever be completely accurate?', a: 'No single tool can observe every cross-device and cross-channel influence. The goal is a robust evidence framework that combines platform, store, analytics and experiment data without pretending uncertainty has disappeared.' },
+      { q: 'Do you implement GA4 ecommerce tracking?', a: 'Yes. We create the event and parameter plan, implement or coordinate the tagging, and validate critical journeys against the measurement specification.' },
+      { q: 'Do we need server-side tracking?', a: 'Not automatically. We assess the commercial need, platform stack, consent requirements, implementation cost and likely data improvement before recommending it.' },
+      { q: 'Which dashboard tools do you use?', a: 'The tool depends on the data and team. We favour the simplest maintainable scorecard that answers the required questions rather than a complex dashboard for its own sake.' },
+    ],
+    related: [{ href: '/services/ppc-management', label: 'Google Shopping & PPC' }, { href: '/services/meta-ads', label: 'Meta ads' }, { href: '/tools/ecommerce-profit-calculator', label: 'Profit calculator' }],
+  },
+];

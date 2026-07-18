@@ -3,172 +3,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
-<BaseLayout title="Contact Us — Free Marketing Audit" description="Get in touch with Spires Digital for a free digital marketing audit. PPC, Meta Ads, and more. Based in Guernsey and Lichfield, UK.">
-  <Breadcrumbs items={[{ label: 'Contact' }]} />
-
-  <section class="page-hero" style="margin-top: -2rem;">
-    <div class="container page-hero-content">
-      <span class="badge">Get in Touch</span>
-      <h1>Let's Grow Your Business Together</h1>
-      <p>Ready to scale your digital marketing? Get a free consultation from our experts.</p>
+<BaseLayout title="Free Ecommerce Growth Review" description="Share your ecommerce growth context and receive a practical opportunity map across acquisition, conversion, retention and measurement.">
+  <div class="breadcrumbs-wrap"><Breadcrumbs items={[{ label: 'Growth review' }]} /></div>
+  <section class="contact-hero hero-dark">
+    <div class="container contact-hero-grid">
+      <div><span class="badge">Free ecommerce growth review</span><h1>Find the next constraint worth removing.</h1><p>Share the commercial context behind your store. We will review the customer journey and return a concise opportunity map with priorities, quick wins and the questions that need deeper evidence.</p></div>
+      <div class="audit-preview"><span>What you receive</span><ol><li><strong>Commercial snapshot</strong><small>Targets, economics and current channel mix</small></li><li><strong>Constraint map</strong><small>Acquire, convert, retain and measure</small></li><li><strong>Prioritised next steps</strong><small>Impact, confidence and dependencies</small></li></ol><p>No obligation. Useful even if we do not work together.</p></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-form-wrap">
-          <h2>Send Us a Message</h2>
-          <form class="contact-form" action="https://formsubmit.co/jack@spiresdigital.com" method="POST">
-            <input type="hidden" name="_subject" value="New enquiry from spiresdigital.com" />
-            <input type="hidden" name="_next" value="https://spiresdigital.com/contact/?sent=1" />
-            <input type="hidden" name="_captcha" value="true" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="text" name="_honey" style="display:none" />
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="budget">Monthly Ad Spend</label>
-              <select id="budget" name="budget">
-                <option value="">Select budget range</option>
-                <option>Under &pound;1,000/month</option>
-                <option>&pound;1,000 - &pound;5,000/month</option>
-                <option>&pound;5,000 - &pound;10,000/month</option>
-                <option>&pound;10,000 - &pound;25,000/month</option>
-                <option>&pound;25,000 - &pound;50,000/month</option>
-                <option>&pound;50,000+/month</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Services you're interested in</label>
-              <div class="checkbox-group">
-                <label class="checkbox"><input type="checkbox" name="services" value="Google Ads" /> Google Ads</label>
-                <label class="checkbox"><input type="checkbox" name="services" value="Meta Ads" /> Meta Ads</label>
-                <label class="checkbox"><input type="checkbox" name="services" value="Affiliate" /> Affiliate Marketing</label>
-                <label class="checkbox"><input type="checkbox" name="services" value="Shopify" /> Shopify / E-Commerce</label>
-                <label class="checkbox"><input type="checkbox" name="services" value="Lead Gen" /> Lead Generation</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
-          </form>
-          <script is:inline>
-            if (window.location.search.includes('sent=1')) {
-              const wrap = document.querySelector('.contact-form-wrap');
-              if (wrap) {
-                wrap.innerHTML = '<div class="success-msg"><h2>Message Sent!</h2><p>Thanks for getting in touch. We\'ll get back to you within 24 hours.</p><a href="/contact" class="btn btn-outline" style="margin-top:1rem;">Send Another</a></div>';
-              }
-            }
-          </script>
-        </div>
-
-        <div class="contact-info">
-          <h2>Get in Touch Directly</h2>
-
-          <div class="info-card">
-            <h4>Email</h4>
-            <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a>
+  <section class="section surface">
+    <div class="container contact-layout">
+      <div>
+        <span class="eyebrow">Tell us about the store</span>
+        <h2>A little context makes the review much more useful.</h2>
+        <p class="form-intro">Required fields are deliberately limited. Commercial ranges help us tailor the review but are optional.</p>
+        <form class="growth-form form-stack" action="https://formsubmit.co/jack@spiresdigital.com" method="POST" data-capture-attribution data-growth-form>
+          <input type="hidden" name="_subject" value="New ecommerce growth review request" />
+          <input type="hidden" name="_next" value="https://spiresdigital.com/thank-you/" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-label="Leave this field blank" aria-hidden="true" />
+          <div class="form-grid">
+            <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required /></div>
+            <div class="field"><label for="email">Work email *</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
           </div>
-
-          <div class="info-card">
-            <h4>Location</h4>
-            <p>Guernsey, Channel Islands<br/>Lichfield, Staffordshire<br/>United Kingdom</p>
+          <div class="form-grid">
+            <div class="field"><label for="company">Brand / company *</label><input id="company" name="company" autocomplete="organization" required /></div>
+            <div class="field"><label for="website">Store URL *</label><input id="website" name="website" type="url" inputmode="url" placeholder="https://" required /></div>
           </div>
-
-          <div class="info-card">
-            <h4>Response Time</h4>
-            <p>We respond within 24 hours during business hours.</p>
+          <div class="form-grid">
+            <div class="field"><label for="platform">Ecommerce platform</label><select id="platform" name="platform"><option value="">Select platform</option><option>Shopify</option><option>WooCommerce</option><option>BigCommerce</option><option>Magento / Adobe Commerce</option><option>Custom platform</option><option>Other / unsure</option></select></div>
+            <div class="field"><label for="revenue">Approximate annual online revenue</label><select id="revenue" name="annual_revenue"><option value="">Prefer not to say</option><option>Pre-revenue / launching</option><option>Under £100k</option><option>£100k–£500k</option><option>£500k–£1m</option><option>£1m–£5m</option><option>£5m+</option></select></div>
           </div>
-
-          <div class="calendly-box">
-            <h4>Book a Call</h4>
-            <p>Skip the back-and-forth. Book a free 30-minute consultation directly in my calendar.</p>
-            <a href="https://calendly.com/jack-spiresdigital/30min?back=1" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 0.75rem;">Book 30-Min Call</a>
-          </div>
-
-          <div class="why-box">
-            <h4>Why Businesses Choose Us</h4>
-            <ul>
-              <li>Rapid 24-hour response time</li>
-              <li>Google & Meta certified</li>
-              <li>Transparent real-time reporting</li>
-              <li>No long-term contracts</li>
-              <li>&pound;10M+ ad spend managed</li>
-            </ul>
-          </div>
-        </div>
+          <fieldset class="challenge-field"><legend>Where does growth feel most constrained?</legend><div class="choice-grid"><label><input type="checkbox" name="constraint" value="Acquisition" /><span><strong>Acquire</strong><small>Paid, SEO or affiliate growth</small></span></label><label><input type="checkbox" name="constraint" value="Conversion" /><span><strong>Convert</strong><small>Store and checkout performance</small></span></label><label><input type="checkbox" name="constraint" value="Retention" /><span><strong>Retain</strong><small>Email and repeat purchase</small></span></label><label><input type="checkbox" name="constraint" value="Measurement" /><span><strong>Measure</strong><small>Tracking and profit clarity</small></span></label></div></fieldset>
+          <div class="field"><label for="context">What are you trying to improve? *</label><textarea id="context" name="context" rows="5" placeholder="A useful answer might include your target, what has already been tried, and the result you are seeing now." required></textarea><span class="field-hint">Please do not include account passwords or other sensitive access details.</span></div>
+          <div class="consent-row"><label><input type="checkbox" name="privacy_acknowledged" required /> <span>I agree that Spires Digital can use this information to respond to my request. *</span></label><a href="/privacy">Privacy policy</a></div>
+          <button type="submit" class="btn btn-primary btn-lg btn-arrow">Request my growth review</button>
+          <p class="submit-note">We aim to reply within one working day. Your details are not added to a marketing list.</p>
+        </form>
       </div>
+      <aside class="contact-side">
+        <div class="direct-card"><span>Consultation-first pricing</span><h3>Book 30 minutes with Jack.</h3><p>We need to understand your goals, current setup and delivery requirements before giving a price. If there is a strong fit, the consultation is followed by a clear written scope and quote—with no obligation to proceed.</p><a href="https://calendly.com/jack-spiresdigital/30min?back=1" class="btn btn-secondary btn-arrow" target="_blank" rel="noopener" data-track="contact_calendly">Book a pricing consultation</a></div>
+        <div class="fit-card"><span>A strong fit</span><ul class="check-list"><li>Ecommerce is a meaningful part of your revenue</li><li>You want profit clarity across channels</li><li>You value account ownership and transparency</li><li>You can implement or collaborate on recommendations</li></ul></div>
+        <div class="direct-links"><a href="mailto:jack@spiresdigital.com" data-track="contact_email"><span>Email directly</span><strong>jack@spiresdigital.com</strong></a><div><span>Based in</span><strong>Guernsey, Channel Islands</strong></div></div>
+      </aside>
     </div>
   </section>
 </BaseLayout>
 
+<script>
+  document.querySelector('[data-growth-form]')?.addEventListener('submit', () => {
+    window.trackSpiresEvent?.('generate_lead', { lead_type: 'growth_review', page_path: window.location.pathname });
+  });
+</script>
+
 <style>
-  .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: start; }
-
-  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; }
-  .form-group label { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.35rem; color: var(--color-text); }
-  .form-group input, .form-group select, .form-group textarea {
-    padding: 0.7rem 0.9rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    font-size: 0.95rem;
-    font-family: var(--font-body);
-    transition: border-color 0.2s;
-    background: var(--color-white);
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
-  }
-  .checkbox-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.25rem; }
-  .checkbox { display: flex; align-items: center; gap: 0.35rem; font-size: 0.88rem; cursor: pointer; }
-
-  .contact-info { margin-top: 3rem; }
-  .info-card { margin-bottom: 1.5rem; }
-  .info-card h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); margin-bottom: 0.25rem; }
-  .info-card a { color: var(--color-accent); font-weight: 500; }
-  .info-card p { color: var(--color-text); font-size: 0.95rem; }
-
-  .calendly-box { background: var(--color-white); border: 2px solid var(--color-accent); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1.5rem; }
-  .calendly-box h4 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--color-dark); }
-  .calendly-box p { font-size: 0.9rem; color: var(--color-text-light); }
-  .why-box { background: var(--color-bg-alt); padding: 1.5rem; border-radius: var(--radius); margin-top: 2rem; }
-  .why-box h4 { font-size: 1rem; margin-bottom: 0.75rem; }
-  .why-box ul { list-style: none; }
-  .why-box li { padding: 0.3rem 0; font-size: 0.9rem; color: var(--color-text-light); }
-  .why-box li::before { content: '\2713'; color: var(--color-success); margin-right: 0.5rem; font-weight: 600; }
-
-  .success-msg { text-align: center; padding: 3rem 1rem; }
-  .success-msg h2 { color: var(--color-success); margin-bottom: 0.5rem; }
-  .success-msg p { color: var(--color-text-light); font-size: 1.05rem; }
-
-  @media (max-width: 768px) {
-    .contact-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .contact-info { margin-top: 0; }
-  }
+  .contact-hero { padding-top: 5rem; }
+  .contact-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .75fr; gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
+  .audit-preview { padding: 1.5rem; border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); background: rgba(255,255,255,.07); }
+  .audit-preview > span { color: #91eadb; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+  .audit-preview ol { display: grid; gap: .7rem; margin: 1.2rem 0; list-style: none; counter-reset: review; }
+  .audit-preview li { display: grid; grid-template-columns: auto 1fr; gap: .8rem; counter-increment: review; }
+  .audit-preview li::before { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: rgba(117,230,211,.12); color: #91eadb; content: counter(review); font-size: .68rem; font-weight: 800; }
+  .audit-preview strong, .audit-preview small { display: block; }.audit-preview strong { color: white; }.audit-preview small { color: #9da8ba; }
+  .audit-preview > p { margin: 0; color: #cbd2df; font-size: .75rem; }
+  .contact-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .65fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: start; }
+  .contact-layout h2 { max-width: 760px; }
+  .form-intro { margin: 1rem 0 2rem; color: var(--slate); }
+  .growth-form { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--canvas); }
+  .honey { position: absolute !important; left: -9999px !important; }
+  .challenge-field { border: 0; }.challenge-field legend { margin-bottom: .55rem; color: var(--ink); font-size: .84rem; font-weight: 750; }
+  .choice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+  .choice-grid label { display: grid; grid-template-columns: auto 1fr; gap: .65rem; align-items: start; padding: .8rem; border: 1px solid var(--line); border-radius: 9px; background: white; cursor: pointer; }
+  .choice-grid input { margin-top: .22rem; accent-color: var(--violet); }
+  .choice-grid strong, .choice-grid small { display: block; }.choice-grid small { color: var(--muted); }
+  .consent-row { display: flex; justify-content: space-between; gap: 1rem; align-items: start; color: var(--slate); font-size: .75rem; }
+  .consent-row label { display: flex; gap: .5rem; }.consent-row input { margin-top: .25rem; accent-color: var(--violet); }.consent-row a { color: var(--violet-dark); text-decoration: underline; white-space: nowrap; }
+  .submit-note { color: var(--muted); font-size: .72rem; text-align: center; }
+  .contact-side { position: sticky; top: 110px; display: grid; gap: 1rem; }
+  .direct-card, .fit-card, .direct-links { padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+  .direct-card > span, .fit-card > span { color: var(--violet-dark); font-size: .68rem; font-weight: 800; text-transform: uppercase; }
+  .direct-card h3 { margin: 1rem 0 .7rem; }.direct-card p { margin-bottom: 1.2rem; color: var(--slate); font-size: .84rem; }.direct-card .btn { width: 100%; }
+  .fit-card .check-list { margin-top: 1rem; font-size: .8rem; }
+  .direct-links { display: grid; gap: 1rem; }.direct-links a, .direct-links div { display: grid; }.direct-links span { color: var(--muted); font-size: .68rem; }.direct-links strong { color: var(--ink); font-size: .84rem; }
+  @media (max-width: 900px) { .contact-hero-grid, .contact-layout { grid-template-columns: 1fr; } .contact-side { position: static; } }
+  @media (max-width: 600px) { .choice-grid { grid-template-columns: 1fr; } .consent-row { flex-direction: column; } }
 </style>

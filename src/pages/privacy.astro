@@ -2,72 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-
-<BaseLayout title="Privacy Policy" description="Spires Digital privacy policy. How we collect, use, and protect your personal data.">
-  <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
-
-  <section class="page-hero" style="margin-top: -2rem;">
-    <div class="container page-hero-content">
-      <h1>Privacy Policy</h1>
-      <p>Last updated: April 2026</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container legal-content">
-      <h2>Who We Are</h2>
-      <p>Spires Digital is a digital marketing agency based in Guernsey, Channel Islands and Lichfield, Staffordshire, United Kingdom. Our website address is <a href="https://spiresdigital.com">https://spiresdigital.com</a>.</p>
-
-      <h2>What Data We Collect</h2>
-      <h3>Contact Form Submissions</h3>
-      <p>When you submit a contact form, we collect the information you provide: your name, email address, phone number (if provided), company name (if provided), and message content. This data is used solely to respond to your enquiry.</p>
-
-      <h3>Analytics Data</h3>
-      <p>We use Google Analytics 4 to understand how visitors interact with our website. This collects anonymised data including pages visited, time on site, referral source, device type, and approximate geographic location. No personally identifiable information is collected through analytics.</p>
-
-      <h3>Cookies</h3>
-      <p>Our site uses essential cookies required for basic functionality and analytics cookies from Google Analytics. You can control cookie preferences through your browser settings.</p>
-
-      <h2>How We Use Your Data</h2>
-      <p>We use the data we collect to:</p>
-      <ul>
-        <li>Respond to your enquiries and provide the services you request</li>
-        <li>Improve our website and services based on usage patterns</li>
-        <li>Send follow-up communications related to your enquiry (we do not send unsolicited marketing emails)</li>
-      </ul>
-
-      <h2>Data Sharing</h2>
-      <p>We do not sell, trade, or rent your personal information to third parties. Data may be processed by:</p>
-      <ul>
-        <li><strong>Google Analytics:</strong> For website analytics (anonymised data only)</li>
-        <li><strong>Email providers:</strong> To deliver responses to your enquiries</li>
-      </ul>
-
-      <h2>Data Retention</h2>
-      <p>Contact form submissions are retained for up to 24 months. Analytics data is retained according to Google Analytics default settings (14 months).</p>
-
-      <h2>Your Rights</h2>
-      <p>Under the UK GDPR, you have the right to:</p>
-      <ul>
-        <li>Access the personal data we hold about you</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your data</li>
-        <li>Object to processing of your data</li>
-        <li>Request data portability</li>
-      </ul>
-
-      <h2>Contact</h2>
-      <p>For any privacy-related requests, contact us at <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a>.</p>
-    </div>
-  </section>
+<BaseLayout title="Privacy Policy" description="How Spires Digital collects, uses and protects personal data on spiresdigital.com.">
+  <Breadcrumbs items={[{ label: 'Privacy policy' }]} />
+  <section class="page-hero"><div class="container page-hero-content"><span class="badge">Privacy</span><h1>Privacy policy</h1><p>Last updated: 18 July 2026</p></div></section>
+  <section class="section surface"><div class="container-narrow legal-content">
+    <h2>Who we are</h2><p>Spires Digital is a digital marketing business operated from Guernsey, Channel Islands. This policy applies to <a href="https://spiresdigital.com">spiresdigital.com</a>. Privacy enquiries can be sent to <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a>.</p>
+    <h2>Information you choose to provide</h2><p>When you request a growth review, we collect the fields you submit, which may include your name, work email, company, store URL, ecommerce platform, revenue range, growth constraints and message. We use this information to review and respond to the request. Please do not submit passwords, payment details or sensitive account credentials.</p>
+    <h2>Form and scheduling providers</h2><p>Website forms are processed using FormSubmit so the enquiry can be delivered by email. Appointment scheduling links open Calendly in a separate service. Those providers process information according to their own privacy terms. You can instead contact us directly by email.</p>
+    <h2>Analytics and cookies</h2><p>Where analytics is configured, non-essential Google Analytics cookies are loaded only after you choose “Accept analytics” in the site preference banner. Analytics helps us understand page and tool usage, referral source, device category and approximate location. Calculator inputs are processed in your browser and are not sent to Spires Digital by the calculator.</p><p>Your analytics choice is stored in your browser as <code>spires-cookie-consent</code>. You can clear site storage in your browser to reset it.</p>
+    <h2>Attribution information</h2><p>If a link contains campaign parameters such as UTM values or a Google click identifier, the site stores those values for the current browser session and includes them with a form only if you choose to submit one. This helps us understand how the enquiry reached the site.</p>
+    <h2>How information is used</h2><ul><li>To respond to enquiries and arrange requested conversations.</li><li>To prepare the review or service information you request.</li><li>To maintain security, diagnose problems and improve the website.</li><li>To understand aggregate site performance where analytics consent is given.</li></ul>
+    <h2>Sharing</h2><p>We do not sell personal information. Information may be processed by service providers used to operate email, forms, scheduling, hosting and consented analytics. It may also be disclosed where required by law or necessary to protect legal rights.</p>
+    <h2>Retention</h2><p>Enquiry records are kept only for as long as reasonably required to respond, manage the business relationship and meet legal or accounting obligations. Retention can vary with the nature of the enquiry. Analytics retention is controlled in the relevant analytics account.</p>
+    <h2>Your rights</h2><p>Depending on the law applying to you, rights may include access, correction, deletion, restriction, objection and data portability. Contact <a href="mailto:jack@spiresdigital.com">jack@spiresdigital.com</a> to make a request. You may also have the right to complain to the relevant data-protection authority.</p>
+    <h2>Changes</h2><p>We may update this notice when site functionality or providers change. The date at the top shows the latest published version.</p>
+  </div></section>
 </BaseLayout>
-
-<style>
-  .legal-content { max-width: 800px; }
-  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; }
-  .legal-content h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; }
-  .legal-content p { color: var(--color-text-light); line-height: 1.8; margin-bottom: 1rem; }
-  .legal-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-  .legal-content li { color: var(--color-text-light); margin-bottom: 0.5rem; line-height: 1.7; }
-  .legal-content a { color: var(--color-accent); }
-</style>
+<style>.legal-content h2{margin:2.6rem 0 .8rem}.legal-content h2:first-child{margin-top:0}.legal-content p{margin-bottom:1rem;color:var(--slate)}.legal-content ul{display:grid;gap:.5rem;padding-left:1.2rem;color:var(--slate)}.legal-content a{color:var(--violet-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px}.legal-content code{padding:.15rem .3rem;border-radius:4px;background:var(--canvas);font-size:.82em}</style>
