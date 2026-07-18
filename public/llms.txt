@@ -20,6 +20,10 @@ Spires Digital works across one ecommerce growth system:
 
 The operating approach starts with store economics and the main commercial constraint. Channel-reported metrics are considered alongside margin, customer acquisition cost, conversion rate, average order value, repeat purchase and contribution.
 
+## Pricing
+
+Spires Digital does not publish fixed service prices. Every potential engagement starts with a consultation to understand the commercial goal, current setup, platform and data complexity, and delivery requirements. If there is a strong fit, Spires Digital provides a clear written scope and price before any work begins.
+
 ## Primary pages
 
 - Ecommerce growth: https://spiresdigital.com/industries/ecommerce/

@@ -132,7 +132,7 @@ export const strategyBlogContent: Record<string, string> = {
 
 <h2>What Good Looks Like: Setting Realistic Expectations</h2>
 <p>A strong first 90 days with a digital marketing agency should deliver clarity on what's working and what isn't, a clean data foundation for future decision-making, early performance improvements from quick wins and structural fixes, a tested and validated strategy for scaling, and a relationship built on trust, transparency, and shared goals.</p>
-<p>At Spires Digital, our growth partnership model — £1,200/month plus 5% of profitable revenue — means our success is directly tied to yours from day one. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring cross-channel expertise from the first kickoff call through to long-term scaling. We don't need three months to prove our process works; we need three months to prove it works <em>for your specific business</em>.</p>
+<p>At Spires Digital, every engagement is scoped around the commercial goal, current setup and work required. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring cross-channel expertise from the first kickoff call through to long-term scaling. We don't need three months to prove our process works; we need three months to prove it works <em>for your specific business</em>.</p>
 <p>If you're considering working with an agency — or you're unhappy with your current one — <a href="/contact">book a free consultation via Calendly</a>. We'll walk you through exactly what our first 90 days together would look like and give you a clear roadmap before you commit to anything.</p>
 
 <details>
@@ -228,7 +228,7 @@ export const strategyBlogContent: Record<string, string> = {
 <h2>Why Choose a Channel Islands-Based Agency</h2>
 <p>Most mainland UK agencies treat Channel Islands businesses like any other regional client — applying the same templates, assumptions, and strategies they'd use for a business in Birmingham or Bristol. The result is wasted budget, irrelevant targeting, and campaigns that don't account for the unique dynamics of island commerce.</p>
 <p>At Spires Digital, we're different because we're <em>from</em> here. Based in Guernsey and Lichfield, we understand the Channel Islands market from the inside out. We know the seasonal patterns, the competitive landscape, the regulatory environment, and the community dynamics that shape consumer behaviour on the islands.</p>
-<p>As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring enterprise-level expertise to Channel Islands businesses at a scale that makes sense. Our growth partnership model — £1,200/month plus 5% of profitable revenue — means you get dedicated, senior-level attention without the overhead of a large mainland agency.</p>
+<p>As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we bring enterprise-level expertise to Channel Islands businesses at a scale that makes sense. We first understand the opportunity and delivery requirements, then provide a tailored scope and price for dedicated, senior-level support.</p>
 
 <div class="tip-box"><strong>Pro Tip:</strong> When evaluating digital marketing agencies for your Channel Islands business, ask them to name three Guernsey or Jersey-specific challenges they'd account for in your campaign strategy. If they can't, they don't understand your market well enough to manage your budget effectively.</div>
 
@@ -360,7 +360,7 @@ export const strategyBlogContent: Record<string, string> = {
 <li><strong>Set up a basic dashboard:</strong> Create a Looker Studio dashboard showing GA4 attributed conversions alongside platform-reported numbers</li>
 </ul>
 
-<p>At Spires Digital, attribution isn't an afterthought — it's central to how we manage multi-channel campaigns from our offices in Guernsey and Lichfield. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we work across all major performance channels and understand how they interact, overlap, and — critically — how to measure their true contribution. Our growth partnership model (£1,200/month + 5% of profitable revenue) means we're as invested in accurate attribution as you are — because our revenue depends on genuinely driving yours, not just claiming credit for it.</p>
+<p>At Spires Digital, attribution isn't an afterthought — it's central to how we manage multi-channel campaigns from Guernsey for brands across the UK and beyond. As a Google Partner, Bing Ads accredited, Shopify Partner, and AWIN Certified agency, we work across all major performance channels and understand how they interact, overlap, and — critically — how to measure their true contribution. The work and price are agreed after a consultation, once the data environment and delivery requirements are understood.</p>
 <p>If you're unsure whether your marketing budget is allocated to the channels that actually drive growth, <a href="/contact">book a free attribution audit via Calendly</a>. We'll review your current measurement setup, identify attribution gaps, and recommend a practical framework that gives you confidence in your channel decisions.</p>
 
 <details>

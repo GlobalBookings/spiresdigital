@@ -20,6 +20,11 @@ interface Props {
 }
 
 const { title, metaTitle, description, phase, intro, promise, outcomes, problems, deliverables, process, fit, faqs, related } = Astro.props;
+const pricingFaq: FAQ = {
+  q: 'How much does this service cost?',
+  a: 'We price every engagement after an initial consultation. The right scope depends on your current setup, goals, data quality, platform complexity and who will implement the work. Once those are clear, we provide a written scope and price before anything begins.',
+};
+const allFaqs = [...faqs, pricingFaq];
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -31,7 +36,7 @@ const serviceSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+  mainEntity: allFaqs.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
 };
 ---
 
@@ -96,10 +101,17 @@ const faqSchema = {
     </div>
   </section>
 
+  <section class="pricing-section surface">
+    <div class="container pricing-card">
+      <div><span class="eyebrow">Pricing</span><h2>Understand the work first. Price it properly second.</h2></div>
+      <div><p>We do not use a public rate card. We start with a consultation to understand the commercial goal, current setup, platform, data and delivery requirements. If there is a strong fit, you receive a clear written scope and price before deciding whether to proceed.</p><a href="/contact" class="btn btn-secondary btn-arrow" data-track="service_pricing_consultation">Book a pricing consultation</a></div>
+    </div>
+  </section>
+
   <section class="section surface-warm">
     <div class="container-narrow">
       <div class="section-heading center"><span class="eyebrow">Questions</span><h2>What brands usually ask.</h2></div>
-      <div class="service-faq">{faqs.map(item => <details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
+      <div class="service-faq">{allFaqs.map(item => <details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
     </div>
   </section>
 
@@ -140,6 +152,10 @@ const faqSchema = {
   .fit-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 4rem; align-items: start; }
   .fit-list { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .fit-list li { padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--canvas); }
+  .pricing-section { padding: 0 0 clamp(4rem, 8vw, 7rem); }
+  .pricing-card { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 7vw, 6rem); align-items: center; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--canvas); }
+  .pricing-card h2 { margin-top: .7rem; font-size: clamp(1.55rem, 3vw, 2.25rem); }
+  .pricing-card p { margin-bottom: 1.2rem; color: var(--slate); }
   .service-faq { display: grid; gap: .7rem; }
   .service-faq details { border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; }
   .service-faq summary { display: flex; justify-content: space-between; padding: 1.2rem; cursor: pointer; color: var(--ink); font-weight: 750; list-style: none; }
@@ -152,6 +168,6 @@ const faqSchema = {
   .related .container > div { display: flex; flex-wrap: wrap; gap: .7rem; }
   .related a { padding: .55rem .8rem; border: 1px solid var(--line); border-radius: 999px; font-size: .74rem; font-weight: 700; }
   .related a:hover { border-color: var(--violet); color: var(--violet-dark); }
-  @media (max-width: 900px) { .service-hero-grid, .fit-grid { grid-template-columns: 1fr; } .problem-cards { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .service-hero-grid, .fit-grid, .pricing-card { grid-template-columns: 1fr; } .problem-cards { grid-template-columns: 1fr; } }
   @media (max-width: 680px) { .outcome-grid, .deliverable-grid, .fit-list { grid-template-columns: 1fr; } .outcome-grid > div { border-right: 0; border-bottom: 1px solid var(--line); } .related .container { align-items: flex-start; flex-direction: column; } }
 </style>

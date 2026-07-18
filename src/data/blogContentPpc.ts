@@ -95,7 +95,7 @@ export const ppcBlogPosts: BlogPost[] = [
 
 export const ppcBlogContent: Record<string, string> = {
   'google-ads-management-cost-2026': `
-<p>If you're searching for Google Ads management pricing, you've probably already discovered that getting a straight answer is surprisingly difficult. Most agencies hide their pricing behind "request a quote" forms, making it almost impossible to compare costs. This guide cuts through the noise with a transparent breakdown of what Google Ads management actually costs in 2026 — and which pricing model delivers the best value.</p>
+<p>If you're searching for Google Ads management pricing, you've probably already discovered that fees vary widely. That is partly because account complexity, ad spend, tracking quality and the work expected of an agency differ from business to business. This guide explains the common market models and the questions to ask before requesting a tailored quote.</p>
 
 <h2>The Three Main Pricing Models</h2>
 <p>Google Ads management agencies typically charge using one of three models. Each has distinct advantages and drawbacks, and the right choice depends on your budget size, growth ambitions, and appetite for risk-sharing.</p>
@@ -114,11 +114,11 @@ export const ppcBlogContent: Record<string, string> = {
 <p>The agency charges a percentage of your monthly ad spend, typically between 10% and 20%. For example, if you spend &pound;10,000/month on ads, you'd pay &pound;1,000–&pound;2,000 in management fees.</p>
 <p><strong>Pros:</strong> Scales with your investment. <strong>Cons:</strong> Creates a perverse incentive — the agency earns more when you spend more, regardless of whether that extra spend is profitable. Some agencies resist cutting wasteful spend because it directly reduces their fee.</p>
 
-<h3>3. Growth Partnership Model</h3>
-<p>This is the model we use at Spires Digital, and we believe it's the fairest structure for serious businesses. Our <a href="/services/ppc-management">PPC management</a> pricing works on a base fee of &pound;1,200/month plus 5% of profitable revenue generated through Google Ads.</p>
-<p><strong>Why this works:</strong> The base fee covers the fixed costs of account management, reporting, and strategy. The revenue share means we only earn more when you earn more. Our incentives are perfectly aligned with yours — we're motivated to maximise your profit, not your spend.</p>
+<h3>3. Scope-Based or Hybrid Pricing</h3>
+<p>Some agencies combine a defined scope with fixed and performance elements. At Spires Digital, we do not quote <a href="/services/ppc-management">PPC management</a> before understanding the account, goals, economics, tracking and implementation requirements. After an initial consultation, we provide a written scope and price tailored to the work required.</p>
+<p><strong>Why this works:</strong> The client can see what is included and the agency can price the actual level of strategy, management, reporting and implementation needed rather than forcing every account into the same package.</p>
 
-<div class="tip-box"><strong>Pro Tip:</strong> Always ask how an agency defines "profitable revenue." At Spires Digital, we calculate it after ad spend is deducted, so we only share in genuine profit. Beware of agencies that take a percentage of gross revenue before costs.</div>
+<div class="tip-box"><strong>Pro Tip:</strong> Ask every agency to define the pricing basis, what is included, what can change the fee and how any performance element is calculated. The written proposal should make each of those points clear.</div>
 
 <h2>What Should Management Fees Include?</h2>
 <p>Regardless of pricing model, your management fee should cover these essentials. If an agency charges extra for any of these, it's a red flag:</p>
@@ -157,7 +157,7 @@ export const ppcBlogContent: Record<string, string> = {
 <h2>Red Flags in Pricing</h2>
 <p>Walk away from any agency that:</p>
 <ul>
-<li>Won't tell you their pricing until after a sales call</li>
+<li>Won't explain how pricing is calculated or provide a written scope after discovery</li>
 <li>Requires 12-month minimum contracts with no break clauses</li>
 <li>Charges setup fees without explaining what they cover</li>
 <li>Takes ownership of your Google Ads account (you should always own it)</li>
@@ -173,11 +173,11 @@ export const ppcBlogContent: Record<string, string> = {
 <p>Request case studies showing actual client results, not hypothetical projections. A credible agency will show you real performance data from accounts of similar size and industry to yours. If they can't, consider why. For a full list of what to look for, check our guide on <a href="/blog/how-to-choose-google-ads-agency">choosing the right Google Ads agency</a>.</p>
 <p>Also consider the opportunity cost of poor management. An inexperienced manager might miss conversion tracking errors, neglect negative keywords, or leave automated bidding on unsuitable settings. These mistakes compound over months, costing far more than the difference between a budget and premium management fee.</p>
 
-<p>At Spires Digital, our growth partnership model (&pound;1,200/month + 5% of profitable revenue) means we're invested in your success from day one. We don't earn more by inflating your spend — we earn more by making your campaigns more profitable. <a href="/contact">Book a free consultation via our Calendly</a> to discuss your campaigns and get a transparent proposal tailored to your business.</p>
+<p>At Spires Digital, pricing starts with understanding the account rather than applying a generic package. <a href="/contact">Book a free consultation</a> to discuss your campaigns; if there is a strong fit, we will provide a transparent written scope and quote tailored to your business.</p>
 
 <details>
 <summary>How much should I budget for Google Ads management in 2026?</summary>
-<div class="faq-answer"><p>Most businesses should expect to pay between &pound;800 and &pound;3,000 per month for professional Google Ads management, depending on account complexity and ad spend. Growth partnership models like &pound;1,200/month + revenue share offer the best alignment of incentives for businesses spending &pound;2,000–&pound;10,000/month on ads.</p></div>
+<div class="faq-answer"><p>Most businesses should expect to pay between &pound;800 and &pound;3,000 per month for professional Google Ads management, depending on account complexity and ad spend. Treat this as a broad market benchmark, not a quote: the useful comparison is the written scope, accountability and total commercial impact.</p></div>
 </details>
 
 <details>
@@ -273,7 +273,7 @@ export const ppcBlogContent: Record<string, string> = {
 <h2>Making Your Decision</h2>
 <p>Shortlist 3-4 agencies based on the criteria above. Have discovery calls with each and pay attention to how they listen as much as how they pitch. The best agency for you is the one that understands your business, communicates clearly, and aligns their success with yours.</p>
 
-<p>At Spires Digital, we believe transparency is the foundation of every great agency relationship. That's why we publish our pricing, work on rolling contracts, and give every client full access to their accounts. <a href="/contact">Book a no-obligation call via Calendly</a> and experience the difference a transparent <a href="/services/ppc-management">PPC agency</a> makes.</p>
+<p>At Spires Digital, we believe transparency is the foundation of every great agency relationship. That means explaining how a price is formed, documenting the agreed scope and giving every client full access to their accounts. <a href="/contact">Book a no-obligation consultation</a> to discuss what your <a href="/services/ppc-management">PPC management</a> would actually require.</p>
 
 <details>
 <summary>How long should I commit to a new Google Ads agency?</summary>
@@ -373,7 +373,7 @@ export const ppcBlogContent: Record<string, string> = {
 <h2>Making the Transition</h2>
 <p>If you're currently managing in-house and considering an agency (or vice versa), plan the transition carefully. Ensure proper handover of account access, historical data, and strategy documentation. A good agency will handle this for you as part of their onboarding process.</p>
 
-<p>At Spires Digital, we work alongside in-house marketing teams just as effectively as we manage accounts independently. Our growth partnership model means our interests are fully aligned with yours — we succeed when you succeed. <a href="/contact">Book a call via Calendly</a> to discuss whether an agency, in-house team, or hybrid approach is right for your <a href="/services/ppc-management">PPC management</a>.</p>
+<p>At Spires Digital, we work alongside in-house marketing teams just as effectively as we manage accounts independently. The right scope depends on where responsibility sits and what the account needs. <a href="/contact">Book a consultation</a> to discuss whether an agency, in-house team, or hybrid approach is right for your <a href="/services/ppc-management">PPC management</a>.</p>
 
 <details>
 <summary>At what ad spend level does it make sense to hire in-house instead of an agency?</summary>
@@ -447,7 +447,7 @@ export const ppcBlogContent: Record<string, string> = {
 <p><strong>Ideal answer:</strong> A comprehensive list covering strategy, keyword research, ad creation, bid management, reporting, and regular calls. No surprises or add-on charges for essentials.</p>
 
 <h3>15. How do you align your fees with our success?</h3>
-<p><strong>Ideal answer:</strong> Agencies using growth partnership models — such as a base fee plus a percentage of profitable revenue — have the strongest incentive alignment. The Spires Digital model of &pound;1,200/month + 5% of profitable revenue ensures both parties benefit from growth.</p>
+<p><strong>Ideal answer:</strong> The agency should explain how its commercial model supports the agreed outcomes, what is included in the fee and how any variable element is calculated. At Spires Digital, that conversation happens during consultation and is documented in the written scope and quote.</p>
 
 <h2>Performance and Accountability</h2>
 
@@ -471,7 +471,7 @@ export const ppcBlogContent: Record<string, string> = {
 <h2>How to Use These Questions</h2>
 <p>Don't fire all 18 questions like an interrogation. Weave them naturally into your discovery calls. The best insights come from follow-up questions when an answer feels vague or rehearsed. And pay attention to the questions <em>they</em> ask you — that reveals their strategic thinking more than any sales pitch.</p>
 
-<p>Ready to experience an agency that welcomes tough questions? At Spires Digital, we're transparent about our pricing, process, and performance. <a href="/contact">Schedule a call via Calendly</a> and ask us anything — we've got nothing to hide.</p>
+<p>Ready to experience an agency that welcomes tough questions? At Spires Digital, we're transparent about how the scope, price, process and performance expectations are agreed. <a href="/contact">Schedule a consultation</a> and ask us anything.</p>
 
 <details>
 <summary>What's the most important question to ask a PPC agency?</summary>
@@ -865,7 +865,7 @@ export const ppcBlogContent: Record<string, string> = {
 
 <h2>DIY vs Hiring an Agency</h2>
 <p>Many small business owners manage their own Google Ads to save on management fees. This can work if you have time to learn the platform and monitor campaigns regularly. However, common DIY mistakes — broad match keywords, missing negative keywords, poor ad copy, incorrect tracking — often waste more money than agency fees would cost.</p>
-<p>At Spires Digital, our growth partnership model (&pound;1,200/month + 5% of profitable revenue) makes professional <a href="/services/ppc-management">PPC management</a> accessible for small businesses. Because our fee scales with your success, you're not paying premium rates before you're earning premium results. Read our <a href="/blog/google-ads-agency-vs-in-house">agency vs in-house comparison</a> for more context on this decision.</p>
+<p>At Spires Digital, we assess the account, economics and work required before quoting for professional <a href="/services/ppc-management">PPC management</a>. This is especially important for small businesses, where the service scope must be proportionate to the opportunity. Read our <a href="/blog/google-ads-agency-vs-in-house">agency vs in-house comparison</a> for more context on this decision.</p>
 
 <h2>The Bottom Line</h2>
 <p>Google Ads is worth it for small businesses when three conditions are met: there's search demand for your product or service, your margins can absorb the cost per acquisition, and you can commit at least the minimum viable budget for your industry. When those conditions align, Google Ads offers something no other channel can — reaching customers at the exact moment they're looking for what you sell.</p>
@@ -1184,7 +1184,7 @@ export const ppcBlogContent: Record<string, string> = {
 <ul>
 <li><strong>DIY management:</strong> &pound;0 in fees but consider the value of your time and the cost of mistakes</li>
 <li><strong>Freelancer:</strong> &pound;400–&pound;1,000/month</li>
-<li><strong>Agency:</strong> &pound;1,200–&pound;5,000/month depending on the model. Our growth partnership pricing at Spires Digital (&pound;1,200/month + 5% of profitable revenue) is designed to keep management costs proportional to results.</li>
+<li><strong>Agency:</strong> &pound;1,200–&pound;5,000/month depending on the model. This is a broad market range; Spires Digital provides a tailored price only after understanding the account and required scope.</li>
 </ul>
 <p>See our full <a href="/blog/google-ads-management-cost-2026">Google Ads management cost breakdown</a> for detailed pricing across different models.</p>
 
