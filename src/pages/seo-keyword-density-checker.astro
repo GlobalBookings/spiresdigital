@@ -1,0 +1,109 @@
+---
+import ToolShell from '../components/ToolShell.astro';
+---
+
+<ToolShell
+  title="Keyword density & content analyser"
+  metaTitle="Free Keyword Density Checker & Content Analyser"
+  eyebrow="Browser-based content tool"
+  description="Analyse word count, repeated terms and target-phrase usage in a draft. Nothing is uploaded, and density is a diagnostic—not a ranking target."
+>
+  <div slot="hero-card" class="density-hero"><span>Useful for editing</span><strong>Find repetition without writing for a percentage.</strong><p>Search engines reward useful content, not a magic keyword-density score.</p></div>
+
+  <div slot="tool" class="tool-card density-tool">
+    <div class="density-intro"><span>Private by design</span><h2>Analyse your draft</h2><p>Paste plain text or page copy. The analysis runs entirely in this browser tab.</p></div>
+    <form id="density-form" class="form-stack">
+      <div class="field"><label for="target-phrase">Target word or phrase <small>(optional)</small></label><input id="target-phrase" name="target" type="text" maxlength="100" placeholder="for example: shopify seo" autocomplete="off" /></div>
+      <div class="field"><label for="content-draft">Content to analyse</label><textarea id="content-draft" name="content" rows="14" minlength="20" required placeholder="Paste the content you want to review…"></textarea><small id="draft-hint">At least 20 characters. Headings and punctuation are handled automatically.</small></div>
+      <button type="submit" class="btn btn-primary btn-lg">Analyse content</button>
+    </form>
+
+    <div class="result-panel" id="density-results" aria-live="polite">
+      <div class="density-summary">
+        <div><strong id="word-count">—</strong><span>Words</span></div>
+        <div><strong id="unique-count">—</strong><span>Unique terms</span></div>
+        <div><strong id="reading-time">—</strong><span>Reading time</span></div>
+        <div><strong id="sentence-count">—</strong><span>Sentences</span></div>
+      </div>
+      <section id="target-result" class="target-result" hidden><div><span>Target phrase</span><h3 id="target-label">—</h3></div><div class="target-metrics"><strong id="target-uses">—</strong><span id="target-density">—</span></div><p id="target-guidance"></p></section>
+      <section class="term-section"><div class="term-heading"><div><span>Dominant language</span><h3>Most-used meaningful terms</h3></div><small>Common connecting words are excluded.</small></div><div id="top-terms" class="term-list"></div></section>
+      <div class="editor-note"><strong>Use this as an editing signal.</strong><p>Repeated terms can be completely natural. Read the surrounding sentences, remove forced wording and make sure the page answers the reader’s actual question. There is no universal ideal density.</p></div>
+    </div>
+  </div>
+
+  <h2>What keyword density means</h2>
+  <p>Keyword density is the number of times a word or phrase appears relative to the total word count. It can expose accidental repetition, but a percentage cannot tell you whether a page is accurate, original, trustworthy or useful.</p>
+  <h2>How to use the result</h2>
+  <ol><li>Check that the primary topic is clear in the title, introduction and relevant headings.</li><li>Review repeated terms in context rather than replacing every occurrence.</li><li>Use precise related language where it improves the explanation.</li><li>Compare the draft with the searcher’s question and the decision the page should support.</li><li>Finish with a human edit for clarity, evidence and unnecessary claims.</li></ol>
+  <h2>What this checker does not do</h2>
+  <p>It does not grade search quality, predict rankings or recommend keyword stuffing. For ecommerce sites, technical indexation, internal linking, category usefulness, product information and authority frequently matter more than a repeated phrase.</p>
+</ToolShell>
+
+<script>
+  const form = document.getElementById('density-form');
+  const stopWords = new Set(['a','about','after','again','all','also','am','an','and','any','are','as','at','be','because','been','before','being','between','both','but','by','can','could','did','do','does','doing','down','during','each','few','for','from','further','had','has','have','having','he','her','here','hers','herself','him','himself','his','how','i','if','in','into','is','it','its','itself','just','me','more','most','my','myself','no','nor','not','now','of','off','on','once','only','or','other','our','ours','ourselves','out','over','own','same','she','should','so','some','such','than','that','the','their','theirs','them','themselves','then','there','these','they','this','those','through','to','too','under','until','up','very','was','we','were','what','when','where','which','while','who','why','will','with','you','your','yours']);
+  const normalise = value => String(value || '').toLocaleLowerCase('en-GB').replace(/[’']/g, '').replace(/[^\p{L}\p{N}\s-]/gu, ' ').replace(/[-\s]+/g, ' ').trim();
+  const setText = (id, value) => { const element = document.getElementById(id); if (element) element.textContent = String(value); };
+
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const content = String(data.get('content') || '').trim();
+    const target = normalise(data.get('target'));
+    if (content.length < 20) return;
+
+    const normalisedContent = normalise(content);
+    const words = normalisedContent ? normalisedContent.split(' ') : [];
+    const meaningful = words.filter(word => word.length > 2 && !stopWords.has(word));
+    const counts = new Map();
+    meaningful.forEach(word => counts.set(word, (counts.get(word) || 0) + 1));
+    const topTerms = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 10);
+    const sentences = content.split(/[.!?]+(?:\s|$)/).filter(part => part.trim().length > 0).length || 1;
+
+    setText('word-count', words.length.toLocaleString('en-GB'));
+    setText('unique-count', new Set(words).size.toLocaleString('en-GB'));
+    setText('reading-time', `${Math.max(1, Math.ceil(words.length / 225))} min`);
+    setText('sentence-count', sentences.toLocaleString('en-GB'));
+
+    const termsContainer = document.getElementById('top-terms');
+    if (termsContainer) {
+      termsContainer.replaceChildren();
+      topTerms.forEach(([term, count]) => {
+        const item = document.createElement('div');
+        const label = document.createElement('strong');
+        const metric = document.createElement('span');
+        label.textContent = term;
+        metric.textContent = `${count} use${count === 1 ? '' : 's'} · ${((count / words.length) * 100).toFixed(1)}%`;
+        item.append(label, metric);
+        termsContainer.append(item);
+      });
+    }
+
+    const targetResult = document.getElementById('target-result');
+    if (target && targetResult) {
+      const padded = ` ${normalisedContent} `;
+      const phrase = ` ${target} `;
+      let uses = 0;
+      let position = 0;
+      while ((position = padded.indexOf(phrase, position)) !== -1) { uses += 1; position += phrase.length - 1; }
+      const phraseWords = target.split(' ').length;
+      const density = words.length ? (uses * phraseWords / words.length) * 100 : 0;
+      setText('target-label', target);
+      setText('target-uses', `${uses} use${uses === 1 ? '' : 's'}`);
+      setText('target-density', `${density.toFixed(2)}% of words`);
+      setText('target-guidance', uses === 0 ? 'The exact phrase is absent. That may be fine if the topic is still unmistakable; add it only where it helps the reader.' : density > 4 ? 'This phrase is prominent. Read each use in context and remove repetition that feels forced.' : 'The phrase is present. Judge each use for clarity and relevance rather than trying to reach a target percentage.');
+      targetResult.hidden = false;
+    } else if (targetResult) {
+      targetResult.hidden = true;
+    }
+
+    const results = document.getElementById('density-results');
+    results?.classList.add('active');
+    results?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.trackSpiresEvent?.('tool_complete', { tool_name: 'keyword_density_checker', result_type: target ? 'target_phrase' : 'general_analysis' });
+  });
+</script>
+
+<style>
+  .density-hero>span,.density-intro>span{color:#91eadb;font-size:.68rem;font-weight:800;text-transform:uppercase}.density-hero strong{display:block;margin:.8rem 0;color:white;font-size:1.35rem}.density-hero p{color:#cbd2df;font-size:.78rem}.density-intro{margin-bottom:1.4rem}.density-intro>span{color:var(--violet-dark)}.density-intro h2{margin:.3rem 0}.density-intro p{color:var(--slate)}.density-tool textarea{min-height:250px;resize:vertical}.field label small,.field>small{color:var(--muted);font-weight:500}.result-panel{background:#effbf8;border-color:#cce9e2}.density-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}.density-summary>div{padding:1rem;border-radius:10px;background:white}.density-summary strong,.density-summary span{display:block}.density-summary strong{font-size:1.4rem}.density-summary span{margin-top:.2rem;color:var(--slate);font-size:.68rem}.target-result{display:grid;grid-template-columns:1fr auto;gap:1rem;margin-top:1rem;padding:1.1rem;border-radius:10px;background:var(--ink)}.target-result span{color:#91eadb;font-size:.67rem;font-weight:800;text-transform:uppercase}.target-result h3{margin:.25rem 0;color:white}.target-result p{grid-column:1/-1;color:#cbd2df;font-size:.75rem}.target-metrics{text-align:right}.target-metrics strong,.target-metrics span{display:block}.target-metrics strong{color:white}.term-section{margin-top:1rem;padding:1.1rem;border-radius:10px;background:white}.term-heading{display:flex;justify-content:space-between;gap:1rem}.term-heading span{color:var(--violet-dark);font-size:.67rem;font-weight:800;text-transform:uppercase}.term-heading h3{margin:.25rem 0}.term-heading small{color:var(--muted)}.term-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem;margin-top:1rem}.term-list :global(div){display:flex;justify-content:space-between;gap:.8rem;padding:.65rem .75rem;border:1px solid var(--line);border-radius:8px}.term-list :global(strong){color:var(--ink);font-size:.76rem}.term-list :global(span){color:var(--slate);font-size:.67rem}.editor-note{margin-top:1rem;padding:1rem;border-left:3px solid var(--success);background:white}.editor-note p{margin-top:.3rem;color:var(--slate);font-size:.75rem}@media(max-width:650px){.density-summary{grid-template-columns:repeat(2,1fr)}.target-result{grid-template-columns:1fr}.target-metrics{text-align:left}.target-result p{grid-column:auto}.term-heading{flex-direction:column}.term-list{grid-template-columns:1fr}}
+</style>

@@ -5,7 +5,7 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 ## Foundation completed
 
 - Ecommerce-focused positioning across acquisition, conversion, retention and measurement
-- Seven service pages, five interactive tools and a consolidated lead journey
+- Seven service pages, six interactive tools and a consolidated lead journey
 - GA4 tag `G-B7840X8QFQ`, consent controls, attribution capture and core lead/tool events
 - Canonical `spiresdigital.com` identity, redirects, sitemap, structured data and `llms.txt`
 - Consultation-first pricing; no public Spires Digital rate card
@@ -51,11 +51,15 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** protect existing demand and concentrate authority on the correct pages.
 
-- Compare the 16-month Search Console export with post-launch URLs
-- Check redirects for historical URLs with clicks, links or impressions
-- Resolve duplicate, crawled-not-indexed, canonical and soft-404 issues
-- Review titles and descriptions for high-impression, low-CTR queries
-- Validate internal links into priority ecommerce and service pages
+- [x] Compare the 16-month Search Console export with post-launch URLs
+- [x] Check redirects for historical URLs with clicks or meaningful impressions
+- [x] Restore the strongest useful legacy tool and two factual legacy answers at their original URLs
+- [x] Consolidate obsolete service, contact, email and Meta billing URLs with explicit redirects
+- [x] Review titles and descriptions for high-impression, low-CTR commercial queries
+- [x] Strengthen the Lichfield landing page around its demonstrated query family without claiming a local office
+- [x] Validate internal links, canonicals, metadata, sitemap coverage and broken-page references in the rendered site
+
+**Week 3 checkpoint:** the private 16-month export was mapped against the current site. Useful historical demand now has an intentional live page or redirect, while unrelated AI and nonprofit articles remain retired rather than diluting the ecommerce focus. The repeatable technical audit covers every rendered HTML page and the public search-recovery map excludes raw Search Console data.
 
 **Done when:** valuable historical URLs have a valid destination and the priority indexation issues have owners and fixes.
 

@@ -17,6 +17,14 @@ export default defineConfig({
     '/understanding-vat-on-google-ads-what-you-need-to-know': '/tools/google-ads-vat-guide',
     '/digital-marketing-agency-in-lichfield-the-importance-of-digital': '/locations/lichfield',
     '/services/shopify-builds': '/services/cro-shopify',
+    '/services-overview': '/services',
+    '/contact-us': '/contact',
+    '/services/web-development': '/services/cro-shopify',
+    '/email-marketing-campaign-automation-tools': '/blog/shopify-email-marketing-klaviyo',
+    '/email-marketing-campaign-automation-tools-5': '/blog/shopify-email-marketing-klaviyo',
+    '/why-facebook-ads-payment-failed-2': '/what-is-the-facebook-ad-credit-code',
+    '/why-facebook-ads-active-but-not-running': '/what-is-the-facebook-ad-credit-code',
+    '/when-does-facebook-ads-charge': '/what-is-the-facebook-ad-credit-code',
   },
   integrations: [
     sitemap({

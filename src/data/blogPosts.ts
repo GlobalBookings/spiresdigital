@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'affiliate-program-setup-guide',
-    title: 'How to Launch a Profitable Affiliate Program',
+    title: 'Affiliate Program Setup Guide',
     description: 'From choosing the right network to recruiting partners and setting commission structures — everything you need to launch an affiliate program.',
     date: '2026-02-15',
     category: 'Affiliate Marketing',
