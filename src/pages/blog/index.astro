@@ -2,61 +2,64 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { blogPosts } from '../../data/blogPosts';
+
+const posts = Array.from(new Map(blogPosts.map(post => [post.slug, post])).values()).sort((a,b) => b.date.localeCompare(a.date));
+const featured = posts.slice(0, 3);
+const groups = [
+  { id: 'ppc', label: 'Google Ads & paid search', match: ['PPC'] },
+  { id: 'meta-ads', label: 'Meta advertising', match: ['Meta Ads'] },
+  { id: 'affiliate-marketing', label: 'Affiliate growth', match: ['Affiliate Marketing'] },
+  { id: 'shopify-ecommerce', label: 'Shopify & ecommerce', match: ['Shopify', 'E-Commerce'] },
+  { id: 'strategy-analytics', label: 'Strategy, analytics & SEO', match: ['Strategy', 'Analytics', 'SEO'] },
+];
 ---
 
-<BaseLayout title="Blog — Digital Marketing Insights" description="Expert digital marketing insights, PPC strategies, SEO tips, and industry updates from Spires Digital.">
-  <Breadcrumbs items={[{ label: 'Blog' }]} />
+<BaseLayout title="Ecommerce Growth Insights" description="Practical guidance on profitable ecommerce acquisition, conversion, retention and measurement from Spires Digital.">
+  <Breadcrumbs items={[{ label: 'Insights' }]} />
+  <section class="page-hero"><div class="container page-hero-content"><span class="badge">Insights library</span><h1>Make a better ecommerce decision.</h1><p>Practical explainers for the questions behind the channel metric: what to measure, where the risk sits and what to do next.</p></div></section>
 
-  <section class="page-hero" style="margin-top: -2rem;">
-    <div class="container page-hero-content">
-      <span class="badge">Blog</span>
-      <h1>Digital Marketing Insights</h1>
-      <p>Strategies, tips, and industry updates to help you grow your business online.</p>
-    </div>
-  </section>
+  <section class="section surface featured-section"><div class="container"><div class="library-tools"><div><span class="eyebrow">Explore the library</span><h2>Find the problem you are working on.</h2></div><label><span>Search all articles</span><input id="article-search" type="search" placeholder="e.g. Shopping, attribution, Shopify…" autocomplete="off" /></label></div><nav class="topic-nav" aria-label="Insight topics">{groups.map(group => <a href={`#${group.id}`}>{group.label}</a>)}</nav><div class="grid grid-3 featured-grid">{featured.map(post => <a href={`/blog/${post.slug}`} class="card feature-card" data-article={`${post.title} ${post.description} ${post.category}`.toLowerCase()}>{post.image && <img src={post.image} alt="" width="520" height="285" loading="lazy" referrerpolicy="no-referrer" />}<div class="card-body"><span class="article-category">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><small>{post.readTime} · {new Date(`${post.date}T12:00:00Z`).toLocaleDateString('en-GB',{month:'short',year:'numeric'})}</small></div></a>)}</div></div></section>
 
-  <section class="section">
-    <div class="container">
-      {blogPosts.length === 0 ? (
-        <div style="text-align: center; padding: 3rem 0;">
-          <h2>Coming Soon</h2>
-          <p style="color: var(--color-text-light); margin-top: 0.5rem;">We're working on our first articles. Check back soon for digital marketing insights and strategies.</p>
-          <a href="/contact" class="btn btn-primary" style="margin-top: 1.5rem;">Get Marketing Advice Now</a>
-        </div>
-      ) : (
-        <div class="grid grid-3">
-          {blogPosts.map(post => (
-            <a href={`/blog/${post.slug}`} class="card blog-card">
-              {post.image && (
-                <img src={post.image} alt={post.title} width="400" height="220" loading="lazy" style="width:100%;height:200px;object-fit:cover;" />
-              )}
-              <div class="card-body">
-                <span class="badge" style="font-size: 0.7rem;">{post.category}</span>
-                <h3>{post.title}</h3>
-                <p>{post.description}</p>
-                <div class="card-meta">
-                  <span>{post.date}</span>
-                  <span>{post.readTime}</span>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      )}
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>Need Expert Marketing Help?</h2>
-      <p>Our articles are helpful, but nothing beats a personalised strategy. Get a free audit today.</p>
-      <a href="/contact" class="btn btn-white btn-lg">Get Free Audit</a>
-    </div>
-  </section>
+  <section class="section surface-warm library"><div class="container"><p id="no-results" hidden>No articles match that search. Try a broader term, or <a href="/contact">send us the question</a>.</p>{groups.map(group => { const groupPosts = posts.filter(post => group.match.includes(post.category)); return <section id={group.id} class="article-group"><div class="group-heading"><h2>{group.label}</h2><span>{groupPosts.length} guides</span></div><div class="article-list">{groupPosts.map(post => <a href={`/blog/${post.slug}`} data-article={`${post.title} ${post.description} ${post.category}`.toLowerCase()}><div><span>{post.category}</span><h3>{post.title}</h3><p>{post.description}</p></div><small>{post.readTime}<b aria-hidden="true">→</b></small></a>)}</div></section>; })}</div></section>
+  <section class="cta-section"><div class="container"><h2>Need a number, not another article?</h2><p>Use a calculator or assessment immediately. No email gate.</p><a href="/tools" class="btn btn-white btn-lg">Explore free tools</a></div></section>
 </BaseLayout>
 
+<script>
+  const input = document.querySelector<HTMLInputElement>('#article-search');
+  const items = Array.from(document.querySelectorAll<HTMLElement>('[data-article]'));
+  const empty = document.querySelector<HTMLElement>('#no-results');
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+    items.forEach(item => { const show = !query || item.dataset.article?.includes(query); item.hidden = !show; if (show) visible += 1; });
+    document.querySelectorAll<HTMLElement>('.article-group').forEach(group => { group.hidden = !Array.from(group.querySelectorAll<HTMLElement>('[data-article]')).some(item => !item.hidden); });
+    if (empty) empty.hidden = visible > 0;
+  });
+</script>
+
 <style>
-  .blog-card { text-decoration: none; }
-  .blog-card h3 { font-size: 1.05rem; }
-  .card-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--color-text-light); margin-top: 0.75rem; }
+  .library-tools { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+  .library-tools h2 { max-width: 650px; }
+  .library-tools label { display: grid; min-width: min(360px,100%); gap: .4rem; color: var(--ink); font-size: .78rem; font-weight: 750; }
+  .library-tools input { min-height: 50px; padding: .75rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--canvas); }
+  .topic-nav { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 3rem; }
+  .topic-nav a { padding: .55rem .75rem; border: 1px solid var(--line); border-radius: 999px; color: var(--slate); font-size: .8rem; font-weight: 700; }
+  .feature-card img { width: 100%; aspect-ratio: 1.82/1; object-fit: cover; background: var(--line); }
+  .feature-card h3 { font-size: 1.18rem; }
+  .feature-card small { display: block; margin-top: 1rem; color: var(--muted); }
+  .article-category, .article-list span { color: var(--violet-dark); font-size: .69rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .article-group { scroll-margin-top: 110px; margin-bottom: 4rem; }
+  .article-group:last-child { margin-bottom: 0; }
+  .group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
+  .group-heading h2 { font-size: clamp(1.6rem,3vw,2.35rem); }
+  .group-heading span { color: var(--muted); font-size: .8rem; }
+  .article-list a { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+  .article-list a:hover h3 { color: var(--violet-dark); }
+  .article-list h3 { margin-top: .2rem; font-size: 1.15rem; transition: color var(--transition); }
+  .article-list p { max-width: 760px; margin-top: .3rem; color: var(--slate); font-size: .86rem; }
+  .article-list small { display: flex; gap: 1rem; align-items: center; flex-shrink: 0; color: var(--muted); }
+  .article-list b { color: var(--violet); font-size: 1.3rem; }
+  #no-results { padding: 1.25rem; border-radius: var(--radius-sm); background: white; }
+  #no-results a { color: var(--violet-dark); text-decoration: underline; }
+  @media (max-width: 760px) { .library-tools { align-items: stretch; flex-direction: column; } .library-tools label { min-width: 0; } .article-list a { align-items: flex-start; } .article-list p { display: none; } .article-list small { font-size: .72rem; } }
 </style>

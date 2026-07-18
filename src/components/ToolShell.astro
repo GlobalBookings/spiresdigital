@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+
+interface Props {
+  title: string;
+  metaTitle: string;
+  description: string;
+  eyebrow: string;
+  updated?: string;
+}
+const { title, metaTitle, description, eyebrow, updated = '18 July 2026' } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: title,
+  description,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+  provider: { '@id': 'https://spiresdigital.com/#organisation' },
+};
+---
+
+<BaseLayout title={metaTitle} description={description} schema={schema}>
+  <div class="breadcrumbs-wrap"><Breadcrumbs items={[{ label: 'Free tools', href: '/tools' }, { label: title }]} /></div>
+  <section class="tool-hero hero-dark"><div class="container tool-hero-grid"><div><span class="badge">{eyebrow}</span><h1>{title}</h1><p>{description}</p><div class="tool-benefits"><span>No signup</span><span>Runs in your browser</span><span>Updated {updated}</span></div></div><div class="hero-slot"><slot name="hero-card" /></div></div></section>
+  <section class="section surface"><div class="container tool-layout"><div><slot name="tool" /></div><aside class="tool-sidebar"><div class="tool-sidebar-card"><span>Need the context behind the number?</span><h3>Turn the result into a growth plan.</h3><p>Share the commercial situation and we will identify the decisions, risks and next steps behind it.</p><a href="/contact" class="btn btn-white btn-arrow" data-track="tool_sidebar_plan">Get a free growth review</a></div><div class="privacy-card"><strong>Your data stays in the browser.</strong><p>Calculator inputs are not transmitted to Spires Digital. If you choose to contact us, share only the context you are comfortable providing.</p></div></aside></div></section>
+  <section class="section surface-warm"><div class="container-narrow tool-content"><slot /></div></section>
+  <section class="related-tools surface"><div class="container"><span>More free tools</span><nav><a href="/tools/ecommerce-profit-calculator">Profit &amp; ROAS</a><a href="/tools/channel-budget-planner">Budget planner</a><a href="/tools/growth-assessment">Growth assessment</a><a href="/tools/google-ads-vat-guide">Google Ads VAT</a><a href="/tools/paid-media-waste-estimator">Waste estimator</a></nav></div></section>
+</BaseLayout>
+
+<style>
+  .tool-hero{padding-top:5rem}.tool-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .55fr;gap:4rem;align-items:center}.tool-hero h1{font-size:clamp(2.6rem,6vw,5rem)}.tool-benefits{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}.tool-benefits span{padding:.4rem .6rem;border:1px solid rgba(255,255,255,.15);border-radius:999px;color:#cbd2df;font-size:.65rem;font-weight:700}.hero-slot{padding:1.4rem;border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);background:rgba(255,255,255,.07)}.hero-slot:empty{display:none}.tool-sidebar-card>span{color:#91eadb;font-size:.67rem;font-weight:800;text-transform:uppercase}.tool-sidebar-card h3{margin:1rem 0}.tool-sidebar-card .btn{width:100%}.privacy-card{margin-top:1rem;padding:1.1rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--canvas)}.privacy-card strong{color:var(--ink);font-size:.78rem}.privacy-card p{margin-top:.4rem;color:var(--slate);font-size:.7rem}.tool-content :global(h2){margin:2.6rem 0 1rem;font-size:clamp(1.6rem,3vw,2.4rem)}.tool-content :global(h2:first-child){margin-top:0}.tool-content :global(h3){margin:2rem 0 .7rem}.tool-content :global(p){margin-bottom:1rem;color:var(--slate)}.tool-content :global(ul),.tool-content :global(ol){display:grid;gap:.5rem;margin:1rem 0 1.5rem;padding-left:1.3rem;color:var(--slate)}.tool-content :global(a){color:var(--violet-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px}.related-tools{padding:1.5rem 0;border-top:1px solid var(--line)}.related-tools .container{display:flex;justify-content:space-between;gap:1rem;align-items:center}.related-tools .container>span{color:var(--muted);font-size:.68rem;font-weight:800;text-transform:uppercase}.related-tools nav{display:flex;flex-wrap:wrap;gap:.5rem}.related-tools a{padding:.4rem .65rem;border:1px solid var(--line);border-radius:999px;font-size:.68rem;font-weight:700}@media(max-width:850px){.tool-hero-grid{grid-template-columns:1fr}.hero-slot{display:none}}@media(max-width:650px){.related-tools .container{align-items:flex-start;flex-direction:column}}
+</style>

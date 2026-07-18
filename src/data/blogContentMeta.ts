@@ -676,7 +676,7 @@ export const metaBlogContent: Record<string, string> = {
 <li><strong>Conversions API (CAPI):</strong> Server-side tracking is essential. ASC relies heavily on conversion data, and CAPI ensures you're capturing events that browser tracking misses.</li>
 <li><strong>Event match quality:</strong> Aim for an event match quality score of 6+ (ideally 8+) for your purchase event. The higher the match quality, the better the algorithm can optimise.</li>
 </ul>
-<p>If you're running a <a href="/services/shopify-builds">Shopify store</a>, Meta's native integration handles most of this automatically — but verify your setup to ensure CAPI is active and event deduplication is working.</p>
+<p>If you're running a <a href="/services/cro-shopify">Shopify store</a>, Meta's native integration handles most of this automatically — but verify your setup to ensure CAPI is active and event deduplication is working.</p>
 
 <h3>2. Product Catalogue</h3>
 <ul>
@@ -752,7 +752,7 @@ export const metaBlogContent: Record<string, string> = {
 </ul>
 <p>In these cases, start with traditional campaign structures to build your data foundation, then transition to ASC once you have consistent conversion volume.</p>
 
-<p>Need help setting up or optimising Advantage+ Shopping campaigns for your <a href="/services/shopify-builds">Shopify store</a>? Our <a href="/services/meta-ads">Meta Ads team</a> manages ASC campaigns for e-commerce brands across the UK. <a href="/contact">Book a free strategy call via our Calendly</a> and we'll assess whether ASC is right for your business.</p>
+<p>Need help setting up or optimising Advantage+ Shopping campaigns for your <a href="/services/cro-shopify">Shopify store</a>? Our <a href="/services/meta-ads">Meta Ads team</a> manages ASC campaigns for e-commerce brands across the UK. <a href="/contact">Book a free strategy call via our Calendly</a> and we'll assess whether ASC is right for your business.</p>
 
 <h2>Frequently Asked Questions</h2>
 <details><summary>Can I run Advantage+ Shopping alongside regular campaigns?</summary><div class="faq-answer"><p>Yes, and we recommend it during a transition period. Run both in parallel for at least 30 days, then compare performance. Many advertisers eventually consolidate into ASC for prospecting while maintaining separate retargeting campaigns for more granular control.</p></div></details>

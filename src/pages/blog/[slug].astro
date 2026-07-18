@@ -4,13 +4,14 @@ import { blogPosts } from '../../data/blogPosts';
 import { blogContent } from '../../data/blogContent';
 
 export function getStaticPaths() {
-  return blogPosts.map(post => ({
+  const uniquePosts = Array.from(new Map(blogPosts.map(post => [post.slug, post])).values());
+  return uniquePosts.map(post => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const post = blogPosts.find(p => p.slug === slug)!;
+const post = Array.from(new Map(blogPosts.map(item => [item.slug, item])).values()).find(item => item.slug === slug)!;
 const content = blogContent[slug];
 ---
 
@@ -21,11 +22,11 @@ const content = blogContent[slug];
   category={post.category}
   image={post.image}
   readTime={post.readTime}
+  noindex={!content}
 >
   {content ? <Fragment set:html={content} /> : (
     <p>{post.description}</p>
-    <h2>Coming Soon</h2>
-    <p>This article is being written by our digital marketing experts. Check back soon for the full guide.</p>
-    <p>In the meantime, explore our <a href="/services/ppc-management">PPC management services</a> or <a href="/contact">get in touch</a> for personalised advice.</p>
+    <h2>This guide is being reviewed</h2>
+    <p>We have temporarily removed the draft while it is checked for accuracy. In the meantime, explore our <a href="/tools">free ecommerce tools</a> or <a href="/contact">ask a specific question</a>.</p>
   )}
 </BlogLayout>

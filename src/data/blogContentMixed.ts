@@ -742,7 +742,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Advanced Shopify:</strong> £399/month — for established brands needing advanced reporting and lower transaction fees</li>
 <li><strong>Shopify Plus:</strong> From £2,300/month — enterprise-grade for high-volume brands</li>
 </ul>
-<p>Most brands we work with at <a href="/services/shopify-builds">Spires Digital</a> operate on the standard Shopify or Advanced plans, with Shopify Plus reserved for brands processing £1M+ annually.</p>
+<p>Most brands we work with at <a href="/services/cro-shopify">Spires Digital</a> operate on the standard Shopify or Advanced plans, with Shopify Plus reserved for brands processing £1M+ annually.</p>
 
 <h2>Standard Shopify Store: From £3,000</h2>
 <p>A standard Shopify store build uses a premium theme as its foundation, customised to match your brand. This is the right choice for most new e-commerce brands and businesses migrating from other platforms.</p>
@@ -864,7 +864,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Get a Detailed Quote for Your Shopify Project</h2>
-<p>Every Shopify build is different, and the right investment depends on your specific requirements, growth ambitions, and budget. At <a href="/services/shopify-builds">Spires Digital</a>, we provide transparent, itemised quotes with no hidden fees.</p>
+<p>Every Shopify build is different, and the right investment depends on your specific requirements, growth ambitions, and budget. At <a href="/services/cro-shopify">Spires Digital</a>, we provide transparent, itemised quotes with no hidden fees.</p>
 <p><a href="/contact">Book a free consultation via Calendly</a> to discuss your project requirements. We'll help you define the right scope, choose the appropriate build level, and create a project plan that delivers maximum value within your budget.</p>
 `,
 
@@ -935,7 +935,7 @@ export const mixedBlogContent: Record<string, string> = {
 <h2>Option 3: Agency</h2>
 
 <h3>Cost: £3,000–£15,000+</h3>
-<p>An agency provides a team approach — typically a project manager, designer, developer, and QA tester working on your build. At <a href="/services/shopify-builds">Spires Digital</a>, our standard Shopify builds start from £3,000 and custom builds from £5,000+.</p>
+<p>An agency provides a team approach — typically a project manager, designer, developer, and QA tester working on your build. At <a href="/services/cro-shopify">Spires Digital</a>, our standard Shopify builds start from £3,000 and custom builds from £5,000+.</p>
 
 <h3>When an Agency Works Well</h3>
 <ul>
@@ -1007,7 +1007,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Ready to Discuss Your Shopify Project?</h2>
-<p>Whether you're starting from scratch or upgrading an existing store, we can help you determine the right approach and investment level. At <a href="/services/shopify-builds">Spires Digital</a>, we offer transparent pricing with standard builds from £3,000 and custom projects from £5,000+.</p>
+<p>Whether you're starting from scratch or upgrading an existing store, we can help you determine the right approach and investment level. At <a href="/services/cro-shopify">Spires Digital</a>, we offer transparent pricing with standard builds from £3,000 and custom projects from £5,000+.</p>
 <p><a href="/contact">Book a free consultation via Calendly</a> and let's discuss your project — we'll recommend the right approach based on your specific situation, whether that's working with us or pointing you in the right direction if an agency isn't the best fit right now.</p>
 `,
 
@@ -1015,7 +1015,7 @@ export const mixedBlogContent: Record<string, string> = {
   'shopify-vs-woocommerce-2026': `
 <p>The Shopify vs WooCommerce debate has been running for years, but the landscape has shifted significantly heading into 2026. Both platforms have evolved, and the right choice depends on factors that have changed since many of the existing comparison articles were written.</p>
 
-<p>This comparison is based on our hands-on experience building and managing stores on both platforms at <a href="/services/shopify-builds">Spires Digital</a>. We'll be honest about where each platform excels and where it falls short.</p>
+<p>This comparison is based on our hands-on experience building and managing stores on both platforms at <a href="/services/cro-shopify">Spires Digital</a>. We'll be honest about where each platform excels and where it falls short.</p>
 
 <h2>The Fundamental Difference</h2>
 <p>Before diving into features, understand the core philosophical difference:</p>
@@ -1144,7 +1144,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Need Help Deciding?</h2>
-<p>Platform selection is an important decision, and the right answer depends on your specific business requirements, technical capabilities, and growth plans. At <a href="/services/shopify-builds">Spires Digital</a>, we've built stores on both platforms and can give you genuinely unbiased advice.</p>
+<p>Platform selection is an important decision, and the right answer depends on your specific business requirements, technical capabilities, and growth plans. At <a href="/services/cro-shopify">Spires Digital</a>, we've built stores on both platforms and can give you genuinely unbiased advice.</p>
 <p><a href="/contact">Book a free consultation via Calendly</a> and we'll help you evaluate both options against your specific needs — no pressure towards either platform, just honest guidance based on experience.</p>
 `,
 
@@ -1203,7 +1203,7 @@ export const mixedBlogContent: Record<string, string> = {
 <div class="tip-box"><strong>Pro Tip:</strong> Map your customer journey using Google Analytics 4's conversion paths report. You'll likely discover that your highest-value customers interact with 3–5 touchpoints across multiple channels before purchasing. This data should drive your budget allocation decisions.</div>
 
 <h3>Shopify Store: The Conversion Engine</h3>
-<p>Your <a href="/services/shopify-builds">Shopify store</a> is where all channels converge. It's not just a shop — it's the conversion engine that determines whether your marketing spend translates into revenue. Key elements:</p>
+<p>Your <a href="/services/cro-shopify">Shopify store</a> is where all channels converge. It's not just a shop — it's the conversion engine that determines whether your marketing spend translates into revenue. Key elements:</p>
 <ul>
 <li><strong>Landing pages:</strong> Channel-specific landing pages that match the messaging of your ads and affiliate content</li>
 <li><strong>Product pages:</strong> Detailed, persuasive pages with reviews, trust signals, and clear CTAs</li>
@@ -1284,7 +1284,7 @@ export const mixedBlogContent: Record<string, string> = {
 </details>
 
 <h2>Ready to Build Your Full-Funnel Strategy?</h2>
-<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/shopify-builds">Shopify builds</a> under one roof — specifically so we can build cohesive, full-funnel strategies for <a href="/industries/ecommerce">e-commerce brands</a>. No silos, no finger-pointing between agencies, just integrated growth.</p>
+<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/cro-shopify">Shopify builds</a> under one roof — specifically so we can build cohesive, full-funnel strategies for <a href="/industries/ecommerce">e-commerce brands</a>. No silos, no finger-pointing between agencies, just integrated growth.</p>
 <p><a href="/contact">Book a free strategy session via Calendly</a> and we'll audit your current channels, identify the gaps in your funnel, and create a roadmap for integrated, sustainable growth.</p>
 `,
 
@@ -1328,7 +1328,7 @@ export const mixedBlogContent: Record<string, string> = {
 <li><strong>Affiliate Marketing:</strong> 15–20% — mature programme with diverse publisher mix driving significant incremental revenue</li>
 <li><strong>SEO/Content:</strong> 10–15% — ongoing content creation, technical optimisation, and authority building</li>
 <li><strong>Email/CRM:</strong> 5–10% — advanced segmentation, personalisation, and lifecycle marketing</li>
-<li><strong>Store optimisation:</strong> 5% — continuous CRO testing and UX improvements on your <a href="/services/shopify-builds">Shopify store</a></li>
+<li><strong>Store optimisation:</strong> 5% — continuous CRO testing and UX improvements on your <a href="/services/cro-shopify">Shopify store</a></li>
 </ul>
 <p>Total recommended spend: £25,000–£100,000+/month. At this stage, marginal gains matter — a 10% improvement in conversion rate on your store can be worth more than a 50% increase in ad spend.</p>
 
@@ -1437,7 +1437,7 @@ export const mixedBlogContent: Record<string, string> = {
 
 <h2>Get a Custom Budget Recommendation</h2>
 <p>Every brand's optimal allocation is different. The frameworks above provide a starting point, but the right split for your business depends on your margins, competitive landscape, brand awareness, and growth targets.</p>
-<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/shopify-builds">Shopify</a> — which means we can recommend budget allocation across channels without bias towards any single service.</p>
+<p>At Spires Digital, we manage <a href="/services/ppc-management">PPC</a>, <a href="/services/meta-ads">Meta Ads</a>, <a href="/services/affiliate-management">affiliate marketing</a>, and <a href="/services/cro-shopify">Shopify</a> — which means we can recommend budget allocation across channels without bias towards any single service.</p>
 <p><a href="/contact">Book a free budget consultation via Calendly</a> and we'll analyse your current spend, benchmark it against industry data, and provide a recommended allocation framework tailored to your business stage and objectives.</p>
 `,
 };

@@ -187,7 +187,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <p>As your business grows, you need seamless connections to tools like Klaviyo, your ERP system, marketplaces, and advertising platforms. If your current platform lacks native integrations or API capabilities, you'll waste time and money on custom middleware that's expensive to maintain.</p>
 
 <h2>When to Make the Move</h2>
-<p>The best time to migrate is during a quieter trading period when you can plan properly. Don't wait for a crisis. A well-planned <a href="/services/shopify-builds">Shopify migration</a> typically takes 4-8 weeks and preserves your SEO equity if handled correctly.</p>
+<p>The best time to migrate is during a quieter trading period when you can plan properly. Don't wait for a crisis. A well-planned <a href="/services/cro-shopify">Shopify migration</a> typically takes 4-8 weeks and preserves your SEO equity if handled correctly.</p>
 <p>Consider migrating when you're hitting at least two of these friction points and your annual revenue exceeds £100,000 — at that point, the ROI on a better platform pays for itself through improved conversion rates alone.</p>
 <p>Read our comparison of <a href="/blog/shopify-plus-vs-standard">Shopify Plus vs Standard Shopify</a> to understand which tier fits your needs, or check our <a href="/blog/custom-shopify-store-cost-2026">guide to Shopify costs in 2026</a> for realistic budgeting.</p>
 
@@ -246,7 +246,7 @@ export const shopifyBlogContent: Record<string, string> = {
 
 <h3>FAQ</h3>
 <details><summary>Can I downgrade from Plus back to standard Shopify?</summary><div class="faq-answer"><p>Yes, but you'll lose access to Plus-exclusive features like checkout customisations, B2B functionality, and expansion stores. Plan the transition carefully and remove Plus-dependent features before downgrading to avoid breaking your store.</p></div></details>
-<details><summary>Is the Plus launch manager worth it?</summary><div class="faq-answer"><p>The launch manager is included with Plus and helps with migration and initial setup. They're useful for technical guidance but won't replace a dedicated <a href="/services/shopify-builds">Shopify development agency</a> for custom work. Think of them as project coordinators rather than implementers.</p></div></details>
+<details><summary>Is the Plus launch manager worth it?</summary><div class="faq-answer"><p>The launch manager is included with Plus and helps with migration and initial setup. They're useful for technical guidance but won't replace a dedicated <a href="/services/cro-shopify">Shopify development agency</a> for custom work. Think of them as project coordinators rather than implementers.</p></div></details>
 <details><summary>Does Shopify Plus improve site speed?</summary><div class="faq-answer"><p>Not inherently — all Shopify plans run on the same infrastructure. Speed improvements come from theme optimisation, app management, and image compression, not the plan tier. See our <a href="/blog/shopify-speed-optimisation">speed optimisation guide</a> for practical tips.</p></div></details>
 
 <p>Need help deciding whether Plus is right for your store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a free consultation</a> and we'll assess your requirements.</p>
@@ -296,7 +296,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Do free Shopify apps hurt performance more than paid ones?</summary><div class="faq-answer"><p>Not necessarily, but free apps are more likely to inject third-party tracking scripts and ads into your store. Always check what scripts an app adds by inspecting your page source after installation.</p></div></details>
 <details><summary>Can I A/B test on Shopify without an app?</summary><div class="faq-answer"><p>You can run basic tests using Google Optimize's successor (now integrated into GA4) or by manually splitting traffic with URL parameters. However, dedicated Shopify A/B testing apps are significantly easier to set up and manage.</p></div></details>
 
-<p>Want help optimising your Shopify store's conversion rate? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a free consultation</a> with our <a href="/services/shopify-builds">Shopify development team</a>.</p>
+<p>Want help optimising your Shopify store's conversion rate? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a free consultation</a> with our <a href="/services/cro-shopify">Shopify development team</a>.</p>
 `,
 
 'shopify-seo-guide': `
@@ -337,7 +337,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Can I customise Shopify's URL structure?</summary><div class="faq-answer"><p>No. The /products/, /collections/, /pages/, and /blogs/ prefixes are hardcoded. You can customise the handle (the slug after the prefix) but not the directory structure. This is a genuine limitation, though in practice it rarely impacts rankings significantly.</p></div></details>
 <details><summary>Is Shopify SEO worse than WooCommerce?</summary><div class="faq-answer"><p>WooCommerce offers more URL flexibility and deeper technical control, but Shopify handles more fundamentals automatically (SSL, speed, mobile, sitemaps). For most merchants, the practical difference in rankings is minimal — content quality and backlinks matter far more than URL structure. See our <a href="/blog/shopify-vs-woocommerce-2026">full comparison</a>.</p></div></details>
 
-<p>Need help getting your Shopify store ranking? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your <a href="/services/shopify-builds">Shopify SEO strategy</a>.</p>
+<p>Need help getting your Shopify store ranking? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your <a href="/services/cro-shopify">Shopify SEO strategy</a>.</p>
 `,
 
 'shopify-checkout-optimisation': `
@@ -384,7 +384,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>How do I measure checkout abandonment rate?</summary><div class="faq-answer"><p>In Shopify admin, go to Analytics > Reports > "Sessions by landing page" isn't quite right — instead, check the "Abandoned checkouts" report under Orders. For funnel visualisation, set up a GA4 purchase funnel that tracks begin_checkout, add_shipping_info, add_payment_info, and purchase events.</p></div></details>
 <details><summary>Should I offer buy-now-pay-later options?</summary><div class="faq-answer"><p>For stores with average order values above £50, BNPL options like Klarna or Clearpay typically increase conversion by 10-20%. They're especially effective for fashion and lifestyle brands where customers are more price-sensitive. Shopify Payments integrates Shop Pay Installments natively.</p></div></details>
 
-<p>Want a checkout audit for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify experts</a>.</p>
+<p>Want a checkout audit for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify experts</a>.</p>
 `,
 
 'shopify-seo-checklist': `
@@ -444,7 +444,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>How often should I audit my product page SEO?</summary><div class="faq-answer"><p>Quarterly is a good cadence for established stores. New stores should optimise every product at creation. Use Screaming Frog or a Shopify SEO app to bulk-audit title tags, meta descriptions, alt text, and broken links.</p></div></details>
 <details><summary>Do product tags affect SEO on Shopify?</summary><div class="faq-answer"><p>Product tags create filterable URLs (/collections/all/tag-name) that are indexed by default. This can create thin content pages. Either add canonical tags to these filtered pages or use robots.txt/meta robots to prevent indexing of tag-filtered URLs.</p></div></details>
 
-<p>Need help optimising your Shopify store for search? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a free SEO audit</a> with our <a href="/services/shopify-builds">Shopify team</a>.</p>
+<p>Need help optimising your Shopify store for search? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a free SEO audit</a> with our <a href="/services/cro-shopify">Shopify team</a>.</p>
 `,
 
 'migrate-woocommerce-to-shopify': `
@@ -509,7 +509,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Should I migrate my WooCommerce blog to Shopify?</summary><div class="faq-answer"><p>If your blog drives significant organic traffic, yes — migrate it and set up redirects. Shopify's blog is more limited than WordPress, but keeping content on the same domain preserves internal linking value and domain authority.</p></div></details>
 <details><summary>Can I keep my domain name when migrating?</summary><div class="faq-answer"><p>Absolutely. Point your domain's DNS to Shopify after launching. The domain itself doesn't change — only the underlying platform. This is seamless for users and search engines provided redirects are in place.</p></div></details>
 
-<p>Planning a WooCommerce to Shopify migration? <a href="/contact">Talk to our team</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> for a migration assessment. Our <a href="/services/shopify-builds">Shopify development service</a> includes full migration support.</p>
+<p>Planning a WooCommerce to Shopify migration? <a href="/contact">Talk to our team</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> for a migration assessment. Our <a href="/services/cro-shopify">Shopify development service</a> includes full migration support.</p>
 `,
 
 'shopify-speed-optimisation': `
@@ -558,7 +558,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Does Shopify's CDN help with speed?</summary><div class="faq-answer"><p>Yes, significantly. Shopify serves all assets through Cloudflare's global CDN, meaning images, CSS, and JavaScript are delivered from edge servers close to your visitors. This is one of Shopify's genuine advantages over self-hosted platforms where you'd need to configure CDN separately.</p></div></details>
 <details><summary>Will removing apps break my store?</summary><div class="faq-answer"><p>Uninstalling an app removes its functionality but shouldn't break your store. However, some apps inject code into theme files that persists after uninstallation. Always check your theme's code after removing apps, and test your store thoroughly. Back up your theme before making changes.</p></div></details>
 
-<p>Want a professional speed audit of your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify development team</a>.</p>
+<p>Want a professional speed audit of your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify development team</a>.</p>
 `,
 
 'shopify-product-page-design': `
@@ -619,7 +619,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Should I use tabs or accordions for product information?</summary><div class="faq-answer"><p>Accordions (expandable sections) generally outperform tabs because they keep content in the natural scroll flow and work better on mobile. Tabs hide content that users may not discover. If using tabs, ensure the most important information is on the default open tab.</p></div></details>
 <details><summary>Does product page length affect conversion?</summary><div class="faq-answer"><p>Longer isn't always better. High-ticket items benefit from detailed pages with extensive information, reviews, and comparison content. Commodity or impulse-buy products convert better with concise pages that don't slow the purchase decision. Test both approaches for your specific product categories.</p></div></details>
 
-<p>Want a product page audit for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify design team</a>.</p>
+<p>Want a product page audit for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify design team</a>.</p>
 `,
 
 'google-shopping-shopify-setup': `
@@ -674,7 +674,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Do I need Google Ads for free listings?</summary><div class="faq-answer"><p>No. Free listings in Merchant Centre are separate from Google Ads. You need a Merchant Centre account (free) but don't need to spend on advertising. However, paid Shopping campaigns significantly increase visibility and are worth the investment for competitive categories.</p></div></details>
 <details><summary>Can I use a supplemental feed for better titles?</summary><div class="faq-answer"><p>Yes. Supplemental feeds let you override auto-generated titles and descriptions with optimised versions without changing your Shopify product listings. This is useful for Shopping-specific title optimisation that differs from your on-site product names.</p></div></details>
 
-<p>Need help setting up or optimising Google Shopping for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a>. We manage <a href="/services/ppc-management">Google Ads</a> and build <a href="/services/shopify-builds">Shopify stores</a> — so we understand both sides of the equation.</p>
+<p>Need help setting up or optimising Google Shopping for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a>. We manage <a href="/services/ppc-management">Google Ads</a> and build <a href="/services/cro-shopify">Shopify stores</a> — so we understand both sides of the equation.</p>
 `,
 
 'shopify-email-marketing-klaviyo': `
@@ -729,7 +729,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>How many emails per week is too many?</summary><div class="faq-answer"><p>It depends on your audience, but 2-3 campaigns per week is typical for active e-commerce brands. Monitor unsubscribe rates — if they exceed 0.3% per campaign, you're sending too often or the content isn't relevant enough. Segmentation solves this better than reducing frequency.</p></div></details>
 <details><summary>Should I use Klaviyo for SMS too?</summary><div class="faq-answer"><p>If your audience opts in to SMS, it's a high-performing channel for time-sensitive offers and delivery updates. Klaviyo's SMS integrates with the same customer profiles as email, enabling coordinated multi-channel campaigns. Start with transactional SMS (order and delivery updates) before adding promotional messages.</p></div></details>
 
-<p>Want help setting up Klaviyo for your <a href="/services/shopify-builds">Shopify store</a>? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your email marketing strategy.</p>
+<p>Want help setting up Klaviyo for your <a href="/services/cro-shopify">Shopify store</a>? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your email marketing strategy.</p>
 `,
 
 'shopify-analytics-guide': `
@@ -782,7 +782,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>What Shopify plan do I need for full analytics?</summary><div class="faq-answer"><p>The Basic plan gives you essential reports. Shopify plan adds professional reports. Advanced plan unlocks custom reports and advanced analytics. For most stores, the standard Shopify plan provides sufficient analytics. Supplement with GA4 for user behaviour insights regardless of plan.</p></div></details>
 <details><summary>Should I use a third-party analytics dashboard?</summary><div class="faq-answer"><p>Tools like Lifetimely or Triple Whale are valuable if you need unified cross-channel attribution and LTV analysis beyond what Shopify and GA4 provide. They're most useful for stores spending £5,000+/month on advertising across multiple platforms where understanding true channel performance is critical.</p></div></details>
 
-<p>Need help making sense of your store data? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify analytics team</a>.</p>
+<p>Need help making sense of your store data? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify analytics team</a>.</p>
 `,
 
 'shopify-b2b-wholesale': `
@@ -834,7 +834,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>How do payment terms work on Shopify Plus?</summary><div class="faq-answer"><p>You can offer net 30, 60, or 90-day payment terms per company. Shopify sends automated payment reminders and tracks outstanding invoices. Payment terms can be customised per company based on their credit history and relationship.</p></div></details>
 <details><summary>Can wholesale customers place orders online?</summary><div class="faq-answer"><p>Yes. B2B customers access your store through a standard login, see their custom pricing and catalogues, and check out online. They can also use draft orders for phone/email orders that you process manually. The self-serve approach reduces operational overhead significantly.</p></div></details>
 
-<p>Need help setting up B2B on your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your wholesale requirements. Our <a href="/services/shopify-builds">Shopify development team</a> has experience with both standard and Plus B2B setups.</p>
+<p>Need help setting up B2B on your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your wholesale requirements. Our <a href="/services/cro-shopify">Shopify development team</a> has experience with both standard and Plus B2B setups.</p>
 `,
 
 'shopify-international-selling': `
@@ -894,7 +894,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>How do I handle returns from international customers?</summary><div class="faq-answer"><p>Offer a local return address if volume justifies it, or use a returns management service like Global-e or Return Rabbit that handles international returns logistics. At minimum, clearly state your international returns policy with realistic timeframes.</p></div></details>
 <details><summary>Which markets should I prioritise first?</summary><div class="faq-answer"><p>Check your GA4 data for existing international traffic and purchases. Start with markets where you already have organic demand. For UK-based stores, Ireland, EU countries, and the US/Canada are typically the strongest first markets due to language and purchasing power.</p></div></details>
 
-<p>Planning international expansion for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your <a href="/services/shopify-builds">international Shopify setup</a>.</p>
+<p>Planning international expansion for your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> to discuss your <a href="/services/cro-shopify">international Shopify setup</a>.</p>
 `,
 
 'shopify-theme-development-guide': `
@@ -959,7 +959,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Is Hydrogen worth the investment?</summary><div class="faq-answer"><p>Hydrogen is Shopify's React-based framework for headless builds. It's powerful but adds complexity and ongoing maintenance cost. It's worth it for brands that need app-like experiences or have very complex front-end requirements. For 90% of Shopify stores, a well-built Liquid theme delivers better ROI.</p></div></details>
 <details><summary>How often should I update my theme?</summary><div class="faq-answer"><p>Keep your theme updated with vendor releases for security and feature improvements. If you're on a heavily customised theme, budget for quarterly updates where a developer merges upstream changes with your customisations. OS 2.0 themes are easier to update because customisations are more modular.</p></div></details>
 
-<p>Need help choosing or building the right Shopify theme? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify development team</a>.</p>
+<p>Need help choosing or building the right Shopify theme? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify development team</a>.</p>
 `,
 
 'shopify-upselling-cross-selling': `
@@ -1015,7 +1015,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>What discount should I offer on bundles?</summary><div class="faq-answer"><p>5-15% is the typical range. The discount needs to be meaningful enough to motivate the bundle purchase but not so deep that it erodes margin. Test different levels — sometimes a smaller discount with better product pairing outperforms a deeper discount on random products.</p></div></details>
 <details><summary>Should I upsell on mobile?</summary><div class="faq-answer"><p>Yes, but with more restraint. Mobile screens have less space, so limit cross-sell suggestions to 1-2 items rather than a grid of 4-6. Ensure upsell elements don't push the add-to-cart button out of view or create a cluttered experience. See our <a href="/blog/shopify-product-page-design">product page design guide</a> for mobile layout best practices.</p></div></details>
 
-<p>Want help implementing upselling on your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/shopify-builds">Shopify team</a>.</p>
+<p>Want help implementing upselling on your Shopify store? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a> with our <a href="/services/cro-shopify">Shopify team</a>.</p>
 `,
 
 'shopify-store-launch-checklist': `
@@ -1126,7 +1126,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <details><summary>Should I launch with a sale or promotion?</summary><div class="faq-answer"><p>A launch offer can drive initial sales and reviews, but avoid deep discounting that sets unrealistic price expectations. A modest first-order discount (10-15%), free shipping, or a gift with purchase is effective without devaluing your products.</p></div></details>
 <details><summary>How soon should I start advertising after launch?</summary><div class="faq-answer"><p>Start with brand search campaigns immediately to capture anyone searching for your brand. Wait 1-2 weeks before scaling broader campaigns — use that time to ensure operations (fulfilment, customer service) are smooth and fix any issues that appear.</p></div></details>
 
-<p>Launching a Shopify store and need expert support? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a>. Our <a href="/services/shopify-builds">Shopify development service</a> includes full launch support and post-launch optimisation.</p>
+<p>Launching a Shopify store and need expert support? <a href="/contact">Get in touch</a> or <a href="https://calendly.com/jack-spiresdigital/30min" target="_blank" rel="noopener">book a call</a>. Our <a href="/services/cro-shopify">Shopify development service</a> includes full launch support and post-launch optimisation.</p>
 `,
 
 };

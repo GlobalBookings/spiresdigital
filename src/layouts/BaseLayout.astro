@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -9,81 +10,115 @@ interface Props {
   image?: string;
   canonicalUrl?: string;
   lastUpdated?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
-  description = 'Spires Digital is a data-driven digital marketing agency in Guernsey and Lichfield. Specialists in PPC, Meta Ads, affiliate management, and Shopify builds.',
-  image = '/images/og-default.jpg',
+  description = 'Profit-focused ecommerce growth across paid media, SEO, CRO, retention, affiliate and analytics. Spires Digital works from Guernsey with brands across the UK and beyond.',
+  image = '/images/og-default.png',
   canonicalUrl,
   lastUpdated,
+  noindex = false,
+  schema,
 } = Astro.props;
 
+const site = 'https://spiresdigital.com';
+const cleanPath = Astro.url.pathname === '/' ? '/' : `${Astro.url.pathname.replace(/\/+$/, '')}/`;
+const canonical = canonicalUrl ? new URL(canonicalUrl, site).href : new URL(cleanPath, site).href;
+const absoluteImage = new URL(image, site).href;
 const pageTitle = title === 'Home'
-  ? 'Spires Digital — Data-Driven Digital Marketing Agency | Guernsey &amp; Lichfield'
+  ? 'Spires Digital — Profit-Focused Ecommerce Growth Agency'
   : `${title} | Spires Digital`;
-const canonical = canonicalUrl || Astro.url.href;
+// GA measurement IDs are public identifiers. The environment variable allows a
+// future property change without a code edit; this production fallback ensures
+// the current site is tagged even when the hosting environment has no value set.
+const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-B7840X8QFQ';
+const organisationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${site}/#organisation`,
+  name: 'Spires Digital',
+  url: site,
+  logo: `${site}/logo.png`,
+  email: 'jack@spiresdigital.com',
+  description: 'Profit-focused ecommerce growth agency covering acquisition, conversion, retention and measurement.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Guernsey',
+    addressRegion: 'Channel Islands',
+    addressCountry: 'GG',
+  },
+  areaServed: ['Guernsey', 'United Kingdom', 'Europe'],
+};
+const schemas = [organisationSchema, ...(Array.isArray(schema) ? schema : schema ? [schema] : [])];
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/favicon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Information" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Spires Digital information" />
     {lastUpdated && <meta property="article:modified_time" content={lastUpdated} />}
-
-    <meta property="og:type" content={canonical.includes('/blog/') ? 'article' : 'website'} />
+    <meta property="og:type" content={cleanPath.startsWith('/blog/') ? 'article' : 'website'} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={absoluteImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Spires Digital" />
     <meta property="og:locale" content="en_GB" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
-
+    <meta name="twitter:image" content={absoluteImage} />
     <title>{pageTitle}</title>
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Spires Digital",
-      "description": "Data-driven digital marketing agency specialising in PPC, Meta Ads, affiliate management, and Shopify builds.",
-      "url": "https://spiresdigital.com",
-      "email": "jack@spiresdigital.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Guernsey",
-        "addressRegion": "Channel Islands",
-        "addressCountry": "GB"
-      },
-      "areaServed": "GB",
-      "priceRange": "$$",
-      "sameAs": []
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
   </head>
-  <body>
+  <body data-page={cleanPath}>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Header />
-    <main id="main-content" role="main">
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
+    <CookieBanner measurementId={measurementId} />
+    <script is:inline>
+      window.trackSpiresEvent = (name, parameters = {}) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: name, ...parameters });
+        if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
+      };
+      document.querySelectorAll('[data-track]').forEach(element => {
+        element.addEventListener('click', () => window.trackSpiresEvent('cta_click', {
+          cta_name: element.dataset.track,
+          page_path: window.location.pathname,
+        }));
+      });
+      const params = new URLSearchParams(window.location.search);
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(key => {
+        const value = params.get(key);
+        if (value) sessionStorage.setItem(`spires_${key}`, value);
+      });
+      document.querySelectorAll('form[data-capture-attribution]').forEach(form => {
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(key => {
+          const value = sessionStorage.getItem(`spires_${key}`);
+          if (!value) return;
+          const input = document.createElement('input');
+          input.type = 'hidden'; input.name = key; input.value = value; form.appendChild(input);
+        });
+      });
+    </script>
   </body>
 </html>

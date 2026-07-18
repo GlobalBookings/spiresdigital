@@ -1,0 +1,121 @@
+---
+import ToolShell from '../../components/ToolShell.astro';
+---
+
+<ToolShell title="Ecommerce profit & break-even ROAS calculator" metaTitle="Free Ecommerce Profit & Break-Even ROAS Calculator" eyebrow="Profit planning" description="Use revenue, product costs, fulfilment, payment fees, overhead and paid-media share to estimate your break-even ROAS, target ROAS, MER and maximum CAC.">
+  <div slot="hero-card" class="formula-card"><span>Core principle</span><strong>Revenue is not profit.</strong><p>Your viable acquisition target changes with every point of margin, fulfilment cost and repeat value.</p><div>Target ad budget = revenue − costs − target profit</div></div>
+  <div slot="tool" class="tool-card">
+    <div class="tool-title"><div><span>Scenario calculator</span><h2>Enter one typical month</h2></div><button type="button" class="reset-button" data-reset>Reset example</button></div>
+    <form class="form-stack" id="profit-calculator">
+      <div class="form-grid">
+        <div class="field"><label for="revenue">Net revenue after returns</label><div class="input-prefix"><span>£</span><input id="revenue" name="revenue" type="number" min="1" step="1" value="100000" required /></div></div>
+        <div class="field"><label for="aov">Average order value</label><div class="input-prefix"><span>£</span><input id="aov" name="aov" type="number" min="1" step="1" value="75" required /></div></div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label for="ad-spend">Current paid-media spend</label><div class="input-prefix"><span>£</span><input id="ad-spend" name="adSpend" type="number" min="0" step="100" value="25000" required /></div></div>
+        <div class="field"><label for="paid-share">Revenue attributed to paid media</label><div class="input-suffix"><input id="paid-share" name="paidShare" type="number" min="1" max="100" step="1" value="60" required /><span>%</span></div><span class="field-hint">Use the best blended estimate available, not one platform’s claim.</span></div>
+      </div>
+      <hr />
+      <div class="form-grid three">
+        <div class="field"><label for="cogs">COGS</label><div class="input-suffix"><input id="cogs" name="cogs" type="number" min="0" max="95" step=".1" value="38" required /><span>%</span></div></div>
+        <div class="field"><label for="fulfilment">Fulfilment & shipping</label><div class="input-suffix"><input id="fulfilment" name="fulfilment" type="number" min="0" max="95" step=".1" value="10" required /><span>%</span></div></div>
+        <div class="field"><label for="fees">Payment fees</label><div class="input-suffix"><input id="fees" name="fees" type="number" min="0" max="20" step=".1" value="3" required /><span>%</span></div></div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label for="fixed">Monthly fixed operating costs</label><div class="input-prefix"><span>£</span><input id="fixed" name="fixed" type="number" min="0" step="100" value="12000" required /></div><span class="field-hint">Team, software, premises and other fixed overhead.</span></div>
+        <div class="field"><label for="target-margin">Target net profit margin</label><div class="input-suffix"><input id="target-margin" name="targetMargin" type="number" min="0" max="50" step=".5" value="10" required /><span>%</span></div></div>
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit">Calculate profit targets</button>
+    </form>
+    <div class="result-panel" id="profit-results" aria-live="polite">
+      <div class="result-heading"><div><span>Your target scenario</span><h2 id="status-heading">Commercially viable</h2></div><span class="status-pill" id="status-pill">Target view</span></div>
+      <div class="result-grid four"><div class="result-item"><strong id="target-roas">—</strong><span>Target ROAS</span></div><div class="result-item"><strong id="break-even-roas">—</strong><span>Break-even ROAS</span></div><div class="result-item"><strong id="target-mer">—</strong><span>Target MER</span></div><div class="result-item"><strong id="max-cac">—</strong><span>Maximum CAC</span></div></div>
+      <div class="waterfall"><div class="waterfall-bar" id="waterfall-bar"></div><div class="waterfall-key" id="waterfall-key"></div></div>
+      <div class="result-summary"><div><span>Maximum ad budget at target margin</span><strong id="max-budget">—</strong></div><div><span>Current estimated operating profit</span><strong id="current-profit">—</strong></div><div><span>Current blended paid ROAS</span><strong id="current-roas">—</strong></div></div>
+      <div class="action-box"><div><strong id="action-title">Use this as the floor for channel decisions.</strong><p id="action-copy">Compare this commercial target with platform performance and new-customer data.</p></div><a href="/contact" class="btn btn-primary btn-arrow" data-track="profit_result_plan">Discuss the scenario</a></div>
+      <p class="disclaimer">This is a planning estimate, not accounting advice. It treats the entered percentages as applying to net revenue and does not model tax, working capital, stock timing or customer lifetime value. Confirm definitions with your finance team.</p>
+    </div>
+  </div>
+
+  <h2>What the calculator is showing</h2>
+  <p><strong>Break-even ROAS</strong> is the paid-attributed revenue required for each pound of advertising before the model reaches zero operating profit. <strong>Target ROAS</strong> adds the profit margin you want to preserve.</p>
+  <p><strong>MER</strong> is advertising spend divided by total net revenue. It gives a blended view that is less vulnerable to multiple platforms claiming the same order.</p>
+  <h2>Why your real target may be different</h2>
+  <ul><li>New and returning customers can support different acquisition costs.</li><li>Product categories can have materially different margins and return rates.</li><li>Cash timing, inventory risk and discounting are not visible in a simple monthly model.</li><li>A first order may be unprofitable but commercially viable when repeat purchase is reliable and measured.</li></ul>
+  <h2>How to use the result</h2>
+  <ol><li>Agree the cost definitions with finance.</li><li>Calculate targets separately for important product or customer groups.</li><li>Compare store-level MER with platform-attributed ROAS.</li><li>Use experiments and new-customer reporting before increasing budget.</li></ol>
+</ToolShell>
+
+<script>
+  const form = document.getElementById('profit-calculator');
+  const defaults = { revenue: 100000, aov: 75, adSpend: 25000, paidShare: 60, cogs: 38, fulfilment: 10, fees: 3, fixed: 12000, targetMargin: 10 };
+  const money = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+  const numberValue = name => Number(new FormData(form).get(name));
+  const setText = (id, value) => { document.getElementById(id).textContent = value; };
+  function calculateProfit(event) {
+    event?.preventDefault();
+    const revenue = numberValue('revenue');
+    const aov = numberValue('aov');
+    const adSpend = numberValue('adSpend');
+    const paidShare = numberValue('paidShare') / 100;
+    const cogs = numberValue('cogs') / 100;
+    const fulfilment = numberValue('fulfilment') / 100;
+    const fees = numberValue('fees') / 100;
+    const fixed = numberValue('fixed');
+    const targetMargin = numberValue('targetMargin') / 100;
+    const variableRate = cogs + fulfilment + fees;
+    const paidRevenue = revenue * paidShare;
+    const breakEvenBudget = revenue * (1 - variableRate) - fixed;
+    const targetBudget = breakEvenBudget - revenue * targetMargin;
+    const paidOrders = paidRevenue / aov;
+    const results = document.getElementById('profit-results');
+    if (variableRate >= 1 || breakEvenBudget <= 0 || targetBudget <= 0 || paidOrders <= 0) {
+      results.classList.add('active');
+      setText('status-heading', 'The cost structure leaves no viable paid-media budget');
+      setText('status-pill', 'Review costs');
+      ['target-roas','break-even-roas','target-mer','max-cac','max-budget'].forEach(id => setText(id, '—'));
+      setText('current-profit', money.format(revenue * (1 - variableRate) - fixed - adSpend));
+      setText('current-roas', adSpend > 0 ? `${(paidRevenue / adSpend).toFixed(2)}×` : '—');
+      setText('action-title', 'Review margin, overhead or the target before scaling.');
+      setText('action-copy', 'The entered costs consume the revenue available for advertising and target profit.');
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.trackSpiresEvent?.('tool_complete', { tool_name: 'profit_calculator', result_type: 'no_viable_budget' });
+      return;
+    }
+    const breakEvenROAS = paidRevenue / breakEvenBudget;
+    const targetROAS = paidRevenue / targetBudget;
+    const targetMER = targetBudget / revenue;
+    const maxCAC = targetBudget / paidOrders;
+    const currentProfit = revenue * (1 - variableRate) - fixed - adSpend;
+    const currentROAS = adSpend > 0 ? paidRevenue / adSpend : 0;
+    setText('status-heading', currentProfit >= revenue * targetMargin ? 'Current spend clears the target margin' : currentProfit >= 0 ? 'Current spend is profitable but below target' : 'Current spend is above break-even');
+    setText('status-pill', currentProfit >= revenue * targetMargin ? 'On target' : currentProfit >= 0 ? 'Opportunity' : 'At risk');
+    setText('target-roas', `${targetROAS.toFixed(2)}×`);
+    setText('break-even-roas', `${breakEvenROAS.toFixed(2)}×`);
+    setText('target-mer', `${(targetMER * 100).toFixed(1)}%`);
+    setText('max-cac', money.format(maxCAC));
+    setText('max-budget', money.format(targetBudget));
+    setText('current-profit', money.format(currentProfit));
+    setText('current-roas', adSpend > 0 ? `${currentROAS.toFixed(2)}×` : '—');
+    const fixedRate = fixed / revenue;
+    const adRate = adSpend / revenue;
+    const profitRate = Math.max(0, currentProfit / revenue);
+    const segments = [['COGS',cogs,'#7772f4'],['Fulfilment & fees',fulfilment+fees,'#9da8ba'],['Fixed',fixedRate,'#e59823'],['Ads',adRate,'#38c6ae'],['Profit',profitRate,'#75e6d3']];
+    document.getElementById('waterfall-bar').innerHTML = segments.map(([label,rate,color]) => `<span title="${label}" style="width:${Math.max(0,Number(rate)*100)}%;background:${color}"></span>`).join('');
+    document.getElementById('waterfall-key').innerHTML = segments.map(([label,rate,color]) => `<span><i style="background:${color}"></i>${label} ${(Number(rate)*100).toFixed(1)}%</span>`).join('');
+    setText('action-title', currentProfit < 0 ? 'The current spend is above the estimated break-even ceiling.' : 'Use the target—not a generic benchmark—as the commercial floor.');
+    setText('action-copy', currentProfit < 0 ? 'Validate attribution, new-customer value and cost assumptions before adding budget.' : 'Compare this with new-customer performance, product mix and blended store efficiency.');
+    results.classList.add('active');
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.trackSpiresEvent?.('tool_complete', { tool_name: 'profit_calculator', result_type: currentProfit >= 0 ? 'profitable' : 'unprofitable' });
+  }
+  form?.addEventListener('submit', calculateProfit);
+  document.querySelector('[data-reset]')?.addEventListener('click', () => {
+    Object.entries(defaults).forEach(([name,value]) => { form.elements[name].value = value; });
+    document.getElementById('profit-results').classList.remove('active');
+  });
+</script>
+
+<style>
+  .formula-card>span,.tool-title span{color:#91eadb;font-size:.68rem;font-weight:800;text-transform:uppercase}.formula-card strong{display:block;margin:.8rem 0;color:white;font-size:1.7rem}.formula-card p{color:#cbd2df;font-size:.82rem}.formula-card div{margin-top:1rem;padding:.7rem;border-radius:8px;background:rgba(255,255,255,.08);color:#91eadb;font-size:.72rem;font-weight:700}.tool-title{display:flex;justify-content:space-between;gap:1rem;align-items:start;margin-bottom:1.5rem}.tool-title span{color:var(--violet-dark)}.tool-title h2{margin-top:.35rem}.reset-button{border:0;background:transparent;color:var(--violet-dark);cursor:pointer;font-size:.72rem;font-weight:800;text-decoration:underline}.tool-card hr{height:1px;border:0;background:var(--line);margin:.5rem 0}.form-grid.three{grid-template-columns:repeat(3,1fr)}.input-prefix,.input-suffix{display:flex;align-items:center;border:1px solid #cfd5df;border-radius:9px;background:white;overflow:hidden}.input-prefix span,.input-suffix span{padding:0 .7rem;color:var(--slate);font-weight:700}.input-prefix input,.input-suffix input{border:0!important;border-radius:0!important;outline:0!important}.input-suffix input{text-align:right}.result-panel{background:#effbf8}.result-heading{display:flex;justify-content:space-between;gap:1rem;align-items:center}.result-heading>div>span{color:var(--success);font-size:.68rem;font-weight:800;text-transform:uppercase}.result-heading h2{margin-top:.3rem;font-size:1.6rem}.status-pill{padding:.35rem .55rem;border-radius:999px;background:var(--mint-soft);color:var(--success);font-size:.65rem;font-weight:800}.result-grid.four{grid-template-columns:repeat(4,1fr)}.waterfall{padding:1rem;border-radius:10px;background:white}.waterfall-bar{display:flex;height:20px;overflow:hidden;border-radius:999px;background:#edf0f4}.waterfall-bar span{display:block;height:100%}.waterfall-key{display:flex;flex-wrap:wrap;gap:.5rem .8rem;margin-top:.7rem;color:var(--muted);font-size:.6rem}.waterfall-key i{display:inline-block;width:7px;height:7px;margin-right:.3rem;border-radius:50%}.result-summary{display:grid;grid-template-columns:repeat(3,1fr);margin:1rem 0;border:1px solid #cce9e2;border-radius:10px;background:white}.result-summary>div{padding:1rem;border-right:1px solid #dfeeea}.result-summary>div:last-child{border:0}.result-summary span,.result-summary strong{display:block}.result-summary span{color:var(--muted);font-size:.64rem}.result-summary strong{margin-top:.25rem;color:var(--ink)}.action-box{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:1rem;border-radius:10px;background:var(--ink);color:#cbd2df}.action-box strong{color:white}.action-box p{margin-top:.2rem;font-size:.72rem}.action-box .btn{flex:0 0 auto}.disclaimer{margin-top:1rem}@media(max-width:700px){.form-grid.three,.result-grid.four,.result-summary{grid-template-columns:1fr}.result-summary>div{border-right:0;border-bottom:1px solid #dfeeea}.action-box{align-items:stretch;flex-direction:column}.tool-title{flex-direction:column}}
+</style>

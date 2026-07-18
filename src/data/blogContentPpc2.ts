@@ -865,7 +865,7 @@ export const ppc2BlogContent: Record<string, string> = {
 <li><strong>Category corrections:</strong> Fix incorrect Google product categories in bulk</li>
 </ul>
 
-<p>For Shopify stores, the native Google channel app provides a solid primary feed. Use a supplemental feed via Google Sheets for the optimisations above. Learn more about optimising your Shopify store in our <a href="/services/shopify-builds">Shopify builds service</a> page.</p>
+<p>For Shopify stores, the native Google channel app provides a solid primary feed. Use a supplemental feed via Google Sheets for the optimisations above. Learn more about optimising your Shopify store in our <a href="/services/cro-shopify">Shopify builds service</a> page.</p>
 
 <h2>Custom Labels Strategy</h2>
 
@@ -1378,7 +1378,7 @@ export const ppc2BlogContent: Record<string, string> = {
 <li><strong>Thumb-zone design:</strong> Place key CTAs and form fields in the natural thumb reach area</li>
 </ul>
 
-<p>Test your landing page on actual mobile devices, not just browser emulators. Real-world mobile experience often differs from desktop previews. Our <a href="/services/shopify-builds">Shopify builds service</a> always prioritises mobile-first design because conversion rates depend on it.</p>
+<p>Test your landing page on actual mobile devices, not just browser emulators. Real-world mobile experience often differs from desktop previews. Our <a href="/services/cro-shopify">Shopify builds service</a> always prioritises mobile-first design because conversion rates depend on it.</p>
 
 <h2>Landing Page Quality Score Impact</h2>
 

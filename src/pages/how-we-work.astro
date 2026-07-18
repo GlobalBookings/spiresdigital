@@ -1,246 +1,72 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How Spires Digital approaches an ecommerce growth engagement',
+  description: 'A practical view of the discovery, diagnosis, roadmap and optimisation process used by Spires Digital.',
+  step: [
+    { '@type': 'HowToStep', name: 'Fit and context', text: 'Understand the store, economics, goals, access and current constraint.' },
+    { '@type': 'HowToStep', name: 'Diagnose the system', text: 'Review acquisition, conversion, retention and measurement together.' },
+    { '@type': 'HowToStep', name: 'Set the roadmap', text: 'Prioritise work by evidence, likely impact, effort and dependency.' },
+    { '@type': 'HowToStep', name: 'Run and learn', text: 'Implement, measure and document the next best decision.' },
+  ],
+};
+
+const stages = [
+  { number: '01', label: 'Fit first', title: 'Context before recommendations', copy: 'We start with your store, products, unit economics, team, targets and current evidence. If the problem is not a fit for our work, we will say so.', output: 'A concise view of the commercial goal, constraints, available data and decisions that matter.' },
+  { number: '02', label: 'Diagnosis', title: 'One connected growth system', copy: 'Paid media is not assessed in isolation. We look across acquisition, conversion, retention and measurement to find where additional effort is most likely to pay back.', output: 'A prioritised diagnostic—not a list of every possible marketing task.' },
+  { number: '03', label: 'Roadmap', title: 'A sequence the team can execute', copy: 'Work is ordered by evidence, impact, effort and dependency. Owners, measures and decision dates are made explicit so the plan stays useful after the meeting.', output: 'A 30–90 day roadmap with a shared scorecard and a clear first set of actions.' },
+  { number: '04', label: 'Operating cadence', title: 'Run, measure, explain, repeat', copy: 'We implement within the agreed scope, monitor the signals that matter and keep a decision log. Reporting explains what changed, what we learned and what happens next.', output: 'Regular commercial reporting, decisions and a living backlog—not a dashboard without interpretation.' },
+];
 ---
 
-<BaseLayout title="How We Work" description="Our process for delivering digital marketing results. From initial audit to ongoing optimisation, here's exactly what working with Spires Digital looks like.">
-  <Breadcrumbs items={[{ label: 'How We Work' }]} />
-
-  <section class="page-hero" style="margin-top: -2rem;">
+<BaseLayout title="How We Work | Ecommerce Growth Process" description="See how Spires Digital diagnoses ecommerce growth constraints, builds a 30–90 day roadmap and runs a transparent optimisation cadence." schema={schema}>
+  <Breadcrumbs items={[{ label: 'How we work' }]} />
+  <section class="page-hero">
     <div class="container page-hero-content">
-      <span class="badge">Our Process</span>
-      <h1>How We Work With You</h1>
-      <p>No mystery, no jargon. Here's exactly what happens when you partner with Spires Digital, from first contact to ongoing growth.</p>
+      <span class="badge">How we work</span>
+      <h1>Clarity before activity.</h1>
+      <p>We connect commercial context to channel decisions, prioritise the constraint and give every piece of work a reason, an owner and a measure.</p>
+      <div class="page-hero-actions"><a href="/contact" class="btn btn-primary btn-lg">Request a growth review</a><a href="/tools/growth-assessment" class="btn btn-outline btn-lg">Diagnose your constraint</a></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="max-width: 900px;">
-      <div class="process-timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <span class="timeline-num">1</span>
-            <span class="timeline-label">Week 0</span>
-          </div>
-          <div class="timeline-content">
-            <h2>Free Audit & Discovery Call</h2>
-            <p>We start with a thorough audit of your current marketing. We review your accounts, analytics, competitors, and market position. Then we jump on a call to discuss your goals, budget, and timeline.</p>
-            <div class="timeline-detail">
-              <h4>What you get:</h4>
-              <ul>
-                <li>Comprehensive account audit report</li>
-                <li>Competitor analysis summary</li>
-                <li>Quick-win opportunities identified</li>
-                <li>30-minute strategy call</li>
-              </ul>
-            </div>
-            <div class="tip-box"><strong>This is completely free.</strong> Even if you don't work with us, you'll walk away with actionable insights you can implement yourself.</div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <span class="timeline-num">2</span>
-            <span class="timeline-label">Week 1</span>
-          </div>
-          <div class="timeline-content">
-            <h2>Strategy & Setup</h2>
-            <p>Once you're on board, we build your custom strategy. This isn't a template -- it's a detailed plan based on your specific business, market, and goals.</p>
-            <div class="timeline-detail">
-              <h4>What happens:</h4>
-              <ul>
-                <li>Campaign structure designed</li>
-                <li>Conversion tracking audited or set up from scratch</li>
-                <li>Audience research and keyword planning</li>
-                <li>Creative briefs and ad copy drafting</li>
-                <li>Full access to all accounts granted to you</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <span class="timeline-num">3</span>
-            <span class="timeline-label">Week 2-4</span>
-          </div>
-          <div class="timeline-content">
-            <h2>Launch & Initial Optimisation</h2>
-            <p>Campaigns go live. The first few weeks are about gathering data, testing assumptions, and making rapid adjustments. We monitor performance daily during this phase.</p>
-            <div class="timeline-detail">
-              <h4>What you see:</h4>
-              <ul>
-                <li>Campaigns launched across chosen channels</li>
-                <li>Daily monitoring and bid adjustments</li>
-                <li>A/B testing on ad copy and creative</li>
-                <li>Weekly check-in to review early data</li>
-                <li>Negative keyword refinement (PPC)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <span class="timeline-num">4</span>
-            <span class="timeline-label">Monthly</span>
-          </div>
-          <div class="timeline-content">
-            <h2>Ongoing Optimisation & Reporting</h2>
-            <p>This is where the real growth happens. Every month, we analyse performance, identify opportunities, and refine the strategy. You get a clear report and a strategy call.</p>
-            <div class="timeline-detail">
-              <h4>What's included:</h4>
-              <ul>
-                <li>Monthly performance report in plain English</li>
-                <li>Strategy call to review results and plan next steps</li>
-                <li>Continuous campaign optimisation</li>
-                <li>New keyword/audience expansion</li>
-                <li>Budget reallocation based on what's working</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="section surface">
+    <div class="container process-list">
+      {stages.map(stage => <article class="process-row"><div class="process-index"><span>{stage.number}</span><small>{stage.label}</small></div><div><h2>{stage.title}</h2><p>{stage.copy}</p></div><aside><strong>Useful output</strong><p>{stage.output}</p></aside></article>)}
     </div>
   </section>
 
-  <section class="section" style="background: var(--color-bg-alt);">
-    <div class="container" style="max-width: 900px;">
-      <div class="section-header">
-        <span class="badge">Our Commitment</span>
-        <h2>What You Can Always Expect</h2>
-      </div>
-      <div class="grid grid-3">
-        <div class="promise-card">
-          <h3>Full Transparency</h3>
-          <p>You own every account. You see every metric. You know exactly where every penny goes.</p>
-        </div>
-        <div class="promise-card">
-          <h3>No Lock-In</h3>
-          <p>Month-to-month agreements. If we're not delivering, you're free to leave with 30 days notice.</p>
-        </div>
-        <div class="promise-card">
-          <h3>Real Communication</h3>
-          <p>No jargon-filled reports. We explain what's working, what isn't, and what we're doing about it.</p>
-        </div>
-        <div class="promise-card">
-          <h3>Data-Driven</h3>
-          <p>Every decision is backed by data. We test, measure, and let the numbers guide the strategy.</p>
-        </div>
-        <div class="promise-card">
-          <h3>Fast Response</h3>
-          <p>Questions answered within 24 hours. Urgent issues addressed same day.</p>
-        </div>
-        <div class="promise-card">
-          <h3>Results Focus</h3>
-          <p>We optimise for business outcomes -- revenue, leads, profit -- not vanity metrics.</p>
-        </div>
-      </div>
+  <section class="section surface-warm">
+    <div class="container split">
+      <div class="split-copy"><span class="eyebrow">What transparency means</span><h2>You keep control of the assets and the decisions.</h2><p>Accounts should be held in your business wherever the platform allows it. You should be able to see what changed, why it changed and how success is being judged.</p></div>
+      <div class="principles"><div><strong>Your accounts</strong><span>Direct access to media, analytics and store platforms.</span></div><div><strong>Your evidence</strong><span>Commercial measures alongside platform-reported results.</span></div><div><strong>Your roadmap</strong><span>Priorities, owners and decision dates visible to the team.</span></div><div><strong>Plain English</strong><span>Assumptions and uncertainty explained, not hidden.</span></div></div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Get Started?</h2>
-      <p>The first step is a free, no-obligation audit. We'll show you exactly where the opportunities are.</p>
-      <a href="/contact" class="btn btn-white btn-lg">Get Your Free Audit</a>
-    </div>
-  </section>
+  <section class="section surface"><div class="container"><div class="section-heading"><span class="eyebrow">Before we begin</span><h2>A productive first conversation needs surprisingly little.</h2><p>If you can share the following, we can spend more time on the decision and less time gathering context.</p></div><div class="grid grid-3"><div class="card"><div class="card-body"><h3>Business target</h3><p>The outcome, timeframe and why it matters now.</p></div></div><div class="card"><div class="card-body"><h3>Economic guardrails</h3><p>Average order value, margin, allowable CAC or your closest estimates.</p></div></div><div class="card"><div class="card-body"><h3>Current evidence</h3><p>Store, analytics and media context. Read-only access can follow after fit is established.</p></div></div></div></div></section>
+
+  <section class="cta-section"><div class="container"><h2>Bring us the constraint, not a polished brief.</h2><p>We will help turn the context into a useful next decision.</p><a href="/contact" class="btn btn-white btn-lg">Request a growth review</a></div></section>
 </BaseLayout>
 
 <style>
-  .process-timeline { position: relative; padding-left: 3rem; }
-
-  .process-timeline::before {
-    content: '';
-    position: absolute;
-    left: 17px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--color-border);
-  }
-
-  .timeline-item { position: relative; margin-bottom: 3rem; }
-  .timeline-item:last-child { margin-bottom: 0; }
-
-  .timeline-marker {
-    position: absolute;
-    left: -3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  .timeline-num {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .timeline-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-  }
-
-  .timeline-content h2 { font-size: 1.4rem; margin-bottom: 0.75rem; }
-  .timeline-content > p { color: var(--color-text-light); font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem; }
-
-  .timeline-detail {
-    background: var(--color-bg-alt);
-    padding: 1.25rem 1.5rem;
-    border-radius: var(--radius-sm);
-    margin-bottom: 1rem;
-  }
-
-  .timeline-detail h4 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-
-  .timeline-detail ul { list-style: none; padding: 0; }
-  .timeline-detail li {
-    padding: 0.25rem 0;
-    font-size: 0.92rem;
-    color: var(--color-text-light);
-  }
-  .timeline-detail li::before {
-    content: '\2713';
-    color: var(--color-success);
-    margin-right: 0.5rem;
-    font-weight: 600;
-  }
-
-  .promise-card {
-    padding: 1.5rem;
-    background: var(--color-white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-  }
-
-  .promise-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
-  .promise-card p { font-size: 0.9rem; color: var(--color-text-light); }
-
-  @media (max-width: 768px) {
-    .process-timeline { padding-left: 2.5rem; }
-    .timeline-marker { left: -2.5rem; }
-  }
+  .process-list { display: grid; gap: 0; }
+  .process-row { display: grid; grid-template-columns: 150px 1fr minmax(260px,.65fr); gap: 2rem; padding: 2.2rem 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .process-row:first-child { border-top: 1px solid var(--line); }
+  .process-index { display: grid; gap: .25rem; }
+  .process-index span { color: var(--violet); font-size: 2rem; font-weight: 850; letter-spacing: -.05em; }
+  .process-index small { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .process-row h2 { font-size: clamp(1.55rem,3vw,2.25rem); }
+  .process-row > div > p { max-width: 580px; margin-top: .75rem; color: var(--slate); }
+  .process-row aside { padding: 1.1rem; border-radius: var(--radius-sm); background: var(--canvas); }
+  .process-row aside strong { color: var(--ink); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+  .process-row aside p { margin-top: .35rem; color: var(--slate); font-size: .88rem; }
+  .principles { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+  .principles div { padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; }
+  .principles strong, .principles span { display: block; }
+  .principles span { margin-top: .35rem; color: var(--slate); font-size: .86rem; }
+  @media (max-width: 800px) { .process-row { grid-template-columns: 75px 1fr; gap: 1rem; } .process-row aside { grid-column: 2; } .principles { grid-template-columns: 1fr; } }
 </style>

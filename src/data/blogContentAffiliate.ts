@@ -1923,7 +1923,7 @@ export const affiliateBlogContent: Record<string, string> = {
   'affiliate-tracking-shopify-integration': `
 <p>Shopify powers millions of e-commerce stores worldwide, and integrating affiliate tracking is one of the most impactful steps you can take to grow your partnership channel. But getting the integration right — with accurate conversion tracking, proper deduplication, and reliable server-side backup — requires more than just dropping a pixel on your thank-you page.</p>
 
-<p>This step-by-step guide covers how to integrate AWIN, Impact, and CJ affiliate tracking with your <a href="/services/shopify-builds">Shopify store</a>, including common pitfalls and best practices for 2026.</p>
+<p>This step-by-step guide covers how to integrate AWIN, Impact, and CJ affiliate tracking with your <a href="/services/cro-shopify">Shopify store</a>, including common pitfalls and best practices for 2026.</p>
 
 <h2>Understanding Shopify's Tracking Architecture</h2>
 

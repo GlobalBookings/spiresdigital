@@ -632,7 +632,7 @@ export const meta2BlogContent: Record<string, string> = {
 <li><strong>Growing (£100–500/day):</strong> Shift to 60/25/15 split across TOF/MOF/BOF</li>
 <li><strong>Scaling (£500+/day):</strong> Maintain the 60/25/15 baseline but adjust weekly based on performance data</li>
 </ul>
-<p>For <a href="/services/shopify-builds">Shopify stores</a> looking to build a complete e-commerce growth engine, integrating your ad funnel with on-site conversion optimisation is essential. Your ads drive traffic; your site converts it.</p>
+<p>For <a href="/services/cro-shopify">Shopify stores</a> looking to build a complete e-commerce growth engine, integrating your ad funnel with on-site conversion optimisation is essential. Your ads drive traffic; your site converts it.</p>
 
 <h2>Measuring Full-Funnel Performance</h2>
 <p>Don't judge TOF campaigns by the same metrics as BOF campaigns. Each stage has different KPIs:</p>
@@ -1041,7 +1041,7 @@ export const meta2BlogContent: Record<string, string> = {
 `,
 
   'dynamic-product-ads-meta-shopify': `
-<p>Dynamic Product Ads (DPA) are arguably the most powerful ad format available to e-commerce advertisers on Meta. Instead of manually creating ads for each product in your catalogue, DPA automatically shows the right products to the right people based on their browsing behaviour, purchase history, and predicted interest. For <a href="/services/shopify-builds">Shopify stores</a>, the integration is particularly seamless — and the results can be transformative.</p>
+<p>Dynamic Product Ads (DPA) are arguably the most powerful ad format available to e-commerce advertisers on Meta. Instead of manually creating ads for each product in your catalogue, DPA automatically shows the right products to the right people based on their browsing behaviour, purchase history, and predicted interest. For <a href="/services/cro-shopify">Shopify stores</a>, the integration is particularly seamless — and the results can be transformative.</p>
 <p>This guide covers everything you need to set up, optimise, and scale Dynamic Product Ads on Meta for your Shopify store — from catalogue configuration to template customisation and advanced remarketing strategies.</p>
 
 <h2>What Are Dynamic Product Ads?</h2>
