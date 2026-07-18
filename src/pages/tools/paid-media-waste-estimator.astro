@@ -2,7 +2,7 @@
 import ToolShell from '../../components/ToolShell.astro';
 import ToolResultActions from '../../components/ToolResultActions.astro';
 ---
-<ToolShell title="Paid media waste estimator" metaTitle="Free Google & Meta Ads Waste Estimator" eyebrow="Efficiency diagnostic" description="Estimate how much monthly media spend deserves closer investigation based on tracking confidence, query control, feed health, creative learning and landing-page evidence.">
+<ToolShell title="Paid media waste estimator" metaTitle="Free Google & Meta Ads Waste Estimator" eyebrow="Efficiency diagnostic" description="Estimate how much paid-media spend needs investigation based on tracking, query control, feed health, creative learning and landing-page evidence.">
   <div slot="hero-card" class="waste-hero"><span>Diagnostic, not an audit</span><strong>Find the part of spend that needs evidence.</strong><p>The result is an investigation range. It does not claim that every pound can be recovered.</p></div>
   <div slot="tool" class="tool-card"><div class="waste-intro"><span>Six inputs</span><h2>Estimate the investigation range</h2><p>Answer conservatively. “Unknown” is itself a useful risk signal.</p></div><form id="waste-estimator" class="form-stack">
     <div class="form-grid"><div class="field"><label for="media-spend">Monthly paid-media spend</label><div class="input-prefix"><span>£</span><input id="media-spend" name="spend" type="number" min="1" value="20000" required /></div></div><div class="field"><label for="media-revenue">Monthly attributed revenue / value</label><div class="input-prefix"><span>£</span><input id="media-revenue" name="revenue" type="number" min="0" value="60000" required /></div></div></div>

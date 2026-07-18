@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getArticleJourney } from '../data/articleJourneys';
+import { founder, founderSchema } from '../data/author';
 
 interface Props {
   title: string;
@@ -26,13 +27,13 @@ const schema = {
   datePublished: date,
   dateModified: date,
   image: image ? new URL(image, 'https://spiresdigital.com').href : 'https://spiresdigital.com/images/og-default.png',
-  author: { '@type': 'Person', name: 'Jack', url: 'https://spiresdigital.com/about/' },
+  author: { '@id': 'https://spiresdigital.com/about/jack-chittenden/#person' },
   publisher: { '@id': 'https://spiresdigital.com/#organisation' },
   mainEntityOfPage: new URL(Astro.url.pathname, 'https://spiresdigital.com').href,
 };
 ---
 
-<BaseLayout title={title} description={description} image={image} lastUpdated={date} noindex={noindex} schema={schema}>
+<BaseLayout title={title} description={description} image={image} lastUpdated={date} noindex={noindex} schema={[founderSchema, schema]}>
   <div class="blog-post">
     <Breadcrumbs items={[{ label: 'Insights', href: '/blog' }, { label: title }]} />
     <article class="blog-article container">
@@ -42,14 +43,14 @@ const schema = {
         <p class="standfirst">{description}</p>
         <div class="byline">
           <span class="author-mark" aria-hidden="true">J</span>
-          <div><strong>Written by Jack, founder of Spires Digital</strong><span>{formattedDate}{readTime ? ` · ${readTime}` : ''}</span></div>
+          <div><a href={founder.profileUrl}><strong>Written by {founder.name}, founder of Spires Digital</strong></a><span>{formattedDate}{readTime ? ` · ${readTime}` : ''}</span></div>
         </div>
       </header>
 
       {image && <div class="blog-hero-image"><img src={image} alt="" width="1200" height="630" loading="eager" referrerpolicy="no-referrer" /></div>}
 
       <div class="article-grid">
-        <aside class="article-note"><strong>Editorial approach</strong><p>Guidance is based on hands-on marketing experience and the information available on the publication date. Platform features, costs and tax treatment can change; verify decisions in your own accounts and with a qualified adviser where relevant.</p><a href="/about">About the author →</a></aside>
+        <aside class="article-note"><strong>Editorial approach</strong><p>Guidance is based on hands-on marketing experience and the information available on the publication date. Platform features, costs and tax treatment can change; verify decisions in your own accounts and with a qualified adviser where relevant.</p><a href={founder.profileUrl}>About the author →</a><a href="/editorial-policy">Editorial standards →</a></aside>
         <div class="blog-content"><slot /></div>
       </div>
     </article>
@@ -65,6 +66,7 @@ const schema = {
   .standfirst { max-width: 720px; margin: 1.2rem auto 0; color: var(--slate); font-size: clamp(1.05rem,2vw,1.25rem); }
   .byline { display: flex; width: fit-content; align-items: center; gap: .75rem; margin: 1.6rem auto 0; text-align: left; }
   .byline strong, .byline span { display: block; }
+  .byline a { text-decoration: none; }
   .byline strong { color: var(--ink); font-size: .84rem; }
   .byline span { color: var(--muted); font-size: .78rem; }
   .author-mark { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--ink); color: white; font-weight: 850; }
@@ -74,7 +76,7 @@ const schema = {
   .article-note { position: sticky; top: 110px; padding: 1rem; border-top: 3px solid var(--violet); background: var(--violet-soft); font-size: .78rem; }
   .article-note strong { color: var(--ink); }
   .article-note p { margin: .5rem 0 .75rem; color: var(--slate); }
-  .article-note a { color: var(--violet-dark); font-weight: 750; }
+  .article-note a { display: block; margin-top: .35rem; color: var(--violet-dark); font-weight: 750; }
   .blog-content { min-width: 0; color: #273348; font-size: 1.04rem; line-height: 1.82; }
   .blog-content :global(h2) { margin: 2.8rem 0 1rem; font-size: clamp(1.65rem,3vw,2.25rem); }
   .blog-content :global(h3) { margin: 2rem 0 .75rem; font-size: 1.3rem; }

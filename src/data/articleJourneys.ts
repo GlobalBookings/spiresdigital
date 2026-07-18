@@ -88,6 +88,13 @@ const journeyOverrides: Record<string, Partial<ArticleJourney>> = {
     primaryHref: '/tools/paid-media-waste-estimator',
     primaryLabel: 'Estimate paid-media waste',
   },
+  'how-to-audit-google-ads-account': {
+    title: 'Turn the audit guide into a prioritised account-control score before changing spend.',
+    primaryHref: '/tools/google-ads-audit-checklist',
+    primaryLabel: 'Run the Google Ads audit',
+    secondaryHref: '/services/ppc-management',
+    secondaryLabel: 'Discuss PPC management',
+  },
   'how-to-launch-affiliate-program': {
     title: 'Pressure-test the programme case before choosing a network or commission structure.',
   },

@@ -66,7 +66,7 @@ export const ppcBlogPosts: BlogPost[] = [
   },
   {
     slug: 'google-ads-benchmarks-by-industry-2026',
-    title: 'Google Ads Benchmarks by Industry: CPCs, CTRs and Conversion Rates 2026',
+    title: 'Google Ads Benchmarks by Industry: CPC, CTR and CVR',
     description: 'Up-to-date Google Ads benchmark data for 2026 covering average CPCs, click-through rates, and conversion rates across major industries.',
     date: '2026-04-21',
     category: 'PPC',

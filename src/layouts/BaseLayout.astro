@@ -30,7 +30,9 @@ const canonical = canonicalUrl ? new URL(canonicalUrl, site).href : new URL(clea
 const absoluteImage = new URL(image, site).href;
 const pageTitle = title === 'Home'
   ? 'Spires Digital — Profit-Focused Ecommerce Growth Agency'
-  : `${title} | Spires Digital`;
+  : title.toLowerCase().includes('spires digital') || title.length > 52
+    ? title
+    : `${title} | Spires Digital`;
 // GA measurement IDs are public identifiers. The environment variable allows a
 // future property change without a code edit; this production fallback ensures
 // the current site is tagged even when the hosting environment has no value set.
@@ -51,8 +53,18 @@ const organisationSchema = {
     addressCountry: 'GG',
   },
   areaServed: ['Guernsey', 'United Kingdom', 'Europe'],
+  founder: { '@id': `${site}/about/jack-chittenden/#person` },
 };
-const schemas = [organisationSchema, ...(Array.isArray(schema) ? schema : schema ? [schema] : [])];
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site}/#website`,
+  url: `${site}/`,
+  name: 'Spires Digital',
+  publisher: { '@id': `${site}/#organisation` },
+  inLanguage: 'en-GB',
+};
+const schemas = [organisationSchema, websiteSchema, ...(Array.isArray(schema) ? schema : schema ? [schema] : [])];
 ---
 
 <!DOCTYPE html>

@@ -21,7 +21,7 @@ export const affiliateBlogPosts: BlogPost[] = [
   },
   {
     slug: 'affiliate-vs-influencer-marketing',
-    title: 'Affiliate Marketing vs Influencer Marketing: Key Differences and When to Use Each',
+    title: 'Affiliate vs Influencer Marketing: Key Differences',
     description: 'A detailed comparison of affiliate and influencer marketing covering payment models, tracking, scale, brand control, and hybrid approaches for 2026.',
     date: '2026-02-21',
     category: 'Affiliate Marketing',

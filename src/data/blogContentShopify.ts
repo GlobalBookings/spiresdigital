@@ -75,7 +75,7 @@ export const shopifyBlogPosts: BlogPost[] = [
   },
   {
     slug: 'shopify-product-page-design',
-    title: 'Shopify Product Page Design: What High-Converting Stores Do Differently',
+    title: 'Shopify Product Page Design That Converts',
     description: 'Learn what makes a high-converting Shopify product page, from above-the-fold layout to imagery, reviews, and mobile UX.',
     date: '2026-01-31',
     category: 'Shopify',
@@ -129,7 +129,7 @@ export const shopifyBlogPosts: BlogPost[] = [
   },
   {
     slug: 'shopify-theme-development-guide',
-    title: 'Shopify Theme Development: Custom vs Pre-Built and When Each Makes Sense',
+    title: 'Shopify Theme Development: Custom vs Pre-Built',
     description: 'A guide to Shopify theme options in 2026, comparing custom development, pre-built themes, and headless approaches.',
     date: '2026-01-25',
     category: 'Shopify',
@@ -138,7 +138,7 @@ export const shopifyBlogPosts: BlogPost[] = [
   },
   {
     slug: 'shopify-upselling-cross-selling',
-    title: 'Upselling and Cross-Selling on Shopify: Apps, Tactics, and Revenue Impact',
+    title: 'Shopify Upselling and Cross-Selling: Apps and Tactics',
     description: 'How to implement effective upselling and cross-selling on your Shopify store with proven tactics and the best apps for 2026.',
     date: '2026-01-24',
     category: 'Shopify',

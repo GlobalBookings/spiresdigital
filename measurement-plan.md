@@ -7,7 +7,7 @@ This is the Week 2 reporting contract for the enquiry journey. It keeps personal
 | Event | Trigger | Reporting job |
 | --- | --- | --- |
 | `cta_click` | A labelled website CTA is selected after analytics consent | Compare CTA placement and destination |
-| `tool_complete` | A visitor produces a result in one of the six tools | Measure useful tool engagement |
+| `tool_complete` | A visitor produces a result in one of the seven tools | Measure useful tool engagement |
 | `tool_result_action` | A completed result is copied, printed or explicitly carried to the contact page | Measure repeat-use and voluntary handoff intent |
 | `lead_submit_attempt` | A valid growth-review form begins submission | Diagnose form delivery drop-off |
 | `generate_lead` | FormSubmit returns the visitor to `/thank-you/` with pending lead context | Count confirmed form journeys |

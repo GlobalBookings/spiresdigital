@@ -47,7 +47,15 @@ const stages = [
     </div>
   </section>
 
-  <section class="section surface"><div class="container"><div class="section-heading"><span class="eyebrow">Before we begin</span><h2>A productive first conversation needs surprisingly little.</h2><p>If you can share the following, we can spend more time on the decision and less time gathering context.</p></div><div class="grid grid-3"><div class="card"><div class="card-body"><h3>Business target</h3><p>The outcome, timeframe and why it matters now.</p></div></div><div class="card"><div class="card-body"><h3>Economic guardrails</h3><p>Average order value, margin, allowable CAC or your closest estimates.</p></div></div><div class="card"><div class="card-body"><h3>Current evidence</h3><p>Store, analytics and media context. Read-only access can follow after fit is established.</p></div></div></div></div></section>
+  <section class="section surface">
+    <div class="container evidence-grid">
+      <div><span class="eyebrow">Evidence standard</span><h2>A recommendation should leave an audit trail.</h2><p>Commercial claims remain part of the conversation, but the baseline, source, assumption and limitation should be visible enough to challenge.</p></div>
+      <div class="evidence-principles"><article><strong>Baseline</strong><p>Record the starting position and metric definition before interpreting improvement.</p></article><article><strong>Intervention</strong><p>Document what changed so an outcome is connected to a real decision.</p></article><article><strong>Decision window</strong><p>Set when evidence will be reviewed and which outside factors may affect it.</p></article><article><strong>Qualification</strong><p>Separate account evidence, platform attribution, professional judgement and unresolved uncertainty.</p></article></div>
+      <div class="evidence-actions"><a href="/case-studies" class="btn btn-secondary">Inspect selected outcomes</a><a href="/editorial-policy" class="btn btn-outline">Read the published standards</a></div>
+    </div>
+  </section>
+
+  <section class="section surface-warm"><div class="container"><div class="section-heading"><span class="eyebrow">Before we begin</span><h2>A productive first conversation needs surprisingly little.</h2><p>If you can share the following, we can spend more time on the decision and less time gathering context.</p></div><div class="grid grid-3"><div class="card"><div class="card-body"><h3>Business target</h3><p>The outcome, timeframe and why it matters now.</p></div></div><div class="card"><div class="card-body"><h3>Economic guardrails</h3><p>Average order value, margin, allowable CAC or your closest estimates.</p></div></div><div class="card"><div class="card-body"><h3>Current evidence</h3><p>Store, analytics and media context. Read-only access can follow after fit is established.</p></div></div></div></div></section>
 
   <section class="cta-section"><div class="container"><h2>Bring us the constraint, not a polished brief.</h2><p>We will help turn the context into a useful next decision.</p><a href="/contact" class="btn btn-white btn-lg">Request a growth review</a></div></section>
 </BaseLayout>
@@ -68,5 +76,6 @@ const stages = [
   .principles div { padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; }
   .principles strong, .principles span { display: block; }
   .principles span { margin-top: .35rem; color: var(--slate); font-size: .86rem; }
-  @media (max-width: 800px) { .process-row { grid-template-columns: 75px 1fr; gap: 1rem; } .process-row aside { grid-column: 2; } .principles { grid-template-columns: 1fr; } }
+  .evidence-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:2rem}.evidence-grid>div:first-child p{margin-top:1rem;color:var(--slate)}.evidence-principles{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.evidence-principles article{padding:1.2rem;border-top:3px solid var(--violet);background:var(--canvas)}.evidence-principles p{margin-top:.4rem;color:var(--slate);font-size:.84rem}.evidence-actions{grid-column:2;display:flex;flex-wrap:wrap;gap:.75rem}
+  @media (max-width: 800px) { .process-row { grid-template-columns: 75px 1fr; gap: 1rem; } .process-row aside { grid-column: 2; } .principles,.evidence-grid { grid-template-columns: 1fr; }.evidence-actions{grid-column:1} }
 </style>

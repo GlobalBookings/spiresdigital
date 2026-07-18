@@ -1,0 +1,140 @@
+---
+import ToolShell from '../../components/ToolShell.astro';
+import ToolResultActions from '../../components/ToolResultActions.astro';
+
+const questions = [
+  { id: 'purchase-tracking', group: 'Measurement', label: 'Purchase tracking and value', good: 'Validated against store orders and revenue', partial: 'Mostly matches, with known differences', gap: 'Not recently tested or materially different' },
+  { id: 'conversion-actions', group: 'Measurement', label: 'Primary conversion actions', good: 'Only commercial outcomes guide bidding', partial: 'Some secondary actions remain included', gap: 'All actions appear equal or the setup is unknown' },
+  { id: 'profit-targets', group: 'Economics', label: 'ROAS and CPA targets', good: 'Built from margin, returns and customer value', partial: 'Based on a broad margin estimate', gap: 'Copied from platform guidance or chosen arbitrarily' },
+  { id: 'new-customers', group: 'Economics', label: 'New-customer performance', good: 'Reported separately with an agreed definition', partial: 'Available but not used consistently', gap: 'Not visible or not trusted' },
+  { id: 'feed-quality', group: 'Shopping feed', label: 'Product feed quality', good: 'Titles, attributes and diagnostics are actively managed', partial: 'Valid feed with limited commercial optimisation', gap: 'Diagnostics, missing data or ownership are unclear' },
+  { id: 'product-priority', group: 'Shopping feed', label: 'Product-level priorities', good: 'Spend reflects margin, stock and product role', partial: 'Some segmentation exists', gap: 'Products compete together regardless of economics' },
+  { id: 'search-terms', group: 'Demand control', label: 'Search-term review', good: 'Reviewed weekly with decisions recorded', partial: 'Reviewed monthly or inconsistently', gap: 'Rarely reviewed or unknown' },
+  { id: 'brand-demand', group: 'Demand control', label: 'Brand and non-brand demand', good: 'Separated in reporting and interpreted differently', partial: 'Visible but blended in key decisions', gap: 'Brand demand can disguise acquisition performance' },
+  { id: 'campaign-role', group: 'Structure', label: 'Campaign roles and overlap', good: 'Each campaign has a clear job and control', partial: 'Some duplication or unclear boundaries', gap: 'Multiple campaigns compete for the same demand' },
+  { id: 'landing-page', group: 'Conversion', label: 'Landing-page evidence', good: 'Search intent, offer and conversion friction are reviewed together', partial: 'Pages receive occasional improvements', gap: 'Campaign changes happen without reviewing the destination' },
+];
+---
+
+<ToolShell
+  title="Ecommerce Google Ads audit checklist"
+  metaTitle="Free Ecommerce Google Ads Audit Checklist"
+  eyebrow="10-part account review"
+  description="Run a free ecommerce Google Ads audit across tracking, profit targets, Shopping feeds, search terms, structure and landing pages."
+>
+  <div slot="hero-card" class="audit-hero"><span>Built for account owners</span><strong>Find the first control worth fixing.</strong><p>Ten checks, an immediate result and no request for account access.</p></div>
+
+  <div slot="tool" class="tool-card audit-tool">
+    <div class="audit-intro"><span>About five minutes</span><h2>Check the account in commercial order</h2><p>Choose the answer closest to the current reality. “Unknown” is a useful finding, not a failed answer.</p></div>
+    <form id="ads-audit" class="audit-form">
+      {questions.map((question, index) => (
+        <fieldset data-audit-question data-group={question.group} data-label={question.label}>
+          <legend><span>{String(index + 1).padStart(2, '0')} · {question.group}</span>{question.label}</legend>
+          <label><input type="radio" name={question.id} value="0" required /><span><strong>Strong control</strong>{question.good}</span></label>
+          <label><input type="radio" name={question.id} value="1" /><span><strong>Needs validation</strong>{question.partial}</span></label>
+          <label><input type="radio" name={question.id} value="2" /><span><strong>Priority gap</strong>{question.gap}</span></label>
+        </fieldset>
+      ))}
+      <button type="submit" class="btn btn-primary btn-lg">Build my audit priorities</button>
+    </form>
+
+    <div class="result-panel" id="audit-results" aria-live="polite">
+      <div class="audit-result-head"><div><span>Account control score</span><h2 id="audit-label">—</h2></div><strong id="audit-score">—</strong></div>
+      <div class="audit-meter" aria-hidden="true"><span id="audit-meter"></span></div>
+      <div class="audit-summary"><p id="audit-summary"></p><strong id="audit-decision"></strong></div>
+      <section class="audit-priorities"><span>Start here</span><h3>Your first three audit priorities</h3><ol id="audit-priorities"></ol></section>
+      <div class="audit-action"><div><strong>Want the account evidence checked directly?</strong><p>Bring this result to a consultation. Scope and price follow once the account, access and commercial question are understood.</p></div><a href="/contact" class="btn btn-primary btn-arrow">Discuss the audit</a></div>
+      <ToolResultActions toolName="google_ads_audit_checklist" resultId="audit-results" resultTitle="Google Ads audit checklist result" />
+      <p class="disclaimer">This checklist is a diagnostic, not an account audit or performance forecast. It cannot inspect change history, search terms, Merchant Centre, attribution or store economics without access.</p>
+    </div>
+  </div>
+
+  <h2>What a useful Google Ads audit should answer</h2>
+  <p>An audit should explain whether the account is optimising towards reliable commercial outcomes, whether the campaign structure gives the business useful control and what should change first. A long list of settings is less useful than a short sequence tied to profit, stock and customer value.</p>
+  <h2>Why ecommerce accounts need different checks</h2>
+  <p>Shopping and Performance Max depend on product data, catalogue structure, stock and margin as well as bids. An account can report an acceptable return while spending heavily on low-margin products, existing demand or customers who would have purchased anyway.</p>
+  <h2>Use the result in this order</h2>
+  <ol><li>Validate purchase, value and consent signals before changing bidding.</li><li>Translate margin, returns and customer value into commercial guardrails.</li><li>Review where spend actually went: products, queries, audiences and campaign overlap.</li><li>Check the offer and landing experience receiving the traffic.</li><li>Make one controlled change and record the decision window.</li></ol>
+  <h2>When to bring in an agency</h2>
+  <p>External support is most useful when the account has meaningful spend, the business can share commercial context and the team wants someone accountable for connecting media decisions to the store. See how our <a href="/services/ppc-management">Google Shopping and PPC management</a> works, or read the <a href="/blog/how-to-audit-google-ads-account">full account-audit guide</a>.</p>
+  <h2>Questions about the checklist</h2>
+  <details><summary>Does Spires Digital receive my answers?</summary><p>No. The checklist runs inside your browser. Nothing is transmitted unless you choose to copy the result into a consultation message.</p></details>
+  <details><summary>Is a high score proof the account is efficient?</summary><p>No. It indicates that important controls appear to exist. The underlying data, implementation quality and commercial outcome still need to be checked.</p></details>
+  <details><summary>Will you quote a price from this result?</summary><p>No. We first need a consultation to understand the account, evidence, access and work required. A written scope and price follow only when the delivery requirement is clear.</p></details>
+</ToolShell>
+
+<script>
+  const auditForm = document.getElementById('ads-audit');
+  const priorityActions = {
+    'purchase-tracking': 'Reconcile Google Ads purchases and value with store orders, refunds and duplicate events.',
+    'conversion-actions': 'Make the bidding hierarchy explicit: primary commercial outcomes first, diagnostic actions second.',
+    'profit-targets': 'Rebuild ROAS and CPA guardrails from product margin, fulfilment, returns and customer value.',
+    'new-customers': 'Agree a new-customer definition and report acquisition performance separately from returning demand.',
+    'feed-quality': 'Resolve Merchant Centre diagnostics, then improve titles and attributes around real product intent.',
+    'product-priority': 'Segment products by margin, stock, role and conversion evidence before changing budget.',
+    'search-terms': 'Review search terms and placements, record exclusions and connect them to landing-page intent.',
+    'brand-demand': 'Separate brand and non-brand demand so existing awareness does not disguise acquisition performance.',
+    'campaign-role': 'Give every campaign a named job and remove overlap that prevents useful budget control.',
+    'landing-page': 'Review offer, message match, product evidence and checkout friction before buying more traffic.',
+  };
+
+  auditForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(auditForm);
+    const fields = [...auditForm.querySelectorAll('[data-audit-question]')];
+    const answers = fields.map(field => {
+      const input = field.querySelector('input:checked');
+      return { id: input?.name || '', score: Number(input?.value || 0), label: field.dataset.label || '' };
+    });
+    const gapScore = answers.reduce((total, answer) => total + answer.score, 0);
+    const controlScore = Math.round((1 - gapScore / 20) * 100);
+    const resultType = controlScore >= 80 ? 'strong' : controlScore >= 55 ? 'mixed' : 'priority_gaps';
+    const label = controlScore >= 80 ? 'Strong controls to verify' : controlScore >= 55 ? 'Several controls need evidence' : 'Foundational gaps come first';
+    const summary = controlScore >= 80
+      ? 'The account appears to have the main controls in place. Verify implementation quality and whether the reported result is genuinely incremental and profitable.'
+      : controlScore >= 55
+        ? 'The account has useful foundations, but several uncertainties could distort bidding, budget or reported return.'
+        : 'Measurement or commercial control gaps may be making optimisation unreliable. Repair the foundations before increasing spend.';
+    const decision = gapScore >= 10 ? 'Next decision: validate the highest-scoring gap before changing campaign budget.' : 'Next decision: verify the controls against account and store evidence, then test one improvement.';
+    const ranked = [...answers].sort((a, b) => b.score - a.score).filter(answer => answer.score > 0).slice(0, 3);
+    const priorities = ranked.length ? ranked : [{ id: 'purchase-tracking', label: 'Purchase tracking' }, { id: 'profit-targets', label: 'Profit targets' }, { id: 'search-terms', label: 'Search terms' }];
+
+    document.getElementById('audit-label').textContent = label;
+    document.getElementById('audit-score').textContent = `${controlScore}/100`;
+    document.getElementById('audit-summary').textContent = summary;
+    document.getElementById('audit-decision').textContent = decision;
+    const meter = document.getElementById('audit-meter');
+    if (meter) meter.style.width = `${controlScore}%`;
+    const list = document.getElementById('audit-priorities');
+    if (list) {
+      list.replaceChildren(...priorities.map(priority => {
+        const item = document.createElement('li');
+        const strong = document.createElement('strong');
+        const text = document.createElement('span');
+        strong.textContent = priority.label;
+        text.textContent = priorityActions[priority.id] || '';
+        item.append(strong, text);
+        return item;
+      }));
+    }
+
+    const results = document.getElementById('audit-results');
+    if (results) results.dataset.resultSummary = [
+      'Spires Digital — ecommerce Google Ads audit checklist',
+      `Control score: ${controlScore}/100`,
+      `Outcome: ${label}`,
+      summary,
+      'First priorities:',
+      ...priorities.map((priority, index) => `${index + 1}. ${priority.label}: ${priorityActions[priority.id] || ''}`),
+      decision,
+      'Diagnostic result only; account and store evidence have not been inspected.',
+    ].join('\n');
+    results?.classList.add('active');
+    results?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.trackSpiresEvent?.('tool_complete', { tool_name: 'google_ads_audit_checklist', result_type: resultType });
+  });
+</script>
+
+<style>
+  .audit-hero>span,.audit-intro>span{color:#91eadb;font-size:.68rem;font-weight:800;text-transform:uppercase}.audit-hero strong{display:block;margin:.8rem 0;color:white;font-size:1.4rem}.audit-hero p{color:#cbd2df;font-size:.78rem}.audit-intro{margin-bottom:1.5rem}.audit-intro>span{color:var(--violet-dark)}.audit-intro h2{margin:.3rem 0}.audit-intro p{color:var(--slate)}.audit-form{display:grid;gap:.8rem}.audit-form fieldset{padding:1rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:white}.audit-form legend{width:100%;margin-bottom:.7rem;color:var(--ink);font-weight:800}.audit-form legend span{display:block;margin-bottom:.2rem;color:var(--violet-dark);font-size:.64rem;text-transform:uppercase}.audit-form label{display:grid;grid-template-columns:auto 1fr;gap:.65rem;padding:.7rem;border-radius:8px;cursor:pointer}.audit-form label:hover{background:var(--violet-soft)}.audit-form label+label{border-top:1px solid var(--line)}.audit-form input{margin-top:.2rem}.audit-form label span,.audit-form label strong{display:block}.audit-form label span{color:var(--slate);font-size:.75rem}.audit-form label strong{margin-bottom:.15rem;color:var(--ink);font-size:.78rem}.result-panel{background:#effbf8;border-color:#cce9e2}.audit-result-head{display:flex;justify-content:space-between;gap:1rem;align-items:center}.audit-result-head span{color:#16705e;font-size:.68rem;font-weight:800;text-transform:uppercase}.audit-result-head h2{margin-top:.3rem;font-size:1.5rem}.audit-result-head>strong{color:#16705e;font-size:1.7rem}.audit-meter{height:12px;margin:1rem 0;overflow:hidden;border-radius:999px;background:#d9e7e4}.audit-meter span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--violet),var(--success));transition:width .35s ease}.audit-summary{padding:1rem;border-radius:10px;background:white}.audit-summary p{color:var(--slate);font-size:.82rem}.audit-summary strong{display:block;margin-top:.6rem;color:var(--ink);font-size:.82rem}.audit-priorities{margin-top:1rem;padding:1rem;border-radius:10px;background:var(--ink)}.audit-priorities>span{color:#91eadb;font-size:.66rem;font-weight:800;text-transform:uppercase}.audit-priorities h3{margin:.3rem 0 1rem;color:white}.audit-priorities ol{display:grid;gap:.6rem;padding:0;list-style:none}.audit-priorities li{padding:.8rem;border-radius:8px;background:rgba(255,255,255,.08)}.audit-priorities strong,.audit-priorities span{display:block}.audit-priorities strong{color:white;font-size:.8rem}.audit-priorities li span{margin-top:.25rem;color:#cbd2df;font-size:.72rem}.audit-action{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-top:1rem;padding:1rem;border-radius:10px;background:white}.audit-action strong{color:var(--ink)}.audit-action p{color:var(--slate);font-size:.7rem}.audit-action .btn{flex:0 0 auto}.disclaimer{margin-top:1rem}.tool-content :global(details){margin-bottom:.7rem;padding:1rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:white}.tool-content :global(summary){cursor:pointer;color:var(--ink);font-weight:750}@media(max-width:650px){.audit-action{align-items:stretch;flex-direction:column}}
+</style>

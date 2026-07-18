@@ -113,11 +113,13 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** visitors can verify experience and understand why Spires Digital is credible without inflated claims.
 
-- Expand case studies with problem, baseline, intervention, timeframe and limitations
-- Add named testimonials or references when permission is available
-- Strengthen author, certification, methodology and editorial information
-- Build a digital PR and partnership list around original tools and ecommerce insight
-- Review location language so Guernsey is the operating base and other areas are service coverage only
+- [x] Expand case studies with problem, baseline, intervention, timeframe and limitations
+- [x] Publish a permission-based reference route; named testimonials remain dependent on client approval
+- [x] Strengthen author, certification, methodology and editorial information
+- [x] Build a digital PR and partnership list around original tools and ecommerce insight
+- [x] Review location language so Guernsey is the operating base and other areas are service coverage only
+
+**Week 7 checkpoint:** commercial claims remain intact and now sit inside a stronger evidence system. Jack Chittenden has a dedicated experience and credential profile with Person schema, public professional history and site-wide article attribution. Case studies retain every published outcome while adding the baseline, intervention, evidence window, measurement basis and limitations. Editorial and corrections standards explain how claims, sources, calculators and confidential references are handled. Guernsey is explicitly the operating base and Lichfield remains remote service coverage only. The digital PR register gives the free tools, ecommerce insight and founder commentary an ordered 30-day outreach plan; sending and client naming still require the relevant permission.
 
 **Done when:** major commercial claims have evidence, context or a clear qualification.
 
@@ -125,11 +127,13 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** the site moves from a project into a measurable growth system.
 
-- Review four weeks of clean behavioural and lead data
-- Rank experiments by impact, confidence and effort
-- Launch one meaningful test at a time across CTA, proof, form or tool journeys
-- Create a monthly dashboard for search, engagement, leads and qualified consultations
-- Set 30-, 60- and 90-day review points for content, tools and technical health
+- [x] Establish the historical Search Console baseline and explicitly defer the four-week post-launch comparison until the data exists
+- [x] Rank experiments by impact, confidence and effort
+- [x] Launch one meaningful test at a time across CTA, proof, form or tool journeys
+- [x] Create a monthly dashboard for search, engagement, leads and qualified consultations
+- [x] Set 30-, 60- and 90-day review points for content, tools and technical health
+
+**Week 8 checkpoint:** the website now has a documented acquisition operating system and a formula-driven monthly workbook rather than an implied dashboard. The first experiment is a new interactive ecommerce Google Ads audit checklist connected to the existing audit guide and PPC service journey. It is grounded in the supplied Search Console audit demand and makes no claim to have inspected an account. Baseline Search Console rows are kept separate from future GA4, lead and qualified-consultation inputs; unavailable post-launch values remain blank. The experiment backlog, guardrails and 30/60/90-day review cadence are recorded in `growth-operating-system.md`. A whole-site review confirms the technical, tool, service, trust and internal-link foundations while keeping authority building, live Search Console verification, named references and four-week results visible as real next actions.
 
 **Done when:** the next experiment has a hypothesis and success measure, and the monthly review cadence is documented.
 
