@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const updated = '2026-07-18';
+const faqs = [
+  { q: 'Is there a universal Facebook ad credit code?', a: 'No. Meta describes ad credits as account or campaign credits received through its own promotions or approved partnerships. A code posted publicly is not a universal source of free advertising.' },
+  { q: 'Where can I check a legitimate Meta ad credit?', a: 'Check Billing & payments or Payment settings in the correct ad account. Meta says this is where the remaining balance and expiry date are shown.' },
+  { q: 'What happens when an ad credit runs out?', a: 'If advertising continues after the credit is exhausted or expires, eligible charges can move to another available account credit or the default payment method.' },
+  { q: 'Can an expired Meta ad credit be reactivated?', a: 'Meta states that expired ad credits cannot be reactivated, even if part of the balance was unused.' },
+];
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: 'What Is the Facebook Ad Credit Code?', datePublished: updated, dateModified: updated, author: { '@type': 'Organization', name: 'Spires Digital' }, publisher: { '@id': 'https://spiresdigital.com/#organisation' }, mainEntityOfPage: 'https://spiresdigital.com/what-is-the-facebook-ad-credit-code/' },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) },
+];
+---
+
+<BaseLayout
+  title="What Is the Facebook Ad Credit Code?"
+  description="There is no universal Facebook ad credit code. Learn how legitimate Meta ad credits work, where to check them and what to inspect when ad payment or delivery fails."
+  lastUpdated={updated}
+  schema={schema}
+>
+  <Breadcrumbs items={[{ label: 'Meta ad credits and billing' }]} />
+  <section class="page-hero"><div class="container-narrow page-hero-content"><span class="badge">Meta billing guide</span><h1>What is the Facebook ad credit code?</h1><p>There is no universal code that gives every advertiser free Facebook or Instagram ads. Meta says legitimate ad credits come through its own periodic promotions or approved partners and are attached to a specific ad account or campaign.</p></div></section>
+
+  <article class="section surface"><div class="container-narrow answer-content">
+    <div class="answer-box"><span>Short answer</span><strong>Treat unsolicited “free ad credit” codes as unverified.</strong><p>Check the credit inside the correct Meta ad account before changing a campaign or entering payment details. A screenshot, social post or third-party code list is not proof that a credit is valid.</p></div>
+
+    <h2>How legitimate Meta ad credits work</h2>
+    <p>Meta currently describes two forms of credit. An <strong>ad-account credit</strong> can cover eligible advertising costs across that account. A <strong>campaign-level credit</strong> is assigned to one or more campaigns. Both can have an expiry date and a remaining balance.</p>
+    <ol><li>Open <strong>Billing &amp; payments</strong> or <strong>Payment settings</strong> in Meta Ads Manager.</li><li>Confirm you are viewing the intended business and ad account.</li><li>Check the credit balance, scope and expiry date.</li><li>Confirm the default payment method that may be charged after the credit is used or expires.</li></ol>
+
+    <h2>How credits are normally received</h2>
+    <p>Meta says credits may be delivered through an in-product promotion, an email from a Meta-controlled Facebook Mail domain, or a partnership with another company. That does not mean every message using Meta branding is genuine. Open Ads Manager directly instead of following an unexpected payment link.</p>
+
+    <h2>If the payment failed or the ads stopped delivering</h2>
+    <p>A failed payment is only one possible cause. Work through the account in this order:</p>
+    <ul><li>Check <strong>Payment activity</strong> for a failed, pending or completed transaction.</li><li>Verify the payment details, expiry date, available funds and whether the method is accepted for the ad account’s country and currency.</li><li>Check the ad-account status, campaign dates, spending limit, budget, audience and review status.</li><li>Use Meta’s account support route for a disabled account or a transaction you do not recognise.</li></ul>
+    <p>Do not repeatedly duplicate campaigns or replace cards before identifying the message shown in Billing &amp; payments; that can make the account harder to diagnose.</p>
+
+    <h2>How to match a charge to Meta</h2>
+    <p>Meta says eligible ad transactions have a reference number that can be compared between Ads Manager, the receipt and a bank or card statement. On statements, Meta says the descriptor can begin with “FACEBK*” or “FACEBOOK INC.” followed by the transaction reference.</p>
+
+    <div class="source-card"><strong>Current official Meta guidance</strong><a href="https://www.facebook.com/help/131439120265224/" target="_blank" rel="noopener">Meta: about ad credits ↗</a><a href="https://www.facebook.com/help/212763688755026/?locale=en_GB" target="_blank" rel="noopener">Meta: accepted payment options for ads ↗</a><a href="https://www.facebook.com/help/1674680089468704?locale=en_GB" target="_blank" rel="noopener">Meta: find ad charges on a statement ↗</a></div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">{faqs.map(item => <details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
+    <p class="updated">Checked against Meta’s official help guidance on 18 July 2026. Interfaces, accepted payment methods and promotional terms can vary by account and may change.</p>
+  </div></article>
+
+  <section class="cta-section"><div class="container-narrow"><h2>Need the advertising account diagnosed?</h2><p>We review payment, delivery, tracking, creative and commercial targets together before recommending a scope or price.</p><a href="/contact" class="btn btn-white btn-lg btn-arrow" data-track="meta_billing_consultation">Request a consultation</a></div></section>
+</BaseLayout>
+
+<style>
+  .answer-content{font-size:.95rem}.answer-content h2{margin:2.5rem 0 .8rem}.answer-content p,.answer-content ol,.answer-content ul{color:var(--slate)}.answer-content ol,.answer-content ul{display:grid;gap:.55rem;padding-left:1.3rem}.answer-box{padding:1.4rem;border:1px solid #cce9e2;border-radius:var(--radius-sm);background:#effbf8}.answer-box span,.answer-box strong{display:block}.answer-box span{color:var(--success);font-size:.67rem;font-weight:800;text-transform:uppercase}.answer-box strong{margin:.4rem 0;color:var(--ink);font-size:1.15rem}.source-card{display:grid;gap:.55rem;margin-top:2.5rem;padding:1.2rem;border-radius:var(--radius-sm);background:var(--ink)}.source-card strong{color:white}.source-card a{color:#91eadb;font-weight:700}.faq-list{display:grid;gap:.6rem}.faq-list details{padding:1rem;border:1px solid var(--line);border-radius:var(--radius-sm)}.faq-list summary{color:var(--ink);font-weight:800;cursor:pointer}.faq-list p{margin-top:.7rem}.updated{margin-top:1.5rem;font-size:.76rem}.cta-section{text-align:center}.cta-section p{max-width:680px;margin:.7rem auto 1.2rem;color:#d8deea}
+</style>

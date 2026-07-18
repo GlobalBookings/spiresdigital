@@ -8,9 +8,10 @@ const tools = [
   { href: '/tools/growth-assessment', label: 'Diagnose', title: 'Store growth assessment', text: 'Identify whether acquisition, conversion, retention or measurement is the likely current constraint.', cta: 'Assess the store' },
   { href: '/tools/google-ads-vat-guide', label: 'UK guidance', title: 'Google Ads VAT decision guide', text: 'Understand which billing and business details to check before discussing Google Ads VAT with your accountant.', cta: 'Check the decision path' },
   { href: '/tools/paid-media-waste-estimator', label: 'Efficiency', title: 'Paid media waste estimator', text: 'Estimate the value of fixing weak tracking, search-term control, feed quality and landing-page conversion.', cta: 'Estimate the opportunity' },
+  { href: '/seo-keyword-density-checker', label: 'Content', title: 'Keyword density & content analyser', text: 'Check word count, repeated language, target-phrase usage and the terms that dominate a draft—without uploading it.', cta: 'Analyse content' },
 ];
 ---
-<BaseLayout title="Free Ecommerce Growth Tools" description="Free browser-based ecommerce calculators and diagnostic tools for profit, ROAS, channel budgets, store growth, Google Ads VAT and paid media efficiency.">
+<BaseLayout title="Free Ecommerce Growth Tools" description="Free browser-based ecommerce calculators and tools for profit, ROAS, channel budgets, store growth, content analysis, Google Ads VAT and paid media efficiency.">
   <div class="breadcrumbs-wrap"><Breadcrumbs items={[{ label: 'Free tools' }]} /></div>
   <section class="page-hero"><div class="container page-hero-content"><span class="badge">Free ecommerce tools</span><h1>Make the next decision with your own numbers.</h1><p>Useful calculators and diagnostics built for ecommerce operators. No login, no spreadsheet download and no email gate.</p></div></section>
   <section class="section surface"><div class="container tools-grid">{tools.map((tool,index)=><a href={tool.href} class:list={['tool-link',{featured:index===0}]}><span class="tool-label">{tool.label}</span><span class="tool-index">0{index+1}</span><h2>{tool.title}</h2><p>{tool.text}</p><strong>{tool.cta} →</strong></a>)}</div></section>
