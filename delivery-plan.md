@@ -67,11 +67,16 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** each service page answers the questions a qualified ecommerce buyer needs before booking a consultation.
 
-- Review one service family at a time: acquire, convert, retain and measure
-- Add stronger proof, delivery boundaries, inputs required and realistic time-to-learning statements
-- Improve relevant case-study connections and explain anonymised evidence clearly
-- Test consultation CTA wording and placement
-- Add objection-handling FAQs based on real sales conversations
+- [x] Review every service across the acquire, convert, retain and measure families
+- [x] State who each service is built for and when it is not the right starting point
+- [x] Add client inputs, delivery boundaries and realistic time-to-learning statements
+- [x] Connect each service to the closest honest public evidence and explain the limitations of anonymised outcomes
+- [x] Make the absence of a direct public retention case study explicit instead of stretching unrelated proof
+- [x] Replace generic hero and final CTAs with service-specific consultation wording and event names
+- [x] Add focused-first-phase, cross-service diagnosis and consultation-first pricing objections to every FAQ set
+- [x] Validate all seven page variants, proof anchors, FAQ interaction, contact attribution and rendered SEO
+
+**Week 4 checkpoint:** all seven service pages now answer the practical pre-consultation questions: audience, poor-fit conditions, deliverables, required access, separate scope, evidence window, proof limitations and next action. Each page contains three delivery expectations, four client inputs, three written boundaries and seven FAQs. Public proof is linked only where the context is relevant; the retention evidence gap remains visible until a suitable case can be published with permission.
 
 **Done when:** each service page has a clear audience, problem, deliverable, evidence path and consultation CTA.
 

@@ -48,7 +48,7 @@ export const services: ServiceDefinition[] = [
       { title: 'Test with a clear hypothesis', text: 'Change one commercial lever at a time and record what the account learns.' },
       { title: 'Scale the profitable segments', text: 'Move budget towards products, audiences and queries with the strongest contribution.' },
     ],
-    fit: ['You spend at least £2,000 per month on Google Ads or are ready to.', 'Your product margins vary and one blended ROAS target is misleading.', 'You want full ownership and visibility of your account.', 'You need Shopping expertise as well as paid-search management.'],
+    fit: ['You have enough demand and budget to produce meaningful conversion data.', 'Your product margins vary and one blended ROAS target is misleading.', 'You want full ownership and visibility of your account.', 'You need Shopping expertise as well as paid-search management.'],
     faqs: [
       { q: 'What advertising budget do you recommend?', a: 'The useful minimum depends on search demand, CPCs, conversion rate and margin. We model the click and order volume needed to learn before recommending a budget.' },
       { q: 'Do you manage Merchant Centre and product feeds?', a: 'Yes. Feed quality is fundamental to ecommerce PPC and is included in the operating plan, not treated as a separate afterthought.' },
