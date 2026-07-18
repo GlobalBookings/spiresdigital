@@ -1,0 +1,101 @@
+---
+interface Props {
+  toolName: string;
+  resultId: string;
+  resultTitle: string;
+}
+
+const { toolName, resultId, resultTitle } = Astro.props;
+---
+
+<div class="result-actions" data-result-actions data-tool-name={toolName} data-result-id={resultId} data-result-title={resultTitle}>
+  <div>
+    <strong>Keep this result</strong>
+    <span>Copy a concise summary, print it, or choose to add it to a consultation request.</span>
+  </div>
+  <div class="result-action-buttons">
+    <button type="button" data-result-action="copy">Copy summary</button>
+    <button type="button" data-result-action="print">Print / save PDF</button>
+    <a href="/contact/?share_result=1" data-result-action="share">Discuss this result</a>
+  </div>
+  <p class="result-action-status" data-result-action-status aria-live="polite"></p>
+</div>
+
+<script>
+  const copyText = async value => {
+    if (navigator.clipboard?.writeText) {
+      try { await navigator.clipboard.writeText(value); return; } catch { /* Use the browser fallback below. */ }
+    }
+    const field = document.createElement('textarea');
+    field.value = value;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.appendChild(field);
+    field.select();
+    const copied = document.execCommand('copy');
+    field.remove();
+    if (!copied) throw new Error('Copy command was unavailable.');
+  };
+
+  document.querySelectorAll('[data-result-actions]').forEach(actions => {
+    const result = document.getElementById(actions.dataset.resultId || '');
+    const status = actions.querySelector('[data-result-action-status]');
+    const track = action => window.trackSpiresEvent?.('tool_result_action', {
+      tool_name: actions.dataset.toolName,
+      result_action: action,
+    });
+    const summary = () => String(result?.dataset.resultSummary || '').trim();
+    const setStatus = message => { if (status) status.textContent = message; };
+
+    actions.querySelector('[data-result-action="copy"]')?.addEventListener('click', async () => {
+      const value = summary();
+      if (!value) return setStatus('Run the tool first to create a summary.');
+      try {
+        await copyText(value);
+        setStatus('Summary copied.');
+        track('copy');
+      } catch {
+        setStatus('Copy was unavailable in this browser. You can still print the result.');
+      }
+    });
+
+    actions.querySelector('[data-result-action="print"]')?.addEventListener('click', () => {
+      if (!summary()) return setStatus('Run the tool first to create a result.');
+      const cleanUpPrint = () => {
+        result?.classList.remove('print-target');
+        document.body.classList.remove('print-tool-result');
+      };
+      result?.classList.add('print-target');
+      document.body.classList.add('print-tool-result');
+      window.addEventListener('afterprint', cleanUpPrint, { once: true });
+      track('print');
+      window.print();
+      window.setTimeout(cleanUpPrint, 30000);
+    });
+
+    actions.querySelector('[data-result-action="share"]')?.addEventListener('click', event => {
+      const value = summary();
+      if (!value) {
+        event.preventDefault();
+        return setStatus('Run the tool first to create a result.');
+      }
+      try {
+        sessionStorage.setItem('spires_shared_tool_result', JSON.stringify({
+          toolName: actions.dataset.toolName,
+          title: actions.dataset.resultTitle,
+          summary: value.slice(0, 3000),
+          createdAt: Date.now(),
+        }));
+        track('share');
+      } catch {
+        event.preventDefault();
+        setStatus('Your browser blocked temporary storage. Copy the summary instead.');
+      }
+    });
+  });
+</script>
+
+<style>
+  .result-actions{display:grid;grid-template-columns:minmax(180px,.65fr) 1fr;gap:.8rem 1rem;align-items:center;margin-top:1rem;padding:1rem;border:1px solid rgba(39,51,73,.13);border-radius:10px;background:rgba(255,255,255,.78)}.result-actions strong,.result-actions span{display:block}.result-actions strong{color:var(--ink);font-size:.82rem}.result-actions span{margin-top:.15rem;color:var(--slate);font-size:.68rem}.result-action-buttons{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.45rem}.result-action-buttons button,.result-action-buttons a{padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--violet-dark);cursor:pointer;font:inherit;font-size:.67rem;font-weight:800}.result-action-buttons button:hover,.result-action-buttons a:hover{border-color:var(--violet);background:#f4f2ff}.result-action-status{grid-column:1/-1;min-height:1em;color:var(--success);font-size:.66rem;font-weight:700}@media(max-width:720px){.result-actions{grid-template-columns:1fr}.result-action-buttons{justify-content:flex-start}.result-action-status{grid-column:auto}}@media print{:global(body.print-tool-result *){visibility:hidden!important}:global(body.print-tool-result .print-target),:global(body.print-tool-result .print-target *){visibility:visible!important}:global(body.print-tool-result .print-target){position:absolute!important;inset:0 auto auto 0!important;width:100%!important;margin:0!important;border:0!important;box-shadow:none!important;background:white!important}:global(body.print-tool-result .result-actions),:global(body.print-tool-result .result-actions *){display:none!important}}
+</style>

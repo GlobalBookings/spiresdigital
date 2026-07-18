@@ -437,7 +437,7 @@ export const shopifyBlogContent: Record<string, string> = {
 <h2>Collection Page Optimisation</h2>
 <p>Don't neglect collection pages — they often rank for broader category terms. Add unique introductory text (at least 100 words), optimise the title and meta description, and ensure the H1 matches the target keyword. Use Shopify's collection sorting to show best-sellers first.</p>
 
-<p>For the broader picture of Shopify's SEO capabilities, read our <a href="/blog/shopify-seo-guide">Shopify SEO assessment</a>. If you're running paid search alongside organic, our <a href="/blog/google-shopping-ads-guide">Google Shopping guide</a> covers feed optimisation that benefits both channels.</p>
+<p>For the broader picture of Shopify's SEO capabilities, read our <a href="/blog/shopify-seo-guide">Shopify SEO assessment</a>. Before publishing product or collection copy, use the browser-based <a href="/seo-keyword-density-checker">keyword density and content analyser</a> to spot forced repetition without uploading the draft. If you're running paid search alongside organic, our <a href="/blog/google-shopping-ads-guide">Google Shopping guide</a> covers feed optimisation that benefits both channels.</p>
 
 <h3>FAQ</h3>
 <details><summary>Should I add SEO text below products on collection pages?</summary><div class="faq-answer"><p>Yes, but keep it genuinely helpful — a brief overview of the category, buying considerations, and what differentiates your products. Avoid keyword-stuffed paragraphs that provide no value. 100-200 words is usually sufficient. Some stores place this content below the product grid.</p></div></details>

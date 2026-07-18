@@ -1,5 +1,6 @@
 ---
 import ToolShell from '../../components/ToolShell.astro';
+import ToolResultActions from '../../components/ToolResultActions.astro';
 ---
 
 <ToolShell title="Ecommerce profit & break-even ROAS calculator" metaTitle="Free Ecommerce Profit & Break-Even ROAS Calculator" eyebrow="Profit planning" description="Use revenue, product costs, fulfilment, payment fees, overhead and paid-media share to estimate your break-even ROAS, target ROAS, MER and maximum CAC.">
@@ -33,6 +34,7 @@ import ToolShell from '../../components/ToolShell.astro';
       <div class="waterfall"><div class="waterfall-bar" id="waterfall-bar"></div><div class="waterfall-key" id="waterfall-key"></div></div>
       <div class="result-summary"><div><span>Maximum ad budget at target margin</span><strong id="max-budget">—</strong></div><div><span>Current estimated operating profit</span><strong id="current-profit">—</strong></div><div><span>Current blended paid ROAS</span><strong id="current-roas">—</strong></div></div>
       <div class="action-box"><div><strong id="action-title">Use this as the floor for channel decisions.</strong><p id="action-copy">Compare this commercial target with platform performance and new-customer data.</p></div><a href="/contact" class="btn btn-primary btn-arrow" data-track="profit_result_plan">Discuss the scenario</a></div>
+      <ToolResultActions toolName="profit_calculator" resultId="profit-results" resultTitle="Ecommerce profit and ROAS result" />
       <p class="disclaimer">This is a planning estimate, not accounting advice. It treats the entered percentages as applying to net revenue and does not model tax, working capital, stock timing or customer lifetime value. Confirm definitions with your finance team.</p>
     </div>
   </div>
@@ -78,6 +80,14 @@ import ToolShell from '../../components/ToolShell.astro';
       setText('current-roas', adSpend > 0 ? `${(paidRevenue / adSpend).toFixed(2)}×` : '—');
       setText('action-title', 'Review margin, overhead or the target before scaling.');
       setText('action-copy', 'The entered costs consume the revenue available for advertising and target profit.');
+      results.dataset.resultSummary = [
+        'Spires Digital — ecommerce profit and ROAS result',
+        'Outcome: The cost structure leaves no viable paid-media budget at the selected target.',
+        `Current estimated operating profit: ${money.format(revenue * (1 - variableRate) - fixed - adSpend)}`,
+        `Current blended paid ROAS: ${adSpend > 0 ? `${(paidRevenue / adSpend).toFixed(2)}×` : 'Not available'}`,
+        'Next decision: Review contribution margin, fixed costs or the profit target before increasing media spend.',
+        'Planning estimate only; validate definitions with finance.',
+      ].join('\n');
       results.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.trackSpiresEvent?.('tool_complete', { tool_name: 'profit_calculator', result_type: 'no_viable_budget' });
       return;
@@ -105,6 +115,18 @@ import ToolShell from '../../components/ToolShell.astro';
     document.getElementById('waterfall-key').innerHTML = segments.map(([label,rate,color]) => `<span><i style="background:${color}"></i>${label} ${(Number(rate)*100).toFixed(1)}%</span>`).join('');
     setText('action-title', currentProfit < 0 ? 'The current spend is above the estimated break-even ceiling.' : 'Use the target—not a generic benchmark—as the commercial floor.');
     setText('action-copy', currentProfit < 0 ? 'Validate attribution, new-customer value and cost assumptions before adding budget.' : 'Compare this with new-customer performance, product mix and blended store efficiency.');
+    results.dataset.resultSummary = [
+      'Spires Digital — ecommerce profit and ROAS result',
+      `Outcome: ${document.getElementById('status-heading').textContent}`,
+      `Target ROAS: ${targetROAS.toFixed(2)}×`,
+      `Break-even ROAS: ${breakEvenROAS.toFixed(2)}×`,
+      `Target MER: ${(targetMER * 100).toFixed(1)}%`,
+      `Maximum CAC: ${money.format(maxCAC)}`,
+      `Maximum ad budget at target margin: ${money.format(targetBudget)}`,
+      `Current estimated operating profit: ${money.format(currentProfit)}`,
+      `Next decision: ${document.getElementById('action-copy').textContent}`,
+      'Planning estimate only; validate definitions with finance.',
+    ].join('\n');
     results.classList.add('active');
     results.scrollIntoView({ behavior: 'smooth', block: 'start' });
     window.trackSpiresEvent?.('tool_complete', { tool_name: 'profit_calculator', result_type: currentProfit >= 0 ? 'profitable' : 'unprofitable' });

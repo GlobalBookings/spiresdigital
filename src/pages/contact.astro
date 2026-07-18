@@ -19,6 +19,14 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <h2>A little context makes the review much more useful.</h2>
         <p class="form-intro">Required fields are deliberately limited. Commercial ranges help us tailor the review but are optional.</p>
         <div class="journey-context" id="journey-context" hidden role="status"><span>Journey context retained</span><strong id="journey-context-label"></strong><p>We will include the page and topic that brought you here with the enquiry.</p></div>
+        <div class="shared-result" id="shared-result" hidden>
+          <span>Result ready to share</span>
+          <strong id="shared-result-title"></strong>
+          <pre id="shared-result-preview"></pre>
+          <p>Nothing is added to the form until you choose to include it. Review and edit the summary before sending.</p>
+          <div><button type="button" class="btn btn-primary" id="add-shared-result">Add result to my message</button><button type="button" class="discard-result" id="discard-shared-result">Discard</button></div>
+          <p class="shared-result-status" id="shared-result-status" aria-live="polite"></p>
+        </div>
         <form class="growth-form form-stack" action="https://formsubmit.co/jack@spiresdigital.com" method="POST" data-capture-attribution data-growth-form>
           <input type="hidden" name="_subject" value="New ecommerce growth review request" />
           <input type="hidden" name="_next" value="https://spiresdigital.com/thank-you/" />
@@ -73,6 +81,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     'tool:growth-assessment': 'Store growth assessment',
     'tool:google-ads-vat-guide': 'Google Ads VAT guide',
     'tool:paid-media-waste-estimator': 'Paid-media waste estimator',
+    'tool:keyword-density-checker': 'Keyword density & content analyser',
     'industry:ecommerce': 'Ecommerce growth',
   };
   const constraintByInterest = {
@@ -85,8 +94,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     'service:analytics-attribution': 'Measurement',
     'tool:ecommerce-profit-calculator': 'Measurement',
     'tool:channel-budget-planner': 'Acquisition',
+    'tool:growth-assessment': 'Measurement',
     'tool:google-ads-vat-guide': 'Measurement',
     'tool:paid-media-waste-estimator': 'Acquisition',
+    'tool:keyword-density-checker': 'Acquisition',
   };
   const contextLabel = interestLabels[interest] || (sourcePage !== '/' ? sourcePage : 'Your current website journey');
   if (interest || sourcePage !== '/') {
@@ -96,6 +107,35 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   }
   const suggestedConstraint = constraintByInterest[interest];
   if (suggestedConstraint) growthForm?.querySelector(`input[name="constraint"][value="${suggestedConstraint}"]`)?.click();
+
+  if (journeyParams.get('share_result') === '1') {
+    try {
+      const shared = JSON.parse(sessionStorage.getItem('spires_shared_tool_result') || 'null');
+      const isRecent = Number(shared?.createdAt) > Date.now() - (2 * 60 * 60 * 1000);
+      const summary = String(shared?.summary || '').trim().slice(0, 3000);
+      if (shared && isRecent && summary) {
+        const panel = document.getElementById('shared-result');
+        document.getElementById('shared-result-title').textContent = String(shared.title || 'Tool result');
+        document.getElementById('shared-result-preview').textContent = summary;
+        panel.hidden = false;
+        const addSharedButton = document.getElementById('add-shared-result');
+        addSharedButton?.addEventListener('click', () => {
+          const context = document.getElementById('context');
+          const existing = context.value.trim();
+          context.value = `${existing}${existing ? '\n\n' : ''}Tool result I would like to discuss:\n\n${summary}`;
+          context.focus();
+          addSharedButton.disabled = true;
+          addSharedButton.textContent = 'Result added';
+          document.getElementById('shared-result-status').textContent = 'Result added. You can edit it before sending.';
+          sessionStorage.removeItem('spires_shared_tool_result');
+        });
+        document.getElementById('discard-shared-result')?.addEventListener('click', () => {
+          sessionStorage.removeItem('spires_shared_tool_result');
+          panel.hidden = true;
+        });
+      }
+    } catch { /* A consultation can still be requested without the stored summary. */ }
+  }
 
   growthForm?.addEventListener('submit', event => {
     if (['localhost', '127.0.0.1'].includes(window.location.hostname)) event.preventDefault();
@@ -152,6 +192,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   .form-intro { margin: 1rem 0 2rem; color: var(--slate); }
   .journey-context { margin: 0 0 1.2rem; padding: 1rem; border: 1px solid #cce9e2; border-radius: var(--radius-sm); background: #effbf8; }
   .journey-context span, .journey-context strong { display: block; }.journey-context span { color: var(--success); font-size: .65rem; font-weight: 800; text-transform: uppercase; }.journey-context strong { margin-top: .25rem; color: var(--ink); }.journey-context p { margin-top: .2rem; color: var(--slate); font-size: .72rem; }
+  .shared-result { margin: 0 0 1.2rem; padding: 1rem; border: 1px solid #cce9e2; border-radius: var(--radius-sm); background: #effbf8; }.shared-result > span,.shared-result > strong { display: block; }.shared-result > span { color: var(--success); font-size: .65rem; font-weight: 800; text-transform: uppercase; }.shared-result > strong { margin-top: .25rem; color: var(--ink); }.shared-result pre { max-height: 220px; margin: .8rem 0; padding: .8rem; overflow: auto; border: 1px solid #dfeeea; border-radius: 8px; background: white; color: var(--slate); font: inherit; font-size: .7rem; white-space: pre-wrap; }.shared-result > p { color: var(--slate); font-size: .7rem; }.shared-result > div { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }.shared-result .btn { padding: .65rem .8rem; }.discard-result { border: 0; background: transparent; color: var(--violet-dark); cursor: pointer; font-weight: 800; text-decoration: underline; }.shared-result .shared-result-status { min-height: 1em; margin-top: .55rem; color: var(--success); font-weight: 700; }
   .growth-form { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--canvas); }
   .honey { position: absolute !important; left: -9999px !important; }
   .challenge-field { border: 0; }.challenge-field legend { margin-bottom: .55rem; color: var(--ink); font-size: .84rem; font-weight: 750; }

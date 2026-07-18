@@ -7,7 +7,8 @@ This is the Week 2 reporting contract for the enquiry journey. It keeps personal
 | Event | Trigger | Reporting job |
 | --- | --- | --- |
 | `cta_click` | A labelled website CTA is selected after analytics consent | Compare CTA placement and destination |
-| `tool_complete` | A visitor produces a result in one of the five tools | Measure useful tool engagement |
+| `tool_complete` | A visitor produces a result in one of the six tools | Measure useful tool engagement |
+| `tool_result_action` | A completed result is copied, printed or explicitly carried to the contact page | Measure repeat-use and voluntary handoff intent |
 | `lead_submit_attempt` | A valid growth-review form begins submission | Diagnose form delivery drop-off |
 | `generate_lead` | FormSubmit returns the visitor to `/thank-you/` with pending lead context | Count confirmed form journeys |
 | `lead_confirmation_view` | `/thank-you/` is viewed | Validate confirmation-page delivery; direct visits are labelled separately |
@@ -32,8 +33,11 @@ Register these as event-scoped custom dimensions in GA4 where a matching predefi
 | Destination path | `destination_path` | Where a measured CTA leads |
 | Tool name | `tool_name` | Calculator or diagnostic completed |
 | Result type | `result_type` | Coarse, non-sensitive result category |
+| Result action | `result_action` | `copy`, `print` or `share`; never the result content |
 
 Do not send names, email addresses, companies, store URLs, free-text answers or exact revenue figures to GA4.
+
+For tool reporting, use tool-page views as the denominator for `tool_complete`, then compare completion with `tool_result_action`. A `share` action is an assisted journey signal, not a lead; only `generate_lead` confirms the form journey.
 
 ## Lead report
 
