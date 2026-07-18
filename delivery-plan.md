@@ -34,11 +34,16 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** fewer dead ends and clearer evidence about which pages create qualified conversations.
 
-- Review the homepage, service pages, tools and articles as separate paths into contact
-- Add source-page and selected-constraint context to enquiries where useful
-- Confirm form delivery reliability and introduce a backup endpoint if needed
-- Define lead quality fields without making the form unnecessarily long
-- Build a simple lead report by landing page, service interest and acquisition source
+- [x] Review the homepage, service pages, tools and articles as separate paths into contact
+- [x] Preserve landing page, source page, service/tool interest, referring domain and campaign context through the enquiry
+- [x] Show retained context on the form and preselect the most relevant growth constraint where the journey provides a strong signal
+- [x] Keep the visible form length unchanged while deriving constraint summary and context-completeness fields from existing answers
+- [x] Separate submission attempts from confirmed `generate_lead` events and remove duplicate/pre-consent event queuing
+- [x] Verify the FormSubmit endpoint is reachable and add an eight-second direct-email recovery path without clearing typed answers
+- [x] Document the GA4 custom dimensions and weekly lead report by landing page, source page, interest and acquisition source
+- [ ] Send and receive a production enquiry to confirm the final email-delivery hop
+
+**Week 2 checkpoint:** local rendered tests cover service-to-contact and campaign-to-tool-to-contact journeys, automatic constraint context, hidden attribution, native validation, submission-state handling and the delivery fallback. The remaining production submission is intentionally held for explicit approval because it sends a real email.
 
 **Done when:** every enquiry can be traced to its originating journey and categorised by commercial need.
 
