@@ -99,11 +99,13 @@ This is the working sequence after the ecommerce site revamp is deployed. Each w
 
 **Outcome:** fewer competing pages, better commercial relevance and a maintainable editorial library.
 
-- Group articles by query intent and identify cannibalisation
-- Refresh high-impression pages sitting just outside the strongest positions
-- Consolidate or redirect thin, overlapping and outdated posts
-- Review factual claims, dates, platform changes and unsupported performance language
-- Strengthen links from informational articles into relevant tools and services
+- [x] Group articles by query intent and identify cannibalisation
+- [x] Refresh high-impression pages sitting just outside the strongest positions
+- [x] Consolidate or redirect thin, overlapping and outdated posts
+- [x] Review factual claims, dates, platform changes and unsupported performance language on the priority set
+- [x] Strengthen links from informational articles into relevant tools and services
+
+**Week 6 checkpoint:** the 16-month Search Console export now drives a documented keep, refresh, merge, redirect or retire decision set. The duplicate affiliate launch guide has been consolidated; eleven relevant legacy routes now point to a close current equivalent; the Meta benchmark, responsive search ads, AWIN setup and AdSense PayPal pages have been materially corrected or refreshed. Every blog category now has an intentional tool or service next step, with page-specific overrides for the strongest commercial journeys. `npm run audit:content` protects unique slugs, titles and complete bodies; the remaining claim-review queue is an ongoing editorial maintenance task rather than a reason to create more overlapping posts. Performance impact will be checked after 28 and 56 days.
 
 **Done when:** every retained article has a distinct search job, current evidence and an intentional next step.
 

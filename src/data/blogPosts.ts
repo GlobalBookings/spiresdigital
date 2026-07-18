@@ -65,15 +65,6 @@ export const blogPosts: BlogPost[] = [
     readTime: '9 min read',
   },
   {
-    slug: 'affiliate-program-setup-guide',
-    title: 'Affiliate Program Setup Guide',
-    description: 'From choosing the right network to recruiting partners and setting commission structures — everything you need to launch an affiliate program.',
-    date: '2026-02-15',
-    category: 'Affiliate Marketing',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
-    readTime: '8 min read',
-  },
-  {
     slug: 'ga4-conversion-tracking-setup',
     title: 'GA4 Conversion Tracking: Complete Setup Guide',
     description: 'How to set up proper conversion tracking in GA4 and Google Ads to make data-driven decisions about your marketing spend.',

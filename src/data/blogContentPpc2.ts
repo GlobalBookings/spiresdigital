@@ -22,8 +22,8 @@ export const ppc2BlogPosts: BlogPost[] = [
   {
     slug: 'responsive-search-ads-best-practices',
     title: 'Responsive Search Ads Best Practices for 2026',
-    description: 'How to structure, test, and optimise responsive search ads in 2026 — covering pin strategies, asset reporting, and headline combinations.',
-    date: '2026-03-26',
+    description: 'Current Google-aligned guidance for writing, pinning, testing and evaluating responsive search ads without relying on arbitrary thresholds.',
+    date: '2026-07-18',
     category: 'PPC',
     image: '',
     readTime: '7 min read',
@@ -398,134 +398,106 @@ export const ppc2BlogContent: Record<string, string> = {
 `,
 
   'responsive-search-ads-best-practices': `
-<p>Responsive search ads (RSAs) are now the default ad format in Google Ads, and for good reason — they give Google's machine learning the flexibility to test thousands of headline and description combinations automatically. But that flexibility is a double-edged sword. Without a thoughtful strategy, you end up with ads that feel disjointed, off-brand, or irrelevant. This guide covers the RSA best practices that actually move performance in 2026.</p>
+<p>Responsive search ads (RSAs) let Google assemble headlines and descriptions for each auction. The job is not to create every possible combination yourself. It is to supply a set of truthful, distinct assets that make sense together and lead to a landing page that fulfils the promise.</p>
 
-<h2>How Responsive Search Ads Work</h2>
+<p>This guide was checked against Google's current RSA guidance on 18 July 2026. Google can change recommendations and reporting, so use the linked Help Centre pages and the prompts in your own account as the final platform reference.</p>
 
-<p>RSAs allow you to provide up to 15 headlines and 4 descriptions. Google then tests different combinations to find the best-performing pairings for each search query, device, and audience. Over time, the algorithm learns which combinations drive the highest click-through and conversion rates.</p>
+<h2>How responsive search ads work</h2>
 
-<p>The key difference from the old expanded text ads (ETAs) is that you do not control exactly which headlines appear together. This makes asset quality and strategic pinning essential.</p>
+<p>An RSA can contain up to 15 headlines and four descriptions. Google selects an eligible combination using the search, device and other auction context. A headline may sometimes appear outside the pattern you expected, so every asset must be comprehensible without relying on the one before it.</p>
 
-<h2>Asset Quantity and Quality</h2>
+<p>Google's concise creation guidance says to provide at least 8–10 headlines, include popular keywords where natural and reduce unnecessary pinning. Its broader best-practice page encourages as many unique, high-quality assets as the advertiser can genuinely support.</p>
 
-<h3>How Many Assets to Provide</h3>
+<div class="tip-box"><strong>Usefulness beats quota:</strong> do not add a weak eleventh headline merely to increase the count. Each asset should introduce a distinct benefit, proof point, qualification, offer detail or next action.</div>
 
-<p>Google recommends providing the maximum number of assets, but more is not always better if quality suffers. Here is what we recommend at Spires Digital:</p>
+<h2>Build an asset set around the search job</h2>
 
-<ul>
-<li><strong>Headlines:</strong> Provide 11-15 unique headlines. Below 10 limits Google's testing ability. Above 10 gives meaningful variety.</li>
-<li><strong>Descriptions:</strong> Provide all 4 descriptions. Each should highlight a different selling point.</li>
-</ul>
-
-<h3>Asset Diversity Framework</h3>
-
-<p>Spread your headlines across these categories to ensure Google has variety to work with:</p>
+<p>Start with a tightly themed ad group and one clear landing-page job. Then draft assets across these roles:</p>
 
 <ul>
-<li><strong>Keyword-focused (3-4 headlines):</strong> Include primary keywords for relevance and Quality Score</li>
-<li><strong>Benefit-focused (3-4 headlines):</strong> Highlight outcomes like "Increase Revenue by 40%"</li>
-<li><strong>Social proof (2-3 headlines):</strong> "Trusted by 200+ UK Brands" or "5-Star Rated Agency"</li>
-<li><strong>CTA-focused (2-3 headlines):</strong> "Get Your Free Audit" or "Book a Strategy Call"</li>
-<li><strong>Differentiator (1-2 headlines):</strong> "No Long-Term Contracts" or "Dedicated Account Manager"</li>
+<li><strong>Relevance:</strong> describe the product, service or category in the language the searcher used.</li>
+<li><strong>Benefit:</strong> explain what becomes easier, faster, safer or more valuable.</li>
+<li><strong>Differentiation:</strong> state a verifiable reason to choose this offer.</li>
+<li><strong>Proof:</strong> use evidence you can substantiate on the landing page.</li>
+<li><strong>Qualification:</strong> clarify location, compatibility, audience or another important limit.</li>
+<li><strong>Action:</strong> tell the user what useful next step the landing page supports.</li>
 </ul>
 
-<div class="tip-box"><strong>Pro Tip:</strong> Write every headline as if it could appear in position 1, alone. Google may only show one or two headlines on mobile devices, so each one must be compelling independently — not reliant on context from another headline.</div>
+<p>Avoid near-duplicates such as “PPC management”, “expert PPC management” and “professional PPC management”. They add nominal quantity without giving the system or the searcher a meaningfully different message.</p>
 
-<h2>Pin Strategies That Work</h2>
+<h2>Make every combination safe</h2>
 
-<p>Pinning forces a specific headline or description to always appear in a particular position. Used sparingly, pinning ensures your most important messages are always visible. Overused, it defeats the purpose of RSAs.</p>
+<p>Read each headline beside every other headline. Remove combinations that repeat, contradict one another or create an unsupported claim. Keep descriptions self-contained and do not make the second description complete a sentence started in the first.</p>
 
-<h3>When to Pin</h3>
+<p>Match every price, promotion, availability claim and proof point to the final URL. For Spires Digital service ads, that means inviting a consultation before a tailored price rather than publishing a rate card or implying a fixed fee.</p>
+
+<h2>Pin only for a real constraint</h2>
+
+<p>Pinning limits which combinations are eligible. Google's current guidance says general campaigns should avoid pinning unless a campaign goal requires consistent messaging.</p>
+
+<p>Reasonable constraints can include:</p>
 
 <ul>
-<li><strong>Brand name:</strong> Pin to headline position 1 if brand awareness is important</li>
-<li><strong>Legal disclaimers:</strong> Pin required disclosures to ensure they always show</li>
-<li><strong>Primary keyword:</strong> Pin one keyword-rich headline to position 1 or 2 for relevance</li>
+<li>a legally required statement that must appear;</li>
+<li>a brand or product name that must occupy a specific position;</li>
+<li>a promotion where the qualifying condition cannot be separated from the offer;</li>
+<li>a controlled test with a documented reason for fixing one message.</li>
 </ul>
 
-<h3>When Not to Pin</h3>
+<p>If several assets can satisfy the same required role, pin those alternatives to the same position rather than fixing one asset unnecessarily. Record why the pin exists so it can be reviewed when the campaign or policy changes.</p>
+
+<h2>Use Ad Strength as setup feedback</h2>
+
+<p>Google describes Ad Strength as forward-looking feedback on the assets and their possible effectiveness. Use it to find missing variety, relevance or asset coverage. Then judge the live campaign with commercial outcomes such as qualified conversions, cost per acquisition, contribution and incremental volume.</p>
+
+<p>A stronger Ad Strength rating does not remove the need to validate conversion tracking, search-term quality or landing-page performance.</p>
+
+<h2>Read the reports carefully</h2>
+
+<p>The combinations report shows combinations and how often they were served. Frequency is not the same as a controlled head-to-head result. Asset reporting can help identify themes worth exploring, but replacement decisions should also consider:</p>
 
 <ul>
-<li>Do not pin all three headline positions — this eliminates Google's ability to test</li>
-<li>Do not pin a single headline to a position — pin 2-3 options to the same position to maintain testing flexibility</li>
-<li>Avoid pinning descriptions unless legally required</li>
+<li>whether the ad group still represents one clear search job;</li>
+<li>whether the asset is eligible often enough to evaluate;</li>
+<li>whether search terms and landing-page intent are aligned;</li>
+<li>whether the campaign produced the commercial outcome you optimise for;</li>
+<li>whether the proposed replacement introduces a genuinely new hypothesis.</li>
 </ul>
 
-<p>If you pin a single headline to each position, you have essentially recreated an expanded text ad with none of RSA's benefits. The ideal approach is to pin 2-3 headlines to position 1 (ensuring your best messages always lead) while leaving positions 2 and 3 unpinned.</p>
+<p>There is no universal impression count or number of days that makes every asset decision reliable. Use the volume, buying cycle and size of the decision to set the observation window before the test begins.</p>
 
-<h2>Writing Headlines That Work in Any Combination</h2>
+<h2>A practical RSA review checklist</h2>
 
-<p>The biggest RSA mistake is writing headlines that only make sense as a sequence. Since Google combines them randomly, every headline must work alongside any other headline.</p>
+<ol>
+<li>Confirm the conversion action and value passed to Google Ads are correct.</li>
+<li>Check that the ad group and landing page serve one coherent search intent.</li>
+<li>Remove unsupported, duplicated or context-dependent assets.</li>
+<li>Add distinct benefits, proof, qualifications and actions where the set is thin.</li>
+<li>Review pins and retain only those with a documented requirement.</li>
+<li>Check search terms and apply the appropriate <a href="/blog/google-ads-negative-keywords-guide">negative keyword controls</a>.</li>
+<li>Evaluate campaign and ad-group outcomes, not asset labels in isolation.</li>
+<li>Record the next messaging hypothesis before replacing an asset.</li>
+</ol>
 
-<h3>Avoid Redundancy</h3>
-
-<p>If three of your headlines say essentially the same thing — "Expert PPC Management," "Professional PPC Services," "Top PPC Agency" — Google is choosing between three weak variations instead of testing genuinely different messages. Write headlines that each contribute a unique piece of information.</p>
-
-<p>For more on writing effective ad copy, see our guide on <a href="/blog/google-ads-copy-that-converts">Google Ads copy that converts</a>.</p>
-
-<h2>Asset Reporting and Performance Analysis</h2>
-
-<p>Google rates each asset as Learning, Low, Good, or Best based on its relative performance. Use these ratings to guide your optimisation:</p>
+<h2>Official Google guidance</h2>
 
 <ul>
-<li><strong>Best:</strong> Keep these assets and create variations that explore similar angles</li>
-<li><strong>Good:</strong> Maintain these — they are performing above average</li>
-<li><strong>Low:</strong> Replace after the asset has had sufficient impressions (at least 5,000)</li>
-<li><strong>Learning:</strong> Wait — Google needs more data before making a judgment</li>
+<li><a href="https://support.google.com/google-ads/answer/6167122?hl=en-GB" target="_blank" rel="noopener">Google Ads: responsive search ads best practices</a></li>
+<li><a href="https://support.google.com/google-ads/answer/10530456?hl=en-GB" target="_blank" rel="noopener">Google Ads: create effective responsive search ads</a></li>
+<li><a href="https://support.google.com/google-ads/answer/7510328?hl=en-GB" target="_blank" rel="noopener">Google Ads: create an ad group with an RSA</a></li>
 </ul>
 
-<h3>Combination Reports</h3>
+<h2>Frequently asked questions</h2>
 
-<p>Beyond individual asset ratings, check the Combinations report to see which specific headline-description pairings Google shows most often. This reveals what the algorithm considers your best messaging and can inform your broader marketing copy.</p>
+<details><summary>How many headlines should an RSA have?</summary><div class="faq-answer"><p>Google currently recommends at least 8–10 headlines in its concise setup guidance and supports up to 15. Prioritise unique, accurate assets; extra near-duplicates do not create useful variety.</p></div></details>
 
-<h2>Testing Approach for RSAs</h2>
+<details><summary>How many RSAs should I run per ad group?</summary><div class="faq-answer"><p>Google's guidance has changed over time and different official pages can emphasise different configurations. Keep the ad group tightly themed, follow the current recommendation shown in your account, and use a second or third RSA only when it represents a deliberate messaging test rather than duplication.</p></div></details>
 
-<p>Testing RSAs requires a different approach than testing the old ETAs. You cannot simply A/B test two complete ads because the combinations within each RSA are already being tested internally.</p>
+<details><summary>Does pinning hurt performance?</summary><div class="faq-answer"><p>Pinning reduces eligible combinations. Use it when consistent placement is necessary for legal, brand or campaign reasons, and avoid it when there is no real constraint.</p></div></details>
 
-<h3>Recommended Testing Framework</h3>
+<details><summary>Is Excellent Ad Strength the goal?</summary><div class="faq-answer"><p>It is a useful setup signal, not the commercial goal. Resolve relevant feedback, then optimise for validated conversion value, acquisition cost and the business result the campaign is meant to create.</p></div></details>
 
-<ul>
-<li>Run one RSA per ad group to give it maximum data</li>
-<li>Test different <em>themes</em> rather than individual headlines — create two RSAs with fundamentally different angles (e.g., price-focused vs. quality-focused)</li>
-<li>Allow at least 30 days and 100+ conversions before evaluating results</li>
-<li>Use Google's ad variation experiments for controlled testing at scale</li>
-</ul>
-
-<p>Review asset performance alongside broader campaign metrics. A headline rated "Best" in a campaign with poor conversion rates might be driving clicks that do not convert. Always tie asset performance back to <a href="/blog/google-ads-quality-score-guide">Quality Score</a> and conversion data.</p>
-
-<h2>Optimising RSAs for Negative Keywords</h2>
-
-<p>Your <a href="/blog/google-ads-negative-keywords-guide">negative keyword strategy</a> directly impacts RSA performance. If irrelevant search terms trigger your ads, Google's machine learning receives noisy data that reduces its ability to optimise headline combinations effectively. Run regular search term reports and maintain comprehensive negative keyword lists to keep your RSA data clean.</p>
-
-<h2>RSA Ad Strength Score</h2>
-
-<p>Google assigns an Ad Strength rating from Poor to Excellent. While this metric is directional, do not treat it as a performance indicator. An "Excellent" Ad Strength does not guarantee high performance — it simply means you have provided enough diverse assets for Google to test.</p>
-
-<p>Focus on actual performance metrics — conversion rate, cost per conversion, and ROAS — rather than chasing a perfect Ad Strength score.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<details>
-<summary>How many responsive search ads should I have per ad group?</summary>
-<div class="faq-answer"><p>Google recommends one RSA per ad group for most cases. This concentrates all impression data into a single ad, giving the algorithm more data to optimise headline combinations. If you want to test different angles, create a second RSA temporarily and compare performance over 30+ days.</p></div>
-</details>
-
-<details>
-<summary>Does pinning hurt RSA performance?</summary>
-<div class="faq-answer"><p>Strategic pinning does not hurt performance when done correctly. Pinning 2-3 headlines to position 1 ensures your key message always appears while still giving Google flexibility. Pinning a single headline to every position essentially creates a static ad and removes the RSA's testing advantages.</p></div>
-</details>
-
-<details>
-<summary>What is a good Ad Strength score?</summary>
-<div class="faq-answer"><p>Aim for "Good" or "Excellent," but do not obsess over it. Ad Strength measures asset diversity and quantity, not actual ad performance. We have seen "Average" rated RSAs outperform "Excellent" ones in terms of conversion rate and ROAS. Use it as a guide for asset coverage, not a performance benchmark.</p></div>
-</details>
-
-<details>
-<summary>How long should I wait before optimising RSA assets?</summary>
-<div class="faq-answer"><p>Allow at least 2-4 weeks for assets to accumulate enough impressions for reliable ratings. Replacing assets too quickly prevents Google from learning which combinations work best. Once an asset has at least 5,000 impressions and is rated "Low," it is safe to replace.</p></div>
-</details>
-
-<p>Responsive search ads reward advertisers who combine creative thinking with disciplined testing. If you want help building RSAs that consistently outperform, <a href="/contact">get in touch with Spires Digital</a> or <a href="/contact">book a free strategy call via Calendly</a> — we will review your current ads and identify quick wins to improve performance.</p>
+<p>Need a structured review of the ads, tracking and landing pages together? <a href="/services/ppc-management">See how Spires Digital manages Google Ads</a> or <a href="/contact">request a consultation</a>. Pricing follows the consultation and written scope.</p>
 `,
 
   'google-ads-negative-keywords-guide': `

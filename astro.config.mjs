@@ -25,6 +25,17 @@ export default defineConfig({
     '/why-facebook-ads-payment-failed-2': '/what-is-the-facebook-ad-credit-code',
     '/why-facebook-ads-active-but-not-running': '/what-is-the-facebook-ad-credit-code',
     '/when-does-facebook-ads-charge': '/what-is-the-facebook-ad-credit-code',
+    '/blog/affiliate-program-setup-guide': '/blog/how-to-launch-affiliate-program',
+    '/12-call-to-action-examples-how-to-write-the-best-social-cta': '/blog/facebook-ad-copy-guide',
+    '/measuring-content-performance-with-analytics-tools-5': '/blog/marketing-attribution-which-channels-work',
+    '/unlocking-the-power-of-shared-budgets-in-google-ads-a-comprehensive-guide': '/blog/how-to-calculate-google-ads-budget',
+    '/rewriting-titles-for-google-shopping-with-gtp-3-openai': '/blog/google-shopping-shopify-setup',
+    '/seo-integration-in-content-strategy-for-higher-rankings-2': '/blog/shopify-seo-guide',
+    '/why-facebook-ads-not-converting': '/blog/facebook-ads-ecommerce-full-funnel',
+    '/are-facebook-ads-based-on-browsing-history': '/blog/facebook-ads-audience-targeting-2026',
+    '/google-marketing': '/services/ppc-management',
+    '/learn': '/blog',
+    '/digital-marketing-guide': '/industries/ecommerce',
   },
   integrations: [
     sitemap({

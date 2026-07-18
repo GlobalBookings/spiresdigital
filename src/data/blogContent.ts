@@ -190,51 +190,6 @@ export const blogContent: Record<string, string> = {
 <p>Managing <a href="/services/ppc-management">Performance Max campaigns</a> effectively requires constant monitoring and optimisation. <a href="/contact">Get in touch</a> for expert PMax management.</p>
 `,
 
-  'affiliate-program-setup-guide': `
-<p>An affiliate program can become one of your most cost-effective marketing channels — you only pay for results. But setting one up properly requires strategic thinking about network choice, commission structures, and partner recruitment.</p>
-
-<h2>Choosing the Right Network</h2>
-<p>The network you choose affects which affiliates can find and promote you. The main options in the UK:</p>
-<ul>
-<li><strong>AWIN:</strong> The largest UK network with strong publisher relationships. Best for established brands.</li>
-<li><strong>CJ Affiliate:</strong> Strong globally with excellent reporting tools</li>
-<li><strong>Rakuten:</strong> Premium network with quality publishers</li>
-<li><strong>Impact:</strong> Modern platform with flexible partnership types beyond traditional affiliates</li>
-</ul>
-
-<h2>Setting Commission Structures</h2>
-<p>Your commission rate needs to be competitive enough to attract quality affiliates while maintaining healthy margins:</p>
-<ul>
-<li>Research competitor commission rates on each network</li>
-<li>Consider tiered commissions to reward top performers</li>
-<li>Set appropriate cookie windows (typically 30 days)</li>
-<li>Factor in your customer lifetime value, not just first-order margins</li>
-</ul>
-
-<div class="tip-box"><strong>Pro Tip:</strong> Offer higher commissions during your first 3 months to build momentum and attract early adopters. You can adjust once you have a baseline of active publishers.</div>
-
-<h2>Recruiting Quality Partners</h2>
-<p>Don't rely on publishers finding you. Proactive recruitment is essential:</p>
-<ul>
-<li>Identify content sites and bloggers in your niche</li>
-<li>Reach out with personalised pitches explaining why your program is worth joining</li>
-<li>Provide quality creative assets (banners, product feeds, exclusive offers)</li>
-<li>Build relationships with your top 20% of publishers — they'll drive 80% of revenue</li>
-</ul>
-
-<h2>Managing for Profitability</h2>
-<p>An unmanaged <a href="/services/affiliate-management">affiliate program</a> will attract coupon sites that steal attribution from other channels. Active management includes:</p>
-<ul>
-<li>Monitoring for coupon/cashback abuse</li>
-<li>Ensuring brand compliance across all publisher content</li>
-<li>Regular commission reviews based on publisher value</li>
-<li>Quarterly strategy reviews with top publishers</li>
-</ul>
-
-<h2>Getting Started</h2>
-<p>A well-managed affiliate program typically takes 3-6 months to gain traction, but becomes increasingly profitable over time as your publisher base grows. <a href="/contact">Talk to our affiliate team</a> about launching your program.</p>
-`,
-
   'ga4-conversion-tracking-setup': `
 <p>Accurate conversion tracking is the foundation of every successful digital marketing campaign. Without it, you're flying blind — spending money without knowing what's actually driving results. This guide covers the complete GA4 and Google Ads tracking setup.</p>
 

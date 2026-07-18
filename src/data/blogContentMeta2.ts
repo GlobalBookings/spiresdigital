@@ -2,15 +2,6 @@ import type { BlogPost } from './blogPosts';
 
 export const meta2BlogPosts: BlogPost[] = [
   {
-    slug: 'facebook-retargeting-strategy-guide',
-    title: 'Facebook Retargeting: The Complete Strategy Guide',
-    description: 'A full-funnel Facebook retargeting strategy covering custom audiences, engagement audiences, video viewers, frequency caps, and creative sequencing.',
-    date: '2026-03-10',
-    category: 'Meta Ads',
-    image: '',
-    readTime: '9 min read',
-  },
-  {
     slug: 'meta-conversions-api-guide',
     title: 'Meta Conversions API: Why You Need It and How to Set It Up',
     description: 'A practical guide to implementing the Meta Conversions API for server-side tracking, improved data quality, and better campaign optimisation.',
