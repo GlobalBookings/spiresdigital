@@ -2,6 +2,10 @@
   "name": "spiresdigital",
   "type": "module",
   "version": "1.0.0",
+  "engines": {
+    "node": "22.x",
+    "npm": ">=9.6.5"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,7 +15,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
-    "astro": "^5.17.1"
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.1.1"
   }
 }
