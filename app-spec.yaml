@@ -1,22 +1,211 @@
 name: spiresdigital
 region: lon1
 
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+
+ingress:
+  rules:
+    - match:
+        path:
+          prefix: /about-us
+      redirect:
+        uri: /about/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /affiliate-marketing-services
+      redirect:
+        uri: /services/affiliate-management/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /free-marketing-audit
+      redirect:
+        uri: /contact/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /roi-calculator
+      redirect:
+        uri: /tools/ecommerce-profit-calculator/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /are-google-ads-vatable
+      redirect:
+        uri: /tools/google-ads-vat-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /are-google-ads-vatable-uk
+      redirect:
+        uri: /tools/google-ads-vat-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /do-google-ads-charge-vat
+      redirect:
+        uri: /tools/google-ads-vat-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /understanding-vat-on-google-ads-what-you-need-to-know
+      redirect:
+        uri: /tools/google-ads-vat-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /digital-marketing-agency-in-lichfield-the-importance-of-digital
+      redirect:
+        uri: /locations/lichfield/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /services/shopify-builds
+      redirect:
+        uri: /services/cro-shopify/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /services-overview
+      redirect:
+        uri: /services/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /contact-us
+      redirect:
+        uri: /contact/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /services/web-development
+      redirect:
+        uri: /services/cro-shopify/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /email-marketing-campaign-automation-tools
+      redirect:
+        uri: /blog/shopify-email-marketing-klaviyo/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /email-marketing-campaign-automation-tools-5
+      redirect:
+        uri: /blog/shopify-email-marketing-klaviyo/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /why-facebook-ads-payment-failed-2
+      redirect:
+        uri: /what-is-the-facebook-ad-credit-code/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /why-facebook-ads-active-but-not-running
+      redirect:
+        uri: /what-is-the-facebook-ad-credit-code/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /when-does-facebook-ads-charge
+      redirect:
+        uri: /what-is-the-facebook-ad-credit-code/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /blog/affiliate-program-setup-guide
+      redirect:
+        uri: /blog/how-to-launch-affiliate-program/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /12-call-to-action-examples-how-to-write-the-best-social-cta
+      redirect:
+        uri: /blog/facebook-ad-copy-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /measuring-content-performance-with-analytics-tools-5
+      redirect:
+        uri: /blog/marketing-attribution-which-channels-work/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /unlocking-the-power-of-shared-budgets-in-google-ads-a-comprehensive-guide
+      redirect:
+        uri: /blog/how-to-calculate-google-ads-budget/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /rewriting-titles-for-google-shopping-with-gtp-3-openai
+      redirect:
+        uri: /blog/google-shopping-shopify-setup/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /seo-integration-in-content-strategy-for-higher-rankings-2
+      redirect:
+        uri: /blog/shopify-seo-guide/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /why-facebook-ads-not-converting
+      redirect:
+        uri: /blog/facebook-ads-ecommerce-full-funnel/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /are-facebook-ads-based-on-browsing-history
+      redirect:
+        uri: /blog/facebook-ads-audience-targeting-2026/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /google-marketing
+      redirect:
+        uri: /services/ppc-management/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /learn
+      redirect:
+        uri: /blog/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /digital-marketing-guide
+      redirect:
+        uri: /industries/ecommerce/
+        redirect_code: 301
+    - match:
+        path:
+          prefix: /
+      component:
+        name: site
+
 static_sites:
   - name: site
     github:
       repo: GlobalBookings/spiresdigital
       branch: main
       deploy_on_push: true
-    build_command: npm install && npm run build
+    # App Platform installs package-lock.json with npm ci before this command.
+    # Keeping the build step separate makes deployments reproducible.
+    build_command: npm run build
     output_dir: dist
     environment_slug: node-js
     envs:
       - key: PUBLIC_GA_MEASUREMENT_ID
         scope: BUILD_TIME
         value: G-B7840X8QFQ
-    routes:
-      - path: /
-
 domains:
   - domain: spiresdigital.com
     type: PRIMARY
+    minimum_tls_version: "1.2"
+  - domain: www.spiresdigital.com
+    type: ALIAS
+    minimum_tls_version: "1.2"
