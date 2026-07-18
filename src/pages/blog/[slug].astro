@@ -22,6 +22,7 @@ const content = blogContent[slug];
   category={post.category}
   image={post.image}
   readTime={post.readTime}
+  slug={post.slug}
   noindex={!content}
 >
   {content ? <Fragment set:html={content} /> : (

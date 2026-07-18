@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { getArticleJourney } from '../data/articleJourneys';
 
 interface Props {
   title: string;
@@ -9,10 +10,12 @@ interface Props {
   category?: string;
   image?: string;
   readTime?: string;
+  slug?: string;
   noindex?: boolean;
 }
 
-const { title, description, date, category, image, readTime, noindex = false } = Astro.props;
+const { title, description, date, category, image, readTime, slug = '', noindex = false } = Astro.props;
+const journey = getArticleJourney(slug, category);
 const formattedDate = date ? new Date(`${date}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 const categoryAnchor: Record<string, string> = { 'PPC': 'ppc', 'Meta Ads': 'meta-ads', 'Affiliate Marketing': 'affiliate-marketing', 'Shopify': 'shopify-ecommerce', 'E-Commerce': 'shopify-ecommerce', 'Strategy': 'strategy-analytics', 'Analytics': 'strategy-analytics', 'SEO': 'strategy-analytics' };
 const schema = {
@@ -51,7 +54,7 @@ const schema = {
       </div>
     </article>
 
-    <section class="article-next"><div class="container"><div><span>Apply the thinking</span><h2>Turn the article into your next commercial decision.</h2></div><div><a href="/tools" class="btn btn-secondary">Use a free tool</a><a href="/contact" class="btn btn-primary">Request a growth review</a></div></div></section>
+    <section class="article-next"><div class="container"><div><span>{journey.eyebrow}</span><h2>{journey.title}</h2></div><div><a href={journey.primaryHref} class="btn btn-secondary" data-track={`article_next_${slug || 'generic'}_primary`}>{journey.primaryLabel}</a><a href={journey.secondaryHref} class="btn btn-primary" data-track={`article_next_${slug || 'generic'}_secondary`}>{journey.secondaryLabel}</a></div></div></section>
   </div>
 </BaseLayout>
 

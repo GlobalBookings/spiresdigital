@@ -94,8 +94,8 @@ export const affiliateBlogPosts: BlogPost[] = [
   {
     slug: 'awin-setup-guide',
     title: 'AWIN Setup Guide: Launching Your First Affiliate Program',
-    description: 'A detailed walkthrough of setting up your first affiliate program on AWIN, covering account configuration, tracking, commission groups, and partner approval.',
-    date: '2026-02-13',
+    description: 'A current walkthrough of setting up an AWIN affiliate programme, covering the commercial case, tracking requirements, commission groups and launch checks.',
+    date: '2026-07-18',
     category: 'Affiliate Marketing',
     image: '',
     readTime: '9 min read',
@@ -1461,9 +1461,9 @@ export const affiliateBlogContent: Record<string, string> = {
 `,
 
   'awin-setup-guide': `
-<p>AWIN is the largest affiliate network in the UK and a go-to platform for brands launching their first affiliate programme. With access to over 270,000 active publishers and robust tracking technology, it provides a comprehensive infrastructure for building and scaling your partnership channel. But setting up correctly from day one is crucial — mistakes in configuration can cause tracking issues, partner frustration, and lost revenue.</p>
+<p>AWIN is an established affiliate network used by UK and international ecommerce brands. It can provide the tracking, publisher marketplace and payment infrastructure behind a programme, but the network does not replace the commercial work: defining partner value, setting sustainable terms, recruiting relevant publishers and validating sales.</p>
 
-<p>As an AWIN-certified agency, Spires Digital has launched dozens of programmes on the platform. This guide walks you through the complete setup process.</p>
+<p>This guide walks through the decisions and checks needed for a reliable launch. It was reviewed against AWIN's current tracking documentation on 18 July 2026.</p>
 
 <h2>Step 1: Account Application and Approval</h2>
 
@@ -1479,17 +1479,11 @@ export const affiliateBlogContent: Record<string, string> = {
 <li>Expected monthly affiliate budget</li>
 </ul>
 
-<h3>Approval Timeline</h3>
-<p>AWIN typically reviews applications within 5-10 working days. Factors that speed up approval include having an established e-commerce site, clear product proposition, and realistic budget expectations. New businesses without trading history may face additional scrutiny.</p>
+<h3>Plan for review and integration</h3>
+<p>Application review, commercial approval and technical integration time vary by advertiser and implementation. Build the launch plan around confirmed AWIN requirements rather than promising partners a date before the account and tracking have passed validation.</p>
 
-<h3>Costs</h3>
-<p>AWIN charges:</p>
-<ul>
-<li><strong>Setup fee:</strong> Typically £500-£2,500 depending on programme complexity</li>
-<li><strong>Monthly platform fee:</strong> Variable based on programme tier</li>
-<li><strong>Network override:</strong> A percentage (usually 2.5%) on top of affiliate commissions, paid to AWIN for platform and tracking services</li>
-<li><strong>Minimum deposit:</strong> Usually £1,000-£2,000 to cover initial commission payments</li>
-</ul>
+<h3>Confirm the commercial terms</h3>
+<p>Ask AWIN for the current plan, setup, network and payment terms that apply to your business. Model those costs alongside partner commission, management time, tenancy and promotion costs before approving the programme case. Spires Digital does not publish a standard service rate: our price follows a consultation and written scope.</p>
 
 <h2>Step 2: Tracking Integration</h2>
 
@@ -1504,7 +1498,7 @@ export const affiliateBlogContent: Record<string, string> = {
 <li>Plugin loading for enhanced features</li>
 </ul>
 
-<p>Place the MasterTag in the <code>&lt;head&gt;</code> section of every page. If you're using a tag manager (GTM), deploy it as a custom HTML tag that fires on all pages.</p>
+<p>Follow AWIN's current implementation instructions rather than copying an old generic snippet. Its developer documentation says the MasterTag should be appended late in the page, outside iframes, and not placed on pages that display or process payment information or other personally identifiable information.</p>
 
 <h3>Conversion Tracking</h3>
 <p>The conversion pixel fires on your order confirmation/thank-you page and passes transaction data to AWIN:</p>
@@ -1517,10 +1511,10 @@ export const affiliateBlogContent: Record<string, string> = {
 <li><strong>Product-level data:</strong> Individual product details for product-level tracking</li>
 </ul>
 
-<h3>Server-Side Tracking (Recommended)</h3>
-<p>With increasing cookie restrictions, server-side tracking (S2S) provides a more reliable backup. AWIN's server-to-server integration sends conversion data directly from your server to AWIN's, bypassing browser limitations. This is particularly important for Safari and other browsers with aggressive cookie policies.</p>
+<h3>Server-side tracking</h3>
+<p>AWIN's current tracking policy treats server-to-server tracking as a required component alongside its client-side components. Plan the browser and server implementation together, including order references, commission groups, product data, consent signals and deduplication.</p>
 
-<div class="tip-box"><strong>Pro Tip:</strong> Always implement both JavaScript pixel tracking and server-side tracking. Use JavaScript as the primary method and S2S as a fallback. This dual approach ensures maximum tracking accuracy regardless of browser restrictions. AWIN's support team can provide specific integration documentation for your e-commerce platform.</div>
+<div class="tip-box"><strong>Implementation note:</strong> Use AWIN's platform-specific documentation and test environment. The network's requirements have changed over time, so an old tag recipe should not be treated as a current specification.</div>
 
 <h3>Testing Your Tracking</h3>
 <p>Before going live, complete thorough testing:</p>
@@ -1532,8 +1526,10 @@ export const affiliateBlogContent: Record<string, string> = {
 <li>Test across multiple browsers (Chrome, Safari, Firefox, Edge)</li>
 <li>Test on mobile devices</li>
 <li>Verify server-side tracking fires independently of the JavaScript pixel</li>
-<li>Test with cookie consent declined to ensure S2S tracking captures the conversion</li>
+<li>Verify consent behaviour against the implementation, privacy notice and applicable requirements</li>
 </ul>
+
+<p>Current primary references: <a href="https://help.awin.com/developers/docs/tracking-overview-1" target="_blank" rel="noopener">AWIN tracking overview</a>, <a href="https://help.awin.com/developers/docs/advertiser-mastertag" target="_blank" rel="noopener">Advertiser MasterTag</a> and <a href="https://help.awin.com/advertisers/docs/en/server-to-server-tracking" target="_blank" rel="noopener">server-to-server tracking</a>.</p>
 
 <h2>Step 3: Commission Groups</h2>
 
