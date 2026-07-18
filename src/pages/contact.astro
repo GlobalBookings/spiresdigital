@@ -18,6 +18,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <span class="eyebrow">Tell us about the store</span>
         <h2>A little context makes the review much more useful.</h2>
         <p class="form-intro">Required fields are deliberately limited. Commercial ranges help us tailor the review but are optional.</p>
+        <div class="journey-context" id="journey-context" hidden role="status"><span>Journey context retained</span><strong id="journey-context-label"></strong><p>We will include the page and topic that brought you here with the enquiry.</p></div>
         <form class="growth-form form-stack" action="https://formsubmit.co/jack@spiresdigital.com" method="POST" data-capture-attribution data-growth-form>
           <input type="hidden" name="_subject" value="New ecommerce growth review request" />
           <input type="hidden" name="_next" value="https://spiresdigital.com/thank-you/" />
@@ -41,6 +42,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <div class="consent-row"><label><input type="checkbox" name="privacy_acknowledged" required /> <span>I agree that Spires Digital can use this information to respond to my request. *</span></label><a href="/privacy">Privacy policy</a></div>
           <button type="submit" class="btn btn-primary btn-lg btn-arrow">Request my growth review</button>
           <p class="submit-note">We aim to reply within one working day. Your details are not added to a marketing list.</p>
+          <div class="delivery-fallback" id="delivery-fallback" hidden role="status"><strong>The form has not moved on yet.</strong><p>You can try again or <a href="mailto:jack@spiresdigital.com?subject=Ecommerce%20growth%20review">email Jack directly</a>. Your typed answers remain on this page.</p></div>
+          <noscript><p class="delivery-fallback"><strong>JavaScript is off.</strong> The form still works, or you can email <a href="mailto:jack@spiresdigital.com?subject=Ecommerce%20growth%20review">jack@spiresdigital.com</a>.</p></noscript>
         </form>
       </div>
       <aside class="contact-side">
@@ -53,8 +56,84 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 </BaseLayout>
 
 <script>
-  document.querySelector('[data-growth-form]')?.addEventListener('submit', () => {
-    window.trackSpiresEvent?.('generate_lead', { lead_type: 'growth_review', page_path: window.location.pathname });
+  const growthForm = document.querySelector('[data-growth-form]');
+  const journeyParams = new URLSearchParams(window.location.search);
+  const interest = journeyParams.get('interest') || '';
+  const sourcePage = journeyParams.get('source_page') || '/';
+  const interestLabels = {
+    'service:ppc-management': 'Google Shopping & PPC',
+    'service:meta-ads': 'Meta advertising',
+    'service:ecommerce-seo': 'Ecommerce SEO',
+    'service:affiliate-management': 'Affiliate growth',
+    'service:cro-shopify': 'CRO & Shopify',
+    'service:email-retention': 'Email & retention',
+    'service:analytics-attribution': 'Analytics & attribution',
+    'tool:ecommerce-profit-calculator': 'Profit & break-even ROAS calculator',
+    'tool:channel-budget-planner': 'Channel budget planner',
+    'tool:growth-assessment': 'Store growth assessment',
+    'tool:google-ads-vat-guide': 'Google Ads VAT guide',
+    'tool:paid-media-waste-estimator': 'Paid-media waste estimator',
+    'industry:ecommerce': 'Ecommerce growth',
+  };
+  const constraintByInterest = {
+    'service:ppc-management': 'Acquisition',
+    'service:meta-ads': 'Acquisition',
+    'service:ecommerce-seo': 'Acquisition',
+    'service:affiliate-management': 'Acquisition',
+    'service:cro-shopify': 'Conversion',
+    'service:email-retention': 'Retention',
+    'service:analytics-attribution': 'Measurement',
+    'tool:ecommerce-profit-calculator': 'Measurement',
+    'tool:channel-budget-planner': 'Acquisition',
+    'tool:google-ads-vat-guide': 'Measurement',
+    'tool:paid-media-waste-estimator': 'Acquisition',
+  };
+  const contextLabel = interestLabels[interest] || (sourcePage !== '/' ? sourcePage : 'Your current website journey');
+  if (interest || sourcePage !== '/') {
+    const contextPanel = document.getElementById('journey-context');
+    document.getElementById('journey-context-label').textContent = contextLabel;
+    contextPanel.hidden = false;
+  }
+  const suggestedConstraint = constraintByInterest[interest];
+  if (suggestedConstraint) growthForm?.querySelector(`input[name="constraint"][value="${suggestedConstraint}"]`)?.click();
+
+  growthForm?.addEventListener('submit', event => {
+    if (['localhost', '127.0.0.1'].includes(window.location.hostname)) event.preventDefault();
+    const data = new FormData(growthForm);
+    const constraints = data.getAll('constraint').map(String);
+    const contextLength = String(data.get('context') || '').trim().length;
+    const completenessPoints = Number(Boolean(data.get('platform'))) + Number(Boolean(data.get('annual_revenue'))) + Number(constraints.length > 0) + Number(contextLength >= 120);
+    const contextCompleteness = completenessPoints >= 3 ? 'detailed' : completenessPoints >= 1 ? 'useful' : 'basic';
+    const addHidden = (name, value) => {
+      let input = growthForm.querySelector(`input[name="${name}"]`);
+      if (!input) { input = document.createElement('input'); input.type = 'hidden'; input.name = name; growthForm.appendChild(input); }
+      input.value = value;
+    };
+    addHidden('constraint_summary', constraints.join(', ') || 'Not selected');
+    addHidden('context_completeness', contextCompleteness);
+
+    const leadContext = {
+      lead_type: 'growth_review',
+      source_page: String(data.get('source_page') || sourcePage).slice(0, 180),
+      landing_page: String(data.get('landing_page') || sourcePage).slice(0, 180),
+      lead_interest: String(data.get('lead_interest') || interest || 'general').slice(0, 100),
+      acquisition_source: String(data.get('acquisition_source') || 'direct').slice(0, 100),
+      constraint_group: constraints.join('|') || 'not_selected',
+      platform: String(data.get('platform') || 'not_selected').slice(0, 50),
+      revenue_band: String(data.get('annual_revenue') || 'not_selected').slice(0, 50),
+      context_completeness: contextCompleteness,
+    };
+    try { sessionStorage.setItem('spires_pending_lead', JSON.stringify(leadContext)); } catch { /* Form delivery is not dependent on storage. */ }
+    window.trackSpiresEvent?.('lead_submit_attempt', leadContext);
+
+    const submitButton = growthForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending your request…';
+    window.setTimeout(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Request my growth review';
+      document.getElementById('delivery-fallback').hidden = false;
+    }, 8000);
   });
 </script>
 
@@ -71,6 +150,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   .contact-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .65fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: start; }
   .contact-layout h2 { max-width: 760px; }
   .form-intro { margin: 1rem 0 2rem; color: var(--slate); }
+  .journey-context { margin: 0 0 1.2rem; padding: 1rem; border: 1px solid #cce9e2; border-radius: var(--radius-sm); background: #effbf8; }
+  .journey-context span, .journey-context strong { display: block; }.journey-context span { color: var(--success); font-size: .65rem; font-weight: 800; text-transform: uppercase; }.journey-context strong { margin-top: .25rem; color: var(--ink); }.journey-context p { margin-top: .2rem; color: var(--slate); font-size: .72rem; }
   .growth-form { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--canvas); }
   .honey { position: absolute !important; left: -9999px !important; }
   .challenge-field { border: 0; }.challenge-field legend { margin-bottom: .55rem; color: var(--ink); font-size: .84rem; font-weight: 750; }
@@ -81,6 +162,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   .consent-row { display: flex; justify-content: space-between; gap: 1rem; align-items: start; color: var(--slate); font-size: .75rem; }
   .consent-row label { display: flex; gap: .5rem; }.consent-row input { margin-top: .25rem; accent-color: var(--violet); }.consent-row a { color: var(--violet-dark); text-decoration: underline; white-space: nowrap; }
   .submit-note { color: var(--muted); font-size: .72rem; text-align: center; }
+  .delivery-fallback { padding: .9rem; border: 1px solid #f0d8aa; border-radius: 9px; background: #fff8eb; color: #765629; font-size: .74rem; }.delivery-fallback p { margin-top: .2rem; }.delivery-fallback a { color: var(--violet-dark); font-weight: 800; text-decoration: underline; }
   .contact-side { position: sticky; top: 110px; display: grid; gap: 1rem; }
   .direct-card, .fit-card, .direct-links { padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
   .direct-card > span, .fit-card > span { color: var(--violet-dark); font-size: .68rem; font-weight: 800; text-transform: uppercase; }

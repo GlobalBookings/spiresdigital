@@ -95,29 +95,99 @@ const schemas = [organisationSchema, ...(Array.isArray(schema) ? schema : schema
     <Footer />
     <CookieBanner measurementId={measurementId} />
     <script is:inline>
-      window.trackSpiresEvent = (name, parameters = {}) => {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: name, ...parameters });
-        if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
+      const storageGet = key => {
+        try { return sessionStorage.getItem(key); } catch { return null; }
       };
-      document.querySelectorAll('[data-track]').forEach(element => {
-        element.addEventListener('click', () => window.trackSpiresEvent('cta_click', {
-          cta_name: element.dataset.track,
-          page_path: window.location.pathname,
-        }));
-      });
+      const storageSet = (key, value) => {
+        try { sessionStorage.setItem(key, value); } catch { /* Attribution must never block the page. */ }
+      };
+      const cleanValue = (value, maxLength = 180) => String(value || '').trim().slice(0, maxLength);
+      const currentPath = window.location.pathname;
+      const deriveInterest = path => {
+        const parts = path.split('/').filter(Boolean);
+        if (parts[0] === 'services' && parts[1]) return `service:${parts[1]}`;
+        if (parts[0] === 'tools' && parts[1]) return `tool:${parts[1]}`;
+        if (parts[0] === 'industries' && parts[1]) return `industry:${parts[1]}`;
+        if (parts[0] === 'locations' && parts[1]) return `location:${parts[1]}`;
+        if (parts[0] === 'blog' && parts[1]) return `article:${parts[1]}`;
+        if (parts.length === 0) return 'homepage';
+        return cleanValue(parts.join(':'), 100);
+      };
+
+      if (!storageGet('spires_landing_page')) {
+        storageSet('spires_landing_page', currentPath);
+        let referrerDomain = '';
+        try { referrerDomain = document.referrer ? new URL(document.referrer).hostname : ''; } catch { referrerDomain = ''; }
+        storageSet('spires_referrer_domain', referrerDomain || 'direct');
+      }
+
       const params = new URLSearchParams(window.location.search);
+      const onContactPage = currentPath.replace(/\/+$/, '') === '/contact';
+      const journeySourcePage = onContactPage ? cleanValue(params.get('source_page') || currentPath) : currentPath;
+      const journeyInterest = onContactPage ? cleanValue(params.get('interest') || deriveInterest(journeySourcePage), 100) : deriveInterest(currentPath);
       ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(key => {
         const value = params.get(key);
-        if (value) sessionStorage.setItem(`spires_${key}`, value);
+        if (value) storageSet(`spires_${key}`, cleanValue(value));
       });
-      document.querySelectorAll('form[data-capture-attribution]').forEach(form => {
-        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(key => {
-          const value = sessionStorage.getItem(`spires_${key}`);
-          if (!value) return;
-          const input = document.createElement('input');
-          input.type = 'hidden'; input.name = key; input.value = value; form.appendChild(input);
+
+      document.querySelectorAll('a[href]').forEach(element => {
+        const rawHref = element.getAttribute('href');
+        if (!rawHref) return;
+        let destination;
+        try { destination = new URL(rawHref, window.location.origin); } catch { return; }
+        if (destination.origin !== window.location.origin || destination.pathname.replace(/\/+$/, '') !== '/contact') return;
+        if (!destination.searchParams.has('source_page')) destination.searchParams.set('source_page', journeySourcePage);
+        if (!destination.searchParams.has('interest')) destination.searchParams.set('interest', element.dataset.interest || journeyInterest);
+        element.setAttribute('href', `${destination.pathname}${destination.search}${destination.hash}`);
+      });
+
+      window.trackSpiresEvent = (name, parameters = {}) => {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', name, parameters);
+      };
+      document.querySelectorAll('[data-track]').forEach(element => {
+        element.addEventListener('click', () => {
+          const href = element.getAttribute('href') || '';
+          let destinationPath = '';
+          try {
+            const destinationUrl = new URL(href, window.location.origin);
+            destinationPath = destinationUrl.origin === window.location.origin ? destinationUrl.pathname : `external:${destinationUrl.hostname || destinationUrl.protocol.replace(':', '')}`;
+          } catch { destinationPath = 'unknown'; }
+          window.trackSpiresEvent('cta_click', {
+            cta_name: element.dataset.track,
+            page_path: currentPath,
+            destination_path: destinationPath,
+            lead_interest: element.dataset.interest || deriveInterest(currentPath),
+          });
         });
+      });
+
+      document.querySelectorAll('form[data-capture-attribution]').forEach(form => {
+        const addHiddenField = (key, value) => {
+          if (!value || form.querySelector(`input[name="${key}"]`)) return;
+          const input = document.createElement('input');
+          input.type = 'hidden'; input.name = key; input.value = cleanValue(value); form.appendChild(input);
+        };
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(key => {
+          const value = storageGet(`spires_${key}`);
+          if (!value) return;
+          addHiddenField(key, value);
+        });
+        let sameSiteReferrerPath = '';
+        try {
+          const referrerUrl = document.referrer ? new URL(document.referrer) : null;
+          if (referrerUrl?.origin === window.location.origin) sameSiteReferrerPath = referrerUrl.pathname;
+        } catch { sameSiteReferrerPath = ''; }
+        const sourcePage = cleanValue(params.get('source_page') || sameSiteReferrerPath || '/contact/');
+        const leadInterest = cleanValue(params.get('interest') || deriveInterest(sourcePage), 100);
+        const landingPage = cleanValue(storageGet('spires_landing_page') || sourcePage);
+        const referrerDomain = cleanValue(storageGet('spires_referrer_domain') || 'direct', 100);
+        const acquisitionSource = cleanValue(storageGet('spires_utm_source') || referrerDomain, 100);
+        addHiddenField('source_page', sourcePage);
+        addHiddenField('landing_page', landingPage);
+        addHiddenField('lead_interest', leadInterest);
+        addHiddenField('referrer_domain', referrerDomain);
+        addHiddenField('acquisition_source', acquisitionSource);
       });
     </script>
   </body>
