@@ -7,7 +7,14 @@ Run a four-week social campaign that reintroduces Spires Digital through useful 
 Campaign dates: **21 July–15 August 2026**  
 Primary site: **spiresdigital.com**  
 Channels: Instagram, X, Threads, Facebook and LinkedIn  
-Scheduled posts: **52**
+Planned channel posts: **52**
+
+## Buffer execution status — 19 July 2026
+
+- **24 scheduled:** LinkedIn 10, Facebook 10 and Instagram 4.
+- **4 saved as drafts:** the final attribution and consultation posts for LinkedIn and Facebook. The current Buffer plan allows ten scheduled posts per channel, so these are ready to move into the queue after earlier posts publish.
+- **24 awaiting channel reconnection:** X 12 and Threads 12. Buffer can list both channels, but the API returns `Account is not allowed to perform this action` when publishing. Reconnect those two channels in Buffer, then rerun the scheduler; its duplicate checks will preserve everything already created.
+- **0 legacy-domain links:** every created item uses `spiresdigital.com`.
 
 ## Positioning and audience
 
@@ -89,4 +96,10 @@ Scheduling is an explicit operation:
 
 ```sh
 BUFFER_API_KEY=... node marketing/social/schedule-buffer.mjs --apply
+```
+
+While X and Threads remain disconnected, the other channels can be reconciled without repeatedly calling the blocked connections:
+
+```sh
+BUFFER_API_KEY=... BUFFER_SKIP_SERVICES=twitter,threads node marketing/social/schedule-buffer.mjs --apply
 ```

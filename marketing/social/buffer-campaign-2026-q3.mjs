@@ -51,6 +51,7 @@ const moments = [
     slot: 'hero',
     path: '/tools/ecommerce-profit-calculator/',
     image: media.profit,
+    altText: 'Abstract ecommerce storefront with revenue streams passing through margin layers into a clear profit signal.',
     long: `Revenue is not profit.
 
 Before increasing spend, model the commercial floor: break-even ROAS, target ROAS, maximum CAC and the ad budget your target margin can support.
@@ -129,6 +130,7 @@ Compare channel roles, confidence and constraints with our free planner.
     slot: 'hero',
     path: '/tools/google-ads-audit-checklist/',
     image: media.audit,
+    altText: 'Abstract paid-media audit system sorting search, product, landing-page and measurement signals into useful priorities.',
     long: `A Google Ads audit should produce decisions, not a 70-page export.
 
 Our free checklist examines demand control, feed health, conversion tracking, landing-page evidence and commercial measurement—then separates strong foundations from partial controls and real gaps.
@@ -205,6 +207,7 @@ Launch guide: {link}`,
     slot: 'hero',
     path: '/industries/ecommerce/',
     image: media.system,
+    altText: 'Ecommerce storefront connected to acquisition, conversion, retention and measurement modules in one continuous system.',
     long: `Acquisition, conversion, retention and measurement are one commercial system.
 
 If paid media brings the wrong customer, CRO cannot repair the economics. If retention is weak, acquisition has to work too hard. If measurement is inconsistent, every channel can appear to be the hero.
@@ -281,6 +284,7 @@ Start with lifecycle moments, margin, frequency and incremental revenue.
     slot: 'hero',
     path: '/tools/paid-media-waste-estimator/',
     image: media.diagnostic,
+    altText: 'Magnifying glass identifying broken signals across an ecommerce analytics dashboard and highlighting one priority.',
     long: `Not every inefficient account needs lower bids.
 
 Waste can come from weak search-term control, an unhealthy product feed, poor creative rotation, missing exclusions, unreliable conversion signals or a landing page that cannot convert the demand you paid to acquire.
@@ -386,7 +390,7 @@ export const campaignPosts = moments.flatMap(moment =>
       channelId: channels[service].id,
       dueAt: dueAt(moment, service),
       text,
-      assets: moment.image ? [{ image: { url: moment.image } }] : [],
+      assets: moment.image ? [{ image: { url: moment.image, metadata: { altText: moment.altText } } }] : [],
     };
   }),
 );
@@ -409,4 +413,3 @@ export function validateCampaign(now = new Date()) {
   }
   return errors;
 }
-

@@ -2,6 +2,7 @@ import { campaign, campaignPosts, validateCampaign } from './buffer-campaign-202
 
 const apply = process.argv.includes('--apply');
 const token = process.env.BUFFER_API_KEY;
+const skippedServices = new Set((process.env.BUFFER_SKIP_SERVICES || '').split(',').map(value => value.trim()).filter(Boolean));
 const validationErrors = validateCampaign();
 if (validationErrors.length) {
   console.error(JSON.stringify({ validationErrors }, null, 2));
@@ -45,13 +46,32 @@ const existingData = await request(`
 
 const existing = existingData.posts.edges.map(({ node }) => node);
 const results = [];
-for (const post of campaignPosts) {
-  const duplicate = existing.find(item => item.channelId === post.channelId && item.dueAt === post.dueAt);
-  if (duplicate) {
-    results.push({ key: post.key, action: 'skipped', id: duplicate.id, status: duplicate.status });
-    continue;
-  }
 
+function channelMetadata(service) {
+  if (service === 'facebook') return { facebook: { type: 'post' } };
+  if (service === 'instagram') {
+    return { instagram: { type: 'post', shouldShareToFeed: true, isAiGenerated: true } };
+  }
+  return undefined;
+}
+
+function createInput(post, saveToDraft = false) {
+  const input = {
+    text: post.text,
+    channelId: post.channelId,
+    schedulingType: 'automatic',
+    mode: saveToDraft ? 'addToQueue' : 'customScheduled',
+    assets: post.assets,
+    metadata: channelMetadata(post.service),
+    aiAssisted: true,
+    source: 'codex',
+  };
+  if (saveToDraft) input.saveToDraft = true;
+  else input.dueAt = post.dueAt;
+  return input;
+}
+
+async function createBufferPost(input) {
   const data = await request(`
     mutation CreatePost($input: CreatePostInput!) {
       createPost(input: $input) {
@@ -62,34 +82,46 @@ for (const post of campaignPosts) {
         ... on MutationError { message }
       }
     }
-  `, {
-    input: {
-      text: post.text,
-      channelId: post.channelId,
-      schedulingType: 'automatic',
-      mode: 'customScheduled',
-      dueAt: post.dueAt,
-      assets: post.assets,
-      aiAssisted: true,
-      source: 'codex',
-    },
-  });
+  `, { input });
+  return data.createPost;
+}
 
-  const payload = data.createPost;
-  if (payload.__typename !== 'PostActionSuccess') {
-    results.push({ key: post.key, action: 'failed', type: payload.__typename, message: payload.message });
-    console.error(JSON.stringify({ campaign: campaign.id, total: campaignPosts.length, results }, null, 2));
-    process.exit(1);
+for (const post of campaignPosts) {
+  if (skippedServices.has(post.service)) {
+    results.push({ key: post.key, action: 'blocked', message: 'Channel connection rejected API publishing and requires reconnection in Buffer.' });
+    continue;
   }
-  existing.push(payload.post);
-  results.push({ key: post.key, action: 'created', id: payload.post.id, dueAt: payload.post.dueAt, status: payload.post.status, assets: payload.post.assets.length });
+  const duplicate = existing.find(item => item.channelId === post.channelId && (item.dueAt === post.dueAt || item.text === post.text));
+  if (duplicate) {
+    results.push({ key: post.key, action: 'skipped', id: duplicate.id, status: duplicate.status });
+    continue;
+  }
+
+  try {
+    let payload = await createBufferPost(createInput(post));
+    let action = 'created';
+    if (payload.__typename === 'LimitReachedError') {
+      payload = await createBufferPost(createInput(post, true));
+      action = 'drafted';
+    }
+    if (payload.__typename !== 'PostActionSuccess') {
+      results.push({ key: post.key, action: 'failed', type: payload.__typename, message: payload.message });
+      continue;
+    }
+    existing.push(payload.post);
+    results.push({ key: post.key, action, id: payload.post.id, dueAt: payload.post.dueAt, intendedDueAt: post.dueAt, status: payload.post.status, assets: payload.post.assets.length });
+  } catch (error) {
+    results.push({ key: post.key, action: 'failed', type: 'RequestError', message: error.message });
+  }
 }
 
 console.log(JSON.stringify({
   campaign: campaign.id,
   total: campaignPosts.length,
   created: results.filter(item => item.action === 'created').length,
+  drafted: results.filter(item => item.action === 'drafted').length,
   skipped: results.filter(item => item.action === 'skipped').length,
+  blocked: results.filter(item => item.action === 'blocked').length,
+  failed: results.filter(item => item.action === 'failed').length,
   results,
 }, null, 2));
-
